@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Petite Cup du Jour Rankings</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏅</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --accent: #f59e0b;
+  --bg: #08080d; --surface: rgba(255,255,255,0.02); --border: rgba(255,255,255,0.06);
+  --border-bright: rgba(255,255,255,0.08); --text: #e5e7eb; --text-dim: #9ca3af;
+  --text-muted: #6b7280; --text-dark: #4b5563;
+  --surface-hover: rgba(255,255,255,0.05); --row-hover: rgba(255,255,255,0.03);
+  --row-border: rgba(255,255,255,0.03); --green: #10b981; --red: #ef4444;
+  --mono: 'JetBrains Mono', monospace;
+  --scrollbar: rgba(255,255,255,0.1);
+}
+html { background: var(--bg); color: var(--text); }
+body { font-family: 'Space Grotesk', system-ui, sans-serif; min-height: 100vh; padding: 20px 12px; }
+::selection { background: rgba(245,158,11,0.3); }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--scrollbar); border-radius: 3px; }
+
+.container { max-width: 960px; margin: 0 auto; }
+
+.header { text-align: center; margin-bottom: 28px; }
+.header h1 {
+  font-size: 28px; font-weight: 800; margin: 0;
+  background: linear-gradient(135deg, #10b981, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.header .sub { font-family: var(--mono); font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+
+.controls { display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; align-items: center; position: sticky; top: 0; z-index: 20; background: var(--bg); padding: 8px 0; }
+.tabs { display: flex; gap: 3px; background: var(--surface-hover); border-radius: 8px; padding: 3px; }
+.tab {
+  padding: 6px 16px; border-radius: 6px; border: none; font-size: 12px;
+  font-family: var(--mono); font-weight: 600; cursor: pointer;
+  background: transparent; color: var(--text-muted); transition: all 0.15s;
+}
+.tab.active { background: rgba(16,185,129,0.2); color: #10b981; }
+.tab:hover:not(.active) { color: var(--text-dim); }
+
+.view-tabs { display: flex; gap: 3px; background: var(--surface-hover); border-radius: 8px; padding: 3px; }
+.view-tab {
+  padding: 6px 14px; border-radius: 6px; border: none; font-size: 11px;
+  font-family: var(--mono); font-weight: 600; cursor: pointer;
+  background: transparent; color: var(--text-muted); transition: all 0.15s;
+}
+.view-tab.active { background: rgba(245,158,11,0.2); color: var(--accent); }
+.view-tab:hover:not(.active) { color: var(--text-dim); }
+
+.table-header {
+  display: grid; padding: 8px 12px; font-family: var(--mono); font-size: 10px;
+  color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border-bright);
+}
+.table-header div { cursor: pointer; user-select: none; }
+.table-header div:hover { color: var(--text-dim); }
+
+.row {
+  display: grid; padding: 7px 12px; border-bottom: 1px solid var(--row-border);
+  font-size: 13px; cursor: pointer; transition: background 0.1s; align-items: center;
+}
+.row:hover { background: var(--row-hover); }
+.row.selected { background: rgba(245,158,11,0.06); }
+
+.rank { font-family: var(--mono); font-size: 12px; color: var(--text-muted); }
+.pname { font-weight: 600; font-size: 13px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+
+.player { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.player .pname { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.round-detail {
+  background: var(--surface); border-bottom: 1px solid var(--border);
+  padding: 10px 14px 14px; animation: slideDown 0.15s ease-out;
+}
+@keyframes slideDown { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+
+.round-player-row {
+  display: grid; padding: 3px 4px; align-items: center;
+  border-bottom: 1px solid var(--row-border); font-size: 12px;
+}
+.round-player-row:nth-child(odd) { background: rgba(255,255,255,0.015); }
+
+.chart-panel {
+  background: var(--row-hover); border: 1px solid var(--border-bright);
+  border-radius: 10px; padding: 14px 12px; margin: 4px 0;
+  animation: slideDown 0.15s ease-out;
+}
+.chart-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.chart-header .name { font-size: 16px; font-weight: 700; }
+.chart-header .stats { font-family: var(--mono); font-size: 10px; color: var(--text-dim); }
+.chart-canvas { position: relative; }
+.chart-canvas canvas { display: block; width: 100%; }
+.close-btn {
+  background: none; border: 1px solid var(--border-bright); color: var(--text-muted);
+  border-radius: 4px; padding: 2px 8px; cursor: pointer; font-size: 12px;
+  font-family: var(--mono); transition: all 0.15s;
+}
+.close-btn:hover { border-color: rgba(255,255,255,0.3); color: var(--accent); }
+.tooltip {
+  display: none; position: absolute; background: rgba(10,10,15,0.95);
+  border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; padding: 6px 10px;
+  font-family: var(--mono); font-size: 10px; color: var(--text-dim);
+  pointer-events: none; z-index: 10; white-space: nowrap;
+}
+.tooltip .t-round { color: var(--text); font-weight: 600; margin-bottom: 2px; }
+.tooltip .t-val span { color: var(--accent); }
+
+/* Tier colors for points */
+.pts-legend { color: #dc2626; }
+.pts-master { color: #f59e0b; }
+.pts-diamond { color: #a855f7; }
+.pts-plat { color: #3b82f6; }
+.pts-gold { color: #10b981; }
+.pts-low { color: var(--text-muted); }
+
+.footer { margin-top: 12px; font-family: var(--mono); font-size: 10px; color: var(--text-dark); text-align: center; line-height: 1.6; }
+.footer-link { display: inline-flex; align-items: center; gap: 5px; color: var(--text-dim); text-decoration: none; transition: color 0.15s; }
+.footer-link.yt:hover { color: #ff0000; }
+.footer-link.tw:hover { color: #9146ff; }
+.footer-link.dc:hover { color: #5865f2; }
+
+.tier-legend {
+  display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+  padding: 20px 0 8px; margin-top: 12px; border-top: 1px solid var(--border);
+  font-family: var(--mono); font-size: 11px;
+}
+.tier-item { display: flex; align-items: center; gap: 5px; }
+.tier-dot { width: 8px; height: 8px; border-radius: 50%; }
+
+.info-btn {
+  background: none; border: 1px solid var(--border-bright); color: var(--text-muted);
+  border-radius: 4px; padding: 2px 7px; cursor: pointer; font-size: 11px;
+  font-family: var(--mono); margin-left: 2px; transition: all 0.15s; line-height: 1;
+}
+.info-btn:hover { border-color: rgba(255,255,255,0.3); color: var(--accent); }
+
+.info-tip-wrap { position: relative; display: inline-flex; align-items: center; }
+.info-tip {
+  display: none; position: absolute; top: 100%; left: 0; margin-top: 8px;
+  background: rgba(10,10,15,0.95); border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px; padding: 10px 14px; font-family: var(--mono); font-size: 10px;
+  color: var(--text-dim); width: 300px; z-index: 20; line-height: 1.7;
+  white-space: normal; text-align: left;
+}
+.info-tip code { color: var(--accent); font-size: 10px; }
+.info-tip .st-head { color: var(--text); font-weight: 700; margin-bottom: 4px; }
+.info-tip-wrap:hover .info-tip { display: block; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>Petite Cup du Jour</h1>
+    <div class="sub">ATP-style points system</div>
+  </div>
+
+  <div class="controls">
+    <div class="tabs" id="seasonTabs"></div>
+    <div class="view-tabs">
+      <button class="view-tab active" data-view="rankings">Rankings</button>
+      <button class="view-tab" data-view="rounds">Rounds</button>
+    </div>
+    <div class="view-tabs" id="pointsToggle">
+      <button class="view-tab active" data-pts="ranking">Ranking Pts</button>
+      <button class="view-tab" data-pts="championship">Championship Pts</button>
+    </div>
+    <span class="info-tip-wrap">
+      <button class="info-btn" onclick="event.stopPropagation()" style="pointer-events:auto">ℹ</button>
+      <div class="info-tip" id="infoTip"></div>
+    </span>
+  </div>
+
+  <div class="table-header" id="tableHeader"></div>
+  <div id="tableBody"></div>
+
+  <div class="tier-legend" id="tierLegend"></div>
+
+  <div class="footer">
+    <div style="display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap">
+      <a href="https://www.youtube.com/@The_Lexer" target="_blank" rel="noopener" class="footer-link yt">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        Lexer
+      </a>
+      <a href="https://www.twitch.tv/justmakivt" target="_blank" rel="noopener" class="footer-link tw">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+        justMaki
+      </a>
+      <a href="https://discord.gg/qadVDXBR" target="_blank" rel="noopener" class="footer-link dc">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.947 2.418-2.157 2.418z"/></svg>
+        CSC Discord
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+let data = null;
+let currentSeason = null;
+let viewMode = 'rankings';
+let sortCol = 'points';
+let sortDir = -1;
+let pointsMode = 'ranking'; // 'ranking' (ATP drops) or 'championship' (OLR 10-1)
+
+// Points tier color
+// Season thresholds
+const SEASON_THRESHOLDS = {
+  championship: [100, 60, 35, 3],   // legend, pro, master, gold
+  ranking:      [1900, 1200, 700, 60],
+};
+// PCDJ trailing thresholds (2 seasons combined, same % ratios)
+const PCDJ_THRESHOLDS = {
+  championship: [200, 120, 70, 5],
+  ranking:      [3600, 2200, 1300, 100],
+};
+const TIER_COLORS = ['#dc2626', '#a855f7', '#3b82f6', '#10b981', '#6b7280'];
+
+function ptsColor(pts) {
+  const isPCDJ = data && data[currentSeason] && data[currentSeason].type === 'trailing';
+  const thresholds = isPCDJ ? PCDJ_THRESHOLDS : SEASON_THRESHOLDS;
+  const t = thresholds[pointsMode === 'championship' ? 'championship' : 'ranking'];
+  for (let i = 0; i < t.length; i++) {
+    if (pts >= t[i]) return TIER_COLORS[i];
+  }
+  return TIER_COLORS[4];
+}
+
+function ptsColorSingle(pts) {
+  if (pointsMode === 'championship') {
+    if (pts >= 9)  return '#dc2626';
+    if (pts >= 7)  return '#a855f7';
+    if (pts >= 5)  return '#3b82f6';
+    if (pts >= 1)  return '#10b981';
+    return '#6b7280';
+  }
+  if (pts >= 180) return '#dc2626';
+  if (pts >= 140) return '#a855f7';
+  if (pts >= 100) return '#3b82f6';
+  if (pts >= 20)  return '#10b981';
+  return '#6b7280';
+}
+
+function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+function updateInfoTip(season) {
+  const tip = document.getElementById('infoTip');
+  const total = season.total_events || season.rounds_total;
+  const played = season.rounds_played || season.rounds_total;
+  const isTrailing = season.type === 'trailing';
+  const isChamp = pointsMode === 'championship';
+
+  if (isChamp) {
+    tip.innerHTML = `<div class="st-head">Championship Points</div>`
+      + `OLR's original scoring:<br>`
+      + `<code>1st=10 2nd=9 ... 10th=1</code><br><br>`
+      + `All results count — no drops<br>`
+      + `Troll & Roulette: <strong>excluded</strong><br><br>`
+      + `${isTrailing ? (season.seasons ? season.seasons.join(' + ') : 'last 2 seasons') : `${played}/${total} rounds played`}`;
+    return;
+  }
+
+  const pointsExplain = `Top 10 per round earn points:<br>`
+    + `<code>1st=200 2nd=180 ... 10th=20</code><br>`
+    + `Troll & Roulette: <strong>half</strong> points<br>`;
+
+  if (isTrailing) {
+    const seasons = season.seasons ? season.seasons.join(' + ') : 'last 2 seasons';
+    tip.innerHTML = `<div class="st-head">PCDJ Ranking Points</div>`
+      + `ATP-style trailing ranking across <strong>${seasons}</strong><br><br>`
+      + pointsExplain + `<br>`
+      + `Best <strong>${season.best_of}</strong> of ${played} total rounds count (70%)<br>`
+      + `Worst ${played - season.best_of} results are always dropped<br><br>`
+      + `Max: <code>${season.best_of} × 200 = ${season.best_of * 200}</code>`;
+  } else if (season.drops_active) {
+    tip.innerHTML = `<div class="st-head">${currentSeason} — Ranking Points</div>`
+      + `${played}/${total} rounds played<br><br>`
+      + pointsExplain + `<br>`
+      + `Best <strong>${season.best_of}</strong> of ${total} rounds count (70%)<br>`
+      + `Drops active — ${played - season.best_of} worst results excluded<br><br>`
+      + `Max: <code>${season.best_of} × 200 = ${season.best_of * 200}</code>`;
+  } else {
+    tip.innerHTML = `<div class="st-head">${currentSeason} — Ranking Points</div>`
+      + `${played}/${total} rounds played<br><br>`
+      + pointsExplain + `<br>`
+      + `All results count right now<br>`
+      + `Drops start at round <strong>${season.best_of + 1}</strong>, then best ${season.best_of} of ${total} (70%)<br><br>`
+      + `Max: <code>${season.best_of} × 200 = ${season.best_of * 200}</code>`;
+  }
+}
+
+// --- Build rank history for a player ---
+function buildRankHistory(playerName) {
+  const season = data[currentSeason];
+  if (!season) return [];
+
+  const src = pointsMode === 'championship' && season.championship ? season.championship : season.rankings;
+
+  // Get ordered round list
+  const allRounds = new Set();
+  src.forEach(p => p.history.forEach(h => allRounds.add(h.r)));
+  const roundOrder = [...allRounds].sort((a, b) => {
+    const na = parseInt(a.replace(/\D/g, '')) || 0;
+    const nb = parseInt(b.replace(/\D/g, '')) || 0;
+    const wa = a.includes('Troll') ? 1000 : a.includes('Roulette') ? 2000 : 0;
+    const wb = b.includes('Troll') ? 1000 : b.includes('Roulette') ? 2000 : 0;
+    return (wa + na) - (wb + nb);
+  });
+
+  // Compute cumulative points for ALL players after each round
+  const cumulative = {}; // name -> running total
+  const snapshots = []; // [{round, rankings: [{name, pts}]}]
+
+  roundOrder.forEach(rName => {
+    // Add this round's points to each player who participated
+    src.forEach(p => {
+      if (!cumulative[p.name]) cumulative[p.name] = 0;
+      const entry = p.history.find(h => h.r === rName);
+      if (entry) cumulative[p.name] += entry.p;
+    });
+
+    // Rank everyone by cumulative points
+    const ranked = Object.entries(cumulative)
+      .filter(([_, pts]) => pts > 0)
+      .sort((a, b) => b[1] - a[1]);
+    snapshots.push({ round: rName, rankings: ranked });
+  });
+
+  // Extract this player's rank at each round they participated in
+  const result = [];
+  let cumulPts = 0;
+  snapshots.forEach((snap, i) => {
+    const playerEntry = season.rankings.find(p => p.name === playerName);
+    if (!playerEntry) return;
+    const roundEntry = playerEntry.history.find(h => h.r === snap.round);
+    if (roundEntry) cumulPts += roundEntry.p;
+    if (cumulPts > 0) {
+      const rank = snap.rankings.findIndex(([n]) => n === playerName) + 1;
+      result.push({ round: snap.round, roundIdx: i + 1, rank, pts: cumulPts, roundPts: roundEntry ? roundEntry.p : 0, pos: roundEntry ? roundEntry.pos : null });
+    }
+  });
+  return result;
+}
+
+// --- Draw rank chart ---
+function drawRankChart(player, panel) {
+  const rankHist = buildRankHistory(player.name);
+  if (rankHist.length === 0) return;
+
+  const season = data[currentSeason];
+  const c = ptsColor(player.points);
+
+  panel.innerHTML = `
+    <div class="chart-header">
+      <div style="min-width:0;overflow:hidden">
+        <span class="name" style="color:${c}">${esc(player.name)}</span><br>
+        <span class="stats">${player.points} pts · ${player.rounds} rounds · ${player.wins} wins · ${player.podiums} podiums</span>
+      </div>
+      <button class="close-btn" id="closeChart">✕</button>
+    </div>
+    <div class="chart-canvas"><canvas id="rankCanvas"></canvas><div class="tooltip" id="chartTip"></div></div>
+  `;
+  panel.querySelector('#closeChart').onclick = () => {
+    panel.remove();
+    document.querySelectorAll('.row.selected').forEach(r => r.classList.remove('selected'));
+  };
+
+  const canvas = panel.querySelector('#rankCanvas');
+  const tip = panel.querySelector('#chartTip');
+  const ctx = canvas.getContext('2d');
+  const dpr = window.devicePixelRatio || 1;
+  const rect = canvas.parentElement.getBoundingClientRect();
+  canvas.width = rect.width * dpr;
+  canvas.height = 180 * dpr;
+  canvas.style.width = rect.width + 'px';
+  canvas.style.height = '180px';
+  ctx.scale(dpr, dpr);
+
+  const W = rect.width, H = 180;
+  const pad = { l: 36, r: 12, t: 12, b: 28 };
+
+  const totalRounds = season.total_events || season.rounds_total;
+  const xMin = 1, xMax = totalRounds;
+  const vMin = 1;
+  const vMax = Math.max(...rankHist.map(d => d.rank), 5);
+
+  function x(idx) { return pad.l + (idx - xMin) / (xMax - xMin || 1) * (W - pad.l - pad.r); }
+  // Inverted: rank 1 at top
+  function y(rank) { return pad.t + (rank - vMin) / (vMax - vMin || 1) * (H - pad.t - pad.b); }
+
+  function draw(highlight) {
+    ctx.clearRect(0, 0, W, H);
+
+    // Grid lines
+    ctx.strokeStyle = 'rgba(255,255,255,0.06)'; ctx.lineWidth = 1;
+    const ySteps = Math.min(vMax, 6);
+    for (let i = 0; i <= ySteps; i++) {
+      const rv = Math.round(vMin + (vMax - vMin) * i / ySteps);
+      const yv = y(rv);
+      ctx.beginPath(); ctx.moveTo(pad.l, yv); ctx.lineTo(W - pad.r, yv); ctx.stroke();
+      ctx.fillStyle = '#6b7280'; ctx.font = "9px 'JetBrains Mono',monospace"; ctx.textAlign = 'right';
+      ctx.fillText('#' + rv, pad.l - 6, yv + 3);
+    }
+
+    // X axis labels
+    ctx.fillStyle = '#6b7280'; ctx.font = "9px 'JetBrains Mono',monospace"; ctx.textAlign = 'center';
+    for (let t = xMin; t <= xMax; t++) {
+      ctx.fillText(t, x(t), H - 6);
+    }
+
+    // Rank 1 reference line
+    ctx.strokeStyle = 'rgba(255,255,255,0.12)'; ctx.setLineDash([4, 4]);
+    ctx.beginPath(); ctx.moveTo(pad.l, y(1)); ctx.lineTo(W - pad.r, y(1)); ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Line
+    ctx.strokeStyle = c; ctx.lineWidth = 2; ctx.lineJoin = 'round';
+    ctx.beginPath();
+    rankHist.forEach((pt, i) => {
+      const method = i === 0 ? 'moveTo' : 'lineTo';
+      ctx[method](x(pt.roundIdx), y(pt.rank));
+    });
+    ctx.stroke();
+
+    // Glow
+    ctx.save(); ctx.globalAlpha = 0.15; ctx.strokeStyle = c; ctx.lineWidth = 6;
+    ctx.beginPath();
+    rankHist.forEach((pt, i) => {
+      const method = i === 0 ? 'moveTo' : 'lineTo';
+      ctx[method](x(pt.roundIdx), y(pt.rank));
+    });
+    ctx.stroke(); ctx.restore();
+
+    // Dots — stars for wins (pos=1)
+    rankHist.forEach(pt => {
+      const isHl = highlight && pt.roundIdx === highlight.roundIdx;
+      const isWin = pt.pos === 1;
+      if (isWin) {
+        const r = isHl ? 7 : 4.5;
+        // Draw star
+        ctx.beginPath();
+        for (let i = 0; i < 10; i++) {
+          const ang = -Math.PI / 2 + i * Math.PI / 5;
+          const rad = i % 2 === 0 ? r : r * 0.45;
+          const method = i === 0 ? 'moveTo' : 'lineTo';
+          ctx[method](x(pt.roundIdx) + Math.cos(ang) * rad, y(pt.rank) + Math.sin(ang) * rad);
+        }
+        ctx.closePath();
+        ctx.fillStyle = '#ffd700'; ctx.fill();
+        ctx.strokeStyle = '#b8960c'; ctx.lineWidth = isHl ? 1.5 : 1; ctx.stroke();
+      } else {
+        ctx.beginPath(); ctx.arc(x(pt.roundIdx), y(pt.rank), isHl ? 5 : 2.5, 0, Math.PI * 2);
+        if (isHl) { ctx.fillStyle = '#fff'; ctx.fill(); ctx.strokeStyle = c; ctx.lineWidth = 2; ctx.stroke(); }
+        else { ctx.fillStyle = c; ctx.fill(); }
+      }
+    });
+  }
+
+  draw(null);
+
+  canvas.onmousemove = (e) => {
+    const br = canvas.getBoundingClientRect();
+    const mx = e.clientX - br.left;
+    let closest = null, minDist = Infinity;
+    rankHist.forEach(pt => {
+      const d = Math.abs(x(pt.roundIdx) - mx);
+      if (d < minDist) { minDist = d; closest = pt; }
+    });
+    if (closest && minDist < 30) {
+      canvas.style.cursor = 'pointer';
+      tip.style.display = 'block';
+      tip.innerHTML = `<div class="t-round">${esc(closest.round)}</div>`
+        + `<div class="t-val">Rank: <span>#${closest.rank}</span></div>`
+        + `<div class="t-val">Total: <span>${closest.pts} pts</span></div>`
+        + (closest.roundPts ? `<div class="t-val">Round: <span>+${closest.roundPts}</span> (pos ${closest.pos})</div>` : '');
+      let tx = x(closest.roundIdx) + 12;
+      if (tx + 140 > W) tx = x(closest.roundIdx) - 150;
+      tip.style.left = tx + 'px';
+      tip.style.top = (y(closest.rank) - 40) + 'px';
+      draw(closest);
+    } else {
+      canvas.style.cursor = '';
+      tip.style.display = 'none';
+      draw(null);
+    }
+  };
+  canvas.onmouseleave = () => { tip.style.display = 'none'; canvas.style.cursor = ''; draw(null); };
+}
+
+// --- Season tabs ---
+function buildSeasonTabs() {
+  const container = document.getElementById('seasonTabs');
+  container.innerHTML = '';
+  Object.keys(data).forEach(season => {
+    const btn = document.createElement('button');
+    btn.className = 'tab' + (season === currentSeason ? ' active' : '');
+    btn.textContent = season;
+    btn.onclick = () => { currentSeason = season; buildSeasonTabs(); render(); };
+    container.appendChild(btn);
+  });
+}
+
+// --- View tabs ---
+document.querySelectorAll('.view-tab[data-view]').forEach(btn => {
+  btn.onclick = () => {
+    viewMode = btn.dataset.view;
+    document.querySelectorAll('.view-tab[data-view]').forEach(b => b.classList.toggle('active', b === btn));
+    render();
+  };
+});
+
+// --- Points mode toggle ---
+document.querySelectorAll('.view-tab[data-pts]').forEach(btn => {
+  btn.onclick = () => {
+    pointsMode = btn.dataset.pts;
+    document.querySelectorAll('.view-tab[data-pts]').forEach(b => b.classList.toggle('active', b === btn));
+    render();
+  };
+});
+
+// --- Ranking columns ---
+const RANK_COLS = '36px 1fr 70px 45px 45px 105px 40px 65px';
+
+function renderRankingsHeader() {
+  const header = document.getElementById('tableHeader');
+  header.style.gridTemplateColumns = RANK_COLS;
+  const cols = [
+    { key: 'rank', label: '#', align: 'left' },
+    { key: 'name', label: 'Player', align: 'left' },
+    { key: 'points', label: 'Pts', align: 'right' },
+    { key: 'rounds', label: 'Rnds', align: 'right' },
+    { key: 'wins', label: 'W', align: 'right' },
+    { key: 'podiums', label: 'Podium', align: 'center' },
+    { key: 'best_pos', label: 'Best', align: 'right' },
+    { key: 'avg_pos', label: 'Avg Pos', align: 'right' },
+  ];
+  header.innerHTML = cols.map(c => {
+    const active = sortCol === c.key;
+    const arrow = active ? (sortDir === 1 ? ' ▲' : ' ▼') : '';
+    return `<div data-sort="${c.key}" style="text-align:${c.align};color:${active ? 'var(--text)' : 'inherit'}">${c.label}${arrow}</div>`;
+  }).join('');
+  header.querySelectorAll('[data-sort]').forEach(el => {
+    el.onclick = () => {
+      const col = el.dataset.sort;
+      if (sortCol === col) sortDir *= -1;
+      else { sortCol = col; sortDir = ['name', 'best_pos', 'avg_pos'].includes(col) ? 1 : -1; }
+      render();
+    };
+  });
+}
+
+function renderRankings() {
+  const season = data[currentSeason];
+  if (!season) return;
+  renderRankingsHeader();
+
+  updateInfoTip(season);
+
+  const src = pointsMode === 'championship' && season.championship ? season.championship : season.rankings;
+  let rankings = [...src];
+
+  // Sort
+  rankings.sort((a, b) => {
+    let av, bv;
+    switch (sortCol) {
+      case 'rank': av = a.rank; bv = b.rank; break;
+      case 'name': av = a.name; bv = b.name; return av.localeCompare(bv) * sortDir;
+      case 'points': av = a.points; bv = b.points; break;
+      case 'rounds': av = a.rounds; bv = b.rounds; break;
+      case 'wins': av = a.wins; bv = b.wins; break;
+      case 'podiums': av = a.podiums.gold+a.podiums.silver+a.podiums.bronze; bv = b.podiums.gold+b.podiums.silver+b.podiums.bronze; break;
+      case 'best_pos': av = a.best_pos; bv = b.best_pos; break;
+      case 'avg_pos': av = a.avg_pos; bv = b.avg_pos; break;
+      default: av = a.points; bv = b.points;
+    }
+    return (av - bv) * sortDir || (b.points - a.points);
+  });
+
+  const body = document.getElementById('tableBody');
+  body.innerHTML = rankings.map((p, i) => {
+    const c = ptsColor(p.points);
+    const wc = p.wins > 0 ? 'var(--accent)' : 'var(--text-dark)';
+    const totalPod = p.podiums.gold + p.podiums.silver + p.podiums.bronze;
+    const podStr = totalPod > 0
+      ? `<span style="color:var(--accent)">${p.podiums.gold}</span>/<span style="color:#6b7280">${p.podiums.silver}</span>/<span style="color:#78716c">${p.podiums.bronze}</span> <span style="color:var(--text-muted)">(${totalPod})</span>`
+      : `<span style="color:var(--text-dark)">0</span>`;
+    const bestC = p.best_pos === 1 ? 'var(--accent)' : p.best_pos <= 3 ? 'var(--text)' : 'var(--text-dim)';
+    const avgPosC = p.avg_pos <= 3 ? 'var(--green)' : p.avg_pos <= 5 ? 'var(--text-dim)' : 'var(--text-muted)';
+    return `<div class="row" data-name="${esc(p.name)}" style="grid-template-columns:${RANK_COLS}">
+      <div class="rank">${i + 1}</div>
+      <div class="player"><span class="dot" style="background:${c};box-shadow:0 0 5px ${c}40"></span><span class="pname">${esc(p.name)}</span></div>
+      <div style="text-align:right;font-family:var(--mono);font-weight:700;color:${c}">${p.points}</div>
+      <div style="text-align:right;font-family:var(--mono);color:var(--text-dim)">${p.rounds}</div>
+      <div style="text-align:right;font-family:var(--mono);font-weight:600;color:${wc}">${p.wins}</div>
+      <div style="text-align:center;font-family:var(--mono)">${podStr}</div>
+      <div style="text-align:right;font-family:var(--mono);color:${bestC}">${p.best_pos}</div>
+      <div style="text-align:right;font-family:var(--mono);color:${avgPosC}">${p.avg_pos}</div>
+    </div>`;
+  }).join('');
+
+  // Click row to expand rank chart
+  body.querySelectorAll('.row').forEach(row => {
+    row.onclick = () => {
+      const existing = body.querySelectorAll('.chart-panel');
+      existing.forEach(e => e.remove());
+      if (row.classList.contains('selected')) { row.classList.remove('selected'); return; }
+      body.querySelectorAll('.row.selected').forEach(r => r.classList.remove('selected'));
+      row.classList.add('selected');
+
+      const playerSrc = pointsMode === 'championship' && season.championship ? season.championship : season.rankings;
+      const player = playerSrc.find(p => p.name === row.dataset.name);
+      if (!player) return;
+
+      const panel = document.createElement('div');
+      panel.className = 'chart-panel';
+      row.after(panel);
+      drawRankChart(player, panel);
+      panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    };
+  });
+}
+
+// --- Rounds view ---
+const ROUND_COLS = '36px 1fr 60px 80px';
+
+function renderRoundsHeader() {
+  const header = document.getElementById('tableHeader');
+  header.style.gridTemplateColumns = ROUND_COLS;
+  header.innerHTML = `<div>#</div><div>Round</div><div style="text-align:center">Players</div><div style="text-align:center">Winner</div>`;
+}
+
+function renderRounds() {
+  const season = data[currentSeason];
+  if (!season) return;
+  renderRoundsHeader();
+  updateInfoTip(season);
+
+  // We need the raw rounds data — stored in rankings JSON under each player's history
+  // Reconstruct rounds from player histories
+  const roundMap = {};
+  season.rankings.forEach(p => {
+    p.history.forEach(h => {
+      if (!roundMap[h.r]) roundMap[h.r] = [];
+      roundMap[h.r].push({ name: p.name, pos: h.pos, pts: h.p });
+    });
+  });
+
+  const roundNames = Object.keys(roundMap);
+  // Sort: Regular rounds by number, then Troll, then Roulette
+  roundNames.sort((a, b) => {
+    const na = parseInt(a.replace(/\D/g, '')) || 0;
+    const nb = parseInt(b.replace(/\D/g, '')) || 0;
+    const wa = a.includes('Troll') ? 1000 : a.includes('Roulette') ? 2000 : 0;
+    const wb = b.includes('Troll') ? 1000 : b.includes('Roulette') ? 2000 : 0;
+    return (wa + na) - (wb + nb);
+  });
+
+  const body = document.getElementById('tableBody');
+  body.innerHTML = roundNames.map((rName, i) => {
+    const players = roundMap[rName].sort((a, b) => a.pos - b.pos);
+    const winner = players[0];
+    const isHalf = rName.includes('Troll') || rName.includes('Roulette');
+    const typeLabel = isHalf ? ' <span style="color:var(--text-dark);font-size:10px">½</span>' : '';
+    return `<div class="row round-row" data-round="${esc(rName)}" style="grid-template-columns:${ROUND_COLS}">
+      <div class="rank">${i + 1}</div>
+      <div style="font-size:13px">${esc(rName)}${typeLabel}</div>
+      <div style="text-align:center;font-family:var(--mono);font-size:11px;color:var(--text-muted)">${players.length}</div>
+      <div style="text-align:center;font-size:12px;font-weight:600;color:var(--accent)">${esc(winner?.name || '—')}</div>
+    </div>`;
+  }).join('');
+
+  // Click round to expand
+  body.querySelectorAll('.round-row').forEach(row => {
+    row.onclick = () => {
+      const existing = body.querySelectorAll('.round-detail-panel');
+      existing.forEach(e => e.remove());
+      if (row.classList.contains('selected')) { row.classList.remove('selected'); return; }
+      body.querySelectorAll('.round-row.selected').forEach(r => r.classList.remove('selected'));
+      row.classList.add('selected');
+
+      const rName = row.dataset.round;
+      const players = roundMap[rName].sort((a, b) => a.pos - b.pos);
+
+      const panel = document.createElement('div');
+      panel.className = 'round-detail-panel round-detail';
+      let h = `<div style="display:grid;grid-template-columns:36px 1fr 80px;font-family:var(--mono);font-size:9px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;padding:0 0 6px;margin-bottom:4px;border-bottom:1px solid var(--row-border)">
+        <div>Pos</div><div>Player</div><div style="text-align:right">Points</div></div>`;
+      players.forEach((p, pi) => {
+        const c = ptsColorSingle(p.pts);
+        const bg = pi % 2 === 0 ? 'transparent' : 'rgba(255,255,255,0.015)';
+        h += `<div class="round-player-row" style="grid-template-columns:36px 1fr 80px;background:${bg}">
+          <div style="font-family:var(--mono);color:var(--text-muted)">${p.pos}</div>
+          <div style="font-weight:600">${esc(p.name)}</div>
+          <div style="text-align:right;font-family:var(--mono);font-weight:700;color:${c}">${p.pts}</div>
+        </div>`;
+      });
+      panel.innerHTML = h;
+      row.after(panel);
+      panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    };
+  });
+}
+
+function renderTierLegend() {
+  const isPCDJ = data && data[currentSeason] && data[currentSeason].type === 'trailing';
+  const thresholds = isPCDJ ? PCDJ_THRESHOLDS : SEASON_THRESHOLDS;
+  const t = thresholds[pointsMode === 'championship' ? 'championship' : 'ranking'];
+  const names = ['Legend', 'Pro', 'Master', 'Gold', 'Silver'];
+  const el = document.getElementById('tierLegend');
+  el.innerHTML = names.map((name, i) => {
+    const label = i < t.length ? `${name} (${t[i]}+)` : name;
+    return `<div class="tier-item"><div class="tier-dot" style="background:${TIER_COLORS[i]};box-shadow:0 0 4px ${TIER_COLORS[i]}40"></div><span style="color:${TIER_COLORS[i]}">${label}</span></div>`;
+  }).join('');
+}
+
+// --- Render ---
+function render() {
+  if (viewMode === 'rankings') renderRankings();
+  else renderRounds();
+  renderTierLegend();
+}
+
+// --- Init ---
+fetch('petite_rankings.json?v=' + Date.now())
+  .then(r => r.json())
+  .then(d => {
+    data = d;
+    const seasons = Object.keys(data);
+    // Default to latest season (not trailing/PCDJ)
+    const seasonKeys = seasons.filter(s => data[s].type === 'season');
+    currentSeason = seasonKeys.length > 0 ? seasonKeys[seasonKeys.length - 1] : seasons[0];
+    buildSeasonTabs();
+    render();
+  });
+</script>
+</body>
+</html>
