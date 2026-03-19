@@ -29,16 +29,20 @@ PETITE_ALIASES = {
     'AndeMe17': 'AndMe',
     'Mackcheesy': 'MackCheesy',
     'An Actual G00se': 'An Actual g00se',
+    'AndMe93': 'brrryy',
     'JustMaki': 'justMaki',
     'QuickRacer10': 'Quickracer10',
     'Redal': 'redal',
     '[GECK]R0nanC': 'R0nanC',
     '[CCC]Shinikage221': 'Shinikage221',
     '[Fae]Kyn': 'Kyn',
-    'brrryy': 'Brrry',
+    'Brrry': 'brrryy',
+    'Gilgool': 'gilgool',
     'BB_Benji': 'BB_Benji',
+    'Ping': 'ping',
+    'RoundNZT': 'RoundNzt',
     'Clowney': 'Clowny',
-    'Brrryy': 'Brrry',
+    'Brrryy': 'brrryy',
     'Magical': 'Magical',
     'Redstoney': 'Redstony',
     'r-tube': 'rtyyyyb',
@@ -302,6 +306,78 @@ def compute_rankings(rounds, best_of, season_mode=True, championship=False):
 
     return rankings
 
+# --- Cup Strength (SOF) ---
+# Uses COTD weighted ELO to measure petite lobby quality
+# PCDJ cup N ≈ COTD cup (97 + N) (both weekly events)
+# Strength = avg normalized ELO of 10 highest-rated players IN THE LOBBY (by ELO, not by finish position)
+PCDJ_TO_COTD = 97
+POOL_CAP = 196
+
+def load_cotd_histories():
+    """Load COTD player histories for per-cup ELO lookups."""
+    try:
+        with open(os.path.join(elo_dir, 'alldata.json'), encoding='utf-8') as f:
+            cotd = json.load(f)
+        histories = {}
+        for p in cotd['weighted']:
+            histories[p['n']] = p['h']
+        return histories
+    except FileNotFoundError:
+        print("  WARNING: alldata.json not found, cup strength unavailable")
+        return None
+
+def get_elo_at_cup(histories, name, cotd_cup):
+    """Get player's ELO just before a given COTD cup number."""
+    if name not in histories:
+        return None
+    hist = histories[name]
+    before = [h for h in hist if h['c'] < cotd_cup]
+    if before:
+        return before[-1]['r']
+    if hist and hist[0]['c'] == cotd_cup:
+        return 1500
+    return None
+
+def compute_cup_strength(rnd, pcdj_cup, histories):
+    """Compute strength for a petite round using COTD ELO.
+    Finds the 10 highest-rated players IN THE LOBBY (by ELO, not finish position),
+    normalizes their ratings, and averages them."""
+    if not histories or len(rnd['players']) <= 10:
+        return None
+    cotd_cup = PCDJ_TO_COTD + pcdj_cup
+
+    # Build normalized pool snapshot at this COTD cup
+    pool = {}
+    for name in histories:
+        elo = get_elo_at_cup(histories, name, cotd_cup)
+        if elo:
+            pool[name] = elo
+    pool_sorted = sorted(pool.items(), key=lambda x: x[1], reverse=True)[:POOL_CAP]
+    if not pool_sorted:
+        return None
+    max_r = pool_sorted[0][1]
+    sc = 2000 / max_r
+    norm = {n: r * sc for n, r in pool_sorted}
+    min_pool = min(norm.values())
+
+    # Find 10 highest ELO players IN THE LOBBY (by ELO, NOT by finish position)
+    lobby_elos = []
+    for p in rnd['players']:
+        if p['name'] in norm:
+            lobby_elos.append(norm[p['name']])
+    lobby_elos.sort(reverse=True)
+    top10 = lobby_elos[:10]
+    while len(top10) < 10:
+        top10.append(min_pool)
+    avg = sum(top10) / 10
+    return round(avg / 1850 * 100, 1)
+
+# Season round number -> overall PCDJ cup number
+SEASON_CUP_OFFSET = {
+    'Season 2': 0,   # S2 Round 1 = Cup 1
+    'Season 3': 29,  # S3 Round 1 = Cup 30
+}
+
 # --- Main ---
 print("Parsing petite cup data...")
 seasons = parse_petite(_p('Results Petite .xlsx'))
@@ -356,6 +432,18 @@ for season_name, rounds in seasons.items():
     else:
         print(f"  All results count (drops start at round {best_of + 1})")
 
+    # Compute cup strength for full-lobby rounds
+    cotd_histories = load_cotd_histories()
+    round_strengths = {}
+    offset = SEASON_CUP_OFFSET.get(season_name, 0)
+    for rnd in rounds:
+        rnum = int(''.join(c for c in rnd['name'] if c.isdigit()) or 0)
+        pcdj_cup = offset + rnum
+        sof = compute_cup_strength(rnd, pcdj_cup, cotd_histories)
+        if sof is not None:
+            round_strengths[rnd['name']] = sof
+            print(f"  {rnd['name']} (PCDJ {pcdj_cup}): SOF {sof}%")
+
     rankings = compute_rankings(rounds, best_of, season_mode=True)
     # Championship points: OLR's original 10-1 scale, no drops, troll/roulette excluded
     champ_rankings = compute_rankings(rounds, len(rounds), season_mode=False, championship=True)
@@ -370,6 +458,7 @@ for season_name, rounds in seasons.items():
         'points_scale': POINTS_SCALE,
         'rankings': rankings,
         'championship': champ_rankings,
+        'round_strengths': round_strengths,
     }
 
     print(f"\n{'#':<4}{'Player':<22}{'Pts':<8}{'Rnds':<6}{'W':<4}{'Pod':<5}{'T5':<4}{'Avg Pts':<9}{'Avg Pos':<9}{'Drop'}")
@@ -382,7 +471,12 @@ if len(season_names) >= 2:
     trailing_seasons = season_names[-2:]
     trailing_rounds = []
     for sn in trailing_seasons:
-        trailing_rounds.extend(seasons[sn])
+        # Prefix round names with season to avoid collisions (both have "Round 1", etc.)
+        for rnd in seasons[sn]:
+            prefixed = dict(rnd)
+            prefixed['name'] = f"{sn} {rnd['name']}"
+            prefixed['players'] = list(rnd['players'])  # shallow copy
+            trailing_rounds.append(prefixed)
     best_of_trailing = round(len(trailing_rounds) * BEST_OF_PCT)
 
     print(f"\n=== PCDJ Ranking ({' + '.join(trailing_seasons)}) ===")
@@ -398,6 +492,7 @@ if len(season_names) >= 2:
         'points_scale': POINTS_SCALE,
         'rankings': trailing_rankings,
         'championship': trailing_champ,
+        'round_strengths': {},  # trailing combines seasons, strengths are per-season
     }
 
     print(f"\n{'#':<4}{'Player':<22}{'Pts':<8}{'Rnds':<6}{'W':<4}{'Pod':<5}{'T5':<4}{'Avg Pts':<9}{'Avg Pos':<9}{'Drop'}")

@@ -582,7 +582,7 @@
         "rank": 7
       },
       {
-        "name": "Ping",
+        "name": "ping",
         "points": 630.0,
         "points_all": 630.0,
         "rounds": 9,
@@ -1280,7 +1280,7 @@
         "rank": 25
       },
       {
-        "name": "Gilgool",
+        "name": "gilgool",
         "points": 100,
         "points_all": 100,
         "rounds": 1,
@@ -2313,7 +2313,7 @@
         "rank": 7
       },
       {
-        "name": "Ping",
+        "name": "ping",
         "points": 28,
         "points_all": 28,
         "rounds": 7,
@@ -2945,7 +2945,7 @@
         "rank": 24
       },
       {
-        "name": "Gilgool",
+        "name": "gilgool",
         "points": 5,
         "points_all": 5,
         "rounds": 1,
@@ -3417,7 +3417,8 @@
         ],
         "rank": 42
       }
-    ]
+    ],
+    "round_strengths": {}
   },
   "Season 3": {
     "type": "season",
@@ -3705,10 +3706,10 @@
         "rank": 5
       },
       {
-        "name": "RoundNZT",
+        "name": "RoundNzt",
         "points": 520,
         "points_all": 520,
-        "rounds": 3,
+        "rounds": 5,
         "wins": 1,
         "podiums": {
           "gold": 1,
@@ -3716,8 +3717,8 @@
           "bronze": 0
         },
         "top5": 3,
-        "avg_pts": 173.3,
-        "avg_pos": 2.3,
+        "avg_pts": 104.0,
+        "avg_pos": 9.6,
         "best_single": 200,
         "best_pos": 1,
         "dropped": 0,
@@ -3733,9 +3734,19 @@
             "pos": 1
           },
           {
+            "r": "Round 5",
+            "p": 0,
+            "pos": 23
+          },
+          {
             "r": "Round 7",
             "p": 140,
             "pos": 4
+          },
+          {
+            "r": "Round 8",
+            "p": 0,
+            "pos": 18
           }
         ],
         "rank": 6
@@ -4157,6 +4168,47 @@
         "rank": 17
       },
       {
+        "name": "brrryy",
+        "points": 160,
+        "points_all": 160,
+        "rounds": 4,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 40.0,
+        "avg_pos": 9.5,
+        "best_single": 60,
+        "best_pos": 8,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 2",
+            "p": 60,
+            "pos": 8
+          },
+          {
+            "r": "Round 3",
+            "p": 40,
+            "pos": 9
+          },
+          {
+            "r": "Round 5",
+            "p": 60,
+            "pos": 8
+          },
+          {
+            "r": "Round 9",
+            "p": 0,
+            "pos": 13
+          }
+        ],
+        "rank": 18
+      },
+      {
         "name": "Matic_D",
         "points": 160,
         "points_all": 160,
@@ -4200,7 +4252,7 @@
             "pos": 22
           }
         ],
-        "rank": 18
+        "rank": 19
       },
       {
         "name": "null/plexus",
@@ -4226,7 +4278,7 @@
             "pos": 5
           }
         ],
-        "rank": 19
+        "rank": 20
       },
       {
         "name": "Hi Im Yolo",
@@ -4265,32 +4317,6 @@
             "r": "Round 8",
             "p": 40,
             "pos": 9
-          }
-        ],
-        "rank": 20
-      },
-      {
-        "name": "Gilgool",
-        "points": 100,
-        "points_all": 100,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 100.0,
-        "avg_pos": 6.0,
-        "best_single": 100,
-        "best_pos": 6,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 1",
-            "p": 100,
-            "pos": 6
           }
         ],
         "rank": 21
@@ -4348,7 +4374,7 @@
         "rank": 23
       },
       {
-        "name": "Brrry",
+        "name": "gilgool",
         "points": 100,
         "points_all": 100,
         "rounds": 3,
@@ -4360,25 +4386,25 @@
         },
         "top5": 0,
         "avg_pts": 33.3,
-        "avg_pos": 10.0,
-        "best_single": 60,
-        "best_pos": 8,
+        "avg_pos": 13.3,
+        "best_single": 100,
+        "best_pos": 6,
         "dropped": 0,
         "history": [
           {
-            "r": "Round 2",
-            "p": 60,
-            "pos": 8
+            "r": "Round 1",
+            "p": 100,
+            "pos": 6
           },
           {
-            "r": "Round 3",
-            "p": 40,
-            "pos": 9
-          },
-          {
-            "r": "Round 9",
+            "r": "Round 5",
             "p": 0,
-            "pos": 13
+            "pos": 14
+          },
+          {
+            "r": "Round 6",
+            "p": 0,
+            "pos": 20
           }
         ],
         "rank": 24
@@ -4472,32 +4498,6 @@
         "rank": 27
       },
       {
-        "name": "AndMe93",
-        "points": 60,
-        "points_all": 60,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 60.0,
-        "avg_pos": 8.0,
-        "best_single": 60,
-        "best_pos": 8,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 5",
-            "p": 60,
-            "pos": 8
-          }
-        ],
-        "rank": 28
-      },
-      {
         "name": "Redstony",
         "points": 60,
         "points_all": 60,
@@ -4521,7 +4521,7 @@
             "pos": 8
           }
         ],
-        "rank": 29
+        "rank": 28
       },
       {
         "name": "M\u03bc",
@@ -4547,7 +4547,7 @@
             "pos": 8
           }
         ],
-        "rank": 30
+        "rank": 29
       },
       {
         "name": "redal",
@@ -4583,7 +4583,7 @@
             "pos": 13
           }
         ],
-        "rank": 31
+        "rank": 30
       },
       {
         "name": "GuAlexItar",
@@ -4609,7 +4609,7 @@
             "pos": 9
           }
         ],
-        "rank": 32
+        "rank": 31
       },
       {
         "name": "BB_Benji",
@@ -4640,7 +4640,7 @@
             "pos": 12
           }
         ],
-        "rank": 33
+        "rank": 32
       },
       {
         "name": "Murrl",
@@ -4676,7 +4676,7 @@
             "pos": 10
           }
         ],
-        "rank": 34
+        "rank": 33
       },
       {
         "name": "Noxitu",
@@ -4717,7 +4717,7 @@
             "pos": 19
           }
         ],
-        "rank": 35
+        "rank": 34
       },
       {
         "name": "R0nanC",
@@ -4768,7 +4768,7 @@
             "pos": 23
           }
         ],
-        "rank": 36
+        "rank": 35
       },
       {
         "name": "Gimpel",
@@ -4809,38 +4809,7 @@
             "pos": 14
           }
         ],
-        "rank": 37
-      },
-      {
-        "name": "gilgool",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 2,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 17.0,
-        "best_single": 0,
-        "best_pos": 14,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 5",
-            "p": 0,
-            "pos": 14
-          },
-          {
-            "r": "Round 6",
-            "p": 0,
-            "pos": 20
-          }
-        ],
-        "rank": 38
+        "rank": 36
       },
       {
         "name": "PlusMicron",
@@ -4881,7 +4850,7 @@
             "pos": 18
           }
         ],
-        "rank": 39
+        "rank": 37
       },
       {
         "name": "alpa",
@@ -4912,7 +4881,7 @@
             "pos": 16
           }
         ],
-        "rank": 40
+        "rank": 38
       },
       {
         "name": "Six",
@@ -4953,7 +4922,7 @@
             "pos": 19
           }
         ],
-        "rank": 41
+        "rank": 39
       },
       {
         "name": "Socks242",
@@ -4979,7 +4948,7 @@
             "pos": 20
           }
         ],
-        "rank": 42
+        "rank": 40
       },
       {
         "name": "376",
@@ -5005,38 +4974,7 @@
             "pos": 22
           }
         ],
-        "rank": 43
-      },
-      {
-        "name": "RoundNzt",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 2,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 20.5,
-        "best_single": 0,
-        "best_pos": 18,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 5",
-            "p": 0,
-            "pos": 23
-          },
-          {
-            "r": "Round 8",
-            "p": 0,
-            "pos": 18
-          }
-        ],
-        "rank": 44
+        "rank": 41
       },
       {
         "name": "Form",
@@ -5062,7 +5000,7 @@
             "pos": 23
           }
         ],
-        "rank": 45
+        "rank": 42
       },
       {
         "name": "Gnomo",
@@ -5093,7 +5031,7 @@
             "pos": 29
           }
         ],
-        "rank": 46
+        "rank": 43
       },
       {
         "name": "[png]breadcrumb_",
@@ -5119,7 +5057,7 @@
             "pos": 28
           }
         ],
-        "rank": 47
+        "rank": 44
       },
       {
         "name": "OLR94",
@@ -5150,7 +5088,7 @@
             "pos": 25
           }
         ],
-        "rank": 48
+        "rank": 45
       },
       {
         "name": "[CSC] OccasionallyAmazingGamer",
@@ -5181,7 +5119,7 @@
             "pos": 23
           }
         ],
-        "rank": 49
+        "rank": 46
       },
       {
         "name": "John Xina",
@@ -5207,7 +5145,7 @@
             "pos": 32
           }
         ],
-        "rank": 50
+        "rank": 47
       },
       {
         "name": "cookie",
@@ -5233,7 +5171,7 @@
             "pos": 32
           }
         ],
-        "rank": 51
+        "rank": 48
       },
       {
         "name": "del23111107300239392952",
@@ -5259,7 +5197,7 @@
             "pos": 15
           }
         ],
-        "rank": 52
+        "rank": 49
       },
       {
         "name": "Shinikage221",
@@ -5290,7 +5228,7 @@
             "pos": 25
           }
         ],
-        "rank": 53
+        "rank": 50
       },
       {
         "name": "Mokster",
@@ -5321,7 +5259,7 @@
             "pos": 29
           }
         ],
-        "rank": 54
+        "rank": 51
       },
       {
         "name": "Dartho Mas",
@@ -5347,7 +5285,7 @@
             "pos": 27
           }
         ],
-        "rank": 55
+        "rank": 52
       },
       {
         "name": "AAredstone",
@@ -5373,7 +5311,7 @@
             "pos": 27
           }
         ],
-        "rank": 56
+        "rank": 53
       },
       {
         "name": "Heart-TGV",
@@ -5404,7 +5342,7 @@
             "pos": 17
           }
         ],
-        "rank": 57
+        "rank": 54
       },
       {
         "name": "stindt",
@@ -5430,7 +5368,7 @@
             "pos": 17
           }
         ],
-        "rank": 58
+        "rank": 55
       },
       {
         "name": "[Fenn]Lilly Fenn",
@@ -5456,7 +5394,7 @@
             "pos": 22
           }
         ],
-        "rank": 59
+        "rank": 56
       },
       {
         "name": "aizpun",
@@ -5482,7 +5420,7 @@
             "pos": 25
           }
         ],
-        "rank": 60
+        "rank": 57
       },
       {
         "name": "SharKy",
@@ -5513,7 +5451,7 @@
             "pos": 25
           }
         ],
-        "rank": 61
+        "rank": 58
       },
       {
         "name": "Brachaldis",
@@ -5539,7 +5477,7 @@
             "pos": 27
           }
         ],
-        "rank": 62
+        "rank": 59
       },
       {
         "name": "timesprout",
@@ -5570,7 +5508,7 @@
             "pos": 25
           }
         ],
-        "rank": 63
+        "rank": 60
       },
       {
         "name": "Gh0stChicken",
@@ -5596,7 +5534,7 @@
             "pos": 29
           }
         ],
-        "rank": 64
+        "rank": 61
       },
       {
         "name": "koz",
@@ -5622,7 +5560,7 @@
             "pos": 30
           }
         ],
-        "rank": 65
+        "rank": 62
       },
       {
         "name": "imagineaclevernamehere",
@@ -5648,7 +5586,7 @@
             "pos": 31
           }
         ],
-        "rank": 66
+        "rank": 63
       },
       {
         "name": "sailingman",
@@ -5674,7 +5612,7 @@
             "pos": 32
           }
         ],
-        "rank": 67
+        "rank": 64
       },
       {
         "name": "[MBT] MOW BIG T",
@@ -5700,7 +5638,7 @@
             "pos": 33
           }
         ],
-        "rank": 68
+        "rank": 65
       },
       {
         "name": "TwoFace",
@@ -5726,7 +5664,7 @@
             "pos": 34
           }
         ],
-        "rank": 69
+        "rank": 66
       },
       {
         "name": "Sir Pickelsworth",
@@ -5752,7 +5690,7 @@
             "pos": 34
           }
         ],
-        "rank": 70
+        "rank": 67
       },
       {
         "name": "[TTR]DragonShadow84290",
@@ -5778,7 +5716,7 @@
             "pos": 34
           }
         ],
-        "rank": 71
+        "rank": 68
       },
       {
         "name": "dencar85",
@@ -5804,7 +5742,7 @@
             "pos": 11
           }
         ],
-        "rank": 72
+        "rank": 69
       },
       {
         "name": "microways",
@@ -5830,7 +5768,7 @@
             "pos": 14
           }
         ],
-        "rank": 73
+        "rank": 70
       },
       {
         "name": "IronDragon111000",
@@ -5856,7 +5794,7 @@
             "pos": 19
           }
         ],
-        "rank": 74
+        "rank": 71
       },
       {
         "name": "aglahir",
@@ -5882,7 +5820,7 @@
             "pos": 24
           }
         ],
-        "rank": 75
+        "rank": 72
       },
       {
         "name": "rtyyyyb",
@@ -5908,7 +5846,7 @@
             "pos": 25
           }
         ],
-        "rank": 76
+        "rank": 73
       },
       {
         "name": "Kyn",
@@ -5934,7 +5872,7 @@
             "pos": 29
           }
         ],
-        "rank": 77
+        "rank": 74
       },
       {
         "name": "Baked Shark",
@@ -5960,7 +5898,7 @@
             "pos": 29
           }
         ],
-        "rank": 78
+        "rank": 75
       },
       {
         "name": "Neon_King2",
@@ -5986,7 +5924,7 @@
             "pos": 29
           }
         ],
-        "rank": 79
+        "rank": 76
       }
     ],
     "championship": [
@@ -6266,10 +6204,10 @@
         "rank": 5
       },
       {
-        "name": "RoundNZT",
+        "name": "RoundNzt",
         "points": 26,
         "points_all": 26,
-        "rounds": 3,
+        "rounds": 5,
         "wins": 1,
         "podiums": {
           "gold": 1,
@@ -6277,8 +6215,8 @@
           "bronze": 0
         },
         "top5": 3,
-        "avg_pts": 8.7,
-        "avg_pos": 2.3,
+        "avg_pts": 5.2,
+        "avg_pos": 9.6,
         "best_single": 10,
         "best_pos": 1,
         "dropped": 0,
@@ -6294,9 +6232,19 @@
             "pos": 1
           },
           {
+            "r": "Round 5",
+            "p": 0,
+            "pos": 23
+          },
+          {
             "r": "Round 7",
             "p": 7,
             "pos": 4
+          },
+          {
+            "r": "Round 8",
+            "p": 0,
+            "pos": 18
           }
         ],
         "rank": 6
@@ -6718,6 +6666,47 @@
         "rank": 17
       },
       {
+        "name": "brrryy",
+        "points": 8,
+        "points_all": 8,
+        "rounds": 4,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 2.0,
+        "avg_pos": 9.5,
+        "best_single": 3,
+        "best_pos": 8,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 2",
+            "p": 3,
+            "pos": 8
+          },
+          {
+            "r": "Round 3",
+            "p": 2,
+            "pos": 9
+          },
+          {
+            "r": "Round 5",
+            "p": 3,
+            "pos": 8
+          },
+          {
+            "r": "Round 9",
+            "p": 0,
+            "pos": 13
+          }
+        ],
+        "rank": 18
+      },
+      {
         "name": "Matic_D",
         "points": 8,
         "points_all": 8,
@@ -6761,7 +6750,7 @@
             "pos": 22
           }
         ],
-        "rank": 18
+        "rank": 19
       },
       {
         "name": "null/plexus",
@@ -6787,7 +6776,7 @@
             "pos": 5
           }
         ],
-        "rank": 19
+        "rank": 20
       },
       {
         "name": "Hi Im Yolo",
@@ -6826,32 +6815,6 @@
             "r": "Round 8",
             "p": 2,
             "pos": 9
-          }
-        ],
-        "rank": 20
-      },
-      {
-        "name": "Gilgool",
-        "points": 5,
-        "points_all": 5,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 5.0,
-        "avg_pos": 6.0,
-        "best_single": 5,
-        "best_pos": 6,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 1",
-            "p": 5,
-            "pos": 6
           }
         ],
         "rank": 21
@@ -6909,7 +6872,7 @@
         "rank": 23
       },
       {
-        "name": "Brrry",
+        "name": "gilgool",
         "points": 5,
         "points_all": 5,
         "rounds": 3,
@@ -6921,25 +6884,25 @@
         },
         "top5": 0,
         "avg_pts": 1.7,
-        "avg_pos": 10.0,
-        "best_single": 3,
-        "best_pos": 8,
+        "avg_pos": 13.3,
+        "best_single": 5,
+        "best_pos": 6,
         "dropped": 0,
         "history": [
           {
-            "r": "Round 2",
-            "p": 3,
-            "pos": 8
+            "r": "Round 1",
+            "p": 5,
+            "pos": 6
           },
           {
-            "r": "Round 3",
-            "p": 2,
-            "pos": 9
-          },
-          {
-            "r": "Round 9",
+            "r": "Round 5",
             "p": 0,
-            "pos": 13
+            "pos": 14
+          },
+          {
+            "r": "Round 6",
+            "p": 0,
+            "pos": 20
           }
         ],
         "rank": 24
@@ -7033,32 +6996,6 @@
         "rank": 27
       },
       {
-        "name": "AndMe93",
-        "points": 3,
-        "points_all": 3,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 3.0,
-        "avg_pos": 8.0,
-        "best_single": 3,
-        "best_pos": 8,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 5",
-            "p": 3,
-            "pos": 8
-          }
-        ],
-        "rank": 28
-      },
-      {
         "name": "Redstony",
         "points": 3,
         "points_all": 3,
@@ -7082,7 +7019,7 @@
             "pos": 8
           }
         ],
-        "rank": 29
+        "rank": 28
       },
       {
         "name": "M\u03bc",
@@ -7108,7 +7045,7 @@
             "pos": 8
           }
         ],
-        "rank": 30
+        "rank": 29
       },
       {
         "name": "redal",
@@ -7144,7 +7081,7 @@
             "pos": 13
           }
         ],
-        "rank": 31
+        "rank": 30
       },
       {
         "name": "GuAlexItar",
@@ -7170,7 +7107,7 @@
             "pos": 9
           }
         ],
-        "rank": 32
+        "rank": 31
       },
       {
         "name": "BB_Benji",
@@ -7201,7 +7138,7 @@
             "pos": 12
           }
         ],
-        "rank": 33
+        "rank": 32
       },
       {
         "name": "Murrl",
@@ -7237,7 +7174,7 @@
             "pos": 10
           }
         ],
-        "rank": 34
+        "rank": 33
       },
       {
         "name": "Noxitu",
@@ -7278,7 +7215,7 @@
             "pos": 19
           }
         ],
-        "rank": 35
+        "rank": 34
       },
       {
         "name": "R0nanC",
@@ -7329,7 +7266,7 @@
             "pos": 23
           }
         ],
-        "rank": 36
+        "rank": 35
       },
       {
         "name": "Gimpel",
@@ -7370,38 +7307,7 @@
             "pos": 14
           }
         ],
-        "rank": 37
-      },
-      {
-        "name": "gilgool",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 2,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 17.0,
-        "best_single": 0,
-        "best_pos": 14,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 5",
-            "p": 0,
-            "pos": 14
-          },
-          {
-            "r": "Round 6",
-            "p": 0,
-            "pos": 20
-          }
-        ],
-        "rank": 38
+        "rank": 36
       },
       {
         "name": "PlusMicron",
@@ -7442,7 +7348,7 @@
             "pos": 18
           }
         ],
-        "rank": 39
+        "rank": 37
       },
       {
         "name": "alpa",
@@ -7473,7 +7379,7 @@
             "pos": 16
           }
         ],
-        "rank": 40
+        "rank": 38
       },
       {
         "name": "Six",
@@ -7514,7 +7420,7 @@
             "pos": 19
           }
         ],
-        "rank": 41
+        "rank": 39
       },
       {
         "name": "Socks242",
@@ -7540,7 +7446,7 @@
             "pos": 20
           }
         ],
-        "rank": 42
+        "rank": 40
       },
       {
         "name": "376",
@@ -7566,38 +7472,7 @@
             "pos": 22
           }
         ],
-        "rank": 43
-      },
-      {
-        "name": "RoundNzt",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 2,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 20.5,
-        "best_single": 0,
-        "best_pos": 18,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 5",
-            "p": 0,
-            "pos": 23
-          },
-          {
-            "r": "Round 8",
-            "p": 0,
-            "pos": 18
-          }
-        ],
-        "rank": 44
+        "rank": 41
       },
       {
         "name": "Form",
@@ -7623,7 +7498,7 @@
             "pos": 23
           }
         ],
-        "rank": 45
+        "rank": 42
       },
       {
         "name": "Gnomo",
@@ -7654,7 +7529,7 @@
             "pos": 29
           }
         ],
-        "rank": 46
+        "rank": 43
       },
       {
         "name": "[png]breadcrumb_",
@@ -7680,7 +7555,7 @@
             "pos": 28
           }
         ],
-        "rank": 47
+        "rank": 44
       },
       {
         "name": "OLR94",
@@ -7711,7 +7586,7 @@
             "pos": 25
           }
         ],
-        "rank": 48
+        "rank": 45
       },
       {
         "name": "[CSC] OccasionallyAmazingGamer",
@@ -7742,7 +7617,7 @@
             "pos": 23
           }
         ],
-        "rank": 49
+        "rank": 46
       },
       {
         "name": "John Xina",
@@ -7768,7 +7643,7 @@
             "pos": 32
           }
         ],
-        "rank": 50
+        "rank": 47
       },
       {
         "name": "cookie",
@@ -7794,7 +7669,7 @@
             "pos": 32
           }
         ],
-        "rank": 51
+        "rank": 48
       },
       {
         "name": "del23111107300239392952",
@@ -7820,7 +7695,7 @@
             "pos": 15
           }
         ],
-        "rank": 52
+        "rank": 49
       },
       {
         "name": "Shinikage221",
@@ -7851,7 +7726,7 @@
             "pos": 25
           }
         ],
-        "rank": 53
+        "rank": 50
       },
       {
         "name": "Mokster",
@@ -7882,7 +7757,7 @@
             "pos": 29
           }
         ],
-        "rank": 54
+        "rank": 51
       },
       {
         "name": "Dartho Mas",
@@ -7908,7 +7783,7 @@
             "pos": 27
           }
         ],
-        "rank": 55
+        "rank": 52
       },
       {
         "name": "AAredstone",
@@ -7934,7 +7809,7 @@
             "pos": 27
           }
         ],
-        "rank": 56
+        "rank": 53
       },
       {
         "name": "Heart-TGV",
@@ -7965,7 +7840,7 @@
             "pos": 17
           }
         ],
-        "rank": 57
+        "rank": 54
       },
       {
         "name": "stindt",
@@ -7991,7 +7866,7 @@
             "pos": 17
           }
         ],
-        "rank": 58
+        "rank": 55
       },
       {
         "name": "[Fenn]Lilly Fenn",
@@ -8017,7 +7892,7 @@
             "pos": 22
           }
         ],
-        "rank": 59
+        "rank": 56
       },
       {
         "name": "aizpun",
@@ -8043,7 +7918,7 @@
             "pos": 25
           }
         ],
-        "rank": 60
+        "rank": 57
       },
       {
         "name": "SharKy",
@@ -8074,7 +7949,7 @@
             "pos": 25
           }
         ],
-        "rank": 61
+        "rank": 58
       },
       {
         "name": "Brachaldis",
@@ -8100,7 +7975,7 @@
             "pos": 27
           }
         ],
-        "rank": 62
+        "rank": 59
       },
       {
         "name": "timesprout",
@@ -8131,7 +8006,7 @@
             "pos": 25
           }
         ],
-        "rank": 63
+        "rank": 60
       },
       {
         "name": "Gh0stChicken",
@@ -8157,7 +8032,7 @@
             "pos": 29
           }
         ],
-        "rank": 64
+        "rank": 61
       },
       {
         "name": "koz",
@@ -8183,7 +8058,7 @@
             "pos": 30
           }
         ],
-        "rank": 65
+        "rank": 62
       },
       {
         "name": "imagineaclevernamehere",
@@ -8209,7 +8084,7 @@
             "pos": 31
           }
         ],
-        "rank": 66
+        "rank": 63
       },
       {
         "name": "sailingman",
@@ -8235,7 +8110,7 @@
             "pos": 32
           }
         ],
-        "rank": 67
+        "rank": 64
       },
       {
         "name": "[MBT] MOW BIG T",
@@ -8261,7 +8136,7 @@
             "pos": 33
           }
         ],
-        "rank": 68
+        "rank": 65
       },
       {
         "name": "TwoFace",
@@ -8287,7 +8162,7 @@
             "pos": 34
           }
         ],
-        "rank": 69
+        "rank": 66
       },
       {
         "name": "Sir Pickelsworth",
@@ -8313,7 +8188,7 @@
             "pos": 34
           }
         ],
-        "rank": 70
+        "rank": 67
       },
       {
         "name": "[TTR]DragonShadow84290",
@@ -8339,7 +8214,7 @@
             "pos": 34
           }
         ],
-        "rank": 71
+        "rank": 68
       },
       {
         "name": "dencar85",
@@ -8365,7 +8240,7 @@
             "pos": 11
           }
         ],
-        "rank": 72
+        "rank": 69
       },
       {
         "name": "microways",
@@ -8391,7 +8266,7 @@
             "pos": 14
           }
         ],
-        "rank": 73
+        "rank": 70
       },
       {
         "name": "IronDragon111000",
@@ -8417,7 +8292,7 @@
             "pos": 19
           }
         ],
-        "rank": 74
+        "rank": 71
       },
       {
         "name": "aglahir",
@@ -8443,7 +8318,7 @@
             "pos": 24
           }
         ],
-        "rank": 75
+        "rank": 72
       },
       {
         "name": "rtyyyyb",
@@ -8469,7 +8344,7 @@
             "pos": 25
           }
         ],
-        "rank": 76
+        "rank": 73
       },
       {
         "name": "Kyn",
@@ -8495,7 +8370,7 @@
             "pos": 29
           }
         ],
-        "rank": 77
+        "rank": 74
       },
       {
         "name": "Baked Shark",
@@ -8521,7 +8396,7 @@
             "pos": 29
           }
         ],
-        "rank": 78
+        "rank": 75
       },
       {
         "name": "Neon_King2",
@@ -8547,9 +8422,15 @@
             "pos": 29
           }
         ],
-        "rank": 79
+        "rank": 76
       }
-    ]
+    ],
+    "round_strengths": {
+      "Round 5": 91.9,
+      "Round 6": 90.0,
+      "Round 8": 92.0,
+      "Round 9": 89.3
+    }
   },
   "PCDJ Ranking": {
     "type": "trailing",
@@ -8580,117 +8461,117 @@
         "dropped": 5,
         "history": [
           {
-            "r": "Round 1",
+            "r": "Season 2 Round 1",
             "p": 200,
             "pos": 1
           },
           {
-            "r": "Round 5",
+            "r": "Season 2 Round 5",
             "p": 40,
             "pos": 9
           },
           {
-            "r": "Round 7",
+            "r": "Season 2 Round 7",
             "p": 200,
             "pos": 1
           },
           {
-            "r": "Round 9",
+            "r": "Season 2 Round 9",
             "p": 140,
             "pos": 4
           },
           {
-            "r": "Round 11",
+            "r": "Season 2 Round 11",
             "p": 180,
             "pos": 2
           },
           {
-            "r": "Round 2",
+            "r": "Season 2 Round 2",
             "p": 200,
             "pos": 1
           },
           {
-            "r": "Round 4",
+            "r": "Season 2 Round 4",
             "p": 200,
             "pos": 1
           },
           {
-            "r": "Round 6",
+            "r": "Season 2 Round 6",
             "p": 160,
             "pos": 3
           },
           {
-            "r": "Round 8",
+            "r": "Season 2 Round 8",
             "p": 160,
             "pos": 3
           },
           {
-            "r": "Round 10",
+            "r": "Season 2 Round 10",
             "p": 180,
             "pos": 2
           },
           {
-            "r": "Round 13",
+            "r": "Season 2 Round 13",
             "p": 180,
             "pos": 2
           },
           {
-            "r": "Round 14",
+            "r": "Season 2 Round 14",
             "p": 160,
             "pos": 3
           },
           {
-            "r": "Round 15",
+            "r": "Season 2 Round 15",
             "p": 180,
             "pos": 2
           },
           {
-            "r": "Troll 2",
+            "r": "Season 2 Troll 2",
             "p": 100.0,
             "pos": 1
           },
           {
-            "r": "Roulette 2",
+            "r": "Season 2 Roulette 2",
             "p": 100.0,
             "pos": 1
           },
           {
-            "r": "Round 1",
+            "r": "Season 3 Round 1",
             "p": 160,
             "pos": 3
           },
           {
-            "r": "Round 2",
+            "r": "Season 3 Round 2",
             "p": 180,
             "pos": 2
           },
           {
-            "r": "Round 3",
+            "r": "Season 3 Round 3",
             "p": 200,
             "pos": 1
           },
           {
-            "r": "Round 4",
+            "r": "Season 3 Round 4",
             "p": 200,
             "pos": 1
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 200,
             "pos": 1
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 160,
             "pos": 3
           },
           {
-            "r": "Round 7",
+            "r": "Season 3 Round 7",
             "p": 180,
             "pos": 2
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 200,
             "pos": 1
           }
@@ -8716,102 +8597,102 @@
         "dropped": 2,
         "history": [
           {
-            "r": "Round 1",
+            "r": "Season 2 Round 1",
             "p": 100,
             "pos": 6
           },
           {
-            "r": "Round 3",
+            "r": "Season 2 Round 3",
             "p": 120,
             "pos": 5
           },
           {
-            "r": "Round 7",
+            "r": "Season 2 Round 7",
             "p": 140,
             "pos": 4
           },
           {
-            "r": "Round 9",
+            "r": "Season 2 Round 9",
             "p": 160,
             "pos": 3
           },
           {
-            "r": "Round 11",
+            "r": "Season 2 Round 11",
             "p": 200,
             "pos": 1
           },
           {
-            "r": "Round 6",
+            "r": "Season 2 Round 6",
             "p": 180,
             "pos": 2
           },
           {
-            "r": "Round 8",
+            "r": "Season 2 Round 8",
             "p": 200,
             "pos": 1
           },
           {
-            "r": "Round 10",
+            "r": "Season 2 Round 10",
             "p": 160,
             "pos": 3
           },
           {
-            "r": "Round 12",
+            "r": "Season 2 Round 12",
             "p": 180,
             "pos": 2
           },
           {
-            "r": "Round 13",
+            "r": "Season 2 Round 13",
             "p": 160,
             "pos": 3
           },
           {
-            "r": "Round 14",
+            "r": "Season 2 Round 14",
             "p": 180,
             "pos": 2
           },
           {
-            "r": "Round 15",
+            "r": "Season 2 Round 15",
             "p": 140,
             "pos": 4
           },
           {
-            "r": "Roulette 2",
+            "r": "Season 2 Roulette 2",
             "p": 40.0,
             "pos": 7
           },
           {
-            "r": "Round 1",
+            "r": "Season 3 Round 1",
             "p": 200,
             "pos": 1
           },
           {
-            "r": "Round 2",
+            "r": "Season 3 Round 2",
             "p": 80,
             "pos": 7
           },
           {
-            "r": "Round 3",
+            "r": "Season 3 Round 3",
             "p": 160,
             "pos": 3
           },
           {
-            "r": "Round 4",
+            "r": "Season 3 Round 4",
             "p": 120,
             "pos": 5
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 200,
             "pos": 1
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 20,
             "pos": 10
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 100,
             "pos": 6
           }
@@ -8837,97 +8718,97 @@
         "dropped": 1,
         "history": [
           {
-            "r": "Round 1",
+            "r": "Season 2 Round 1",
             "p": 180,
             "pos": 2
           },
           {
-            "r": "Round 3",
+            "r": "Season 2 Round 3",
             "p": 140,
             "pos": 4
           },
           {
-            "r": "Round 5",
+            "r": "Season 2 Round 5",
             "p": 200,
             "pos": 1
           },
           {
-            "r": "Round 7",
+            "r": "Season 2 Round 7",
             "p": 60,
             "pos": 8
           },
           {
-            "r": "Round 9",
+            "r": "Season 2 Round 9",
             "p": 100,
             "pos": 6
           },
           {
-            "r": "Round 11",
+            "r": "Season 2 Round 11",
             "p": 20,
             "pos": 10
           },
           {
-            "r": "Round 2",
+            "r": "Season 2 Round 2",
             "p": 120,
             "pos": 5
           },
           {
-            "r": "Round 4",
+            "r": "Season 2 Round 4",
             "p": 80,
             "pos": 7
           },
           {
-            "r": "Round 6",
+            "r": "Season 2 Round 6",
             "p": 120,
             "pos": 5
           },
           {
-            "r": "Round 8",
+            "r": "Season 2 Round 8",
             "p": 100,
             "pos": 6
           },
           {
-            "r": "Round 13",
+            "r": "Season 2 Round 13",
             "p": 80,
             "pos": 7
           },
           {
-            "r": "Round 15",
+            "r": "Season 2 Round 15",
             "p": 160,
             "pos": 3
           },
           {
-            "r": "Round 2",
+            "r": "Season 3 Round 2",
             "p": 160,
             "pos": 3
           },
           {
-            "r": "Round 4",
+            "r": "Season 3 Round 4",
             "p": 80,
             "pos": 7
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 160,
             "pos": 3
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 180,
             "pos": 2
           },
           {
-            "r": "Round 7",
+            "r": "Season 3 Round 7",
             "p": 200,
             "pos": 1
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 140,
             "pos": 4
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 200,
             "pos": 1
           }
@@ -8953,107 +8834,107 @@
         "dropped": 3,
         "history": [
           {
-            "r": "Round 3",
+            "r": "Season 2 Round 3",
             "p": 160,
             "pos": 3
           },
           {
-            "r": "Round 5",
+            "r": "Season 2 Round 5",
             "p": 180,
             "pos": 2
           },
           {
-            "r": "Round 9",
+            "r": "Season 2 Round 9",
             "p": 180,
             "pos": 2
           },
           {
-            "r": "Round 11",
+            "r": "Season 2 Round 11",
             "p": 160,
             "pos": 3
           },
           {
-            "r": "Round 2",
+            "r": "Season 2 Round 2",
             "p": 60,
             "pos": 8
           },
           {
-            "r": "Round 4",
+            "r": "Season 2 Round 4",
             "p": 140,
             "pos": 4
           },
           {
-            "r": "Round 8",
+            "r": "Season 2 Round 8",
             "p": 120,
             "pos": 5
           },
           {
-            "r": "Round 12",
+            "r": "Season 2 Round 12",
             "p": 140,
             "pos": 4
           },
           {
-            "r": "Round 13",
+            "r": "Season 2 Round 13",
             "p": 140,
             "pos": 4
           },
           {
-            "r": "Round 14",
+            "r": "Season 2 Round 14",
             "p": 20,
             "pos": 10
           },
           {
-            "r": "Round 15",
+            "r": "Season 2 Round 15",
             "p": 20,
             "pos": 10
           },
           {
-            "r": "Troll 2",
+            "r": "Season 2 Troll 2",
             "p": 70.0,
             "pos": 4
           },
           {
-            "r": "Roulette 2",
+            "r": "Season 2 Roulette 2",
             "p": 70.0,
             "pos": 4
           },
           {
-            "r": "Round 2",
+            "r": "Season 3 Round 2",
             "p": 140,
             "pos": 4
           },
           {
-            "r": "Round 3",
+            "r": "Season 3 Round 3",
             "p": 80,
             "pos": 7
           },
           {
-            "r": "Round 4",
+            "r": "Season 3 Round 4",
             "p": 180,
             "pos": 2
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 100,
             "pos": 6
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 20,
             "pos": 10
           },
           {
-            "r": "Round 7",
+            "r": "Season 3 Round 7",
             "p": 160,
             "pos": 3
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 180,
             "pos": 2
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 140,
             "pos": 4
           }
@@ -9079,57 +8960,57 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 3",
+            "r": "Season 2 Round 3",
             "p": 200,
             "pos": 1
           },
           {
-            "r": "Round 9",
+            "r": "Season 2 Round 9",
             "p": 200,
             "pos": 1
           },
           {
-            "r": "Round 2",
+            "r": "Season 2 Round 2",
             "p": 180,
             "pos": 2
           },
           {
-            "r": "Round 4",
+            "r": "Season 2 Round 4",
             "p": 180,
             "pos": 2
           },
           {
-            "r": "Round 6",
+            "r": "Season 2 Round 6",
             "p": 200,
             "pos": 1
           },
           {
-            "r": "Round 10",
+            "r": "Season 2 Round 10",
             "p": 200,
             "pos": 1
           },
           {
-            "r": "Round 12",
+            "r": "Season 2 Round 12",
             "p": 200,
             "pos": 1
           },
           {
-            "r": "Round 13",
+            "r": "Season 2 Round 13",
             "p": 60,
             "pos": 8
           },
           {
-            "r": "Round 15",
+            "r": "Season 2 Round 15",
             "p": 200,
             "pos": 1
           },
           {
-            "r": "Troll 2",
+            "r": "Season 2 Troll 2",
             "p": 90.0,
             "pos": 2
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 180,
             "pos": 2
           }
@@ -9155,77 +9036,77 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 1",
+            "r": "Season 2 Round 1",
             "p": 80,
             "pos": 7
           },
           {
-            "r": "Round 3",
+            "r": "Season 2 Round 3",
             "p": 100,
             "pos": 6
           },
           {
-            "r": "Round 5",
+            "r": "Season 2 Round 5",
             "p": 100,
             "pos": 6
           },
           {
-            "r": "Round 7",
+            "r": "Season 2 Round 7",
             "p": 160,
             "pos": 3
           },
           {
-            "r": "Round 9",
+            "r": "Season 2 Round 9",
             "p": 40,
             "pos": 9
           },
           {
-            "r": "Round 8",
+            "r": "Season 2 Round 8",
             "p": 140,
             "pos": 4
           },
           {
-            "r": "Round 10",
+            "r": "Season 2 Round 10",
             "p": 20,
             "pos": 10
           },
           {
-            "r": "Round 14",
+            "r": "Season 2 Round 14",
             "p": 200,
             "pos": 1
           },
           {
-            "r": "Round 15",
+            "r": "Season 2 Round 15",
             "p": 120,
             "pos": 5
           },
           {
-            "r": "Troll 2",
+            "r": "Season 2 Troll 2",
             "p": 30.0,
             "pos": 8
           },
           {
-            "r": "Roulette 2",
+            "r": "Season 2 Roulette 2",
             "p": 90.0,
             "pos": 2
           },
           {
-            "r": "Round 1",
+            "r": "Season 3 Round 1",
             "p": 120,
             "pos": 5
           },
           {
-            "r": "Round 3",
+            "r": "Season 3 Round 3",
             "p": 180,
             "pos": 2
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 100,
             "pos": 6
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 180,
             "pos": 2
           }
@@ -9251,82 +9132,82 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 1",
+            "r": "Season 2 Round 1",
             "p": 60,
             "pos": 8
           },
           {
-            "r": "Round 7",
+            "r": "Season 2 Round 7",
             "p": 120,
             "pos": 5
           },
           {
-            "r": "Round 9",
+            "r": "Season 2 Round 9",
             "p": 120,
             "pos": 5
           },
           {
-            "r": "Round 4",
+            "r": "Season 2 Round 4",
             "p": 60,
             "pos": 8
           },
           {
-            "r": "Round 6",
+            "r": "Season 2 Round 6",
             "p": 140,
             "pos": 4
           },
           {
-            "r": "Round 8",
+            "r": "Season 2 Round 8",
             "p": 20,
             "pos": 10
           },
           {
-            "r": "Round 10",
+            "r": "Season 2 Round 10",
             "p": 140,
             "pos": 4
           },
           {
-            "r": "Round 12",
+            "r": "Season 2 Round 12",
             "p": 160,
             "pos": 3
           },
           {
-            "r": "Round 14",
+            "r": "Season 2 Round 14",
             "p": 120,
             "pos": 5
           },
           {
-            "r": "Round 15",
+            "r": "Season 2 Round 15",
             "p": 80,
             "pos": 7
           },
           {
-            "r": "Roulette 2",
+            "r": "Season 2 Roulette 2",
             "p": 80.0,
             "pos": 3
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 11
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 11
           },
           {
-            "r": "Round 7",
+            "r": "Season 3 Round 7",
             "p": 80,
             "pos": 7
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 80,
             "pos": 7
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 120,
             "pos": 5
           }
@@ -9352,52 +9233,138 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 7",
+            "r": "Season 2 Round 7",
             "p": 100,
             "pos": 6
           },
           {
-            "r": "Round 4",
+            "r": "Season 2 Round 4",
             "p": 160,
             "pos": 3
           },
           {
-            "r": "Round 8",
+            "r": "Season 2 Round 8",
             "p": 180,
             "pos": 2
           },
           {
-            "r": "Round 10",
+            "r": "Season 2 Round 10",
             "p": 100,
             "pos": 6
           },
           {
-            "r": "Troll 2",
+            "r": "Season 2 Troll 2",
             "p": 40.0,
             "pos": 7
           },
           {
-            "r": "Round 2",
+            "r": "Season 3 Round 2",
             "p": 120,
             "pos": 5
           },
           {
-            "r": "Round 3",
+            "r": "Season 3 Round 3",
             "p": 60,
             "pos": 8
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 140,
             "pos": 4
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 160,
             "pos": 3
           }
         ],
         "rank": 8
+      },
+      {
+        "name": "ping",
+        "points": 890.0,
+        "points_all": 890.0,
+        "rounds": 13,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 4,
+        "avg_pts": 68.5,
+        "avg_pos": 7.5,
+        "best_single": 140,
+        "best_pos": 4,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 2 Round 5",
+            "p": 140,
+            "pos": 4
+          },
+          {
+            "r": "Season 2 Round 7",
+            "p": 40,
+            "pos": 9
+          },
+          {
+            "r": "Season 2 Round 9",
+            "p": 60,
+            "pos": 8
+          },
+          {
+            "r": "Season 2 Round 6",
+            "p": 20,
+            "pos": 10
+          },
+          {
+            "r": "Season 2 Round 12",
+            "p": 120,
+            "pos": 5
+          },
+          {
+            "r": "Season 2 Round 14",
+            "p": 80,
+            "pos": 7
+          },
+          {
+            "r": "Season 2 Round 15",
+            "p": 100,
+            "pos": 6
+          },
+          {
+            "r": "Season 2 Troll 2",
+            "p": 10.0,
+            "pos": 10
+          },
+          {
+            "r": "Season 2 Roulette 2",
+            "p": 60.0,
+            "pos": 5
+          },
+          {
+            "r": "Season 3 Round 5",
+            "p": 80,
+            "pos": 7
+          },
+          {
+            "r": "Season 3 Round 6",
+            "p": 0,
+            "pos": 14
+          },
+          {
+            "r": "Season 3 Round 8",
+            "p": 120,
+            "pos": 5
+          },
+          {
+            "r": "Season 3 Round 9",
+            "p": 60,
+            "pos": 8
+          }
+        ],
+        "rank": 9
       },
       {
         "name": "An Actual g00se",
@@ -9418,104 +9385,38 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 1",
+            "r": "Season 2 Round 1",
             "p": 160,
             "pos": 3
           },
           {
-            "r": "Round 2",
+            "r": "Season 2 Round 2",
             "p": 100,
             "pos": 6
           },
           {
-            "r": "Round 10",
+            "r": "Season 2 Round 10",
             "p": 120,
             "pos": 5
           },
           {
-            "r": "Round 1",
+            "r": "Season 3 Round 1",
             "p": 140,
             "pos": 4
           },
           {
-            "r": "Round 3",
+            "r": "Season 3 Round 3",
             "p": 120,
-            "pos": 5
-          }
-        ],
-        "rank": 9
-      },
-      {
-        "name": "Ping",
-        "points": 630.0,
-        "points_all": 630.0,
-        "rounds": 9,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 3,
-        "avg_pts": 70.0,
-        "avg_pos": 7.1,
-        "best_single": 140,
-        "best_pos": 4,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 5",
-            "p": 140,
-            "pos": 4
-          },
-          {
-            "r": "Round 7",
-            "p": 40,
-            "pos": 9
-          },
-          {
-            "r": "Round 9",
-            "p": 60,
-            "pos": 8
-          },
-          {
-            "r": "Round 6",
-            "p": 20,
-            "pos": 10
-          },
-          {
-            "r": "Round 12",
-            "p": 120,
-            "pos": 5
-          },
-          {
-            "r": "Round 14",
-            "p": 80,
-            "pos": 7
-          },
-          {
-            "r": "Round 15",
-            "p": 100,
-            "pos": 6
-          },
-          {
-            "r": "Troll 2",
-            "p": 10.0,
-            "pos": 10
-          },
-          {
-            "r": "Roulette 2",
-            "p": 60.0,
             "pos": 5
           }
         ],
         "rank": 10
       },
       {
-        "name": "RoundNZT",
+        "name": "RoundNzt",
         "points": 520,
         "points_all": 520,
-        "rounds": 3,
+        "rounds": 5,
         "wins": 1,
         "podiums": {
           "gold": 1,
@@ -9523,26 +9424,36 @@
           "bronze": 0
         },
         "top5": 3,
-        "avg_pts": 173.3,
-        "avg_pos": 2.3,
+        "avg_pts": 104.0,
+        "avg_pos": 9.6,
         "best_single": 200,
         "best_pos": 1,
         "dropped": 0,
         "history": [
           {
-            "r": "Round 1",
+            "r": "Season 3 Round 1",
             "p": 180,
             "pos": 2
           },
           {
-            "r": "Round 2",
+            "r": "Season 3 Round 2",
             "p": 200,
             "pos": 1
           },
           {
-            "r": "Round 7",
+            "r": "Season 3 Round 5",
+            "p": 0,
+            "pos": 23
+          },
+          {
+            "r": "Season 3 Round 7",
             "p": 140,
             "pos": 4
+          },
+          {
+            "r": "Season 3 Round 8",
+            "p": 0,
+            "pos": 18
           }
         ],
         "rank": 11
@@ -9566,47 +9477,47 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 7",
+            "r": "Season 2 Round 7",
             "p": 180,
             "pos": 2
           },
           {
-            "r": "Round 4",
+            "r": "Season 2 Round 4",
             "p": 40,
             "pos": 9
           },
           {
-            "r": "Round 13",
+            "r": "Season 2 Round 13",
             "p": 20,
             "pos": 10
           },
           {
-            "r": "Round 14",
+            "r": "Season 2 Round 14",
             "p": 100,
             "pos": 6
           },
           {
-            "r": "Round 15",
+            "r": "Season 2 Round 15",
             "p": 40,
             "pos": 9
           },
           {
-            "r": "Roulette 2",
+            "r": "Season 2 Roulette 2",
             "p": 50.0,
             "pos": 6
           },
           {
-            "r": "Round 1",
+            "r": "Season 3 Round 1",
             "p": 60,
             "pos": 8
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 12
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 13
           }
@@ -9632,27 +9543,27 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 1",
+            "r": "Season 2 Round 1",
             "p": 120,
             "pos": 5
           },
           {
-            "r": "Round 3",
+            "r": "Season 2 Round 3",
             "p": 60,
             "pos": 8
           },
           {
-            "r": "Round 10",
+            "r": "Season 2 Round 10",
             "p": 60,
             "pos": 8
           },
           {
-            "r": "Round 12",
+            "r": "Season 2 Round 12",
             "p": 100,
             "pos": 6
           },
           {
-            "r": "Round 13",
+            "r": "Season 2 Round 13",
             "p": 120,
             "pos": 5
           }
@@ -9678,37 +9589,37 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 1",
+            "r": "Season 2 Round 1",
             "p": 140,
             "pos": 4
           },
           {
-            "r": "Round 3",
+            "r": "Season 2 Round 3",
             "p": 40,
             "pos": 9
           },
           {
-            "r": "Round 5",
+            "r": "Season 2 Round 5",
             "p": 20,
             "pos": 10
           },
           {
-            "r": "Round 9",
+            "r": "Season 2 Round 9",
             "p": 20,
             "pos": 10
           },
           {
-            "r": "Round 4",
+            "r": "Season 2 Round 4",
             "p": 100,
             "pos": 6
           },
           {
-            "r": "Round 10",
+            "r": "Season 2 Round 10",
             "p": 80,
             "pos": 7
           },
           {
-            "r": "Round 15",
+            "r": "Season 2 Round 15",
             "p": 60,
             "pos": 8
           }
@@ -9734,42 +9645,42 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 4",
+            "r": "Season 2 Round 4",
             "p": 120,
             "pos": 5
           },
           {
-            "r": "Round 6",
+            "r": "Season 2 Round 6",
             "p": 80,
             "pos": 7
           },
           {
-            "r": "Round 8",
+            "r": "Season 2 Round 8",
             "p": 80,
             "pos": 7
           },
           {
-            "r": "Round 12",
+            "r": "Season 2 Round 12",
             "p": 80,
             "pos": 7
           },
           {
-            "r": "Troll 2",
+            "r": "Season 2 Troll 2",
             "p": 50.0,
             "pos": 6
           },
           {
-            "r": "Round 2",
+            "r": "Season 3 Round 2",
             "p": 20,
             "pos": 10
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 13
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 20,
             "pos": 10
           }
@@ -9795,27 +9706,27 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 3",
+            "r": "Season 2 Round 3",
             "p": 180,
             "pos": 2
           },
           {
-            "r": "Round 9",
+            "r": "Season 2 Round 9",
             "p": 80,
             "pos": 7
           },
           {
-            "r": "Round 14",
+            "r": "Season 2 Round 14",
             "p": 60,
             "pos": 8
           },
           {
-            "r": "Troll 2",
+            "r": "Season 2 Troll 2",
             "p": 60.0,
             "pos": 5
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 25
           }
@@ -9841,17 +9752,17 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 3",
+            "r": "Season 2 Round 3",
             "p": 80,
             "pos": 7
           },
           {
-            "r": "Round 5",
+            "r": "Season 2 Round 5",
             "p": 120,
             "pos": 5
           },
           {
-            "r": "Round 11",
+            "r": "Season 2 Round 11",
             "p": 140,
             "pos": 4
           }
@@ -9877,17 +9788,17 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 2",
+            "r": "Season 2 Round 2",
             "p": 80,
             "pos": 7
           },
           {
-            "r": "Round 13",
+            "r": "Season 2 Round 13",
             "p": 100,
             "pos": 6
           },
           {
-            "r": "Round 14",
+            "r": "Season 2 Round 14",
             "p": 140,
             "pos": 4
           }
@@ -9913,37 +9824,37 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 11",
+            "r": "Season 2 Round 11",
             "p": 100,
             "pos": 6
           },
           {
-            "r": "Round 6",
+            "r": "Season 2 Round 6",
             "p": 40,
             "pos": 9
           },
           {
-            "r": "Round 12",
+            "r": "Season 2 Round 12",
             "p": 20,
             "pos": 10
           },
           {
-            "r": "Roulette 2",
+            "r": "Season 2 Roulette 2",
             "p": 30.0,
             "pos": 8
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 16
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 80,
             "pos": 7
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 24
           }
@@ -9969,58 +9880,17 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 3",
+            "r": "Season 3 Round 3",
             "p": 140,
             "pos": 4
           },
           {
-            "r": "Round 7",
+            "r": "Season 3 Round 7",
             "p": 120,
             "pos": 5
           }
         ],
         "rank": 20
-      },
-      {
-        "name": "ping",
-        "points": 260,
-        "points_all": 260,
-        "rounds": 4,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 1,
-        "avg_pts": 65.0,
-        "avg_pos": 8.5,
-        "best_single": 120,
-        "best_pos": 5,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 5",
-            "p": 80,
-            "pos": 7
-          },
-          {
-            "r": "Round 6",
-            "p": 0,
-            "pos": 14
-          },
-          {
-            "r": "Round 8",
-            "p": 120,
-            "pos": 5
-          },
-          {
-            "r": "Round 9",
-            "p": 60,
-            "pos": 8
-          }
-        ],
-        "rank": 21
       },
       {
         "name": "Hi Im Yolo",
@@ -10041,37 +9911,37 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 11",
+            "r": "Season 2 Round 11",
             "p": 60,
             "pos": 8
           },
           {
-            "r": "Round 8",
+            "r": "Season 2 Round 8",
             "p": 60,
             "pos": 8
           },
           {
-            "r": "Round 2",
+            "r": "Season 3 Round 2",
             "p": 40,
             "pos": 9
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 30
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 40,
             "pos": 9
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 40,
             "pos": 9
           }
         ],
-        "rank": 22
+        "rank": 21
       },
       {
         "name": "R0nanC",
@@ -10092,47 +9962,47 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 1",
+            "r": "Season 2 Round 1",
             "p": 20,
             "pos": 10
           },
           {
-            "r": "Round 5",
+            "r": "Season 2 Round 5",
             "p": 160,
             "pos": 3
           },
           {
-            "r": "Round 4",
+            "r": "Season 3 Round 4",
             "p": 20,
             "pos": 10
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 18
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 22
           },
           {
-            "r": "Round 7",
+            "r": "Season 3 Round 7",
             "p": 20,
             "pos": 10
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 21
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 23
           }
         ],
-        "rank": 23
+        "rank": 22
       },
       {
         "name": "Warsnac",
@@ -10153,27 +10023,27 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 3",
+            "r": "Season 3 Round 3",
             "p": 100,
             "pos": 6
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 20,
             "pos": 10
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 13
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 100,
             "pos": 6
           }
         ],
-        "rank": 24
+        "rank": 23
       },
       {
         "name": "Kernkob",
@@ -10194,12 +10064,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 13",
+            "r": "Season 2 Round 13",
             "p": 200,
             "pos": 1
           }
         ],
-        "rank": 25
+        "rank": 24
       },
       {
         "name": "Clowny",
@@ -10220,53 +10090,22 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 13",
+            "r": "Season 2 Round 13",
             "p": 40,
             "pos": 9
           },
           {
-            "r": "Troll 2",
+            "r": "Season 2 Troll 2",
             "p": 80.0,
             "pos": 3
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 80,
             "pos": 7
           }
         ],
-        "rank": 26
-      },
-      {
-        "name": "Gilgool",
-        "points": 200,
-        "points_all": 200,
-        "rounds": 2,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 100.0,
-        "avg_pos": 6.0,
-        "best_single": 100,
-        "best_pos": 6,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 6",
-            "p": 100,
-            "pos": 6
-          },
-          {
-            "r": "Round 1",
-            "p": 100,
-            "pos": 6
-          }
-        ],
-        "rank": 27
+        "rank": 25
       },
       {
         "name": "LKat",
@@ -10287,22 +10126,63 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 4",
+            "r": "Season 3 Round 4",
             "p": 60,
             "pos": 8
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 23
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 140,
             "pos": 4
           }
         ],
-        "rank": 28
+        "rank": 26
+      },
+      {
+        "name": "gilgool",
+        "points": 200,
+        "points_all": 200,
+        "rounds": 4,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 50.0,
+        "avg_pos": 11.5,
+        "best_single": 100,
+        "best_pos": 6,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 2 Round 6",
+            "p": 100,
+            "pos": 6
+          },
+          {
+            "r": "Season 3 Round 1",
+            "p": 100,
+            "pos": 6
+          },
+          {
+            "r": "Season 3 Round 5",
+            "p": 0,
+            "pos": 14
+          },
+          {
+            "r": "Season 3 Round 6",
+            "p": 0,
+            "pos": 20
+          }
+        ],
+        "rank": 27
       },
       {
         "name": "Matic_D",
@@ -10323,37 +10203,37 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 10",
+            "r": "Season 2 Round 10",
             "p": 40,
             "pos": 9
           },
           {
-            "r": "Round 4",
+            "r": "Season 3 Round 4",
             "p": 100,
             "pos": 6
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 18
           },
           {
-            "r": "Round 7",
+            "r": "Season 3 Round 7",
             "p": 60,
             "pos": 8
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 20
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 22
           }
         ],
-        "rank": 29
+        "rank": 28
       },
       {
         "name": "icRS",
@@ -10374,37 +10254,37 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 1",
+            "r": "Season 3 Round 1",
             "p": 40,
             "pos": 9
           },
           {
-            "r": "Round 4",
+            "r": "Season 3 Round 4",
             "p": 40,
             "pos": 9
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 120,
             "pos": 5
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 12
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 11
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 16
           }
         ],
-        "rank": 30
+        "rank": 29
       },
       {
         "name": "Victor",
@@ -10425,32 +10305,32 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 1",
+            "r": "Season 3 Round 1",
             "p": 20,
             "pos": 10
           },
           {
-            "r": "Round 4",
+            "r": "Season 3 Round 4",
             "p": 160,
             "pos": 3
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 21
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 16
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 15
           }
         ],
-        "rank": 31
+        "rank": 30
       },
       {
         "name": "MackCheesy",
@@ -10471,12 +10351,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 2",
+            "r": "Season 2 Round 2",
             "p": 160,
             "pos": 3
           }
         ],
-        "rank": 32
+        "rank": 31
       },
       {
         "name": "Sandals",
@@ -10497,9 +10377,50 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 160,
             "pos": 3
+          }
+        ],
+        "rank": 32
+      },
+      {
+        "name": "brrryy",
+        "points": 160,
+        "points_all": 160,
+        "rounds": 4,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 40.0,
+        "avg_pos": 9.5,
+        "best_single": 60,
+        "best_pos": 8,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 3 Round 2",
+            "p": 60,
+            "pos": 8
+          },
+          {
+            "r": "Season 3 Round 3",
+            "p": 40,
+            "pos": 9
+          },
+          {
+            "r": "Season 3 Round 5",
+            "p": 60,
+            "pos": 8
+          },
+          {
+            "r": "Season 3 Round 9",
+            "p": 0,
+            "pos": 13
           }
         ],
         "rank": 33
@@ -10523,7 +10444,7 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 2",
+            "r": "Season 2 Round 2",
             "p": 140,
             "pos": 4
           }
@@ -10549,12 +10470,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 14",
+            "r": "Season 2 Round 14",
             "p": 40,
             "pos": 9
           },
           {
-            "r": "Round 7",
+            "r": "Season 3 Round 7",
             "p": 100,
             "pos": 6
           }
@@ -10580,7 +10501,7 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 11",
+            "r": "Season 2 Round 11",
             "p": 120,
             "pos": 5
           }
@@ -10606,7 +10527,7 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 120,
             "pos": 5
           }
@@ -10632,48 +10553,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 2",
+            "r": "Season 3 Round 2",
             "p": 100,
             "pos": 6
           }
         ],
         "rank": 38
-      },
-      {
-        "name": "Brrry",
-        "points": 100,
-        "points_all": 100,
-        "rounds": 3,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 33.3,
-        "avg_pos": 10.0,
-        "best_single": 60,
-        "best_pos": 8,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 2",
-            "p": 60,
-            "pos": 8
-          },
-          {
-            "r": "Round 3",
-            "p": 40,
-            "pos": 9
-          },
-          {
-            "r": "Round 9",
-            "p": 0,
-            "pos": 13
-          }
-        ],
-        "rank": 39
       },
       {
         "name": "TheBamboozler",
@@ -10694,12 +10579,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 2 Round 5",
             "p": 80,
             "pos": 7
           }
         ],
-        "rank": 40
+        "rank": 39
       },
       {
         "name": "TheRockingSheep",
@@ -10720,12 +10605,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 7",
+            "r": "Season 2 Round 7",
             "p": 80,
             "pos": 7
           }
         ],
-        "rank": 41
+        "rank": 40
       },
       {
         "name": "Naomi",
@@ -10746,12 +10631,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 11",
+            "r": "Season 2 Round 11",
             "p": 80,
             "pos": 7
           }
         ],
-        "rank": 42
+        "rank": 41
       },
       {
         "name": "B_es",
@@ -10772,12 +10657,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 1",
+            "r": "Season 3 Round 1",
             "p": 80,
             "pos": 7
           }
         ],
-        "rank": 43
+        "rank": 42
       },
       {
         "name": "DeeDeeNaNaNa",
@@ -10798,17 +10683,17 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 3",
+            "r": "Season 2 Round 3",
             "p": 20,
             "pos": 10
           },
           {
-            "r": "Round 12",
+            "r": "Season 2 Round 12",
             "p": 60,
             "pos": 8
           }
         ],
-        "rank": 44
+        "rank": 43
       },
       {
         "name": "Bram",
@@ -10829,38 +10714,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 6",
+            "r": "Season 2 Round 6",
             "p": 60,
             "pos": 8
           }
         ],
-        "rank": 45
-      },
-      {
-        "name": "AndMe93",
-        "points": 60,
-        "points_all": 60,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 60.0,
-        "avg_pos": 8.0,
-        "best_single": 60,
-        "best_pos": 8,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 5",
-            "p": 60,
-            "pos": 8
-          }
-        ],
-        "rank": 46
+        "rank": 44
       },
       {
         "name": "Redstony",
@@ -10881,12 +10740,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 60,
             "pos": 8
           }
         ],
-        "rank": 47
+        "rank": 45
       },
       {
         "name": "M\u03bc",
@@ -10907,12 +10766,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 60,
             "pos": 8
           }
         ],
-        "rank": 48
+        "rank": 46
       },
       {
         "name": "Heart-TGV",
@@ -10933,22 +10792,22 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 2 Round 5",
             "p": 60,
             "pos": 8
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 12
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 17
           }
         ],
-        "rank": 49
+        "rank": 47
       },
       {
         "name": "Mr. Hubhub",
@@ -10969,12 +10828,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 1",
+            "r": "Season 2 Round 1",
             "p": 40,
             "pos": 9
           }
         ],
-        "rank": 50
+        "rank": 48
       },
       {
         "name": "Wheelie",
@@ -10995,12 +10854,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 11",
+            "r": "Season 2 Round 11",
             "p": 40,
             "pos": 9
           }
         ],
-        "rank": 51
+        "rank": 49
       },
       {
         "name": "Lynhardt",
@@ -11021,12 +10880,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 2",
+            "r": "Season 2 Round 2",
             "p": 40,
             "pos": 9
           }
         ],
-        "rank": 52
+        "rank": 50
       },
       {
         "name": "Alpa",
@@ -11047,12 +10906,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 2 Round 8",
             "p": 40,
             "pos": 9
           }
         ],
-        "rank": 53
+        "rank": 51
       },
       {
         "name": "Macromelon",
@@ -11073,12 +10932,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 12",
+            "r": "Season 2 Round 12",
             "p": 40,
             "pos": 9
           }
         ],
-        "rank": 54
+        "rank": 52
       },
       {
         "name": "GuAlexItar",
@@ -11099,12 +10958,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 40,
             "pos": 9
           }
         ],
-        "rank": 55
+        "rank": 53
       },
       {
         "name": "Shadynook",
@@ -11125,17 +10984,17 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 4",
+            "r": "Season 2 Round 4",
             "p": 20,
             "pos": 10
           },
           {
-            "r": "Troll 2",
+            "r": "Season 2 Troll 2",
             "p": 20.0,
             "pos": 9
           }
         ],
-        "rank": 56
+        "rank": 54
       },
       {
         "name": "BB_Benji",
@@ -11156,17 +11015,17 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 7",
+            "r": "Season 3 Round 7",
             "p": 40,
             "pos": 9
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 12
           }
         ],
-        "rank": 57
+        "rank": 55
       },
       {
         "name": "Noxitu",
@@ -11187,27 +11046,27 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 40,
             "pos": 9
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 24
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 15
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 19
           }
         ],
-        "rank": 58
+        "rank": 56
       },
       {
         "name": "jofk2415",
@@ -11228,12 +11087,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 7",
+            "r": "Season 2 Round 7",
             "p": 20,
             "pos": 10
           }
         ],
-        "rank": 59
+        "rank": 57
       },
       {
         "name": "Bank Waffles",
@@ -11254,12 +11113,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 2",
+            "r": "Season 2 Round 2",
             "p": 20,
             "pos": 10
           }
         ],
-        "rank": 60
+        "rank": 58
       },
       {
         "name": "Cookie",
@@ -11280,12 +11139,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Roulette 2",
+            "r": "Season 2 Roulette 2",
             "p": 20.0,
             "pos": 9
           }
         ],
-        "rank": 61
+        "rank": 59
       },
       {
         "name": "Gimpel",
@@ -11306,27 +11165,27 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 3",
+            "r": "Season 3 Round 3",
             "p": 20,
             "pos": 10
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 27
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 17
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 14
           }
         ],
-        "rank": 62
+        "rank": 60
       },
       {
         "name": "SGR",
@@ -11347,43 +11206,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Roulette 2",
+            "r": "Season 2 Roulette 2",
             "p": 10.0,
             "pos": 10
           }
         ],
-        "rank": 63
-      },
-      {
-        "name": "gilgool",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 2,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 17.0,
-        "best_single": 0,
-        "best_pos": 14,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 5",
-            "p": 0,
-            "pos": 14
-          },
-          {
-            "r": "Round 6",
-            "p": 0,
-            "pos": 20
-          }
-        ],
-        "rank": 64
+        "rank": 61
       },
       {
         "name": "PlusMicron",
@@ -11404,27 +11232,27 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 15
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 21
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 23
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 18
           }
         ],
-        "rank": 65
+        "rank": 62
       },
       {
         "name": "alpa",
@@ -11445,17 +11273,17 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 17
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 16
           }
         ],
-        "rank": 66
+        "rank": 63
       },
       {
         "name": "Six",
@@ -11476,27 +11304,27 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 19
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 19
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 19
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 19
           }
         ],
-        "rank": 67
+        "rank": 64
       },
       {
         "name": "Socks242",
@@ -11517,12 +11345,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 20
           }
         ],
-        "rank": 68
+        "rank": 65
       },
       {
         "name": "376",
@@ -11543,43 +11371,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 22
           }
         ],
-        "rank": 69
-      },
-      {
-        "name": "RoundNzt",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 2,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 20.5,
-        "best_single": 0,
-        "best_pos": 18,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 5",
-            "p": 0,
-            "pos": 23
-          },
-          {
-            "r": "Round 8",
-            "p": 0,
-            "pos": 18
-          }
-        ],
-        "rank": 70
+        "rank": 66
       },
       {
         "name": "Form",
@@ -11600,12 +11397,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 23
           }
         ],
-        "rank": 71
+        "rank": 67
       },
       {
         "name": "Gnomo",
@@ -11626,17 +11423,17 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 26
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 29
           }
         ],
-        "rank": 72
+        "rank": 68
       },
       {
         "name": "[png]breadcrumb_",
@@ -11657,12 +11454,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 28
           }
         ],
-        "rank": 73
+        "rank": 69
       },
       {
         "name": "OLR94",
@@ -11683,17 +11480,17 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 29
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 25
           }
         ],
-        "rank": 74
+        "rank": 70
       },
       {
         "name": "[CSC] OccasionallyAmazingGamer",
@@ -11714,17 +11511,17 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 30
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 23
           }
         ],
-        "rank": 75
+        "rank": 71
       },
       {
         "name": "John Xina",
@@ -11745,12 +11542,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 32
           }
         ],
-        "rank": 76
+        "rank": 72
       },
       {
         "name": "cookie",
@@ -11771,12 +11568,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 32
           }
         ],
-        "rank": 77
+        "rank": 73
       },
       {
         "name": "del23111107300239392952",
@@ -11797,12 +11594,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 15
           }
         ],
-        "rank": 78
+        "rank": 74
       },
       {
         "name": "Shinikage221",
@@ -11823,17 +11620,17 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 26
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 25
           }
         ],
-        "rank": 79
+        "rank": 75
       },
       {
         "name": "Mokster",
@@ -11854,17 +11651,17 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 27
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 29
           }
         ],
-        "rank": 80
+        "rank": 76
       },
       {
         "name": "Dartho Mas",
@@ -11885,12 +11682,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 27
           }
         ],
-        "rank": 81
+        "rank": 77
       },
       {
         "name": "AAredstone",
@@ -11911,12 +11708,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 27
           }
         ],
-        "rank": 82
+        "rank": 78
       },
       {
         "name": "stindt",
@@ -11937,12 +11734,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 17
           }
         ],
-        "rank": 83
+        "rank": 79
       },
       {
         "name": "[Fenn]Lilly Fenn",
@@ -11963,12 +11760,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 22
           }
         ],
-        "rank": 84
+        "rank": 80
       },
       {
         "name": "aizpun",
@@ -11989,12 +11786,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 25
           }
         ],
-        "rank": 85
+        "rank": 81
       },
       {
         "name": "SharKy",
@@ -12015,17 +11812,17 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 26
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 25
           }
         ],
-        "rank": 86
+        "rank": 82
       },
       {
         "name": "Brachaldis",
@@ -12046,12 +11843,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 27
           }
         ],
-        "rank": 87
+        "rank": 83
       },
       {
         "name": "timesprout",
@@ -12072,17 +11869,17 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 28
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 25
           }
         ],
-        "rank": 88
+        "rank": 84
       },
       {
         "name": "Gh0stChicken",
@@ -12103,12 +11900,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 29
           }
         ],
-        "rank": 89
+        "rank": 85
       },
       {
         "name": "koz",
@@ -12129,12 +11926,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 30
           }
         ],
-        "rank": 90
+        "rank": 86
       },
       {
         "name": "imagineaclevernamehere",
@@ -12155,12 +11952,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 31
           }
         ],
-        "rank": 91
+        "rank": 87
       },
       {
         "name": "sailingman",
@@ -12181,12 +11978,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 32
           }
         ],
-        "rank": 92
+        "rank": 88
       },
       {
         "name": "[MBT] MOW BIG T",
@@ -12207,12 +12004,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 33
           }
         ],
-        "rank": 93
+        "rank": 89
       },
       {
         "name": "TwoFace",
@@ -12233,12 +12030,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 34
           }
         ],
-        "rank": 94
+        "rank": 90
       },
       {
         "name": "Sir Pickelsworth",
@@ -12259,12 +12056,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 34
           }
         ],
-        "rank": 95
+        "rank": 91
       },
       {
         "name": "[TTR]DragonShadow84290",
@@ -12285,12 +12082,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 34
           }
         ],
-        "rank": 96
+        "rank": 92
       },
       {
         "name": "dencar85",
@@ -12311,12 +12108,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 11
           }
         ],
-        "rank": 97
+        "rank": 93
       },
       {
         "name": "microways",
@@ -12337,12 +12134,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 14
           }
         ],
-        "rank": 98
+        "rank": 94
       },
       {
         "name": "IronDragon111000",
@@ -12363,12 +12160,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 19
           }
         ],
-        "rank": 99
+        "rank": 95
       },
       {
         "name": "aglahir",
@@ -12389,12 +12186,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 24
           }
         ],
-        "rank": 100
+        "rank": 96
       },
       {
         "name": "Kyn",
@@ -12415,12 +12212,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 29
           }
         ],
-        "rank": 101
+        "rank": 97
       },
       {
         "name": "Baked Shark",
@@ -12441,12 +12238,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 29
           }
         ],
-        "rank": 102
+        "rank": 98
       },
       {
         "name": "Neon_King2",
@@ -12467,12 +12264,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 29
           }
         ],
-        "rank": 103
+        "rank": 99
       }
     ],
     "championship": [
@@ -12495,107 +12292,107 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 1",
+            "r": "Season 2 Round 1",
             "p": 10,
             "pos": 1
           },
           {
-            "r": "Round 5",
+            "r": "Season 2 Round 5",
             "p": 2,
             "pos": 9
           },
           {
-            "r": "Round 7",
+            "r": "Season 2 Round 7",
             "p": 10,
             "pos": 1
           },
           {
-            "r": "Round 9",
+            "r": "Season 2 Round 9",
             "p": 7,
             "pos": 4
           },
           {
-            "r": "Round 11",
+            "r": "Season 2 Round 11",
             "p": 9,
             "pos": 2
           },
           {
-            "r": "Round 2",
+            "r": "Season 2 Round 2",
             "p": 10,
             "pos": 1
           },
           {
-            "r": "Round 4",
+            "r": "Season 2 Round 4",
             "p": 10,
             "pos": 1
           },
           {
-            "r": "Round 6",
+            "r": "Season 2 Round 6",
             "p": 8,
             "pos": 3
           },
           {
-            "r": "Round 8",
+            "r": "Season 2 Round 8",
             "p": 8,
             "pos": 3
           },
           {
-            "r": "Round 10",
+            "r": "Season 2 Round 10",
             "p": 9,
             "pos": 2
           },
           {
-            "r": "Round 13",
+            "r": "Season 2 Round 13",
             "p": 9,
             "pos": 2
           },
           {
-            "r": "Round 14",
+            "r": "Season 2 Round 14",
             "p": 8,
             "pos": 3
           },
           {
-            "r": "Round 15",
+            "r": "Season 2 Round 15",
             "p": 9,
             "pos": 2
           },
           {
-            "r": "Round 1",
+            "r": "Season 3 Round 1",
             "p": 8,
             "pos": 3
           },
           {
-            "r": "Round 2",
+            "r": "Season 3 Round 2",
             "p": 9,
             "pos": 2
           },
           {
-            "r": "Round 3",
+            "r": "Season 3 Round 3",
             "p": 10,
             "pos": 1
           },
           {
-            "r": "Round 4",
+            "r": "Season 3 Round 4",
             "p": 10,
             "pos": 1
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 10,
             "pos": 1
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 8,
             "pos": 3
           },
           {
-            "r": "Round 7",
+            "r": "Season 3 Round 7",
             "p": 9,
             "pos": 2
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 10,
             "pos": 1
           }
@@ -12621,97 +12418,97 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 1",
+            "r": "Season 2 Round 1",
             "p": 5,
             "pos": 6
           },
           {
-            "r": "Round 3",
+            "r": "Season 2 Round 3",
             "p": 6,
             "pos": 5
           },
           {
-            "r": "Round 7",
+            "r": "Season 2 Round 7",
             "p": 7,
             "pos": 4
           },
           {
-            "r": "Round 9",
+            "r": "Season 2 Round 9",
             "p": 8,
             "pos": 3
           },
           {
-            "r": "Round 11",
+            "r": "Season 2 Round 11",
             "p": 10,
             "pos": 1
           },
           {
-            "r": "Round 6",
+            "r": "Season 2 Round 6",
             "p": 9,
             "pos": 2
           },
           {
-            "r": "Round 8",
+            "r": "Season 2 Round 8",
             "p": 10,
             "pos": 1
           },
           {
-            "r": "Round 10",
+            "r": "Season 2 Round 10",
             "p": 8,
             "pos": 3
           },
           {
-            "r": "Round 12",
+            "r": "Season 2 Round 12",
             "p": 9,
             "pos": 2
           },
           {
-            "r": "Round 13",
+            "r": "Season 2 Round 13",
             "p": 8,
             "pos": 3
           },
           {
-            "r": "Round 14",
+            "r": "Season 2 Round 14",
             "p": 9,
             "pos": 2
           },
           {
-            "r": "Round 15",
+            "r": "Season 2 Round 15",
             "p": 7,
             "pos": 4
           },
           {
-            "r": "Round 1",
+            "r": "Season 3 Round 1",
             "p": 10,
             "pos": 1
           },
           {
-            "r": "Round 2",
+            "r": "Season 3 Round 2",
             "p": 4,
             "pos": 7
           },
           {
-            "r": "Round 3",
+            "r": "Season 3 Round 3",
             "p": 8,
             "pos": 3
           },
           {
-            "r": "Round 4",
+            "r": "Season 3 Round 4",
             "p": 6,
             "pos": 5
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 10,
             "pos": 1
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 1,
             "pos": 10
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 5,
             "pos": 6
           }
@@ -12737,97 +12534,97 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 1",
+            "r": "Season 2 Round 1",
             "p": 9,
             "pos": 2
           },
           {
-            "r": "Round 3",
+            "r": "Season 2 Round 3",
             "p": 7,
             "pos": 4
           },
           {
-            "r": "Round 5",
+            "r": "Season 2 Round 5",
             "p": 10,
             "pos": 1
           },
           {
-            "r": "Round 7",
+            "r": "Season 2 Round 7",
             "p": 3,
             "pos": 8
           },
           {
-            "r": "Round 9",
+            "r": "Season 2 Round 9",
             "p": 5,
             "pos": 6
           },
           {
-            "r": "Round 11",
+            "r": "Season 2 Round 11",
             "p": 1,
             "pos": 10
           },
           {
-            "r": "Round 2",
+            "r": "Season 2 Round 2",
             "p": 6,
             "pos": 5
           },
           {
-            "r": "Round 4",
+            "r": "Season 2 Round 4",
             "p": 4,
             "pos": 7
           },
           {
-            "r": "Round 6",
+            "r": "Season 2 Round 6",
             "p": 6,
             "pos": 5
           },
           {
-            "r": "Round 8",
+            "r": "Season 2 Round 8",
             "p": 5,
             "pos": 6
           },
           {
-            "r": "Round 13",
+            "r": "Season 2 Round 13",
             "p": 4,
             "pos": 7
           },
           {
-            "r": "Round 15",
+            "r": "Season 2 Round 15",
             "p": 8,
             "pos": 3
           },
           {
-            "r": "Round 2",
+            "r": "Season 3 Round 2",
             "p": 8,
             "pos": 3
           },
           {
-            "r": "Round 4",
+            "r": "Season 3 Round 4",
             "p": 4,
             "pos": 7
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 8,
             "pos": 3
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 9,
             "pos": 2
           },
           {
-            "r": "Round 7",
+            "r": "Season 3 Round 7",
             "p": 10,
             "pos": 1
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 7,
             "pos": 4
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 10,
             "pos": 1
           }
@@ -12853,97 +12650,97 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 3",
+            "r": "Season 2 Round 3",
             "p": 8,
             "pos": 3
           },
           {
-            "r": "Round 5",
+            "r": "Season 2 Round 5",
             "p": 9,
             "pos": 2
           },
           {
-            "r": "Round 9",
+            "r": "Season 2 Round 9",
             "p": 9,
             "pos": 2
           },
           {
-            "r": "Round 11",
+            "r": "Season 2 Round 11",
             "p": 8,
             "pos": 3
           },
           {
-            "r": "Round 2",
+            "r": "Season 2 Round 2",
             "p": 3,
             "pos": 8
           },
           {
-            "r": "Round 4",
+            "r": "Season 2 Round 4",
             "p": 7,
             "pos": 4
           },
           {
-            "r": "Round 8",
+            "r": "Season 2 Round 8",
             "p": 6,
             "pos": 5
           },
           {
-            "r": "Round 12",
+            "r": "Season 2 Round 12",
             "p": 7,
             "pos": 4
           },
           {
-            "r": "Round 13",
+            "r": "Season 2 Round 13",
             "p": 7,
             "pos": 4
           },
           {
-            "r": "Round 14",
+            "r": "Season 2 Round 14",
             "p": 1,
             "pos": 10
           },
           {
-            "r": "Round 15",
+            "r": "Season 2 Round 15",
             "p": 1,
             "pos": 10
           },
           {
-            "r": "Round 2",
+            "r": "Season 3 Round 2",
             "p": 7,
             "pos": 4
           },
           {
-            "r": "Round 3",
+            "r": "Season 3 Round 3",
             "p": 4,
             "pos": 7
           },
           {
-            "r": "Round 4",
+            "r": "Season 3 Round 4",
             "p": 9,
             "pos": 2
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 5,
             "pos": 6
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 1,
             "pos": 10
           },
           {
-            "r": "Round 7",
+            "r": "Season 3 Round 7",
             "p": 8,
             "pos": 3
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 9,
             "pos": 2
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 7,
             "pos": 4
           }
@@ -12969,52 +12766,52 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 3",
+            "r": "Season 2 Round 3",
             "p": 10,
             "pos": 1
           },
           {
-            "r": "Round 9",
+            "r": "Season 2 Round 9",
             "p": 10,
             "pos": 1
           },
           {
-            "r": "Round 2",
+            "r": "Season 2 Round 2",
             "p": 9,
             "pos": 2
           },
           {
-            "r": "Round 4",
+            "r": "Season 2 Round 4",
             "p": 9,
             "pos": 2
           },
           {
-            "r": "Round 6",
+            "r": "Season 2 Round 6",
             "p": 10,
             "pos": 1
           },
           {
-            "r": "Round 10",
+            "r": "Season 2 Round 10",
             "p": 10,
             "pos": 1
           },
           {
-            "r": "Round 12",
+            "r": "Season 2 Round 12",
             "p": 10,
             "pos": 1
           },
           {
-            "r": "Round 13",
+            "r": "Season 2 Round 13",
             "p": 3,
             "pos": 8
           },
           {
-            "r": "Round 15",
+            "r": "Season 2 Round 15",
             "p": 10,
             "pos": 1
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 9,
             "pos": 2
           }
@@ -13040,67 +12837,67 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 1",
+            "r": "Season 2 Round 1",
             "p": 4,
             "pos": 7
           },
           {
-            "r": "Round 3",
+            "r": "Season 2 Round 3",
             "p": 5,
             "pos": 6
           },
           {
-            "r": "Round 5",
+            "r": "Season 2 Round 5",
             "p": 5,
             "pos": 6
           },
           {
-            "r": "Round 7",
+            "r": "Season 2 Round 7",
             "p": 8,
             "pos": 3
           },
           {
-            "r": "Round 9",
+            "r": "Season 2 Round 9",
             "p": 2,
             "pos": 9
           },
           {
-            "r": "Round 8",
+            "r": "Season 2 Round 8",
             "p": 7,
             "pos": 4
           },
           {
-            "r": "Round 10",
+            "r": "Season 2 Round 10",
             "p": 1,
             "pos": 10
           },
           {
-            "r": "Round 14",
+            "r": "Season 2 Round 14",
             "p": 10,
             "pos": 1
           },
           {
-            "r": "Round 15",
+            "r": "Season 2 Round 15",
             "p": 6,
             "pos": 5
           },
           {
-            "r": "Round 1",
+            "r": "Season 3 Round 1",
             "p": 6,
             "pos": 5
           },
           {
-            "r": "Round 3",
+            "r": "Season 3 Round 3",
             "p": 9,
             "pos": 2
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 5,
             "pos": 6
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 9,
             "pos": 2
           }
@@ -13126,77 +12923,77 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 1",
+            "r": "Season 2 Round 1",
             "p": 3,
             "pos": 8
           },
           {
-            "r": "Round 7",
+            "r": "Season 2 Round 7",
             "p": 6,
             "pos": 5
           },
           {
-            "r": "Round 9",
+            "r": "Season 2 Round 9",
             "p": 6,
             "pos": 5
           },
           {
-            "r": "Round 4",
+            "r": "Season 2 Round 4",
             "p": 3,
             "pos": 8
           },
           {
-            "r": "Round 6",
+            "r": "Season 2 Round 6",
             "p": 7,
             "pos": 4
           },
           {
-            "r": "Round 8",
+            "r": "Season 2 Round 8",
             "p": 1,
             "pos": 10
           },
           {
-            "r": "Round 10",
+            "r": "Season 2 Round 10",
             "p": 7,
             "pos": 4
           },
           {
-            "r": "Round 12",
+            "r": "Season 2 Round 12",
             "p": 8,
             "pos": 3
           },
           {
-            "r": "Round 14",
+            "r": "Season 2 Round 14",
             "p": 6,
             "pos": 5
           },
           {
-            "r": "Round 15",
+            "r": "Season 2 Round 15",
             "p": 4,
             "pos": 7
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 11
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 11
           },
           {
-            "r": "Round 7",
+            "r": "Season 3 Round 7",
             "p": 4,
             "pos": 7
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 4,
             "pos": 7
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 6,
             "pos": 5
           }
@@ -13222,47 +13019,123 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 7",
+            "r": "Season 2 Round 7",
             "p": 5,
             "pos": 6
           },
           {
-            "r": "Round 4",
+            "r": "Season 2 Round 4",
             "p": 8,
             "pos": 3
           },
           {
-            "r": "Round 8",
+            "r": "Season 2 Round 8",
             "p": 9,
             "pos": 2
           },
           {
-            "r": "Round 10",
+            "r": "Season 2 Round 10",
             "p": 5,
             "pos": 6
           },
           {
-            "r": "Round 2",
+            "r": "Season 3 Round 2",
             "p": 6,
             "pos": 5
           },
           {
-            "r": "Round 3",
+            "r": "Season 3 Round 3",
             "p": 3,
             "pos": 8
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 7,
             "pos": 4
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 8,
             "pos": 3
           }
         ],
         "rank": 8
+      },
+      {
+        "name": "ping",
+        "points": 41,
+        "points_all": 41,
+        "rounds": 11,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 3,
+        "avg_pts": 3.7,
+        "avg_pos": 7.5,
+        "best_single": 7,
+        "best_pos": 4,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 2 Round 5",
+            "p": 7,
+            "pos": 4
+          },
+          {
+            "r": "Season 2 Round 7",
+            "p": 2,
+            "pos": 9
+          },
+          {
+            "r": "Season 2 Round 9",
+            "p": 3,
+            "pos": 8
+          },
+          {
+            "r": "Season 2 Round 6",
+            "p": 1,
+            "pos": 10
+          },
+          {
+            "r": "Season 2 Round 12",
+            "p": 6,
+            "pos": 5
+          },
+          {
+            "r": "Season 2 Round 14",
+            "p": 4,
+            "pos": 7
+          },
+          {
+            "r": "Season 2 Round 15",
+            "p": 5,
+            "pos": 6
+          },
+          {
+            "r": "Season 3 Round 5",
+            "p": 4,
+            "pos": 7
+          },
+          {
+            "r": "Season 3 Round 6",
+            "p": 0,
+            "pos": 14
+          },
+          {
+            "r": "Season 3 Round 8",
+            "p": 6,
+            "pos": 5
+          },
+          {
+            "r": "Season 3 Round 9",
+            "p": 3,
+            "pos": 8
+          }
+        ],
+        "rank": 9
       },
       {
         "name": "An Actual g00se",
@@ -13283,94 +13156,38 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 1",
+            "r": "Season 2 Round 1",
             "p": 8,
             "pos": 3
           },
           {
-            "r": "Round 2",
+            "r": "Season 2 Round 2",
             "p": 5,
             "pos": 6
           },
           {
-            "r": "Round 10",
+            "r": "Season 2 Round 10",
             "p": 6,
             "pos": 5
           },
           {
-            "r": "Round 1",
+            "r": "Season 3 Round 1",
             "p": 7,
             "pos": 4
           },
           {
-            "r": "Round 3",
+            "r": "Season 3 Round 3",
             "p": 6,
             "pos": 5
-          }
-        ],
-        "rank": 9
-      },
-      {
-        "name": "Ping",
-        "points": 28,
-        "points_all": 28,
-        "rounds": 7,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 2,
-        "avg_pts": 4.0,
-        "avg_pos": 7.0,
-        "best_single": 7,
-        "best_pos": 4,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 5",
-            "p": 7,
-            "pos": 4
-          },
-          {
-            "r": "Round 7",
-            "p": 2,
-            "pos": 9
-          },
-          {
-            "r": "Round 9",
-            "p": 3,
-            "pos": 8
-          },
-          {
-            "r": "Round 6",
-            "p": 1,
-            "pos": 10
-          },
-          {
-            "r": "Round 12",
-            "p": 6,
-            "pos": 5
-          },
-          {
-            "r": "Round 14",
-            "p": 4,
-            "pos": 7
-          },
-          {
-            "r": "Round 15",
-            "p": 5,
-            "pos": 6
           }
         ],
         "rank": 10
       },
       {
-        "name": "RoundNZT",
+        "name": "RoundNzt",
         "points": 26,
         "points_all": 26,
-        "rounds": 3,
+        "rounds": 5,
         "wins": 1,
         "podiums": {
           "gold": 1,
@@ -13378,26 +13195,36 @@
           "bronze": 0
         },
         "top5": 3,
-        "avg_pts": 8.7,
-        "avg_pos": 2.3,
+        "avg_pts": 5.2,
+        "avg_pos": 9.6,
         "best_single": 10,
         "best_pos": 1,
         "dropped": 0,
         "history": [
           {
-            "r": "Round 1",
+            "r": "Season 3 Round 1",
             "p": 9,
             "pos": 2
           },
           {
-            "r": "Round 2",
+            "r": "Season 3 Round 2",
             "p": 10,
             "pos": 1
           },
           {
-            "r": "Round 7",
+            "r": "Season 3 Round 5",
+            "p": 0,
+            "pos": 23
+          },
+          {
+            "r": "Season 3 Round 7",
             "p": 7,
             "pos": 4
+          },
+          {
+            "r": "Season 3 Round 8",
+            "p": 0,
+            "pos": 18
           }
         ],
         "rank": 11
@@ -13421,27 +13248,27 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 1",
+            "r": "Season 2 Round 1",
             "p": 6,
             "pos": 5
           },
           {
-            "r": "Round 3",
+            "r": "Season 2 Round 3",
             "p": 3,
             "pos": 8
           },
           {
-            "r": "Round 10",
+            "r": "Season 2 Round 10",
             "p": 3,
             "pos": 8
           },
           {
-            "r": "Round 12",
+            "r": "Season 2 Round 12",
             "p": 5,
             "pos": 6
           },
           {
-            "r": "Round 13",
+            "r": "Season 2 Round 13",
             "p": 6,
             "pos": 5
           }
@@ -13467,37 +13294,37 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 1",
+            "r": "Season 2 Round 1",
             "p": 7,
             "pos": 4
           },
           {
-            "r": "Round 3",
+            "r": "Season 2 Round 3",
             "p": 2,
             "pos": 9
           },
           {
-            "r": "Round 5",
+            "r": "Season 2 Round 5",
             "p": 1,
             "pos": 10
           },
           {
-            "r": "Round 9",
+            "r": "Season 2 Round 9",
             "p": 1,
             "pos": 10
           },
           {
-            "r": "Round 4",
+            "r": "Season 2 Round 4",
             "p": 5,
             "pos": 6
           },
           {
-            "r": "Round 10",
+            "r": "Season 2 Round 10",
             "p": 4,
             "pos": 7
           },
           {
-            "r": "Round 15",
+            "r": "Season 2 Round 15",
             "p": 3,
             "pos": 8
           }
@@ -13523,42 +13350,42 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 7",
+            "r": "Season 2 Round 7",
             "p": 9,
             "pos": 2
           },
           {
-            "r": "Round 4",
+            "r": "Season 2 Round 4",
             "p": 2,
             "pos": 9
           },
           {
-            "r": "Round 13",
+            "r": "Season 2 Round 13",
             "p": 1,
             "pos": 10
           },
           {
-            "r": "Round 14",
+            "r": "Season 2 Round 14",
             "p": 5,
             "pos": 6
           },
           {
-            "r": "Round 15",
+            "r": "Season 2 Round 15",
             "p": 2,
             "pos": 9
           },
           {
-            "r": "Round 1",
+            "r": "Season 3 Round 1",
             "p": 3,
             "pos": 8
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 12
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 13
           }
@@ -13584,37 +13411,37 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 4",
+            "r": "Season 2 Round 4",
             "p": 6,
             "pos": 5
           },
           {
-            "r": "Round 6",
+            "r": "Season 2 Round 6",
             "p": 4,
             "pos": 7
           },
           {
-            "r": "Round 8",
+            "r": "Season 2 Round 8",
             "p": 4,
             "pos": 7
           },
           {
-            "r": "Round 12",
+            "r": "Season 2 Round 12",
             "p": 4,
             "pos": 7
           },
           {
-            "r": "Round 2",
+            "r": "Season 3 Round 2",
             "p": 1,
             "pos": 10
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 13
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 1,
             "pos": 10
           }
@@ -13640,17 +13467,17 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 3",
+            "r": "Season 2 Round 3",
             "p": 4,
             "pos": 7
           },
           {
-            "r": "Round 5",
+            "r": "Season 2 Round 5",
             "p": 6,
             "pos": 5
           },
           {
-            "r": "Round 11",
+            "r": "Season 2 Round 11",
             "p": 7,
             "pos": 4
           }
@@ -13676,22 +13503,22 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 3",
+            "r": "Season 2 Round 3",
             "p": 9,
             "pos": 2
           },
           {
-            "r": "Round 9",
+            "r": "Season 2 Round 9",
             "p": 4,
             "pos": 7
           },
           {
-            "r": "Round 14",
+            "r": "Season 2 Round 14",
             "p": 3,
             "pos": 8
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 25
           }
@@ -13717,17 +13544,17 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 2",
+            "r": "Season 2 Round 2",
             "p": 4,
             "pos": 7
           },
           {
-            "r": "Round 13",
+            "r": "Season 2 Round 13",
             "p": 5,
             "pos": 6
           },
           {
-            "r": "Round 14",
+            "r": "Season 2 Round 14",
             "p": 7,
             "pos": 4
           }
@@ -13753,58 +13580,17 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 3",
+            "r": "Season 3 Round 3",
             "p": 7,
             "pos": 4
           },
           {
-            "r": "Round 7",
+            "r": "Season 3 Round 7",
             "p": 6,
             "pos": 5
           }
         ],
         "rank": 19
-      },
-      {
-        "name": "ping",
-        "points": 13,
-        "points_all": 13,
-        "rounds": 4,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 1,
-        "avg_pts": 3.2,
-        "avg_pos": 8.5,
-        "best_single": 6,
-        "best_pos": 5,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 5",
-            "p": 4,
-            "pos": 7
-          },
-          {
-            "r": "Round 6",
-            "p": 0,
-            "pos": 14
-          },
-          {
-            "r": "Round 8",
-            "p": 6,
-            "pos": 5
-          },
-          {
-            "r": "Round 9",
-            "p": 3,
-            "pos": 8
-          }
-        ],
-        "rank": 20
       },
       {
         "name": "K410K3N",
@@ -13825,37 +13611,37 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 11",
+            "r": "Season 2 Round 11",
             "p": 5,
             "pos": 6
           },
           {
-            "r": "Round 6",
+            "r": "Season 2 Round 6",
             "p": 2,
             "pos": 9
           },
           {
-            "r": "Round 12",
+            "r": "Season 2 Round 12",
             "p": 1,
             "pos": 10
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 16
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 4,
             "pos": 7
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 24
           }
         ],
-        "rank": 21
+        "rank": 20
       },
       {
         "name": "Hi Im Yolo",
@@ -13876,37 +13662,37 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 11",
+            "r": "Season 2 Round 11",
             "p": 3,
             "pos": 8
           },
           {
-            "r": "Round 8",
+            "r": "Season 2 Round 8",
             "p": 3,
             "pos": 8
           },
           {
-            "r": "Round 2",
+            "r": "Season 3 Round 2",
             "p": 2,
             "pos": 9
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 30
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 2,
             "pos": 9
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 2,
             "pos": 9
           }
         ],
-        "rank": 22
+        "rank": 21
       },
       {
         "name": "R0nanC",
@@ -13927,47 +13713,47 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 1",
+            "r": "Season 2 Round 1",
             "p": 1,
             "pos": 10
           },
           {
-            "r": "Round 5",
+            "r": "Season 2 Round 5",
             "p": 8,
             "pos": 3
           },
           {
-            "r": "Round 4",
+            "r": "Season 3 Round 4",
             "p": 1,
             "pos": 10
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 18
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 22
           },
           {
-            "r": "Round 7",
+            "r": "Season 3 Round 7",
             "p": 1,
             "pos": 10
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 21
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 23
           }
         ],
-        "rank": 23
+        "rank": 22
       },
       {
         "name": "Warsnac",
@@ -13988,27 +13774,27 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 3",
+            "r": "Season 3 Round 3",
             "p": 5,
             "pos": 6
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 1,
             "pos": 10
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 13
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 5,
             "pos": 6
           }
         ],
-        "rank": 24
+        "rank": 23
       },
       {
         "name": "Kernkob",
@@ -14029,43 +13815,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 13",
+            "r": "Season 2 Round 13",
             "p": 10,
             "pos": 1
           }
         ],
-        "rank": 25
-      },
-      {
-        "name": "Gilgool",
-        "points": 10,
-        "points_all": 10,
-        "rounds": 2,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 5.0,
-        "avg_pos": 6.0,
-        "best_single": 5,
-        "best_pos": 6,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 6",
-            "p": 5,
-            "pos": 6
-          },
-          {
-            "r": "Round 1",
-            "p": 5,
-            "pos": 6
-          }
-        ],
-        "rank": 26
+        "rank": 24
       },
       {
         "name": "LKat",
@@ -14086,22 +13841,63 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 4",
+            "r": "Season 3 Round 4",
             "p": 3,
             "pos": 8
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 23
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 7,
             "pos": 4
           }
         ],
-        "rank": 27
+        "rank": 25
+      },
+      {
+        "name": "gilgool",
+        "points": 10,
+        "points_all": 10,
+        "rounds": 4,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 2.5,
+        "avg_pos": 11.5,
+        "best_single": 5,
+        "best_pos": 6,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 2 Round 6",
+            "p": 5,
+            "pos": 6
+          },
+          {
+            "r": "Season 3 Round 1",
+            "p": 5,
+            "pos": 6
+          },
+          {
+            "r": "Season 3 Round 5",
+            "p": 0,
+            "pos": 14
+          },
+          {
+            "r": "Season 3 Round 6",
+            "p": 0,
+            "pos": 20
+          }
+        ],
+        "rank": 26
       },
       {
         "name": "Matic_D",
@@ -14122,37 +13918,37 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 10",
+            "r": "Season 2 Round 10",
             "p": 2,
             "pos": 9
           },
           {
-            "r": "Round 4",
+            "r": "Season 3 Round 4",
             "p": 5,
             "pos": 6
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 18
           },
           {
-            "r": "Round 7",
+            "r": "Season 3 Round 7",
             "p": 3,
             "pos": 8
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 20
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 22
           }
         ],
-        "rank": 28
+        "rank": 27
       },
       {
         "name": "icRS",
@@ -14173,37 +13969,37 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 1",
+            "r": "Season 3 Round 1",
             "p": 2,
             "pos": 9
           },
           {
-            "r": "Round 4",
+            "r": "Season 3 Round 4",
             "p": 2,
             "pos": 9
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 6,
             "pos": 5
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 12
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 11
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 16
           }
         ],
-        "rank": 29
+        "rank": 28
       },
       {
         "name": "Victor",
@@ -14224,32 +14020,32 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 1",
+            "r": "Season 3 Round 1",
             "p": 1,
             "pos": 10
           },
           {
-            "r": "Round 4",
+            "r": "Season 3 Round 4",
             "p": 8,
             "pos": 3
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 21
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 16
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 15
           }
         ],
-        "rank": 30
+        "rank": 29
       },
       {
         "name": "MackCheesy",
@@ -14270,12 +14066,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 2",
+            "r": "Season 2 Round 2",
             "p": 8,
             "pos": 3
           }
         ],
-        "rank": 31
+        "rank": 30
       },
       {
         "name": "Sandals",
@@ -14296,9 +14092,50 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 8,
             "pos": 3
+          }
+        ],
+        "rank": 31
+      },
+      {
+        "name": "brrryy",
+        "points": 8,
+        "points_all": 8,
+        "rounds": 4,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 2.0,
+        "avg_pos": 9.5,
+        "best_single": 3,
+        "best_pos": 8,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 3 Round 2",
+            "p": 3,
+            "pos": 8
+          },
+          {
+            "r": "Season 3 Round 3",
+            "p": 2,
+            "pos": 9
+          },
+          {
+            "r": "Season 3 Round 5",
+            "p": 3,
+            "pos": 8
+          },
+          {
+            "r": "Season 3 Round 9",
+            "p": 0,
+            "pos": 13
           }
         ],
         "rank": 32
@@ -14322,7 +14159,7 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 2",
+            "r": "Season 2 Round 2",
             "p": 7,
             "pos": 4
           }
@@ -14348,12 +14185,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 14",
+            "r": "Season 2 Round 14",
             "p": 2,
             "pos": 9
           },
           {
-            "r": "Round 7",
+            "r": "Season 3 Round 7",
             "p": 5,
             "pos": 6
           }
@@ -14379,7 +14216,7 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 11",
+            "r": "Season 2 Round 11",
             "p": 6,
             "pos": 5
           }
@@ -14405,7 +14242,7 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 6,
             "pos": 5
           }
@@ -14431,12 +14268,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 13",
+            "r": "Season 2 Round 13",
             "p": 2,
             "pos": 9
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 4,
             "pos": 7
           }
@@ -14462,48 +14299,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 2",
+            "r": "Season 3 Round 2",
             "p": 5,
             "pos": 6
           }
         ],
         "rank": 38
-      },
-      {
-        "name": "Brrry",
-        "points": 5,
-        "points_all": 5,
-        "rounds": 3,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 1.7,
-        "avg_pos": 10.0,
-        "best_single": 3,
-        "best_pos": 8,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 2",
-            "p": 3,
-            "pos": 8
-          },
-          {
-            "r": "Round 3",
-            "p": 2,
-            "pos": 9
-          },
-          {
-            "r": "Round 9",
-            "p": 0,
-            "pos": 13
-          }
-        ],
-        "rank": 39
       },
       {
         "name": "TheBamboozler",
@@ -14524,12 +14325,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 2 Round 5",
             "p": 4,
             "pos": 7
           }
         ],
-        "rank": 40
+        "rank": 39
       },
       {
         "name": "TheRockingSheep",
@@ -14550,12 +14351,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 7",
+            "r": "Season 2 Round 7",
             "p": 4,
             "pos": 7
           }
         ],
-        "rank": 41
+        "rank": 40
       },
       {
         "name": "Naomi",
@@ -14576,12 +14377,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 11",
+            "r": "Season 2 Round 11",
             "p": 4,
             "pos": 7
           }
         ],
-        "rank": 42
+        "rank": 41
       },
       {
         "name": "B_es",
@@ -14602,12 +14403,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 1",
+            "r": "Season 3 Round 1",
             "p": 4,
             "pos": 7
           }
         ],
-        "rank": 43
+        "rank": 42
       },
       {
         "name": "DeeDeeNaNaNa",
@@ -14628,17 +14429,17 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 3",
+            "r": "Season 2 Round 3",
             "p": 1,
             "pos": 10
           },
           {
-            "r": "Round 12",
+            "r": "Season 2 Round 12",
             "p": 3,
             "pos": 8
           }
         ],
-        "rank": 44
+        "rank": 43
       },
       {
         "name": "Bram",
@@ -14659,38 +14460,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 6",
+            "r": "Season 2 Round 6",
             "p": 3,
             "pos": 8
           }
         ],
-        "rank": 45
-      },
-      {
-        "name": "AndMe93",
-        "points": 3,
-        "points_all": 3,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 3.0,
-        "avg_pos": 8.0,
-        "best_single": 3,
-        "best_pos": 8,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 5",
-            "p": 3,
-            "pos": 8
-          }
-        ],
-        "rank": 46
+        "rank": 44
       },
       {
         "name": "Redstony",
@@ -14711,12 +14486,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 3,
             "pos": 8
           }
         ],
-        "rank": 47
+        "rank": 45
       },
       {
         "name": "M\u03bc",
@@ -14737,12 +14512,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 3,
             "pos": 8
           }
         ],
-        "rank": 48
+        "rank": 46
       },
       {
         "name": "Heart-TGV",
@@ -14763,22 +14538,22 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 2 Round 5",
             "p": 3,
             "pos": 8
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 12
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 17
           }
         ],
-        "rank": 49
+        "rank": 47
       },
       {
         "name": "Mr. Hubhub",
@@ -14799,12 +14574,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 1",
+            "r": "Season 2 Round 1",
             "p": 2,
             "pos": 9
           }
         ],
-        "rank": 50
+        "rank": 48
       },
       {
         "name": "Wheelie",
@@ -14825,12 +14600,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 11",
+            "r": "Season 2 Round 11",
             "p": 2,
             "pos": 9
           }
         ],
-        "rank": 51
+        "rank": 49
       },
       {
         "name": "Lynhardt",
@@ -14851,12 +14626,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 2",
+            "r": "Season 2 Round 2",
             "p": 2,
             "pos": 9
           }
         ],
-        "rank": 52
+        "rank": 50
       },
       {
         "name": "Alpa",
@@ -14877,12 +14652,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 2 Round 8",
             "p": 2,
             "pos": 9
           }
         ],
-        "rank": 53
+        "rank": 51
       },
       {
         "name": "Macromelon",
@@ -14903,12 +14678,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 12",
+            "r": "Season 2 Round 12",
             "p": 2,
             "pos": 9
           }
         ],
-        "rank": 54
+        "rank": 52
       },
       {
         "name": "GuAlexItar",
@@ -14929,12 +14704,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 2,
             "pos": 9
           }
         ],
-        "rank": 55
+        "rank": 53
       },
       {
         "name": "BB_Benji",
@@ -14955,17 +14730,17 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 7",
+            "r": "Season 3 Round 7",
             "p": 2,
             "pos": 9
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 12
           }
         ],
-        "rank": 56
+        "rank": 54
       },
       {
         "name": "Noxitu",
@@ -14986,27 +14761,27 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 2,
             "pos": 9
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 24
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 15
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 19
           }
         ],
-        "rank": 57
+        "rank": 55
       },
       {
         "name": "jofk2415",
@@ -15027,12 +14802,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 7",
+            "r": "Season 2 Round 7",
             "p": 1,
             "pos": 10
           }
         ],
-        "rank": 58
+        "rank": 56
       },
       {
         "name": "Bank Waffles",
@@ -15053,12 +14828,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 2",
+            "r": "Season 2 Round 2",
             "p": 1,
             "pos": 10
           }
         ],
-        "rank": 59
+        "rank": 57
       },
       {
         "name": "Shadynook",
@@ -15079,12 +14854,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 4",
+            "r": "Season 2 Round 4",
             "p": 1,
             "pos": 10
           }
         ],
-        "rank": 60
+        "rank": 58
       },
       {
         "name": "Gimpel",
@@ -15105,58 +14880,27 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 3",
+            "r": "Season 3 Round 3",
             "p": 1,
             "pos": 10
           },
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 27
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 17
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 14
           }
         ],
-        "rank": 61
-      },
-      {
-        "name": "gilgool",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 2,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 17.0,
-        "best_single": 0,
-        "best_pos": 14,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 5",
-            "p": 0,
-            "pos": 14
-          },
-          {
-            "r": "Round 6",
-            "p": 0,
-            "pos": 20
-          }
-        ],
-        "rank": 62
+        "rank": 59
       },
       {
         "name": "PlusMicron",
@@ -15177,27 +14921,27 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 15
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 21
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 23
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 18
           }
         ],
-        "rank": 63
+        "rank": 60
       },
       {
         "name": "alpa",
@@ -15218,17 +14962,17 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 17
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 16
           }
         ],
-        "rank": 64
+        "rank": 61
       },
       {
         "name": "Six",
@@ -15249,27 +14993,27 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 19
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 19
           },
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 19
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 19
           }
         ],
-        "rank": 65
+        "rank": 62
       },
       {
         "name": "Socks242",
@@ -15290,12 +15034,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 20
           }
         ],
-        "rank": 66
+        "rank": 63
       },
       {
         "name": "376",
@@ -15316,43 +15060,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 22
           }
         ],
-        "rank": 67
-      },
-      {
-        "name": "RoundNzt",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 2,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 20.5,
-        "best_single": 0,
-        "best_pos": 18,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 5",
-            "p": 0,
-            "pos": 23
-          },
-          {
-            "r": "Round 8",
-            "p": 0,
-            "pos": 18
-          }
-        ],
-        "rank": 68
+        "rank": 64
       },
       {
         "name": "Form",
@@ -15373,12 +15086,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 23
           }
         ],
-        "rank": 69
+        "rank": 65
       },
       {
         "name": "Gnomo",
@@ -15399,17 +15112,17 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 26
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 29
           }
         ],
-        "rank": 70
+        "rank": 66
       },
       {
         "name": "[png]breadcrumb_",
@@ -15430,12 +15143,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 28
           }
         ],
-        "rank": 71
+        "rank": 67
       },
       {
         "name": "OLR94",
@@ -15456,17 +15169,17 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 29
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 25
           }
         ],
-        "rank": 72
+        "rank": 68
       },
       {
         "name": "[CSC] OccasionallyAmazingGamer",
@@ -15487,17 +15200,17 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 30
           },
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 23
           }
         ],
-        "rank": 73
+        "rank": 69
       },
       {
         "name": "John Xina",
@@ -15518,12 +15231,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 32
           }
         ],
-        "rank": 74
+        "rank": 70
       },
       {
         "name": "cookie",
@@ -15544,12 +15257,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 5",
+            "r": "Season 3 Round 5",
             "p": 0,
             "pos": 32
           }
         ],
-        "rank": 75
+        "rank": 71
       },
       {
         "name": "del23111107300239392952",
@@ -15570,12 +15283,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 15
           }
         ],
-        "rank": 76
+        "rank": 72
       },
       {
         "name": "Shinikage221",
@@ -15596,17 +15309,17 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 26
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 25
           }
         ],
-        "rank": 77
+        "rank": 73
       },
       {
         "name": "Mokster",
@@ -15627,17 +15340,17 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 27
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 29
           }
         ],
-        "rank": 78
+        "rank": 74
       },
       {
         "name": "Dartho Mas",
@@ -15658,12 +15371,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 27
           }
         ],
-        "rank": 79
+        "rank": 75
       },
       {
         "name": "AAredstone",
@@ -15684,12 +15397,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 6",
+            "r": "Season 3 Round 6",
             "p": 0,
             "pos": 27
           }
         ],
-        "rank": 80
+        "rank": 76
       },
       {
         "name": "stindt",
@@ -15710,12 +15423,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 17
           }
         ],
-        "rank": 81
+        "rank": 77
       },
       {
         "name": "[Fenn]Lilly Fenn",
@@ -15736,12 +15449,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 22
           }
         ],
-        "rank": 82
+        "rank": 78
       },
       {
         "name": "aizpun",
@@ -15762,12 +15475,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 25
           }
         ],
-        "rank": 83
+        "rank": 79
       },
       {
         "name": "SharKy",
@@ -15788,17 +15501,17 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 26
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 25
           }
         ],
-        "rank": 84
+        "rank": 80
       },
       {
         "name": "Brachaldis",
@@ -15819,12 +15532,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 27
           }
         ],
-        "rank": 85
+        "rank": 81
       },
       {
         "name": "timesprout",
@@ -15845,17 +15558,17 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 28
           },
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 25
           }
         ],
-        "rank": 86
+        "rank": 82
       },
       {
         "name": "Gh0stChicken",
@@ -15876,12 +15589,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 29
           }
         ],
-        "rank": 87
+        "rank": 83
       },
       {
         "name": "koz",
@@ -15902,12 +15615,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 30
           }
         ],
-        "rank": 88
+        "rank": 84
       },
       {
         "name": "imagineaclevernamehere",
@@ -15928,12 +15641,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 31
           }
         ],
-        "rank": 89
+        "rank": 85
       },
       {
         "name": "sailingman",
@@ -15954,12 +15667,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 32
           }
         ],
-        "rank": 90
+        "rank": 86
       },
       {
         "name": "[MBT] MOW BIG T",
@@ -15980,12 +15693,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 33
           }
         ],
-        "rank": 91
+        "rank": 87
       },
       {
         "name": "TwoFace",
@@ -16006,12 +15719,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 34
           }
         ],
-        "rank": 92
+        "rank": 88
       },
       {
         "name": "Sir Pickelsworth",
@@ -16032,12 +15745,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 34
           }
         ],
-        "rank": 93
+        "rank": 89
       },
       {
         "name": "[TTR]DragonShadow84290",
@@ -16058,12 +15771,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 8",
+            "r": "Season 3 Round 8",
             "p": 0,
             "pos": 34
           }
         ],
-        "rank": 94
+        "rank": 90
       },
       {
         "name": "dencar85",
@@ -16084,12 +15797,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 11
           }
         ],
-        "rank": 95
+        "rank": 91
       },
       {
         "name": "microways",
@@ -16110,12 +15823,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 14
           }
         ],
-        "rank": 96
+        "rank": 92
       },
       {
         "name": "IronDragon111000",
@@ -16136,12 +15849,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 19
           }
         ],
-        "rank": 97
+        "rank": 93
       },
       {
         "name": "aglahir",
@@ -16162,12 +15875,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 24
           }
         ],
-        "rank": 98
+        "rank": 94
       },
       {
         "name": "Kyn",
@@ -16188,12 +15901,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 29
           }
         ],
-        "rank": 99
+        "rank": 95
       },
       {
         "name": "Baked Shark",
@@ -16214,12 +15927,12 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 29
           }
         ],
-        "rank": 100
+        "rank": 96
       },
       {
         "name": "Neon_King2",
@@ -16240,13 +15953,14 @@
         "dropped": 0,
         "history": [
           {
-            "r": "Round 9",
+            "r": "Season 3 Round 9",
             "p": 0,
             "pos": 29
           }
         ],
-        "rank": 101
+        "rank": 97
       }
-    ]
+    ],
+    "round_strengths": {}
   }
 }

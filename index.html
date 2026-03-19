@@ -98,6 +98,14 @@ body { font-family: 'Space Grotesk', system-ui, sans-serif; min-height: 100vh; p
 .chart-header .stats { font-family: var(--mono); font-size: 10px; color: var(--text-dim); }
 .chart-canvas { position: relative; }
 .chart-canvas canvas { display: block; width: 100%; }
+.chart-mode-btn {
+  background: none; border: 1px solid var(--border-bright); color: var(--text-muted);
+  border-radius: 4px; padding: 3px 10px; cursor: pointer; font-size: 10px;
+  font-family: var(--mono); transition: all 0.15s;
+}
+.chart-mode-btn:hover { border-color: rgba(255,255,255,0.3); color: var(--text-dim); }
+.chart-mode-btn.active { border-color: var(--mc); color: var(--mc); background: rgba(255,255,255,0.03); }
+
 .close-btn {
   background: none; border: 1px solid var(--border-bright); color: var(--text-muted);
   border-radius: 4px; padding: 2px 8px; cursor: pointer; font-size: 12px;
@@ -159,7 +167,6 @@ body { font-family: 'Space Grotesk', system-ui, sans-serif; min-height: 100vh; p
 <div class="container">
   <div class="header">
     <h1>Petite Cup du Jour</h1>
-    <div class="sub">ATP-style points system</div>
   </div>
 
   <div class="controls">
@@ -249,6 +256,16 @@ function ptsColorSingle(pts) {
 
 function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
 
+function roundSortKey(name) {
+  // Handle "Season N Round M", "Season N Troll N", plain "Round M", etc.
+  const seasonMatch = name.match(/Season (\d+)/);
+  const seasonNum = seasonMatch ? parseInt(seasonMatch[1]) * 10000 : 0;
+  const numMatch = name.match(/\d+$/);
+  const num = numMatch ? parseInt(numMatch[0]) : 0;
+  const type = name.includes('Troll') ? 1000 : name.includes('Roulette') ? 2000 : 0;
+  return seasonNum + type + num;
+}
+
 function updateInfoTip(season) {
   const tip = document.getElementById('infoTip');
   const total = season.total_events || season.rounds_total;
@@ -297,55 +314,151 @@ function updateInfoTip(season) {
 
 // --- Build rank history for a player ---
 function buildRankHistory(playerName) {
-  const season = data[currentSeason];
-  if (!season) return [];
+  // Always use PCDJ Ranking (trailing) for full cross-season history
+  const pcdj = data['PCDJ Ranking'];
+  if (!pcdj) return [];
 
-  const src = pointsMode === 'championship' && season.championship ? season.championship : season.rankings;
+  const src = pointsMode === 'championship' && pcdj.championship ? pcdj.championship : pcdj.rankings;
 
-  // Get ordered round list
-  const allRounds = new Set();
-  src.forEach(p => p.history.forEach(h => allRounds.add(h.r)));
-  const roundOrder = [...allRounds].sort((a, b) => {
-    const na = parseInt(a.replace(/\D/g, '')) || 0;
-    const nb = parseInt(b.replace(/\D/g, '')) || 0;
-    const wa = a.includes('Troll') ? 1000 : a.includes('Roulette') ? 2000 : 0;
-    const wb = b.includes('Troll') ? 1000 : b.includes('Roulette') ? 2000 : 0;
-    return (wa + na) - (wb + nb);
+  // Build round order with season labels
+  // Collect per-season round lists to know the divider point
+  const seasonRounds = {};
+  Object.keys(data).forEach(sName => {
+    if (data[sName].type === 'trailing') return;
+    const sRankings = pointsMode === 'championship' && data[sName].championship ? data[sName].championship : data[sName].rankings;
+    const rounds = new Set();
+    sRankings.forEach(p => p.history.forEach(h => rounds.add(h.r)));
+    seasonRounds[sName] = [...rounds];
   });
 
+  // Get all rounds from PCDJ data
+  const allRounds = new Set();
+  src.forEach(p => p.history.forEach(h => allRounds.add(h.r)));
+  const roundOrder = [...allRounds].sort((a, b) => roundSortKey(a) - roundSortKey(b));
+
+  // Find season divider index
+  const s2Rounds = seasonRounds['Season 2'] || [];
+  let seasonDividerIdx = s2Rounds.length; // rounds in S2
+
   // Compute cumulative points for ALL players after each round
-  const cumulative = {}; // name -> running total
-  const snapshots = []; // [{round, rankings: [{name, pts}]}]
+  const cumulative = {};
+  const snapshots = [];
 
   roundOrder.forEach(rName => {
-    // Add this round's points to each player who participated
     src.forEach(p => {
       if (!cumulative[p.name]) cumulative[p.name] = 0;
       const entry = p.history.find(h => h.r === rName);
       if (entry) cumulative[p.name] += entry.p;
     });
-
-    // Rank everyone by cumulative points
     const ranked = Object.entries(cumulative)
       .filter(([_, pts]) => pts > 0)
       .sort((a, b) => b[1] - a[1]);
     snapshots.push({ round: rName, rankings: ranked });
   });
 
-  // Extract this player's rank at each round they participated in
+  // Extract this player's rank at each round
   const result = [];
   let cumulPts = 0;
+  let seasonPts = 0;
+  let currentSeason = null;
+  const playerEntry = src.find(p => p.name === playerName);
+  if (!playerEntry) return [];
+
   snapshots.forEach((snap, i) => {
-    const playerEntry = season.rankings.find(p => p.name === playerName);
-    if (!playerEntry) return;
+    // Track per-season cumulative — reset when season changes
+    const rSeason = snap.round.startsWith('Season 3') ? 'S3' : 'S2';
+    if (currentSeason && rSeason !== currentSeason) seasonPts = 0;
+    currentSeason = rSeason;
+
     const roundEntry = playerEntry.history.find(h => h.r === snap.round);
-    if (roundEntry) cumulPts += roundEntry.p;
+    if (roundEntry) { cumulPts += roundEntry.p; seasonPts += roundEntry.p; }
     if (cumulPts > 0) {
       const rank = snap.rankings.findIndex(([n]) => n === playerName) + 1;
-      result.push({ round: snap.round, roundIdx: i + 1, rank, pts: cumulPts, roundPts: roundEntry ? roundEntry.p : 0, pos: roundEntry ? roundEntry.pos : null });
+      result.push({ round: snap.round, roundIdx: i + 1, rank, pts: cumulPts, seasonPts, roundPts: roundEntry ? roundEntry.p : 0, pos: roundEntry ? roundEntry.pos : null });
     }
   });
+  result.seasonDividerIdx = seasonDividerIdx;
+  result.totalRounds = roundOrder.length;
   return result;
+}
+
+function buildSeasonRankHistory(playerName) {
+  // Build per-season rank histories for ALL seasons, mapped to PCDJ x-axis
+  // Returns { s2: [...], s3: [...] } with rank computed within each season independently
+
+  const pcdj = data['PCDJ Ranking'];
+  const pcdjSrc = pcdj ? (pointsMode === 'championship' && pcdj.championship ? pcdj.championship : pcdj.rankings) : null;
+  const pcdjAllRounds = new Set();
+  if (pcdjSrc) pcdjSrc.forEach(p => p.history.forEach(h => pcdjAllRounds.add(h.r)));
+  const pcdjRoundOrder = [...pcdjAllRounds].sort((a, b) => roundSortKey(a) - roundSortKey(b));
+
+  const seasonKeys = Object.keys(data).filter(s => data[s].type === 'season');
+  const allSegments = [];
+
+  seasonKeys.forEach(sName => {
+    const season = data[sName];
+    const src = pointsMode === 'championship' && season.championship ? season.championship : season.rankings;
+
+    const allRounds = new Set();
+    src.forEach(p => p.history.forEach(h => allRounds.add(h.r)));
+    const roundOrder = [...allRounds].sort((a, b) => roundSortKey(a) - roundSortKey(b));
+
+    const cumulative = {};
+    const snapshots = [];
+    roundOrder.forEach(rName => {
+      src.forEach(p => {
+        if (!cumulative[p.name]) cumulative[p.name] = 0;
+        const entry = p.history.find(h => h.r === rName);
+        if (entry) cumulative[p.name] += entry.p;
+      });
+      const ranked = Object.entries(cumulative)
+        .filter(([_, pts]) => pts > 0)
+        .sort((a, b) => b[1] - a[1]);
+      snapshots.push({ round: rName, rankings: ranked });
+    });
+
+    const playerEntry = src.find(p => p.name === playerName);
+    if (!playerEntry) return;
+
+    const segment = [];
+    let cumulPts = 0;
+    snapshots.forEach((snap) => {
+      const roundEntry = playerEntry.history.find(h => h.r === snap.round);
+      if (roundEntry) cumulPts += roundEntry.p;
+      if (cumulPts > 0) {
+        const rank = snap.rankings.findIndex(([n]) => n === playerName) + 1;
+        const prefixed = sName + ' ' + snap.round;
+        const pcdjIdx = pcdjRoundOrder.indexOf(prefixed) + 1;
+        segment.push({ round: snap.round, roundIdx: pcdjIdx > 0 ? pcdjIdx : 0, rank, pts: cumulPts, seasonPts: cumulPts, roundPts: roundEntry ? roundEntry.p : 0, pos: roundEntry ? roundEntry.pos : null });
+      }
+    });
+    if (segment.length) allSegments.push(segment);
+  });
+
+  return allSegments; // array of segments, one per season
+}
+
+function buildChartStats(playerName) {
+  const parts = [];
+  const seasonKeys = Object.keys(data).filter(s => data[s].type === 'season');
+  seasonKeys.forEach(sName => {
+    const src = pointsMode === 'championship' && data[sName].championship ? data[sName].championship : data[sName].rankings;
+    const p = src.find(x => x.name === playerName);
+    if (!p) return;
+    const rank = p.rank;
+    const totalPod = p.podiums.gold + p.podiums.silver + p.podiums.bronze;
+    let detail = '';
+    if (p.wins > 0) detail = `${p.wins}W`;
+    else if (totalPod > 0) detail = `${p.podiums.gold}/${p.podiums.silver}/${p.podiums.bronze}`;
+    else detail = `best #${p.best_pos}`;
+    const label = sName.replace('Season ', 'S');
+    parts.push(`${label}: <strong>#${rank}</strong> (${detail})`);
+  });
+  // Current season rounds
+  const curSrc = pointsMode === 'championship' && data[currentSeason]?.championship ? data[currentSeason].championship : data[currentSeason]?.rankings;
+  const curP = curSrc?.find(x => x.name === playerName);
+  if (curP) parts.push(`${curP.rounds} rounds`);
+  return parts.join(' · ');
 }
 
 // --- Draw rank chart ---
@@ -353,144 +466,296 @@ function drawRankChart(player, panel) {
   const rankHist = buildRankHistory(player.name);
   if (rankHist.length === 0) return;
 
-  const season = data[currentSeason];
-  const c = ptsColor(player.points);
+  // Stats from current season/tab, chart history from PCDJ
+  const chartPlayer = player;
+  const mainColor = ptsColor(chartPlayer.points);
+  const pcdj = data['PCDJ Ranking'];
+  const pcdjSrc = pcdj ? (pointsMode === 'championship' && pcdj.championship ? pcdj.championship : pcdj.rankings) : null;
+  const pcdjPlayer = pcdjSrc ? pcdjSrc.find(p => p.name === player.name) : null;
 
-  panel.innerHTML = `
-    <div class="chart-header">
-      <div style="min-width:0;overflow:hidden">
-        <span class="name" style="color:${c}">${esc(player.name)}</span><br>
-        <span class="stats">${player.points} pts · ${player.rounds} rounds · ${player.wins} wins · ${player.podiums} podiums</span>
+  // Chart modes — cycle through states
+  // Rank: 'pcdj' (default) → 'season' → 'off'
+  // Position: 'on' → 'off'
+  // Points: 'season' (default) → 'pcdj' → 'off'
+  let rankMode = 'pcdj', posMode = 'off', ptsMode = 'off';
+
+  // Pick colors that don't clash with the player's tier color
+  // Check both season and PCDJ tier colors to avoid any overlap
+  const RANK_COLOR = mainColor;
+  const usedColors = new Set([mainColor]);
+  // Also check PCDJ color if different
+  if (pcdjPlayer) usedColors.add(ptsColor(pcdjPlayer.points));
+  const colorPool = ['#f59e0b', '#ec4899', '#3b82f6', '#10b981', '#ef4444', '#a855f7'];
+  const available = colorPool.filter(c => !usedColors.has(c));
+  const POS_COLOR = available[0] || '#f59e0b';
+  const PTS_COLOR = available[1] || '#ec4899';
+
+  function buildPanel() {
+    const posInfo = `<span class="info-tip-wrap"><span class="info-btn" style="font-size:9px;padding:0 3px;margin-left:3px;pointer-events:auto;cursor:help" onclick="event.stopPropagation()">\u2139</span>`
+      + `<div class="info-tip" style="width:220px"><div class="st-head">Cup Position</div>Only top 10 positions are logged.</div></span>`;
+    panel.innerHTML = `
+      <div class="chart-header">
+        <div style="min-width:0;overflow:hidden">
+          <span class="name" style="color:${mainColor}">${esc(chartPlayer.name)}</span><br>
+          <span class="stats">${buildChartStats(chartPlayer.name)}</span>
+        </div>
+        <button class="close-btn" id="closeChart">✕</button>
       </div>
-      <button class="close-btn" id="closeChart">✕</button>
-    </div>
-    <div class="chart-canvas"><canvas id="rankCanvas"></canvas><div class="tooltip" id="chartTip"></div></div>
-  `;
-  panel.querySelector('#closeChart').onclick = () => {
-    panel.remove();
-    document.querySelectorAll('.row.selected').forEach(r => r.classList.remove('selected'));
-  };
-
-  const canvas = panel.querySelector('#rankCanvas');
-  const tip = panel.querySelector('#chartTip');
-  const ctx = canvas.getContext('2d');
-  const dpr = window.devicePixelRatio || 1;
-  const rect = canvas.parentElement.getBoundingClientRect();
-  canvas.width = rect.width * dpr;
-  canvas.height = 180 * dpr;
-  canvas.style.width = rect.width + 'px';
-  canvas.style.height = '180px';
-  ctx.scale(dpr, dpr);
-
-  const W = rect.width, H = 180;
-  const pad = { l: 36, r: 12, t: 12, b: 28 };
-
-  const totalRounds = season.total_events || season.rounds_total;
-  const xMin = 1, xMax = totalRounds;
-  const vMin = 1;
-  const vMax = Math.max(...rankHist.map(d => d.rank), 5);
-
-  function x(idx) { return pad.l + (idx - xMin) / (xMax - xMin || 1) * (W - pad.l - pad.r); }
-  // Inverted: rank 1 at top
-  function y(rank) { return pad.t + (rank - vMin) / (vMax - vMin || 1) * (H - pad.t - pad.b); }
-
-  function draw(highlight) {
-    ctx.clearRect(0, 0, W, H);
-
-    // Grid lines
-    ctx.strokeStyle = 'rgba(255,255,255,0.06)'; ctx.lineWidth = 1;
-    const ySteps = Math.min(vMax, 6);
-    for (let i = 0; i <= ySteps; i++) {
-      const rv = Math.round(vMin + (vMax - vMin) * i / ySteps);
-      const yv = y(rv);
-      ctx.beginPath(); ctx.moveTo(pad.l, yv); ctx.lineTo(W - pad.r, yv); ctx.stroke();
-      ctx.fillStyle = '#6b7280'; ctx.font = "9px 'JetBrains Mono',monospace"; ctx.textAlign = 'right';
-      ctx.fillText('#' + rv, pad.l - 6, yv + 3);
-    }
-
-    // X axis labels
-    ctx.fillStyle = '#6b7280'; ctx.font = "9px 'JetBrains Mono',monospace"; ctx.textAlign = 'center';
-    for (let t = xMin; t <= xMax; t++) {
-      ctx.fillText(t, x(t), H - 6);
-    }
-
-    // Rank 1 reference line
-    ctx.strokeStyle = 'rgba(255,255,255,0.12)'; ctx.setLineDash([4, 4]);
-    ctx.beginPath(); ctx.moveTo(pad.l, y(1)); ctx.lineTo(W - pad.r, y(1)); ctx.stroke();
-    ctx.setLineDash([]);
-
-    // Line
-    ctx.strokeStyle = c; ctx.lineWidth = 2; ctx.lineJoin = 'round';
-    ctx.beginPath();
-    rankHist.forEach((pt, i) => {
-      const method = i === 0 ? 'moveTo' : 'lineTo';
-      ctx[method](x(pt.roundIdx), y(pt.rank));
-    });
-    ctx.stroke();
-
-    // Glow
-    ctx.save(); ctx.globalAlpha = 0.15; ctx.strokeStyle = c; ctx.lineWidth = 6;
-    ctx.beginPath();
-    rankHist.forEach((pt, i) => {
-      const method = i === 0 ? 'moveTo' : 'lineTo';
-      ctx[method](x(pt.roundIdx), y(pt.rank));
-    });
-    ctx.stroke(); ctx.restore();
-
-    // Dots — stars for wins (pos=1)
-    rankHist.forEach(pt => {
-      const isHl = highlight && pt.roundIdx === highlight.roundIdx;
-      const isWin = pt.pos === 1;
-      if (isWin) {
-        const r = isHl ? 7 : 4.5;
-        // Draw star
-        ctx.beginPath();
-        for (let i = 0; i < 10; i++) {
-          const ang = -Math.PI / 2 + i * Math.PI / 5;
-          const rad = i % 2 === 0 ? r : r * 0.45;
-          const method = i === 0 ? 'moveTo' : 'lineTo';
-          ctx[method](x(pt.roundIdx) + Math.cos(ang) * rad, y(pt.rank) + Math.sin(ang) * rad);
+      <div style="display:flex;gap:4px;margin-bottom:6px">
+        <button class="chart-mode-btn${rankMode !== 'off' ? ' active' : ''}" data-mode="rank" style="--mc:${RANK_COLOR}">Rank${rankMode !== 'off' ? ` <span style="font-size:8px;opacity:0.7">${rankMode === 'pcdj' ? 'PCDJ' : 'Season'}</span>` : ''}</button>
+        <button class="chart-mode-btn${posMode === 'on' ? ' active' : ''}" data-mode="pos" style="--mc:${POS_COLOR}">Position ${posInfo}</button>
+        <button class="chart-mode-btn${ptsMode !== 'off' ? ' active' : ''}" data-mode="pts" style="--mc:${PTS_COLOR}">Points${ptsMode !== 'off' ? ` <span style="font-size:8px;opacity:0.7">${ptsMode === 'season' ? 'Season' : 'PCDJ'}</span>` : ''}</button>
+      </div>
+      <div class="chart-canvas"><canvas id="rankCanvas"></canvas><div class="tooltip" id="chartTip"></div></div>
+    `;
+    panel.querySelector('#closeChart').onclick = () => {
+      panel.remove();
+      document.querySelectorAll('.row.selected').forEach(r => r.classList.remove('selected'));
+    };
+    panel.querySelectorAll('.chart-mode-btn').forEach(btn => {
+      btn.onclick = (e) => {
+        e.stopPropagation();
+        if (btn.dataset.mode === 'rank') {
+          rankMode = rankMode === 'pcdj' ? 'season' : rankMode === 'season' ? 'off' : 'pcdj';
         }
-        ctx.closePath();
-        ctx.fillStyle = '#ffd700'; ctx.fill();
-        ctx.strokeStyle = '#b8960c'; ctx.lineWidth = isHl ? 1.5 : 1; ctx.stroke();
-      } else {
-        ctx.beginPath(); ctx.arc(x(pt.roundIdx), y(pt.rank), isHl ? 5 : 2.5, 0, Math.PI * 2);
-        if (isHl) { ctx.fillStyle = '#fff'; ctx.fill(); ctx.strokeStyle = c; ctx.lineWidth = 2; ctx.stroke(); }
-        else { ctx.fillStyle = c; ctx.fill(); }
-      }
+        if (btn.dataset.mode === 'pos') {
+          posMode = posMode === 'off' ? 'on' : 'off';
+        }
+        if (btn.dataset.mode === 'pts') {
+          ptsMode = ptsMode === 'off' ? 'season' : ptsMode === 'season' ? 'pcdj' : 'off';
+        }
+        if (rankMode === 'off' && posMode === 'off' && ptsMode === 'off') rankMode = 'pcdj';
+        buildPanel();
+        drawCanvas();
+      };
     });
   }
 
-  draw(null);
+  function drawCanvas() {
+    const canvas = panel.querySelector('#rankCanvas');
+    const tip = panel.querySelector('#chartTip');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    const dpr = window.devicePixelRatio || 1;
+    const rect = canvas.parentElement.getBoundingClientRect();
+    canvas.width = rect.width * dpr;
+    canvas.height = 180 * dpr;
+    canvas.style.width = rect.width + 'px';
+    canvas.style.height = '180px';
+    ctx.scale(dpr, dpr);
 
-  canvas.onmousemove = (e) => {
-    const br = canvas.getBoundingClientRect();
-    const mx = e.clientX - br.left;
-    let closest = null, minDist = Infinity;
-    rankHist.forEach(pt => {
-      const d = Math.abs(x(pt.roundIdx) - mx);
-      if (d < minDist) { minDist = d; closest = pt; }
-    });
-    if (closest && minDist < 30) {
-      canvas.style.cursor = 'pointer';
-      tip.style.display = 'block';
-      tip.innerHTML = `<div class="t-round">${esc(closest.round)}</div>`
-        + `<div class="t-val">Rank: <span>#${closest.rank}</span></div>`
-        + `<div class="t-val">Total: <span>${closest.pts} pts</span></div>`
-        + (closest.roundPts ? `<div class="t-val">Round: <span>+${closest.roundPts}</span> (pos ${closest.pos})</div>` : '');
-      let tx = x(closest.roundIdx) + 12;
-      if (tx + 140 > W) tx = x(closest.roundIdx) - 150;
-      tip.style.left = tx + 'px';
-      tip.style.top = (y(closest.rank) - 40) + 'px';
-      draw(closest);
-    } else {
-      canvas.style.cursor = '';
-      tip.style.display = 'none';
-      draw(null);
+    const W = rect.width, H = 180;
+    const hasRight = ptsMode !== 'off';
+    const pad = { l: 36, r: hasRight ? 42 : 12, t: 12, b: 28 };
+
+    let totalRounds = 0;
+    Object.keys(data).forEach(s => { if (data[s].type === 'season') totalRounds += (data[s].rounds_played || 0); });
+    if (!totalRounds) totalRounds = 26;
+    const seasonDivider = rankHist.seasonDividerIdx || 0;
+    const xMin = 1, xMax = totalRounds;
+
+    function xf(idx) { return pad.l + (idx - xMin) / (xMax - xMin || 1) * (W - pad.l - pad.r); }
+
+    // Left Y: rank and/or position (inverted, 1 at top)
+    const seasonRankSegments = rankMode === 'season' ? buildSeasonRankHistory(chartPlayer.name) : null;
+
+    const leftValues = [];
+    if (rankMode !== 'off') {
+      if (seasonRankSegments) seasonRankSegments.forEach(seg => seg.forEach(d => leftValues.push(d.rank)));
+      else rankHist.forEach(d => leftValues.push(d.rank));
     }
-  };
-  canvas.onmouseleave = () => { tip.style.display = 'none'; canvas.style.cursor = ''; draw(null); };
+    if (posMode === 'on') rankHist.forEach(d => leftValues.push(d.pos ? Math.min(d.pos, 11) : 11));
+    const leftMin = 1;
+    const leftMax = Math.max(...leftValues, 5);
+    function yLeft(v) { return pad.t + (v - leftMin) / (leftMax - leftMin || 1) * (H - pad.t - pad.b); }
+
+    // Right Y: points (normal, 0 at bottom)
+    const ptsMax = Math.max(...rankHist.map(d => ptsMode === 'pcdj' ? d.pts : d.seasonPts), 100);
+    function yRight(v) { return pad.t + (1 - v / ptsMax) * (H - pad.t - pad.b); }
+
+    function draw(highlight) {
+      ctx.clearRect(0, 0, W, H);
+
+      // Season divider
+      if (seasonDivider > 0 && seasonDivider < totalRounds) {
+        const divX = xf(seasonDivider + 0.5);
+        ctx.strokeStyle = 'rgba(255,255,255,0.15)'; ctx.lineWidth = 1;
+        ctx.setLineDash([4, 4]);
+        ctx.beginPath(); ctx.moveTo(divX, pad.t); ctx.lineTo(divX, H - pad.b); ctx.stroke();
+        ctx.setLineDash([]);
+        ctx.fillStyle = 'rgba(255,255,255,0.2)'; ctx.font = "9px 'JetBrains Mono',monospace"; ctx.textAlign = 'center';
+        ctx.fillText('S2', (pad.l + divX) / 2, pad.t + 10);
+        ctx.fillText('S3', (divX + W - pad.r) / 2, pad.t + 10);
+      }
+
+      // Left Y grid
+      ctx.strokeStyle = 'rgba(255,255,255,0.06)'; ctx.lineWidth = 1;
+      if (rankMode !== 'off' || posMode === 'on') {
+        const ySteps = Math.min(leftMax, 6);
+        for (let i = 0; i <= ySteps; i++) {
+          const rv = Math.round(leftMin + (leftMax - leftMin) * i / ySteps);
+          const yv = yLeft(rv);
+          ctx.beginPath(); ctx.moveTo(pad.l, yv); ctx.lineTo(W - pad.r, yv); ctx.stroke();
+          ctx.fillStyle = '#6b7280'; ctx.font = "9px 'JetBrains Mono',monospace"; ctx.textAlign = 'right';
+          ctx.fillText('#' + rv, pad.l - 6, yv + 3);
+        }
+      }
+
+      // Right Y labels (points)
+      if (ptsMode !== 'off') {
+        const pSteps = 5;
+        for (let i = 0; i <= pSteps; i++) {
+          const pv = Math.round(ptsMax * i / pSteps);
+          const yv = yRight(pv);
+          if (!rankMode !== 'off' && !posMode === 'on') {
+            ctx.beginPath(); ctx.moveTo(pad.l, yv); ctx.lineTo(W - pad.r, yv); ctx.stroke();
+          }
+          ctx.fillStyle = PTS_COLOR; ctx.font = "9px 'JetBrains Mono',monospace"; ctx.textAlign = 'left';
+          ctx.fillText(pv, W - pad.r + 4, yv + 3);
+        }
+      }
+
+      // X axis
+      ctx.fillStyle = '#6b7280'; ctx.font = "9px 'JetBrains Mono',monospace"; ctx.textAlign = 'center';
+      for (let t = xMin; t <= xMax; t++) ctx.fillText(t, xf(t), H - 6);
+
+      // #1 reference line
+      if (rankMode !== 'off' || posMode === 'on') {
+        ctx.strokeStyle = 'rgba(255,255,255,0.12)'; ctx.setLineDash([4, 4]);
+        ctx.beginPath(); ctx.moveTo(pad.l, yLeft(1)); ctx.lineTo(W - pad.r, yLeft(1)); ctx.stroke();
+        ctx.setLineDash([]);
+      }
+
+      // --- Draw lines ---
+      function drawLine(points, color, yFn, valueKey, skipNull) {
+        const filtered = skipNull ? points.filter(pt => pt[valueKey] != null) : points;
+        if (!filtered.length) return;
+        // Line — break at gaps when skipNull
+        ctx.strokeStyle = color; ctx.lineWidth = 2; ctx.lineJoin = 'round';
+        ctx.beginPath();
+        let drawing = false;
+        filtered.forEach((pt, i) => {
+          const px = xf(pt.roundIdx), py = yFn(pt[valueKey]);
+          if (!drawing) { ctx.moveTo(px, py); drawing = true; }
+          else ctx.lineTo(px, py);
+        });
+        ctx.stroke();
+        // Glow
+        ctx.save(); ctx.globalAlpha = 0.12; ctx.strokeStyle = color; ctx.lineWidth = 6;
+        ctx.beginPath(); drawing = false;
+        filtered.forEach((pt) => {
+          const px = xf(pt.roundIdx), py = yFn(pt[valueKey]);
+          if (!drawing) { ctx.moveTo(px, py); drawing = true; }
+          else ctx.lineTo(px, py);
+        });
+        ctx.stroke(); ctx.restore();
+        // Dots
+        filtered.forEach(pt => {
+          const isHl = highlight && pt.roundIdx === highlight.roundIdx;
+          const isWin = pt.pos === 1 && valueKey === 'rank';
+          const px = xf(pt.roundIdx), py = yFn(pt[valueKey]);
+          if (isWin) {
+            const r = isHl ? 7 : 4.5;
+            ctx.beginPath();
+            for (let i = 0; i < 10; i++) {
+              const ang = -Math.PI / 2 + i * Math.PI / 5;
+              const rad = i % 2 === 0 ? r : r * 0.45;
+              ctx[i === 0 ? 'moveTo' : 'lineTo'](px + Math.cos(ang) * rad, py + Math.sin(ang) * rad);
+            }
+            ctx.closePath();
+            ctx.fillStyle = '#ffd700'; ctx.fill();
+            ctx.strokeStyle = '#b8960c'; ctx.lineWidth = isHl ? 1.5 : 1; ctx.stroke();
+          } else {
+            ctx.beginPath(); ctx.arc(px, py, isHl ? 5 : 2.5, 0, Math.PI * 2);
+            if (isHl) { ctx.fillStyle = '#fff'; ctx.fill(); ctx.strokeStyle = color; ctx.lineWidth = 2; ctx.stroke(); }
+            else { ctx.fillStyle = color; ctx.fill(); }
+          }
+        });
+      }
+
+      // Points line (behind rank/pos)
+      if (ptsMode !== 'off') {
+        if (ptsMode === 'pcdj') {
+          // PCDJ: continuous cumulative across all seasons
+          drawLine(rankHist, PTS_COLOR, yRight, 'pts', false);
+        } else {
+          // Season: per-season cumulative, break at season boundary
+          const s2Pts = rankHist.filter(pt => pt.roundIdx <= seasonDivider);
+          const s3Pts = rankHist.filter(pt => pt.roundIdx > seasonDivider);
+          if (s2Pts.length) drawLine(s2Pts, PTS_COLOR, yRight, 'seasonPts', false);
+          if (s3Pts.length) drawLine(s3Pts, PTS_COLOR, yRight, 'seasonPts', false);
+        }
+      }
+
+      // Position line — only rounds where player has a position, cap non-top10 at 11
+      if (posMode === 'on') {
+        const posData = rankHist
+          .filter(pt => pt.pos != null)
+          .map(pt => ({ ...pt, posVal: Math.min(pt.pos, 11) }));
+        drawLine(posData, POS_COLOR, yLeft, 'posVal', false);
+      }
+
+      // Rank line (on top) — PCDJ (continuous) or season (per-season segments)
+      if (rankMode !== 'off') {
+        if (seasonRankSegments) {
+          seasonRankSegments.forEach(seg => {
+            const filtered = seg.filter(pt => pt.pos != null);
+            if (filtered.length) drawLine(filtered, RANK_COLOR, yLeft, 'rank', false);
+          });
+        } else {
+          const filtered = rankHist.filter(pt => pt.pos != null);
+          drawLine(filtered, RANK_COLOR, yLeft, 'rank', false);
+        }
+      }
+    }
+
+    draw(null);
+
+    // Tooltip
+    canvas.onmousemove = (e) => {
+      const br = canvas.getBoundingClientRect();
+      const mx = e.clientX - br.left;
+      let closest = null, minDist = Infinity;
+      rankHist.forEach(pt => { const d = Math.abs(xf(pt.roundIdx) - mx); if (d < minDist) { minDist = d; closest = pt; } });
+      if (closest && minDist < 30) {
+        canvas.style.cursor = 'pointer';
+        tip.style.display = 'block';
+        let html = `<div class="t-round">${esc(closest.round)}</div>`;
+        // Rank — matches current button mode
+        if (rankMode !== 'off') {
+          let rankVal = closest.rank; // default PCDJ rank
+          if (rankMode === 'season' && seasonRankSegments) {
+            // Find this round in season segments
+            for (const seg of seasonRankSegments) {
+              const match = seg.find(pt => pt.roundIdx === closest.roundIdx);
+              if (match) { rankVal = match.rank; break; }
+            }
+          }
+          html += `<div class="t-val" style="color:${RANK_COLOR}">${rankMode === 'pcdj' ? 'PCDJ' : 'Season'} Rank: <span>#${rankVal}</span></div>`;
+        }
+        // Position — always show if player played this round, hide if no data
+        if (closest.pos != null) {
+          html += `<div class="t-val">Position: <span>#${closest.pos}</span></div>`;
+        }
+        // Points
+        if (ptsMode !== 'off') html += `<div class="t-val" style="color:${PTS_COLOR}">${ptsMode === 'pcdj' ? 'PCDJ' : 'Season'} pts: <span>${ptsMode === 'pcdj' ? closest.pts : closest.seasonPts}</span></div>`;
+        if (closest.roundPts) html += `<div class="t-val">Round: <span>+${closest.roundPts}</span></div>`;
+        tip.innerHTML = html;
+        let tx = xf(closest.roundIdx) + 12;
+        if (tx + 160 > W) tx = xf(closest.roundIdx) - 170;
+        const primaryY = rankMode !== 'off' ? yLeft(closest.rank) : posMode === 'on' ? yLeft(Math.min(closest.pos || 11, 11)) : yRight(ptsMode === 'pcdj' ? closest.pts : closest.seasonPts);
+        tip.style.left = tx + 'px';
+        tip.style.top = (primaryY - 40) + 'px';
+        draw(closest);
+      } else {
+        canvas.style.cursor = ''; tip.style.display = 'none'; draw(null);
+      }
+    };
+    canvas.onmouseleave = () => { tip.style.display = 'none'; canvas.style.cursor = ''; draw(null); };
+  }
+
+  buildPanel();
+  drawCanvas();
 }
 
 // --- Season tabs ---
@@ -627,12 +892,20 @@ function renderRankings() {
 }
 
 // --- Rounds view ---
-const ROUND_COLS = '36px 1fr 60px 80px';
+const ROUND_COLS = '36px 1fr 60px 80px 80px';
+
+function strengthColor(val) {
+  if (val >= 92) return '#10b981';
+  if (val >= 90) return '#84cc16';
+  if (val >= 88) return '#eab308';
+  if (val >= 85) return '#f97316';
+  return '#ef4444';
+}
 
 function renderRoundsHeader() {
   const header = document.getElementById('tableHeader');
   header.style.gridTemplateColumns = ROUND_COLS;
-  header.innerHTML = `<div>#</div><div>Round</div><div style="text-align:center">Players</div><div style="text-align:center">Winner</div>`;
+  header.innerHTML = `<div>#</div><div>Round</div><div style="text-align:center">Players</div><div style="text-align:center">Winner</div><div style="text-align:center">SOF</div>`;
 }
 
 function renderRounds() {
@@ -652,26 +925,23 @@ function renderRounds() {
   });
 
   const roundNames = Object.keys(roundMap);
-  // Sort: Regular rounds by number, then Troll, then Roulette
-  roundNames.sort((a, b) => {
-    const na = parseInt(a.replace(/\D/g, '')) || 0;
-    const nb = parseInt(b.replace(/\D/g, '')) || 0;
-    const wa = a.includes('Troll') ? 1000 : a.includes('Roulette') ? 2000 : 0;
-    const wb = b.includes('Troll') ? 1000 : b.includes('Roulette') ? 2000 : 0;
-    return (wa + na) - (wb + nb);
-  });
+  roundNames.sort((a, b) => roundSortKey(a) - roundSortKey(b));
 
   const body = document.getElementById('tableBody');
+  const strengths = season.round_strengths || {};
   body.innerHTML = roundNames.map((rName, i) => {
     const players = roundMap[rName].sort((a, b) => a.pos - b.pos);
     const winner = players[0];
     const isHalf = rName.includes('Troll') || rName.includes('Roulette');
     const typeLabel = isHalf ? ' <span style="color:var(--text-dark);font-size:10px">½</span>' : '';
+    const sof = strengths[rName];
+    const sofHtml = sof ? `<span style="color:${strengthColor(sof)};font-weight:600">${sof.toFixed(1)}</span>` : '<span style="color:var(--text-dark)">—</span>';
     return `<div class="row round-row" data-round="${esc(rName)}" style="grid-template-columns:${ROUND_COLS}">
       <div class="rank">${i + 1}</div>
       <div style="font-size:13px">${esc(rName)}${typeLabel}</div>
       <div style="text-align:center;font-family:var(--mono);font-size:11px;color:var(--text-muted)">${players.length}</div>
       <div style="text-align:center;font-size:12px;font-weight:600;color:var(--accent)">${esc(winner?.name || '—')}</div>
+      <div style="text-align:center;font-family:var(--mono);font-size:11px">${sofHtml}</div>
     </div>`;
   }).join('');
 
