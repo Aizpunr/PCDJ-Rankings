@@ -1,4 +1,4 @@
-import openpyxl, json, os, sys
+import openpyxl, json, os, sys, re
 from collections import defaultdict
 sys.stdout.reconfigure(encoding='utf-8')
 
@@ -32,6 +32,11 @@ PETITE_ALIASES = {
     'JustMaki': 'justMaki',
     'QuickRacer10': 'Quickracer10',
     'Redal': 'redal',
+    '[GECK]R0nanC': 'R0nanC',
+    '[CCC]Shinikage221': 'Shinikage221',
+    '[Fae]Kyn': 'Kyn',
+    'brrryy': 'Brrry',
+    'BB_Benji': 'BB_Benji',
     'Clowney': 'Clowny',
     'Brrryy': 'Brrry',
     'Magical': 'Magical',
@@ -49,9 +54,18 @@ PETITE_ALIASES = {
 }
 NAME_MAP.update(PETITE_ALIASES)
 
+def strip_tag(name):
+    return re.sub(r'\[.*?\]\s*', '', name).strip()
+
 def normalize(name):
     name = name.strip()
-    return NAME_MAP.get(name, name)
+    if name in NAME_MAP:
+        return NAME_MAP[name]
+    # Auto-strip: [TAG]Name -> Name if Name is a canonical key
+    stripped = strip_tag(name)
+    if stripped != name and (stripped in CANONICAL or stripped in NAME_MAP.values()):
+        return NAME_MAP.get(stripped, stripped)
+    return name
 
 # --- Points system ---
 POINTS_SCALE = 20  # multiplier: 1st=200, 2nd=180, ..., 10th=20
@@ -138,6 +152,82 @@ def parse_petite(filepath):
 
     return seasons
 
+def parse_cup_file(filepath, round_name, cup_label=None):
+    """Parse a cup xlsx in COTD format. Finds cup by cup_label (e.g. 'Petite Cup 38').
+    If cup_label is None, reads the first Position column found."""
+    wb = openpyxl.load_workbook(filepath, data_only=True)
+    ws = wb.active
+    rows = list(ws.iter_rows(values_only=False))
+
+    # Find all Position headers and their associated cup names
+    position_cols = []
+    for ri, row in enumerate(rows):
+        for cell in row:
+            if cell.value == 'Position':
+                # Look above for cup name
+                cup_name = None
+                for sr in range(cell.row - 2, max(0, cell.row - 5), -1):
+                    val = ws.cell(row=sr, column=cell.column).value
+                    if val and str(val).startswith('Petite'):
+                        cup_name = str(val).strip()
+                        break
+                position_cols.append((cell.row, cell.column, cup_name))
+
+    # Find the right cup
+    target_col = None
+    target_row = None
+    for row_idx, col_idx, cname in position_cols:
+        if cup_label and cname == cup_label:
+            target_row, target_col = row_idx, col_idx
+            break
+        elif not cup_label and not target_col:
+            target_row, target_col = row_idx, col_idx
+
+    if target_col is None:
+        print(f"  WARNING: Could not find cup '{cup_label}' in {filepath}")
+        return {'name': round_name, 'lobby_size': 0, 'is_half': False, 'players': []}
+
+    # Read players below the Position header
+    players = []
+    for r in range(target_row + 1, ws.max_row + 1):
+        pos_val = ws.cell(row=r, column=target_col).value
+        name_val = ws.cell(row=r, column=target_col + 1).value
+        if pos_val is None or name_val is None:
+            break
+        try:
+            pos = int(float(pos_val))
+        except (ValueError, TypeError):
+            continue
+        name = normalize(str(name_val).strip())
+        pts = base_points(pos) * POINTS_SCALE
+        players.append({
+            'position': pos,
+            'name': name,
+            'points': pts,
+        })
+
+    return {
+        'name': round_name,
+        'lobby_size': len(players),
+        'is_half': False,
+        'players': players,
+    }
+
+# Full-lobby replacements: override SGR's top-10-only data with complete results
+# Format: 'Round N': ('filename.xlsx', 'Cup Label in xlsx')
+FULL_LOBBY_REPLACEMENTS = {
+    'Season 3': {
+        'Round 5': ('Petite Cups 31-35.xlsx', 'Petite Cup 34'),
+        'Round 6': ('Petite Cups 31-35.xlsx', 'Petite Cup 35'),
+        'Round 8': ('Petite Cups 36-40.xlsx', 'Petite Cup 37'),
+        'Round 9': ('Petite Cups 36-40.xlsx', 'Petite Cup 38'),
+    },
+}
+
+# Supplementary cups not yet in SGR's spreadsheet
+EXTRA_CUPS = {
+}
+
 # --- Compute rankings ---
 def compute_rankings(rounds, best_of, season_mode=True, championship=False):
     """Compute rankings from a list of rounds.
@@ -206,6 +296,8 @@ def compute_rankings(rounds, best_of, season_mode=True, championship=False):
             'history': history,
         })
 
+    # Filter out players with 0 points (outside top 10 every round)
+    rankings = [p for p in rankings if p['points'] > 0]
     rankings.sort(key=lambda p: (p['points'], p['wins'], p['podiums']['gold'] + p['podiums']['silver'] + p['podiums']['bronze'], p['avg_pts']), reverse=True)
     for i, p in enumerate(rankings, 1):
         p['rank'] = i
@@ -215,6 +307,36 @@ def compute_rankings(rounds, best_of, season_mode=True, championship=False):
 # --- Main ---
 print("Parsing petite cup data...")
 seasons = parse_petite(_p('Results Petite .xlsx'))
+
+# Replace rounds with full-lobby data where available
+for season_name, replacements in FULL_LOBBY_REPLACEMENTS.items():
+    if season_name not in seasons:
+        continue
+    for round_name, (filename, cup_label) in replacements.items():
+        rnd = parse_cup_file(_p(filename), round_name, cup_label=cup_label)
+        if not rnd['players']:
+            continue
+        # Find and replace the existing round
+        replaced = False
+        for i, existing in enumerate(seasons[season_name]):
+            if existing['name'] == round_name:
+                seasons[season_name][i] = rnd
+                replaced = True
+                print(f"  Replaced {round_name} with full lobby from {filename}: {len(rnd['players'])} players")
+                break
+        if not replaced:
+            seasons[season_name].append(rnd)
+            print(f"  Added {round_name} from {filename}: {len(rnd['players'])} players")
+
+# Append supplementary cups
+for season_name, cups in EXTRA_CUPS.items():
+    if season_name not in seasons:
+        seasons[season_name] = []
+    for filename, round_name in cups:
+        rnd = parse_cup_file(_p(filename), round_name)
+        if rnd['players']:
+            seasons[season_name].append(rnd)
+            print(f"  Added {round_name} from {filename}: {len(rnd['players'])} top-10 players, {rnd['lobby_size']} total")
 season_names = list(seasons.keys())
 
 output = {}
