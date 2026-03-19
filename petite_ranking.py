@@ -296,8 +296,6 @@ def compute_rankings(rounds, best_of, season_mode=True, championship=False):
             'history': history,
         })
 
-    # Filter out players with 0 points (outside top 10 every round)
-    rankings = [p for p in rankings if p['points'] > 0]
     rankings.sort(key=lambda p: (p['points'], p['wins'], p['podiums']['gold'] + p['podiums']['silver'] + p['podiums']['bronze'], p['avg_pts']), reverse=True)
     for i, p in enumerate(rankings, 1):
         p['rank'] = i

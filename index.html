@@ -563,7 +563,7 @@ function renderRankings() {
   updateInfoTip(season);
 
   const src = pointsMode === 'championship' && season.championship ? season.championship : season.rankings;
-  let rankings = [...src];
+  let rankings = [...src].filter(p => p.points > 0);
 
   // Sort
   rankings.sort((a, b) => {
