@@ -9,14 +9,38 @@
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  --accent: #f59e0b;
+  --green: #10b981; --red: #ef4444;
+  --mono: 'JetBrains Mono', monospace;
+}
+[data-theme="dark"] { --accent: #f59e0b; }
+[data-theme="light"] { --accent: #b45309; }
+[data-theme="dark"] {
   --bg: #08080d; --surface: rgba(255,255,255,0.02); --border: rgba(255,255,255,0.06);
   --border-bright: rgba(255,255,255,0.08); --text: #e5e7eb; --text-dim: #9ca3af;
   --text-muted: #6b7280; --text-dark: #4b5563;
   --surface-hover: rgba(255,255,255,0.05); --row-hover: rgba(255,255,255,0.03);
-  --row-border: rgba(255,255,255,0.03); --green: #10b981; --red: #ef4444;
-  --mono: 'JetBrains Mono', monospace;
+  --row-border: rgba(255,255,255,0.03);
   --scrollbar: rgba(255,255,255,0.1);
+  --btn-hover: rgba(255,255,255,0.3); --btn-active-bg: rgba(255,255,255,0.03);
+  --tooltip-bg: rgba(10,10,15,0.95); --tooltip-border: rgba(255,255,255,0.15);
+  --row-stripe: rgba(255,255,255,0.015);
+  --chart-grid: rgba(255,255,255,0.06); --chart-divider: rgba(255,255,255,0.15);
+  --chart-label: rgba(255,255,255,0.2); --chart-guide: rgba(255,255,255,0.12);
+  --dot-hl: #ffffff;
+}
+[data-theme="light"] {
+  --bg: #f5f5f7; --surface: rgba(0,0,0,0.02); --border: rgba(0,0,0,0.08);
+  --border-bright: rgba(0,0,0,0.12); --text: #1f2937; --text-dim: #4b5563;
+  --text-muted: #6b7280; --text-dark: #9ca3af;
+  --surface-hover: rgba(0,0,0,0.05); --row-hover: rgba(0,0,0,0.03);
+  --row-border: rgba(0,0,0,0.05);
+  --scrollbar: rgba(0,0,0,0.15);
+  --btn-hover: rgba(0,0,0,0.3); --btn-active-bg: rgba(0,0,0,0.03);
+  --tooltip-bg: rgba(255,255,255,0.95); --tooltip-border: rgba(0,0,0,0.15);
+  --row-stripe: rgba(0,0,0,0.02);
+  --chart-grid: rgba(0,0,0,0.06); --chart-divider: rgba(0,0,0,0.15);
+  --chart-label: rgba(0,0,0,0.25); --chart-guide: rgba(0,0,0,0.15);
+  --dot-hl: #f5f5f7;
 }
 html { background: var(--bg); color: var(--text); }
 body { font-family: 'Space Grotesk', system-ui, sans-serif; min-height: 100vh; padding: 20px 12px; }
@@ -27,7 +51,7 @@ body { font-family: 'Space Grotesk', system-ui, sans-serif; min-height: 100vh; p
 
 .container { max-width: 960px; margin: 0 auto; }
 
-.header { text-align: center; margin-bottom: 28px; }
+.header { text-align: center; margin-bottom: 28px; position: relative; }
 .header h1 {
   font-size: 28px; font-weight: 800; margin: 0;
   background: linear-gradient(135deg, #10b981, #3b82f6, #8b5cf6);
@@ -86,7 +110,7 @@ body { font-family: 'Space Grotesk', system-ui, sans-serif; min-height: 100vh; p
   display: grid; padding: 3px 4px; align-items: center;
   border-bottom: 1px solid var(--row-border); font-size: 12px;
 }
-.round-player-row:nth-child(odd) { background: rgba(255,255,255,0.015); }
+.round-player-row:nth-child(odd) { background: var(--row-stripe); }
 
 .chart-panel {
   background: var(--row-hover); border: 1px solid var(--border-bright);
@@ -103,18 +127,18 @@ body { font-family: 'Space Grotesk', system-ui, sans-serif; min-height: 100vh; p
   border-radius: 4px; padding: 3px 10px; cursor: pointer; font-size: 10px;
   font-family: var(--mono); transition: all 0.15s;
 }
-.chart-mode-btn:hover { border-color: rgba(255,255,255,0.3); color: var(--text-dim); }
-.chart-mode-btn.active { border-color: var(--mc); color: var(--mc); background: rgba(255,255,255,0.03); }
+.chart-mode-btn:hover { border-color: var(--btn-hover); color: var(--text-dim); }
+.chart-mode-btn.active { border-color: var(--mc); color: var(--mc); background: var(--btn-active-bg); }
 
 .close-btn {
   background: none; border: 1px solid var(--border-bright); color: var(--text-muted);
   border-radius: 4px; padding: 2px 8px; cursor: pointer; font-size: 12px;
   font-family: var(--mono); transition: all 0.15s;
 }
-.close-btn:hover { border-color: rgba(255,255,255,0.3); color: var(--accent); }
+.close-btn:hover { border-color: var(--btn-hover); color: var(--accent); }
 .tooltip {
-  display: none; position: absolute; background: rgba(10,10,15,0.95);
-  border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; padding: 6px 10px;
+  display: none; position: absolute; background: var(--tooltip-bg);
+  border: 1px solid var(--tooltip-border); border-radius: 6px; padding: 6px 10px;
   font-family: var(--mono); font-size: 10px; color: var(--text-dim);
   pointer-events: none; z-index: 10; white-space: nowrap;
 }
@@ -148,12 +172,12 @@ body { font-family: 'Space Grotesk', system-ui, sans-serif; min-height: 100vh; p
   border-radius: 4px; padding: 2px 7px; cursor: pointer; font-size: 11px;
   font-family: var(--mono); margin-left: 2px; transition: all 0.15s; line-height: 1;
 }
-.info-btn:hover { border-color: rgba(255,255,255,0.3); color: var(--accent); }
+.info-btn:hover { border-color: var(--btn-hover); color: var(--accent); }
 
 .info-tip-wrap { position: relative; display: inline-flex; align-items: center; }
 .info-tip {
   display: none; position: absolute; top: 100%; left: 0; margin-top: 8px;
-  background: rgba(10,10,15,0.95); border: 1px solid rgba(255,255,255,0.15);
+  background: var(--tooltip-bg); border: 1px solid var(--tooltip-border);
   border-radius: 8px; padding: 10px 14px; font-family: var(--mono); font-size: 10px;
   color: var(--text-dim); width: 300px; z-index: 20; line-height: 1.7;
   white-space: normal; text-align: left;
@@ -161,12 +185,53 @@ body { font-family: 'Space Grotesk', system-ui, sans-serif; min-height: 100vh; p
 .info-tip code { color: var(--accent); font-size: 10px; }
 .info-tip .st-head { color: var(--text); font-weight: 700; margin-bottom: 4px; }
 .info-tip-wrap:hover .info-tip { display: block; }
+
+.compare-toggle {
+  display: flex; align-items: center; gap: 5px; cursor: pointer;
+  font-family: var(--mono); font-size: 11px; color: var(--text-muted);
+  user-select: none; padding: 3px 0;
+}
+.compare-toggle input[type="checkbox"] {
+  accent-color: var(--accent); width: 13px; height: 13px; cursor: pointer;
+}
+.compare-panel {
+  background: var(--row-hover); border: 1px solid var(--border-bright);
+  border-radius: 10px; padding: 14px; margin-bottom: 16px;
+  animation: slideDown 0.15s ease-out;
+}
+.comp-grid {
+  display: grid; grid-template-columns: 1fr auto 1fr; gap: 4px 12px;
+  font-family: var(--mono); font-size: 11px; align-items: center;
+}
+.comp-grid .comp-label { text-align: center; color: var(--text-muted); font-size: 9px; text-transform: uppercase; }
+.comp-grid .comp-left { text-align: right; }
+.comp-grid .comp-right { text-align: left; }
+.comp-winner { font-weight: 700; }
+.row.comp-p1 { background: rgba(6,182,212,0.08); }
+.row.comp-p2 { background: rgba(249,115,22,0.08); }
+.row.comp-p1:hover { background: rgba(6,182,212,0.12) !important; }
+.row.comp-p2:hover { background: rgba(249,115,22,0.12) !important; }
+
+.theme-toggle {
+  position: absolute; top: 8px; right: 0;
+  background: var(--surface-hover); border: 1px solid var(--border);
+  border-radius: 8px; padding: 5px 10px; cursor: pointer;
+  font-size: 16px; line-height: 1; transition: border-color 0.15s;
+}
+.theme-toggle:hover { border-color: var(--btn-hover); }
 </style>
+<script>
+(function(){
+  var t = localStorage.getItem('theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', t);
+})();
+</script>
 </head>
 <body>
 <div class="container">
   <div class="header">
     <h1>Petite Cup du Jour</h1>
+    <button class="theme-toggle" id="themeToggle" title="Toggle light/dark mode"></button>
   </div>
 
   <div class="controls">
@@ -183,8 +248,10 @@ body { font-family: 'Space Grotesk', system-ui, sans-serif; min-height: 100vh; p
       <button class="info-btn" onclick="event.stopPropagation()" style="pointer-events:auto">ℹ</button>
       <div class="info-tip" id="infoTip"></div>
     </span>
+    <label class="compare-toggle"><input type="checkbox" id="compareCheck"><span>Compare</span></label>
   </div>
 
+  <div id="comparePanel"></div>
   <div class="table-header" id="tableHeader"></div>
   <div id="tableBody"></div>
 
@@ -209,12 +276,33 @@ body { font-family: 'Space Grotesk', system-ui, sans-serif; min-height: 100vh; p
 </div>
 
 <script>
+// ── THEME ──
+function setTheme(t) {
+  document.documentElement.setAttribute('data-theme', t);
+  localStorage.setItem('theme', t);
+  const btn = document.getElementById('themeToggle');
+  if (btn) btn.textContent = t === 'dark' ? '\u2600\uFE0F' : '\uD83C\uDF19';
+  if (typeof render === 'function') render();
+}
+document.addEventListener('DOMContentLoaded', function() {
+  var cur = document.documentElement.getAttribute('data-theme') || 'dark';
+  var btn = document.getElementById('themeToggle');
+  btn.textContent = cur === 'dark' ? '\u2600\uFE0F' : '\uD83C\uDF19';
+  btn.addEventListener('click', function() {
+    setTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+  });
+});
+
 let data = null;
 let currentSeason = null;
 let viewMode = 'rankings';
 let sortCol = 'points';
 let sortDir = -1;
 let pointsMode = 'ranking'; // 'ranking' (ATP drops) or 'championship' (OLR 10-1)
+let compareMode = false;
+let compareList = []; // up to 2 player names
+let compareChartMode = 'ranking'; // 'ranking' (PCDJ cumulative) or 'season' (per-season)
+const COMP_COLORS = ['#06b6d4', '#f97316'];
 
 // Points tier color
 // Season thresholds
@@ -228,6 +316,8 @@ const PCDJ_THRESHOLDS = {
   ranking:      [3600, 2200, 1300, 100],
 };
 const TIER_COLORS = ['#dc2626', '#a855f7', '#3b82f6', '#10b981', '#6b7280'];
+
+function cssVar(name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
 
 function ptsColor(pts) {
   const isPCDJ = data && data[currentSeason] && data[currentSeason].type === 'trailing';
@@ -579,17 +669,17 @@ function drawRankChart(player, panel) {
       // Season divider
       if (seasonDivider > 0 && seasonDivider < totalRounds) {
         const divX = xf(seasonDivider + 0.5);
-        ctx.strokeStyle = 'rgba(255,255,255,0.15)'; ctx.lineWidth = 1;
+        ctx.strokeStyle = cssVar('--chart-divider'); ctx.lineWidth = 1;
         ctx.setLineDash([4, 4]);
         ctx.beginPath(); ctx.moveTo(divX, pad.t); ctx.lineTo(divX, H - pad.b); ctx.stroke();
         ctx.setLineDash([]);
-        ctx.fillStyle = 'rgba(255,255,255,0.2)'; ctx.font = "9px 'JetBrains Mono',monospace"; ctx.textAlign = 'center';
+        ctx.fillStyle = cssVar('--chart-label'); ctx.font = "9px 'JetBrains Mono',monospace"; ctx.textAlign = 'center';
         ctx.fillText('S2', (pad.l + divX) / 2, pad.t + 10);
         ctx.fillText('S3', (divX + W - pad.r) / 2, pad.t + 10);
       }
 
       // Left Y grid
-      ctx.strokeStyle = 'rgba(255,255,255,0.06)'; ctx.lineWidth = 1;
+      ctx.strokeStyle = cssVar('--chart-grid'); ctx.lineWidth = 1;
       if (rankMode !== 'off' || posMode === 'on') {
         const ySteps = Math.min(leftMax, 6);
         for (let i = 0; i <= ySteps; i++) {
@@ -621,7 +711,7 @@ function drawRankChart(player, panel) {
 
       // #1 reference line
       if (rankMode !== 'off' || posMode === 'on') {
-        ctx.strokeStyle = 'rgba(255,255,255,0.12)'; ctx.setLineDash([4, 4]);
+        ctx.strokeStyle = cssVar('--chart-guide'); ctx.setLineDash([4, 4]);
         ctx.beginPath(); ctx.moveTo(pad.l, yLeft(1)); ctx.lineTo(W - pad.r, yLeft(1)); ctx.stroke();
         ctx.setLineDash([]);
       }
@@ -667,7 +757,7 @@ function drawRankChart(player, panel) {
             ctx.strokeStyle = '#b8960c'; ctx.lineWidth = isHl ? 1.5 : 1; ctx.stroke();
           } else {
             ctx.beginPath(); ctx.arc(px, py, isHl ? 5 : 2.5, 0, Math.PI * 2);
-            if (isHl) { ctx.fillStyle = '#fff'; ctx.fill(); ctx.strokeStyle = color; ctx.lineWidth = 2; ctx.stroke(); }
+            if (isHl) { ctx.fillStyle = cssVar('--dot-hl'); ctx.fill(); ctx.strokeStyle = color; ctx.lineWidth = 2; ctx.stroke(); }
             else { ctx.fillStyle = color; ctx.fill(); }
           }
         });
@@ -752,6 +842,30 @@ function drawRankChart(player, panel) {
       }
     };
     canvas.onmouseleave = () => { tip.style.display = 'none'; canvas.style.cursor = ''; draw(null); };
+    canvas.onclick = (e) => {
+      const br = canvas.getBoundingClientRect();
+      const mx = e.clientX - br.left;
+      let closest = null, minDist = Infinity;
+      rankHist.forEach(pt => { const d = Math.abs(xf(pt.roundIdx) - mx); if (d < minDist) { minDist = d; closest = pt; } });
+      if (!closest || minDist >= 30) return;
+      // Determine season and round name from PCDJ prefixed round
+      const rName = closest.round; // e.g. "Season 2 Round 5" or "Season 3 Troll 2"
+      const match = rName.match(/^(Season \d+)\s+(.+)$/);
+      if (!match) return;
+      const targetSeason = match[1]; // "Season 2"
+      const targetRound = match[2]; // "Round 5"
+      // Switch to that season's rounds view
+      currentSeason = targetSeason;
+      viewMode = 'rounds';
+      document.querySelectorAll('.view-tab[data-view]').forEach(b => b.classList.toggle('active', b.dataset.view === 'rounds'));
+      buildSeasonTabs();
+      render();
+      // Auto-expand the target round
+      setTimeout(() => {
+        const row = document.querySelector(`.round-row[data-round="${CSS.escape(targetRound)}"]`);
+        if (row) { row.click(); row.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+      }, 50);
+    };
   }
 
   buildPanel();
@@ -857,7 +971,8 @@ function renderRankings() {
       : `<span style="color:var(--text-dark)">0</span>`;
     const bestC = p.best_pos === 1 ? 'var(--accent)' : p.best_pos <= 3 ? 'var(--text)' : 'var(--text-dim)';
     const avgPosC = p.avg_pos <= 3 ? 'var(--green)' : p.avg_pos <= 5 ? 'var(--text-dim)' : 'var(--text-muted)';
-    return `<div class="row" data-name="${esc(p.name)}" style="grid-template-columns:${RANK_COLS}">
+    const compClass = compareMode && compareList[0] === p.name ? ' comp-p1' : compareMode && compareList[1] === p.name ? ' comp-p2' : '';
+    return `<div class="row${compClass}" data-name="${esc(p.name)}" style="grid-template-columns:${RANK_COLS}">
       <div class="rank">${i + 1}</div>
       <div class="player"><span class="dot" style="background:${c};box-shadow:0 0 5px ${c}40"></span><span class="pname">${esc(p.name)}</span></div>
       <div style="text-align:right;font-family:var(--mono);font-weight:700;color:${c}">${p.points}</div>
@@ -869,9 +984,23 @@ function renderRankings() {
     </div>`;
   }).join('');
 
-  // Click row to expand rank chart
+  // Click row to expand rank chart or compare
   body.querySelectorAll('.row').forEach(row => {
     row.onclick = () => {
+      const name = row.dataset.name;
+      if (compareMode) {
+        const idx = compareList.indexOf(name);
+        if (idx >= 0) compareList.splice(idx, 1);
+        else if (compareList.length < 2) compareList.push(name);
+        else compareList = [compareList[1], name];
+        body.querySelectorAll('.row').forEach(r => {
+          r.classList.remove('comp-p1', 'comp-p2');
+          if (r.dataset.name === compareList[0]) r.classList.add('comp-p1');
+          else if (compareList[1] && r.dataset.name === compareList[1]) r.classList.add('comp-p2');
+        });
+        renderComparePanel();
+        return;
+      }
       const existing = body.querySelectorAll('.chart-panel');
       existing.forEach(e => e.remove());
       if (row.classList.contains('selected')) { row.classList.remove('selected'); return; }
@@ -957,20 +1086,67 @@ function renderRounds() {
       const rName = row.dataset.round;
       const players = roundMap[rName].sort((a, b) => a.pos - b.pos);
 
+      // Build PCDJ cumulative points at this round
+      const pcdj = data['PCDJ Ranking'];
+      const pcdjSrc = pcdj ? (pointsMode === 'championship' && pcdj.championship ? pcdj.championship : pcdj.rankings) : null;
+      const pcdjRoundName = currentSeason + ' ' + rName; // e.g. "Season 3 Round 5"
+      const pcdjPtsMap = {};
+      if (pcdjSrc) {
+        const allRounds = new Set();
+        pcdjSrc.forEach(p => p.history.forEach(h => allRounds.add(h.r)));
+        const roundOrder = [...allRounds].sort((a, b) => roundSortKey(a) - roundSortKey(b));
+        const targetIdx = roundOrder.indexOf(pcdjRoundName);
+        if (targetIdx >= 0) {
+          const roundsUpTo = new Set(roundOrder.slice(0, targetIdx + 1));
+          pcdjSrc.forEach(p => {
+            let cum = 0;
+            p.history.forEach(h => { if (roundsUpTo.has(h.r)) cum += h.p; });
+            if (cum > 0) pcdjPtsMap[p.name] = cum;
+          });
+        }
+      }
+
       const panel = document.createElement('div');
       panel.className = 'round-detail-panel round-detail';
-      let h = `<div style="display:grid;grid-template-columns:36px 1fr 80px;font-family:var(--mono);font-size:9px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;padding:0 0 6px;margin-bottom:4px;border-bottom:1px solid var(--row-border)">
-        <div>Pos</div><div>Player</div><div style="text-align:right">Points</div></div>`;
+      const cols = '36px 1fr 60px 80px';
+      let h = `<div style="display:grid;grid-template-columns:${cols};font-family:var(--mono);font-size:9px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;padding:0 0 6px;margin-bottom:4px;border-bottom:1px solid var(--row-border)">
+        <div>Pos</div><div>Player</div><div style="text-align:right">PCDJ Pts</div><div style="text-align:right">Round</div></div>`;
       players.forEach((p, pi) => {
         const c = ptsColorSingle(p.pts);
-        const bg = pi % 2 === 0 ? 'transparent' : 'rgba(255,255,255,0.015)';
-        h += `<div class="round-player-row" style="grid-template-columns:36px 1fr 80px;background:${bg}">
+        const bg = pi % 2 === 0 ? 'transparent' : 'var(--row-stripe)';
+        const cumPts = pcdjPtsMap[p.name];
+        const cumColor = cumPts ? ptsColor(cumPts) : 'var(--text-dark)';
+        const cumHtml = cumPts ? `<span style="color:${cumColor}">${cumPts}</span>` : '<span style="color:var(--text-dark)">—</span>';
+        h += `<div class="round-player-row" data-player="${esc(p.name)}" style="grid-template-columns:${cols};background:${bg}">
           <div style="font-family:var(--mono);color:var(--text-muted)">${p.pos}</div>
-          <div style="font-weight:600">${esc(p.name)}</div>
+          <div class="round-player-link" style="font-weight:600;cursor:pointer">${esc(p.name)}</div>
+          <div style="text-align:right;font-family:var(--mono);font-size:11px">${cumHtml}</div>
           <div style="text-align:right;font-family:var(--mono);font-weight:700;color:${c}">${p.pts}</div>
         </div>`;
       });
       panel.innerHTML = h;
+      // Make player names clickable for inline chart
+      panel.querySelectorAll('.round-player-link').forEach(el => {
+        el.onmouseenter = () => { el.style.textDecoration = 'underline'; };
+        el.onmouseleave = () => { el.style.textDecoration = 'none'; };
+        el.onclick = (e) => {
+          e.stopPropagation();
+          const name = el.closest('.round-player-row').dataset.player;
+          // Close any existing inline chart
+          panel.querySelectorAll('.round-inline-chart').forEach(c => c.remove());
+          // Find player in current season or PCDJ data
+          const pcdj = data['PCDJ Ranking'];
+          const src = pointsMode === 'championship' && pcdj.championship ? pcdj.championship : pcdj.rankings;
+          const playerObj = src.find(x => x.name === name);
+          if (!playerObj) return;
+          const chartEl = document.createElement('div');
+          chartEl.className = 'round-inline-chart chart-panel';
+          chartEl.style.cssText = 'margin:4px 0;border-radius:8px;';
+          el.closest('.round-player-row').after(chartEl);
+          drawRankChart(playerObj, chartEl);
+          chartEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        };
+      });
       row.after(panel);
       panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     };
@@ -989,8 +1165,263 @@ function renderTierLegend() {
   }).join('');
 }
 
+// --- Compare ---
+document.getElementById('compareCheck').onchange = (e) => {
+  compareMode = e.target.checked;
+  if (!compareMode) compareList = [];
+  renderComparePanel();
+  render();
+};
+
+function computeH2H(name1, name2) {
+  const pcdj = data['PCDJ Ranking'];
+  if (!pcdj) return { p1w: 0, p2w: 0, ties: 0, total: 0 };
+  const src = pointsMode === 'championship' && pcdj.championship ? pcdj.championship : pcdj.rankings;
+  const p1 = src.find(p => p.name === name1);
+  const p2 = src.find(p => p.name === name2);
+  if (!p1 || !p2) return { p1w: 0, p2w: 0, ties: 0, total: 0 };
+  const map2 = new Map(p2.history.map(h => [h.r, h.pos]));
+  let p1w = 0, p2w = 0, ties = 0, total = 0;
+  p1.history.forEach(h => {
+    if (map2.has(h.r)) {
+      const p2pos = map2.get(h.r);
+      total++;
+      if (h.pos < p2pos) p1w++;
+      else if (p2pos < h.pos) p2w++;
+      else ties++;
+    }
+  });
+  return { p1w, p2w, ties, total };
+}
+
+function drawCompareChart(p1hist, p2hist, panel) {
+  const canvas = panel.querySelector('#compareCanvas');
+  const tip = panel.querySelector('#compareTip');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const dpr = window.devicePixelRatio || 1;
+  const rect = canvas.parentElement.getBoundingClientRect();
+  canvas.width = rect.width * dpr;
+  canvas.height = 180 * dpr;
+  canvas.style.width = rect.width + 'px';
+  canvas.style.height = '180px';
+  ctx.scale(dpr, dpr);
+  const W = rect.width, H = 180;
+  const pad = { l: 36, r: 12, t: 12, b: 28 };
+
+  let totalRounds = 0;
+  Object.keys(data).forEach(s => { if (data[s].type === 'season') totalRounds += (data[s].rounds_played || 0); });
+  if (!totalRounds) totalRounds = 26;
+  const xMin = 1, xMax = totalRounds;
+  function xf(idx) { return pad.l + (idx - xMin) / (xMax - xMin || 1) * (W - pad.l - pad.r); }
+
+  const ptsKey = compareChartMode === 'season' ? 'seasonPts' : 'pts';
+  const allPtsVals = [...p1hist.map(d => d[ptsKey]), ...p2hist.map(d => d[ptsKey])];
+  const ptsMax = Math.max(...allPtsVals, 100);
+  function yPts(v) { return pad.t + (1 - v / ptsMax) * (H - pad.t - pad.b); }
+
+  const seasonDivider = p1hist.seasonDividerIdx || p2hist.seasonDividerIdx || 0;
+
+  function draw(highlight) {
+    ctx.clearRect(0, 0, W, H);
+
+    // Season divider
+    if (seasonDivider > 0 && seasonDivider < totalRounds) {
+      const divX = xf(seasonDivider + 0.5);
+      ctx.strokeStyle = cssVar('--chart-divider'); ctx.lineWidth = 1;
+      ctx.setLineDash([4, 4]);
+      ctx.beginPath(); ctx.moveTo(divX, pad.t); ctx.lineTo(divX, H - pad.b); ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.fillStyle = cssVar('--chart-label'); ctx.font = "9px 'JetBrains Mono',monospace"; ctx.textAlign = 'center';
+      ctx.fillText('S2', (pad.l + divX) / 2, pad.t + 10);
+      ctx.fillText('S3', (divX + W - pad.r) / 2, pad.t + 10);
+    }
+
+    // Grid
+    ctx.strokeStyle = cssVar('--chart-grid'); ctx.lineWidth = 1;
+    const steps = 5;
+    for (let i = 0; i <= steps; i++) {
+      const pv = Math.round(ptsMax * i / steps);
+      const yv = yPts(pv);
+      ctx.beginPath(); ctx.moveTo(pad.l, yv); ctx.lineTo(W - pad.r, yv); ctx.stroke();
+      ctx.fillStyle = '#6b7280'; ctx.font = "9px 'JetBrains Mono',monospace"; ctx.textAlign = 'right';
+      ctx.fillText(pv, pad.l - 6, yv + 3);
+    }
+    // X ticks
+    ctx.fillStyle = '#6b7280'; ctx.font = "9px 'JetBrains Mono',monospace"; ctx.textAlign = 'center';
+    for (let t = xMin; t <= xMax; t++) ctx.fillText(t, xf(t), H - 6);
+
+    // Draw lines
+    [p1hist, p2hist].forEach((hist, pi) => {
+      const color = COMP_COLORS[pi];
+      if (!hist.length) return;
+      // Split into segments for season mode (break at season boundary)
+      let segments;
+      if (compareChartMode === 'season' && seasonDivider > 0) {
+        const s2 = hist.filter(pt => pt.roundIdx <= seasonDivider);
+        const s3 = hist.filter(pt => pt.roundIdx > seasonDivider);
+        segments = [s2, s3].filter(s => s.length > 0);
+      } else {
+        segments = [hist];
+      }
+      segments.forEach(seg => {
+        ctx.strokeStyle = color; ctx.lineWidth = 2; ctx.lineJoin = 'round';
+        ctx.beginPath();
+        seg.forEach((pt, i) => {
+          const px = xf(pt.roundIdx), py = yPts(pt[ptsKey]);
+          if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+        });
+        ctx.stroke();
+        // Glow
+        ctx.save(); ctx.globalAlpha = 0.12; ctx.strokeStyle = color; ctx.lineWidth = 6;
+        ctx.beginPath();
+        seg.forEach((pt, i) => {
+          const px = xf(pt.roundIdx), py = yPts(pt[ptsKey]);
+          if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+        });
+        ctx.stroke(); ctx.restore();
+      });
+      // Dots
+      hist.forEach(pt => {
+        const isHl = highlight && pt.roundIdx === highlight.roundIdx;
+        const isWin = pt.pos === 1;
+        const px = xf(pt.roundIdx), py = yPts(pt[ptsKey]);
+        if (isWin) {
+          const r = isHl ? 7 : 4.5;
+          ctx.beginPath();
+          for (let k = 0; k < 10; k++) {
+            const ang = -Math.PI / 2 + k * Math.PI / 5;
+            const rad = k % 2 === 0 ? r : r * 0.45;
+            ctx[k === 0 ? 'moveTo' : 'lineTo'](px + Math.cos(ang) * rad, py + Math.sin(ang) * rad);
+          }
+          ctx.closePath();
+          ctx.fillStyle = '#ffd700'; ctx.fill();
+          ctx.strokeStyle = '#b8960c'; ctx.lineWidth = isHl ? 1.5 : 1; ctx.stroke();
+        } else {
+          ctx.beginPath(); ctx.arc(px, py, isHl ? 5 : 2.5, 0, Math.PI * 2);
+          if (isHl) { ctx.fillStyle = cssVar('--dot-hl'); ctx.fill(); ctx.strokeStyle = color; ctx.lineWidth = 2; ctx.stroke(); }
+          else { ctx.fillStyle = color; ctx.fill(); }
+        }
+      });
+    });
+  }
+
+  draw(null);
+
+  canvas.onmousemove = (e) => {
+    const br = canvas.getBoundingClientRect();
+    const mx = e.clientX - br.left;
+    const allPts = [...p1hist, ...p2hist];
+    let closest = null, minDist = Infinity;
+    allPts.forEach(pt => { const d = Math.abs(xf(pt.roundIdx) - mx); if (d < minDist) { minDist = d; closest = pt; } });
+    if (closest && minDist < 30) {
+      canvas.style.cursor = 'pointer';
+      tip.style.display = 'block';
+      const ri = closest.roundIdx;
+      const pt1 = p1hist.find(p => p.roundIdx === ri);
+      const pt2 = p2hist.find(p => p.roundIdx === ri);
+      let html = `<div class="t-round">${esc(closest.round)}</div>`;
+      if (pt1) html += `<div class="t-val" style="color:${COMP_COLORS[0]}">${esc(compareList[0])}: <span>${pt1[ptsKey]}</span>${pt1.pos ? ` (#${pt1.pos})` : ''}</div>`;
+      if (pt2) html += `<div class="t-val" style="color:${COMP_COLORS[1]}">${esc(compareList[1])}: <span>${pt2[ptsKey]}</span>${pt2.pos ? ` (#${pt2.pos})` : ''}</div>`;
+      tip.innerHTML = html;
+      let tx = xf(ri) + 12;
+      if (tx + 180 > W) tx = xf(ri) - 190;
+      tip.style.left = tx + 'px';
+      tip.style.top = '40px';
+      draw(closest);
+    } else {
+      canvas.style.cursor = ''; tip.style.display = 'none'; draw(null);
+    }
+  };
+  canvas.onmouseleave = () => { tip.style.display = 'none'; canvas.style.cursor = ''; draw(null); };
+}
+
+function renderComparePanel() {
+  const panel = document.getElementById('comparePanel');
+  if (!compareMode || compareList.length === 0) { panel.innerHTML = ''; return; }
+
+  const pcdj = data['PCDJ Ranking'];
+  const src = pcdj ? (pointsMode === 'championship' && pcdj.championship ? pcdj.championship : pcdj.rankings) : [];
+
+  if (compareList.length === 1) {
+    const p = src.find(x => x.name === compareList[0]);
+    const c = p ? ptsColor(p.points) : COMP_COLORS[0];
+    panel.innerHTML = `<div class="compare-panel" style="text-align:center;font-family:var(--mono);font-size:12px">
+      <span style="color:${COMP_COLORS[0]};font-weight:700">${esc(compareList[0])}</span>
+      <span style="color:var(--text-muted)"> — select a 2nd player</span>
+      <button class="close-btn" style="margin-left:10px" onclick="clearCompare()">✕</button>
+    </div>`;
+    return;
+  }
+
+  // Two players selected
+  const p1 = src.find(x => x.name === compareList[0]);
+  const p2 = src.find(x => x.name === compareList[1]);
+  if (!p1 || !p2) { panel.innerHTML = ''; return; }
+
+  const h2h = computeH2H(compareList[0], compareList[1]);
+  const p1hist = buildRankHistory(compareList[0]);
+  const p2hist = buildRankHistory(compareList[1]);
+
+  const pod1 = p1.podiums.gold + p1.podiums.silver + p1.podiums.bronze;
+  const pod2 = p2.podiums.gold + p2.podiums.silver + p2.podiums.bronze;
+
+  function compRow(label, v1, v2, higherWins) {
+    const w1 = higherWins ? v1 > v2 : v1 < v2;
+    const w2 = higherWins ? v2 > v1 : v2 < v1;
+    return `<div class="comp-left${w1 ? ' comp-winner' : ''}" style="color:${w1 ? COMP_COLORS[0] : 'var(--text-dim)'}">${v1}</div>
+      <div class="comp-label">${label}</div>
+      <div class="comp-right${w2 ? ' comp-winner' : ''}" style="color:${w2 ? COMP_COLORS[1] : 'var(--text-dim)'}">${v2}</div>`;
+  }
+
+  panel.innerHTML = `<div class="compare-panel">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+      <div id="compSwap" style="font-family:var(--mono);font-size:13px;cursor:pointer" title="Click to swap sides">
+        <span style="color:${COMP_COLORS[0]};font-weight:700">${esc(compareList[0])}</span>
+        <span style="color:var(--text-muted)"> vs </span>
+        <span style="color:${COMP_COLORS[1]};font-weight:700">${esc(compareList[1])}</span>
+      </div>
+      <button class="close-btn" onclick="clearCompare()">✕</button>
+    </div>
+    <div style="text-align:center;font-family:var(--mono);font-size:11px;margin-bottom:10px;color:var(--text-dim)">
+      H2H: <span style="color:${COMP_COLORS[0]};font-weight:700">${h2h.p1w}</span>
+      <span style="color:var(--text-muted)"> - ${h2h.ties > 0 ? h2h.ties + ' - ' : ''}</span>
+      <span style="color:${COMP_COLORS[1]};font-weight:700">${h2h.p2w}</span>
+      <span style="color:var(--text-muted)"> (${h2h.total} shared rounds)</span>
+    </div>
+    <div class="comp-grid">
+      ${compRow('Points', p1.points, p2.points, true)}
+      ${compRow('Rounds', p1.rounds, p2.rounds, true)}
+      ${compRow('Wins', p1.wins, p2.wins, true)}
+      ${compRow('Podiums', pod1, pod2, true)}
+      ${compRow('Best', p1.best_pos, p2.best_pos, false)}
+      ${compRow('Avg Pos', p1.avg_pos, p2.avg_pos, false)}
+    </div>
+    <div style="display:flex;gap:4px;margin-top:10px;margin-bottom:6px">
+      <button class="chart-mode-btn${compareChartMode === 'ranking' ? ' active' : ''}" id="compModeRanking" style="--mc:var(--accent)">Ranking Pts</button>
+      <button class="chart-mode-btn${compareChartMode === 'season' ? ' active' : ''}" id="compModeSeason" style="--mc:var(--accent)">Season Pts</button>
+    </div>
+    <div class="chart-canvas"><canvas id="compareCanvas"></canvas><div class="tooltip" id="compareTip"></div></div>
+  </div>`;
+
+  panel.querySelector('#compModeRanking').onclick = () => { compareChartMode = 'ranking'; renderComparePanel(); };
+  panel.querySelector('#compModeSeason').onclick = () => { compareChartMode = 'season'; renderComparePanel(); };
+  panel.querySelector('#compSwap').onclick = () => { compareList.reverse(); renderComparePanel(); render(); };
+
+  drawCompareChart(p1hist, p2hist, panel);
+}
+
+function clearCompare() {
+  compareList = [];
+  compareMode = false;
+  document.getElementById('compareCheck').checked = false;
+  renderComparePanel();
+  render();
+}
+
 // --- Render ---
 function render() {
+  renderComparePanel();
   if (viewMode === 'rankings') renderRankings();
   else renderRounds();
   renderTierLegend();
