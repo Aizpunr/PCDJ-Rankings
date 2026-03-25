@@ -225,6 +225,7 @@ FULL_LOBBY_REPLACEMENTS = {
         'Round 6': ('Petite Cups 31-35.xlsx', 'Petite Cup 35'),
         'Round 8': ('Petite Cups 36-40.xlsx', 'Petite Cup 37'),
         'Round 9': ('Petite Cups 36-40.xlsx', 'Petite Cup 38'),
+        'Round 10': ('Petite Cups 36-40.xlsx', 'Petite Cup 39'),
     },
 }
 

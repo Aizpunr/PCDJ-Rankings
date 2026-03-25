@@ -961,6 +961,10 @@ function renderRankings() {
     return (av - bv) * sortDir || (b.points - a.points);
   });
 
+  // Status snapshot lookup for rank arrows
+  const statusKey = currentSeason.toLowerCase().replace(/ /g, '_');
+  const snap = statusData[statusKey] || {};
+
   const body = document.getElementById('tableBody');
   body.innerHTML = rankings.map((p, i) => {
     const c = ptsColor(p.points);
@@ -972,8 +976,20 @@ function renderRankings() {
     const bestC = p.best_pos === 1 ? 'var(--accent)' : p.best_pos <= 3 ? 'var(--text)' : 'var(--text-dim)';
     const avgPosC = p.avg_pos <= 3 ? 'var(--green)' : p.avg_pos <= 5 ? 'var(--text-dim)' : 'var(--text-muted)';
     const compClass = compareMode && compareList[0] === p.name ? ' comp-p1' : compareMode && compareList[1] === p.name ? ' comp-p2' : '';
+    // Rank change arrow
+    const curRank = i + 1;
+    const prev = snap[p.name];
+    let deltaStr = '';
+    if (prev) {
+      const oldRank = prev[0];
+      const diff = oldRank - curRank;
+      if (diff > 0) deltaStr = `<span style="color:var(--green);font-size:10px;margin-left:4px">+${diff}</span>`;
+      else if (diff < 0) deltaStr = `<span style="color:var(--red);font-size:10px;margin-left:4px">${diff}</span>`;
+    } else if (Object.keys(snap).length > 0) {
+      deltaStr = `<span style="color:var(--green);font-size:10px;margin-left:4px">NEW</span>`;
+    }
     return `<div class="row${compClass}" data-name="${esc(p.name)}" style="grid-template-columns:${RANK_COLS}">
-      <div class="rank">${i + 1}</div>
+      <div class="rank">${curRank}${deltaStr}</div>
       <div class="player"><span class="dot" style="background:${c};box-shadow:0 0 5px ${c}40"></span><span class="pname">${esc(p.name)}</span></div>
       <div style="text-align:right;font-family:var(--mono);font-weight:700;color:${c}">${p.points}</div>
       <div style="text-align:right;font-family:var(--mono);color:var(--text-dim)">${p.rounds}</div>
@@ -1428,10 +1444,13 @@ function render() {
 }
 
 // --- Init ---
-fetch('petite_rankings.json?v=' + Date.now())
-  .then(r => r.json())
-  .then(d => {
+let statusData = {};
+Promise.all([
+  fetch('petite_rankings.json?v=' + Date.now()).then(r => r.json()),
+  fetch('status.json?v=' + Date.now()).then(r => r.json()).catch(() => ({}))
+]).then(([d, s]) => {
     data = d;
+    statusData = s;
     const seasons = Object.keys(data);
     // Default to latest season (not trailing/PCDJ)
     const seasonKeys = seasons.filter(s => data[s].type === 'season');
