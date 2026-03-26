@@ -2,10 +2,13 @@
 status.py — write status.json (snapshot) from petite_rankings.json
 
 Usage:
-  python status.py          → snapshot = current standings
-  python status.py 38       → snapshot = standings as of round 38
+  python status.py          → snapshot current standings (run BEFORE adding new cup)
+  python status.py 9        → reconstruct Season 3 at round 9 (for retroactive snapshot)
+
+Stores: rank, points, wins, gold, silver, bronze per player.
+Season 2 is excluded (finished). PCDJ is always snapshotted directly.
 """
-import json, os, sys
+import json, os, re, sys
 
 base = os.path.dirname(os.path.abspath(__file__))
 def _p(f): return os.path.join(base, f)
@@ -15,58 +18,58 @@ with open(_p('petite_rankings.json'), encoding='utf-8') as f:
 
 target_round = int(sys.argv[1]) if len(sys.argv) > 1 else None
 
-def build_snap(season_data, target=None):
-    """Build snapshot from a season's rankings.
-    If target is given, reconstruct standings up to that round number."""
+def snap_direct(season_data):
+    """Snapshot rankings directly as they are."""
+    rankings = season_data.get('rankings', [])
+    return {
+        p['name']: [p['rank'], p['points'], p.get('wins', 0),
+                     p['podiums']['gold'], p['podiums']['silver'], p['podiums']['bronze']]
+        for p in rankings if p['points'] > 0
+    }
+
+def snap_at_round(season_data, target):
+    """Reconstruct season standings up to a target round number."""
     rankings = season_data.get('rankings', [])
     if not rankings:
         return {}
-
-    if target is None:
-        # Use current standings as-is
-        return {
-            p['name']: [p['rank'], p['points'], p.get('wins', 0), p['podiums']['gold'] + p['podiums']['silver'] + p['podiums']['bronze']]
-            for p in rankings
-        }
-
-    # Reconstruct standings up to target round
-    player_pts = {}
+    player_data = {}
     for p in rankings:
         pts = 0
+        wins = 0
+        gold = silver = bronze = 0
         for h in p.get('history', []):
-            # Extract round number from "Round X" / "Troll X" / "PCDJ X"
-            import re
             m = re.search(r'(\d+)', h['r'])
             if not m:
                 continue
-            rnum = int(m.group(1))
-            if rnum <= target:
+            if int(m.group(1)) <= target:
                 pts += h['p']
+                if h['pos'] == 1: wins += 1; gold += 1
+                elif h['pos'] == 2: silver += 1
+                elif h['pos'] == 3: bronze += 1
         if pts > 0:
-            pods = 0
-            wins = 0
-            for h in p.get('history', []):
-                m = re.search(r'(\d+)', h['r'])
-                if not m:
-                    continue
-                rnum = int(m.group(1))
-                if rnum <= target:
-                    if h['pos'] == 1: wins += 1
-                    if h['pos'] <= 3: pods += 1
-            player_pts[p['name']] = (pts, wins, pods)
+            player_data[p['name']] = (pts, wins, gold, silver, bronze)
 
-    # Sort by points descending
-    sorted_players = sorted(player_pts.items(), key=lambda x: x[1][0], reverse=True)
+    sorted_players = sorted(player_data.items(), key=lambda x: x[1][0], reverse=True)
     return {
-        name: [rank + 1, pts, wins, pods]
-        for rank, (name, (pts, wins, pods)) in enumerate(sorted_players)
+        name: [rank + 1, pts, wins, gold, silver, bronze]
+        for rank, (name, (pts, wins, gold, silver, bronze)) in enumerate(sorted_players)
     }
 
+# Build snapshot
 snap = {}
-for season_name in ['Season 2', 'Season 3', 'PCDJ Ranking']:
-    if season_name in data:
-        key = season_name.lower().replace(' ', '_')
-        snap[key] = build_snap(data[season_name], target_round)
+
+# Season 3: reconstruct at target round, or snapshot current
+if 'Season 3' in data:
+    if target_round is not None:
+        snap['season_3'] = snap_at_round(data['Season 3'], target_round)
+    else:
+        snap['season_3'] = snap_direct(data['Season 3'])
+
+# PCDJ: always snapshot directly (drops/best-of too complex to reconstruct)
+if 'PCDJ Ranking' in data:
+    snap['pcdj_ranking'] = snap_direct(data['PCDJ Ranking'])
+
+# Season 2: skip (finished)
 
 # Backup existing status.json
 status_path = _p('status.json')
@@ -74,9 +77,6 @@ if os.path.exists(status_path):
     import shutil
     backup_dir = _p('old_status')
     os.makedirs(backup_dir, exist_ok=True)
-    with open(status_path, encoding='utf-8') as f:
-        old = json.load(f)
-    # Find a unique backup name
     i = 0
     backup_path = os.path.join(backup_dir, f'status_{target_round or "current"}.json')
     while os.path.exists(backup_path):
@@ -96,5 +96,5 @@ s3 = snap.get('season_3', {})
 if s3:
     top = sorted(s3.items(), key=lambda x: x[1][0])[:10]
     print(f"\nSeason 3 top 10:")
-    for name, (rank, pts, wins, pods) in top:
-        print(f"  #{rank} {name}: {pts} pts, {wins}W, {pods}P")
+    for name, (rank, pts, wins, g, s, b) in top:
+        print(f"  #{rank} {name}: {pts} pts, {wins}W, {g}G/{s}S/{b}B")
