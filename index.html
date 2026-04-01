@@ -92,6 +92,7 @@ body { font-family: 'Space Grotesk', system-ui, sans-serif; min-height: 100vh; p
 }
 .row:hover { background: var(--row-hover); }
 .row.selected { background: rgba(245,158,11,0.06); }
+.row.zero-pts { opacity: 0.45; }
 
 .rank { font-family: var(--mono); font-size: 12px; color: var(--text-muted); }
 .pname { font-weight: 600; font-size: 13px; }
@@ -138,6 +139,7 @@ body { font-family: 'Space Grotesk', system-ui, sans-serif; min-height: 100vh; p
 }
 .chart-mode-btn:hover { border-color: var(--btn-hover); color: var(--text-dim); }
 .chart-mode-btn.active { border-color: var(--mc); color: var(--mc); background: var(--btn-active-bg); }
+.chart-mode-btn:disabled { opacity: 0.3; cursor: not-allowed; pointer-events: none; }
 
 .close-btn {
   background: none; border: 1px solid var(--border-bright); color: var(--text-muted);
@@ -451,8 +453,7 @@ function buildRankHistory(playerName) {
       if (entry) cumulative[p.name] += entry.p;
     });
     const ranked = Object.entries(cumulative)
-      .filter(([_, pts]) => pts > 0)
-      .sort((a, b) => b[1] - a[1]);
+      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
     snapshots.push({ round: rName, rankings: ranked });
   });
 
@@ -472,9 +473,9 @@ function buildRankHistory(playerName) {
 
     const roundEntry = playerEntry.history.find(h => h.r === snap.round);
     if (roundEntry) { cumulPts += roundEntry.p; seasonPts += roundEntry.p; }
-    if (cumulPts > 0) {
+    if (roundEntry || cumulPts > 0) {
       const rank = snap.rankings.findIndex(([n]) => n === playerName) + 1;
-      result.push({ round: snap.round, roundIdx: i + 1, rank, pts: cumulPts, seasonPts, roundPts: roundEntry ? roundEntry.p : 0, pos: roundEntry ? roundEntry.pos : null });
+      if (rank > 0) result.push({ round: snap.round, roundIdx: i + 1, rank, pts: cumulPts, seasonPts, roundPts: roundEntry ? roundEntry.p : 0, pos: roundEntry ? roundEntry.pos : null });
     }
   });
   result.seasonDividerIdx = seasonDividerIdx;
@@ -512,8 +513,7 @@ function buildSeasonRankHistory(playerName) {
         if (entry) cumulative[p.name] += entry.p;
       });
       const ranked = Object.entries(cumulative)
-        .filter(([_, pts]) => pts > 0)
-        .sort((a, b) => b[1] - a[1]);
+        .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
       snapshots.push({ round: rName, rankings: ranked });
     });
 
@@ -525,11 +525,11 @@ function buildSeasonRankHistory(playerName) {
     snapshots.forEach((snap) => {
       const roundEntry = playerEntry.history.find(h => h.r === snap.round);
       if (roundEntry) cumulPts += roundEntry.p;
-      if (cumulPts > 0) {
+      if (roundEntry || cumulPts > 0) {
         const rank = snap.rankings.findIndex(([n]) => n === playerName) + 1;
         const prefixed = sName + ' ' + snap.round;
         const pcdjIdx = pcdjRoundOrder.indexOf(prefixed) + 1;
-        segment.push({ round: snap.round, roundIdx: pcdjIdx > 0 ? pcdjIdx : 0, rank, pts: cumulPts, seasonPts: cumulPts, roundPts: roundEntry ? roundEntry.p : 0, pos: roundEntry ? roundEntry.pos : null });
+        if (rank > 0) segment.push({ round: snap.round, roundIdx: pcdjIdx > 0 ? pcdjIdx : 0, rank, pts: cumulPts, seasonPts: cumulPts, roundPts: roundEntry ? roundEntry.p : 0, pos: roundEntry ? roundEntry.pos : null });
       }
     });
     if (segment.length) allSegments.push(segment);
@@ -577,7 +577,8 @@ function drawRankChart(player, panel) {
   // Rank: 'pcdj' (default) → 'season' → 'off'
   // Position: 'on' → 'off'
   // Points: 'season' (default) → 'pcdj' → 'off'
-  let rankMode = 'pcdj', posMode = 'off', ptsMode = 'off';
+  const isZeroPts = chartPlayer.points === 0;
+  let rankMode = isZeroPts ? 'off' : 'pcdj', posMode = isZeroPts ? 'on' : 'off', ptsMode = 'off';
 
   // Pick colors that don't clash with the player's tier color
   // Check both season and PCDJ tier colors to avoid any overlap
@@ -602,9 +603,9 @@ function drawRankChart(player, panel) {
         <button class="close-btn" id="closeChart">✕</button>
       </div>
       <div style="display:flex;gap:4px;margin-bottom:6px">
-        <button class="chart-mode-btn${rankMode !== 'off' ? ' active' : ''}" data-mode="rank" style="--mc:${RANK_COLOR}">Rank${rankMode !== 'off' ? ` <span style="font-size:8px;opacity:0.7">${rankMode === 'pcdj' ? 'PCDJ' : 'Season'}</span>` : ''}</button>
+        <button class="chart-mode-btn${rankMode !== 'off' ? ' active' : ''}${isZeroPts ? ' disabled' : ''}" data-mode="rank" style="--mc:${RANK_COLOR}"${isZeroPts ? ' disabled' : ''}>Rank${rankMode !== 'off' ? ` <span style="font-size:8px;opacity:0.7">${rankMode === 'pcdj' ? 'PCDJ' : 'Season'}</span>` : ''}</button>
         <button class="chart-mode-btn${posMode === 'on' ? ' active' : ''}" data-mode="pos" style="--mc:${POS_COLOR}">Position ${posInfo}</button>
-        <button class="chart-mode-btn${ptsMode !== 'off' ? ' active' : ''}" data-mode="pts" style="--mc:${PTS_COLOR}">Points${ptsMode !== 'off' ? ` <span style="font-size:8px;opacity:0.7">${ptsMode === 'season' ? 'Season' : 'PCDJ'}</span>` : ''}</button>
+        <button class="chart-mode-btn${ptsMode !== 'off' ? ' active' : ''}${isZeroPts ? ' disabled' : ''}" data-mode="pts" style="--mc:${PTS_COLOR}"${isZeroPts ? ' disabled' : ''}>Points${ptsMode !== 'off' ? ` <span style="font-size:8px;opacity:0.7">${ptsMode === 'season' ? 'Season' : 'PCDJ'}</span>` : ''}</button>
       </div>
       <div class="chart-canvas"><canvas id="rankCanvas"></canvas><div class="tooltip" id="chartTip"></div></div>
     `;
@@ -624,7 +625,7 @@ function drawRankChart(player, panel) {
         if (btn.dataset.mode === 'pts') {
           ptsMode = ptsMode === 'off' ? 'season' : ptsMode === 'season' ? 'pcdj' : 'off';
         }
-        if (rankMode === 'off' && posMode === 'off' && ptsMode === 'off') rankMode = 'pcdj';
+        if (rankMode === 'off' && posMode === 'off' && ptsMode === 'off') { isZeroPts ? posMode = 'on' : rankMode = 'pcdj'; }
         buildPanel();
         drawCanvas();
       };
@@ -664,7 +665,7 @@ function drawRankChart(player, panel) {
       if (seasonRankSegments) seasonRankSegments.forEach(seg => seg.forEach(d => leftValues.push(d.rank)));
       else rankHist.forEach(d => leftValues.push(d.rank));
     }
-    if (posMode === 'on') rankHist.forEach(d => leftValues.push(d.pos ? Math.min(d.pos, 11) : 11));
+    if (posMode === 'on') rankHist.forEach(d => leftValues.push(d.pos ? (isZeroPts ? d.pos : Math.min(d.pos, 11)) : 11));
     const leftMin = 1;
     const leftMax = Math.max(...leftValues, 5);
     function yLeft(v) { return pad.t + (v - leftMin) / (leftMax - leftMin || 1) * (H - pad.t - pad.b); }
@@ -787,11 +788,11 @@ function drawRankChart(player, panel) {
         }
       }
 
-      // Position line — only rounds where player has a position, cap non-top10 at 11
+      // Position line — only rounds where player has a position
       if (posMode === 'on') {
         const posData = rankHist
           .filter(pt => pt.pos != null)
-          .map(pt => ({ ...pt, posVal: Math.min(pt.pos, 11) }));
+          .map(pt => ({ ...pt, posVal: isZeroPts ? pt.pos : Math.min(pt.pos, 11) }));
         drawLine(posData, POS_COLOR, yLeft, 'posVal', false);
       }
 
@@ -843,7 +844,8 @@ function drawRankChart(player, panel) {
         tip.innerHTML = html;
         let tx = xf(closest.roundIdx) + 12;
         if (tx + 160 > W) tx = xf(closest.roundIdx) - 170;
-        const primaryY = rankMode !== 'off' ? yLeft(closest.rank) : posMode === 'on' ? yLeft(Math.min(closest.pos || 11, 11)) : yRight(ptsMode === 'pcdj' ? closest.pts : closest.seasonPts);
+        const posVal = isZeroPts ? (closest.pos || 11) : Math.min(closest.pos || 11, 11);
+        const primaryY = rankMode !== 'off' ? yLeft(closest.rank) : posMode === 'on' ? yLeft(posVal) : yRight(ptsMode === 'pcdj' ? closest.pts : closest.seasonPts);
         tip.style.left = tx + 'px';
         tip.style.top = (primaryY - 40) + 'px';
         draw(closest);
@@ -955,7 +957,7 @@ function renderRankings() {
   updateInfoTip(season);
 
   const src = pointsMode === 'championship' && season.championship ? season.championship : season.rankings;
-  let rankings = [...src].filter(p => p.points > 0);
+  let rankings = [...src];
 
   // Sort
   rankings.sort((a, b) => {
@@ -971,7 +973,7 @@ function renderRankings() {
       case 'avg_pos': av = a.avg_pos; bv = b.avg_pos; break;
       default: av = a.points; bv = b.points;
     }
-    return (av - bv) * sortDir || (b.points - a.points);
+    return (av - bv) * sortDir || (b.points - a.points) || (a.best_pos - b.best_pos) || (b.rounds - a.rounds);
   });
 
   // Status snapshot lookup for rank arrows
@@ -983,25 +985,30 @@ function renderRankings() {
     const c = ptsColor(p.points);
     const wc = p.wins > 0 ? 'var(--accent)' : 'var(--text-dark)';
     const totalPod = p.podiums.gold + p.podiums.silver + p.podiums.bronze;
+    const prevPod = snap[p.name] ? { g: snap[p.name][3], s: snap[p.name][4], b: snap[p.name][5] } : null;
+    const gDelta = prevPod && p.podiums.gold > prevPod.g ? `<span style="color:var(--accent);font-size:10px"> +${p.podiums.gold - prevPod.g}</span>` : '';
+    const sDelta = prevPod && p.podiums.silver > prevPod.s ? `<span style="color:#6b7280;font-size:10px"> +${p.podiums.silver - prevPod.s}</span>` : '';
+    const bDelta = prevPod && p.podiums.bronze > prevPod.b ? `<span style="color:#78716c;font-size:10px"> +${p.podiums.bronze - prevPod.b}</span>` : '';
     const podStr = totalPod > 0
-      ? `<span style="color:var(--accent)">${p.podiums.gold}</span>/<span style="color:#6b7280">${p.podiums.silver}</span>/<span style="color:#78716c">${p.podiums.bronze}</span> <span style="color:var(--text-muted)">(${totalPod})</span>`
+      ? `<span style="color:var(--accent)">${p.podiums.gold}</span>${gDelta}/<span style="color:#6b7280">${p.podiums.silver}</span>${sDelta}/<span style="color:#78716c">${p.podiums.bronze}</span>${bDelta} <span style="color:var(--text-muted)">(${totalPod})</span>`
       : `<span style="color:var(--text-dark)">0</span>`;
     const bestC = p.best_pos === 1 ? 'var(--accent)' : p.best_pos <= 3 ? 'var(--text)' : 'var(--text-dim)';
     const avgPosC = p.avg_pos <= 3 ? 'var(--green)' : p.avg_pos <= 5 ? 'var(--text-dim)' : 'var(--text-muted)';
     const compClass = compareMode && compareList[0] === p.name ? ' comp-p1' : compareMode && compareList[1] === p.name ? ' comp-p2' : '';
     // Rank change arrow (use p.rank, not sort position)
+    const displayRank = i + 1;
     const prev = snap[p.name];
     let deltaStr = '';
-    if (prev) {
+    if (prev && p.points > 0) {
       const diff = prev[0] - p.rank;
       if (diff > 0) deltaStr = `<span style="color:var(--green);font-size:10px;margin-left:4px">+${diff}</span>`;
       else if (diff < 0) deltaStr = `<span style="color:var(--red);font-size:10px;margin-left:4px">${diff}</span>`;
-    } else if (Object.keys(snap).length > 0 && p.points > 0) {
+    } else if (Object.keys(snap).length > 0 && p.points > 0 && !prev) {
       deltaStr = `<span style="color:var(--green);font-size:10px;margin-left:4px">NEW</span>`;
     }
     // Milestone indicators: [rank, pts, wins, gold, silver, bronze]
     let milestones = [];
-    if (prev) {
+    if (prev && p.points > 0) {
       const [, , oldW, oldG, oldS, oldB] = prev;
       const totalPodOld = oldG + oldS + oldB;
       const totalPodNew = p.podiums.gold + p.podiums.silver + p.podiums.bronze;
@@ -1009,10 +1016,11 @@ function renderRankings() {
       if (totalPodNew > 0 && totalPodOld === 0) milestones.push('🥇 1st Podium!');
     }
     const milestoneStr = milestones.length ? ` <span style="font-size:9px;color:var(--accent)">${milestones.join(' ')}</span>` : '';
-    return `<div class="row${compClass}" data-name="${esc(p.name)}" style="grid-template-columns:${RANK_COLS}">
-      <div class="rank">${p.rank}${deltaStr}</div>
+    const zeroClass = p.points === 0 ? ' zero-pts' : '';
+    return `<div class="row${compClass}${zeroClass}" data-name="${esc(p.name)}" style="grid-template-columns:${RANK_COLS}">
+      <div class="rank">${displayRank}${deltaStr}</div>
       <div class="player"><span class="dot" style="background:${c};box-shadow:0 0 5px ${c}40"></span><span class="pname">${esc(p.name)}</span>${milestoneStr}</div>
-      <div style="text-align:right;font-family:var(--mono);font-weight:700;color:${c}">${p.points}</div>
+      <div style="text-align:right;font-family:var(--mono);font-weight:700;color:${c}">${prev && p.points > 0 && p.points - prev[1] > 0 ? `<span style="color:var(--green);font-size:10px;margin-right:4px">+${Math.round(p.points - prev[1])}</span>` : ''}${p.points}</div>
       <div style="text-align:right;font-family:var(--mono);color:var(--text-dim)">${p.rounds}</div>
       <div style="text-align:right;font-family:var(--mono);font-weight:600;color:${wc}">${p.wins}</div>
       <div style="text-align:center;font-family:var(--mono)">${podStr}</div>
@@ -1476,8 +1484,12 @@ function renderSearch(query) {
     const c = ptsColor(p.points);
     const wc = p.wins > 0 ? 'var(--accent)' : 'var(--text-dark)';
     const totalPod = p.podiums.gold + p.podiums.silver + p.podiums.bronze;
+    const prevPod = snap[p.name] ? { g: snap[p.name][3], s: snap[p.name][4], b: snap[p.name][5] } : null;
+    const gDelta = prevPod && p.podiums.gold > prevPod.g ? `<span style="color:var(--accent);font-size:10px"> +${p.podiums.gold - prevPod.g}</span>` : '';
+    const sDelta = prevPod && p.podiums.silver > prevPod.s ? `<span style="color:#6b7280;font-size:10px"> +${p.podiums.silver - prevPod.s}</span>` : '';
+    const bDelta = prevPod && p.podiums.bronze > prevPod.b ? `<span style="color:#78716c;font-size:10px"> +${p.podiums.bronze - prevPod.b}</span>` : '';
     const podStr = totalPod > 0
-      ? `<span style="color:var(--accent)">${p.podiums.gold}</span>/<span style="color:#6b7280">${p.podiums.silver}</span>/<span style="color:#78716c">${p.podiums.bronze}</span> <span style="color:var(--text-muted)">(${totalPod})</span>`
+      ? `<span style="color:var(--accent)">${p.podiums.gold}</span>${gDelta}/<span style="color:#6b7280">${p.podiums.silver}</span>${sDelta}/<span style="color:#78716c">${p.podiums.bronze}</span>${bDelta} <span style="color:var(--text-muted)">(${totalPod})</span>`
       : `<span style="color:var(--text-dark)">0</span>`;
     const bestC = p.best_pos === 1 ? 'var(--accent)' : p.best_pos <= 3 ? 'var(--text)' : 'var(--text-dim)';
     const avgPosC = p.avg_pos <= 3 ? 'var(--green)' : p.avg_pos <= 5 ? 'var(--text-dim)' : 'var(--text-muted)';
@@ -1502,7 +1514,7 @@ function renderSearch(query) {
     return `<div class="row" data-name="${esc(p.name)}" style="grid-template-columns:${RANK_COLS}">
       <div class="rank">${p.rank}${deltaStr}</div>
       <div class="player"><span class="dot" style="background:${c};box-shadow:0 0 5px ${c}40"></span><span class="pname">${esc(p.name)}</span>${milestoneStr}</div>
-      <div style="text-align:right;font-family:var(--mono);font-weight:700;color:${c}">${p.points}</div>
+      <div style="text-align:right;font-family:var(--mono);font-weight:700;color:${c}">${prev && p.points - prev[1] > 0 ? `<span style="color:var(--green);font-size:10px;margin-right:4px">+${Math.round(p.points - prev[1])}</span>` : ''}${p.points}</div>
       <div style="text-align:right;font-family:var(--mono);color:var(--text-dim)">${p.rounds}</div>
       <div style="text-align:right;font-family:var(--mono);font-weight:600;color:${wc}">${p.wins}</div>
       <div style="text-align:center;font-family:var(--mono)">${podStr}</div>

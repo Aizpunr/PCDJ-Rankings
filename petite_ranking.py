@@ -226,6 +226,7 @@ FULL_LOBBY_REPLACEMENTS = {
         'Round 8': ('Petite Cups 36-40.xlsx', 'Petite Cup 37'),
         'Round 9': ('Petite Cups 36-40.xlsx', 'Petite Cup 38'),
         'Round 10': ('Petite Cups 36-40.xlsx', 'Petite Cup 39'),
+        'Troll 3': ('Petite Cups 36-40.xlsx', 'Petite Cup 40'),
     },
 }
 
@@ -389,6 +390,10 @@ for season_name, replacements in FULL_LOBBY_REPLACEMENTS.items():
         continue
     for round_name, (filename, cup_label) in replacements.items():
         rnd = parse_cup_file(_p(filename), round_name, cup_label=cup_label)
+        rnd['is_half'] = 'Troll' in round_name or 'Roulette' in round_name
+        if rnd['is_half']:
+            for p in rnd['players']:
+                p['points'] *= TROLL_MULT
         if not rnd['players']:
             continue
         # Find and replace the existing round
