@@ -986,11 +986,13 @@ function renderRankings() {
     const wc = p.wins > 0 ? 'var(--accent)' : 'var(--text-dark)';
     const totalPod = p.podiums.gold + p.podiums.silver + p.podiums.bronze;
     const prevPod = snap[p.name] ? { g: snap[p.name][3], s: snap[p.name][4], b: snap[p.name][5] } : null;
-    const gDelta = prevPod && p.podiums.gold > prevPod.g ? `<span style="color:var(--accent);font-size:10px"> +${p.podiums.gold - prevPod.g}</span>` : '';
-    const sDelta = prevPod && p.podiums.silver > prevPod.s ? `<span style="color:#6b7280;font-size:10px"> +${p.podiums.silver - prevPod.s}</span>` : '';
-    const bDelta = prevPod && p.podiums.bronze > prevPod.b ? `<span style="color:#78716c;font-size:10px"> +${p.podiums.bronze - prevPod.b}</span>` : '';
+    const podDeltas = [];
+    if (prevPod && p.podiums.gold > prevPod.g) podDeltas.push(`<span style="color:var(--accent)">+${p.podiums.gold - prevPod.g}G</span>`);
+    if (prevPod && p.podiums.silver > prevPod.s) podDeltas.push(`<span style="color:#6b7280">+${p.podiums.silver - prevPod.s}S</span>`);
+    if (prevPod && p.podiums.bronze > prevPod.b) podDeltas.push(`<span style="color:#78716c">+${p.podiums.bronze - prevPod.b}B</span>`);
+    const podDeltaStr = podDeltas.length ? `<span style="font-size:10px;position:absolute;left:100%;white-space:nowrap;margin-left:4px">${podDeltas.join(' ')}</span>` : '';
     const podStr = totalPod > 0
-      ? `<span style="color:var(--accent)">${p.podiums.gold}</span>${gDelta}/<span style="color:#6b7280">${p.podiums.silver}</span>${sDelta}/<span style="color:#78716c">${p.podiums.bronze}</span>${bDelta} <span style="color:var(--text-muted)">(${totalPod})</span>`
+      ? `<span style="position:relative;display:inline-block"><span style="color:var(--accent)">${p.podiums.gold}</span>/<span style="color:#6b7280">${p.podiums.silver}</span>/<span style="color:#78716c">${p.podiums.bronze}</span> <span style="color:var(--text-muted)">(${totalPod})</span>${podDeltaStr}</span>`
       : `<span style="color:var(--text-dark)">0</span>`;
     const bestC = p.best_pos === 1 ? 'var(--accent)' : p.best_pos <= 3 ? 'var(--text)' : 'var(--text-dim)';
     const avgPosC = p.avg_pos <= 3 ? 'var(--green)' : p.avg_pos <= 5 ? 'var(--text-dim)' : 'var(--text-muted)';
@@ -1485,11 +1487,13 @@ function renderSearch(query) {
     const wc = p.wins > 0 ? 'var(--accent)' : 'var(--text-dark)';
     const totalPod = p.podiums.gold + p.podiums.silver + p.podiums.bronze;
     const prevPod = snap[p.name] ? { g: snap[p.name][3], s: snap[p.name][4], b: snap[p.name][5] } : null;
-    const gDelta = prevPod && p.podiums.gold > prevPod.g ? `<span style="color:var(--accent);font-size:10px"> +${p.podiums.gold - prevPod.g}</span>` : '';
-    const sDelta = prevPod && p.podiums.silver > prevPod.s ? `<span style="color:#6b7280;font-size:10px"> +${p.podiums.silver - prevPod.s}</span>` : '';
-    const bDelta = prevPod && p.podiums.bronze > prevPod.b ? `<span style="color:#78716c;font-size:10px"> +${p.podiums.bronze - prevPod.b}</span>` : '';
+    const podDeltas = [];
+    if (prevPod && p.podiums.gold > prevPod.g) podDeltas.push(`<span style="color:var(--accent)">+${p.podiums.gold - prevPod.g}G</span>`);
+    if (prevPod && p.podiums.silver > prevPod.s) podDeltas.push(`<span style="color:#6b7280">+${p.podiums.silver - prevPod.s}S</span>`);
+    if (prevPod && p.podiums.bronze > prevPod.b) podDeltas.push(`<span style="color:#78716c">+${p.podiums.bronze - prevPod.b}B</span>`);
+    const podDeltaStr = podDeltas.length ? `<span style="font-size:10px;position:absolute;left:100%;white-space:nowrap;margin-left:4px">${podDeltas.join(' ')}</span>` : '';
     const podStr = totalPod > 0
-      ? `<span style="color:var(--accent)">${p.podiums.gold}</span>${gDelta}/<span style="color:#6b7280">${p.podiums.silver}</span>${sDelta}/<span style="color:#78716c">${p.podiums.bronze}</span>${bDelta} <span style="color:var(--text-muted)">(${totalPod})</span>`
+      ? `<span style="position:relative;display:inline-block"><span style="color:var(--accent)">${p.podiums.gold}</span>/<span style="color:#6b7280">${p.podiums.silver}</span>/<span style="color:#78716c">${p.podiums.bronze}</span> <span style="color:var(--text-muted)">(${totalPod})</span>${podDeltaStr}</span>`
       : `<span style="color:var(--text-dark)">0</span>`;
     const bestC = p.best_pos === 1 ? 'var(--accent)' : p.best_pos <= 3 ? 'var(--text)' : 'var(--text-dim)';
     const avgPosC = p.avg_pos <= 3 ? 'var(--green)' : p.avg_pos <= 5 ? 'var(--text-dim)' : 'var(--text-muted)';
