@@ -230,6 +230,14 @@ body { font-family: 'Space Grotesk', system-ui, sans-serif; min-height: 100vh; p
   font-size: 16px; line-height: 1; transition: border-color 0.15s;
 }
 .theme-toggle:hover { border-color: var(--btn-hover); }
+@media(max-width:700px){
+  .table-header, .row { grid-template-columns: 28px 1fr 50px 28px 70px !important; font-size: 10px; padding: 5px 6px !important; }
+  .table-header > :nth-child(4), .row > :nth-child(4),
+  .table-header > :nth-child(7), .row > :nth-child(7),
+  .table-header > :nth-child(8), .row > :nth-child(8) { display: none !important; }
+  .pname { font-size: 11px; }
+  .rank { font-size: 10px; }
+}
 </style>
 <script>
 (function(){
