@@ -5,10 +5,10 @@ sys.stdout.reconfigure(encoding='utf-8')
 _dir = os.path.dirname(os.path.abspath(__file__))
 _p = lambda f: os.path.join(_dir, f)
 
-# Import CANONICAL from elo_75.py
+# Import CANONICAL from elo_engine.py
 elo_dir = os.path.join(os.path.dirname(_dir), 'zeepkist cotd elo')
 sys.path.insert(0, elo_dir)
-from elo_75 import CANONICAL
+from elo_engine import CANONICAL
 
 # Build name map from CANONICAL
 NAME_MAP = {}
@@ -227,6 +227,7 @@ FULL_LOBBY_REPLACEMENTS = {
         'Round 9': ('Petite Cups 36-40.xlsx', 'Petite Cup 38'),
         'Round 10': ('Petite Cups 36-40.xlsx', 'Petite Cup 39'),
         'Troll 3': ('Petite Cups 36-40.xlsx', 'Petite Cup 40'),
+        'Round 12': ('Petite Cups 41-45.xlsx', 'Petite Cup 41'),
     },
 }
 
