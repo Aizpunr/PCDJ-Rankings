@@ -3494,13 +3494,13 @@
             "pos": 1
           },
           {
-            "r": "Troll 3",
-            "p": 100.0,
+            "r": "Round 12",
+            "p": 200,
             "pos": 1
           },
           {
-            "r": "Round 12",
-            "p": 200,
+            "r": "Troll 3",
+            "p": 100.0,
             "pos": 1
           }
         ],
@@ -3636,14 +3636,14 @@
             "pos": 3
           },
           {
-            "r": "Troll 3",
-            "p": 90.0,
-            "pos": 2
-          },
-          {
             "r": "Round 12",
             "p": 60,
             "pos": 8
+          },
+          {
+            "r": "Troll 3",
+            "p": 90.0,
+            "pos": 2
           }
         ],
         "rank": 3
@@ -3697,14 +3697,14 @@
             "pos": 2
           },
           {
-            "r": "Troll 3",
-            "p": 50.0,
-            "pos": 6
-          },
-          {
             "r": "Round 12",
             "p": 140,
             "pos": 4
+          },
+          {
+            "r": "Troll 3",
+            "p": 50.0,
+            "pos": 6
           }
         ],
         "rank": 4
@@ -4147,14 +4147,14 @@
             "pos": 11
           },
           {
-            "r": "Troll 3",
-            "p": 60.0,
-            "pos": 5
-          },
-          {
             "r": "Round 12",
             "p": 0,
             "pos": 26
+          },
+          {
+            "r": "Troll 3",
+            "p": 60.0,
+            "pos": 5
           }
         ],
         "rank": 14
@@ -4249,14 +4249,14 @@
             "pos": 26
           },
           {
-            "r": "Troll 3",
-            "p": 40.0,
-            "pos": 7
-          },
-          {
             "r": "Round 12",
             "p": 20,
             "pos": 10
+          },
+          {
+            "r": "Troll 3",
+            "p": 40.0,
+            "pos": 7
           }
         ],
         "rank": 16
@@ -4443,13 +4443,13 @@
             "pos": 17
           },
           {
-            "r": "Troll 3",
-            "p": 0.0,
+            "r": "Round 12",
+            "p": 0,
             "pos": 15
           },
           {
-            "r": "Round 12",
-            "p": 0,
+            "r": "Troll 3",
+            "p": 0.0,
             "pos": 15
           }
         ],
@@ -4479,14 +4479,14 @@
             "pos": 25
           },
           {
-            "r": "Troll 3",
-            "p": 10.0,
-            "pos": 10
-          },
-          {
             "r": "Round 12",
             "p": 120,
             "pos": 5
+          },
+          {
+            "r": "Troll 3",
+            "p": 10.0,
+            "pos": 10
           }
         ],
         "rank": 21
@@ -4561,14 +4561,14 @@
             "pos": 9
           },
           {
-            "r": "Troll 3",
-            "p": 0.0,
-            "pos": 11
-          },
-          {
             "r": "Round 12",
             "p": 40,
             "pos": 9
+          },
+          {
+            "r": "Troll 3",
+            "p": 0.0,
+            "pos": 11
           }
         ],
         "rank": 23
@@ -4809,14 +4809,14 @@
             "pos": 20
           },
           {
-            "r": "Troll 3",
-            "p": 0.0,
-            "pos": 24
-          },
-          {
             "r": "Round 12",
             "p": 0,
             "pos": 14
+          },
+          {
+            "r": "Troll 3",
+            "p": 0.0,
+            "pos": 24
           }
         ],
         "rank": 31
@@ -5307,14 +5307,14 @@
             "pos": 24
           },
           {
-            "r": "Troll 3",
-            "p": 0.0,
-            "pos": 14
-          },
-          {
             "r": "Round 12",
             "p": 0,
             "pos": 11
+          },
+          {
+            "r": "Troll 3",
+            "p": 0.0,
+            "pos": 14
           }
         ],
         "rank": 44
@@ -5623,14 +5623,14 @@
             "pos": 25
           },
           {
-            "r": "Troll 3",
-            "p": 0.0,
-            "pos": 21
-          },
-          {
             "r": "Round 12",
             "p": 0,
             "pos": 26
+          },
+          {
+            "r": "Troll 3",
+            "p": 0.0,
+            "pos": 21
           }
         ],
         "rank": 55
@@ -5835,14 +5835,14 @@
             "pos": 31
           },
           {
-            "r": "Troll 3",
-            "p": 0.0,
-            "pos": 15
-          },
-          {
             "r": "Round 12",
             "p": 0,
             "pos": 19
+          },
+          {
+            "r": "Troll 3",
+            "p": 0.0,
+            "pos": 15
           }
         ],
         "rank": 62
@@ -6520,14 +6520,14 @@
             "pos": 28
           },
           {
-            "r": "Troll 3",
-            "p": 0.0,
-            "pos": 18
-          },
-          {
             "r": "Round 12",
             "p": 0,
             "pos": 23
+          },
+          {
+            "r": "Troll 3",
+            "p": 0.0,
+            "pos": 18
           }
         ],
         "rank": 87
@@ -6611,271 +6611,6 @@
         "rank": 90
       },
       {
-        "name": "Eclipse135",
-        "points": 0.0,
-        "points_all": 0.0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 13.0,
-        "best_single": 0.0,
-        "best_pos": 13,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Troll 3",
-            "p": 0.0,
-            "pos": 13
-          }
-        ],
-        "rank": 91
-      },
-      {
-        "name": "Zeus",
-        "points": 0.0,
-        "points_all": 0.0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 19.0,
-        "best_single": 0.0,
-        "best_pos": 19,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Troll 3",
-            "p": 0.0,
-            "pos": 19
-          }
-        ],
-        "rank": 92
-      },
-      {
-        "name": "Babup",
-        "points": 0.0,
-        "points_all": 0.0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 21.0,
-        "best_single": 0.0,
-        "best_pos": 21,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Troll 3",
-            "p": 0.0,
-            "pos": 21
-          }
-        ],
-        "rank": 93
-      },
-      {
-        "name": "gameface",
-        "points": 0.0,
-        "points_all": 0.0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 23.0,
-        "best_single": 0.0,
-        "best_pos": 23,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Troll 3",
-            "p": 0.0,
-            "pos": 23
-          }
-        ],
-        "rank": 94
-      },
-      {
-        "name": "paytonkimpel11",
-        "points": 0.0,
-        "points_all": 0.0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 24.0,
-        "best_single": 0.0,
-        "best_pos": 24,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Troll 3",
-            "p": 0.0,
-            "pos": 24
-          }
-        ],
-        "rank": 95
-      },
-      {
-        "name": "daytime",
-        "points": 0.0,
-        "points_all": 0.0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 24.0,
-        "best_single": 0.0,
-        "best_pos": 24,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Troll 3",
-            "p": 0.0,
-            "pos": 24
-          }
-        ],
-        "rank": 96
-      },
-      {
-        "name": "OccasionallyAmazingGamer",
-        "points": 0.0,
-        "points_all": 0.0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 24.0,
-        "best_single": 0.0,
-        "best_pos": 24,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Troll 3",
-            "p": 0.0,
-            "pos": 24
-          }
-        ],
-        "rank": 97
-      },
-      {
-        "name": "Edwin",
-        "points": 0.0,
-        "points_all": 0.0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 31.0,
-        "best_single": 0.0,
-        "best_pos": 31,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Troll 3",
-            "p": 0.0,
-            "pos": 31
-          }
-        ],
-        "rank": 98
-      },
-      {
-        "name": "MossRover",
-        "points": 0.0,
-        "points_all": 0.0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 31.0,
-        "best_single": 0.0,
-        "best_pos": 31,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Troll 3",
-            "p": 0.0,
-            "pos": 31
-          }
-        ],
-        "rank": 99
-      },
-      {
-        "name": "Tomixcomics",
-        "points": 0.0,
-        "points_all": 0.0,
-        "rounds": 2,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 28.5,
-        "best_single": 0.0,
-        "best_pos": 26,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Troll 3",
-            "p": 0.0,
-            "pos": 31
-          },
-          {
-            "r": "Round 12",
-            "p": 0,
-            "pos": 26
-          }
-        ],
-        "rank": 100
-      },
-      {
         "name": "vortex",
         "points": 0,
         "points_all": 0,
@@ -6899,7 +6634,7 @@
             "pos": 16
           }
         ],
-        "rank": 101
+        "rank": 91
       },
       {
         "name": "[CSC]ShyGirlyRaccoon",
@@ -6925,7 +6660,7 @@
             "pos": 17
           }
         ],
-        "rank": 102
+        "rank": 92
       },
       {
         "name": "grop44",
@@ -6951,7 +6686,7 @@
             "pos": 21
           }
         ],
-        "rank": 103
+        "rank": 93
       },
       {
         "name": "Cool",
@@ -6977,7 +6712,7 @@
             "pos": 23
           }
         ],
-        "rank": 104
+        "rank": 94
       },
       {
         "name": "DarthJohansen",
@@ -7003,7 +6738,7 @@
             "pos": 23
           }
         ],
-        "rank": 105
+        "rank": 95
       },
       {
         "name": "Aetherhead",
@@ -7027,6 +6762,271 @@
             "r": "Round 12",
             "p": 0,
             "pos": 26
+          }
+        ],
+        "rank": 96
+      },
+      {
+        "name": "Tomixcomics",
+        "points": 0.0,
+        "points_all": 0.0,
+        "rounds": 2,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 28.5,
+        "best_single": 0,
+        "best_pos": 26,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 12",
+            "p": 0,
+            "pos": 26
+          },
+          {
+            "r": "Troll 3",
+            "p": 0.0,
+            "pos": 31
+          }
+        ],
+        "rank": 97
+      },
+      {
+        "name": "Eclipse135",
+        "points": 0.0,
+        "points_all": 0.0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 13.0,
+        "best_single": 0.0,
+        "best_pos": 13,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Troll 3",
+            "p": 0.0,
+            "pos": 13
+          }
+        ],
+        "rank": 98
+      },
+      {
+        "name": "Zeus",
+        "points": 0.0,
+        "points_all": 0.0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 19.0,
+        "best_single": 0.0,
+        "best_pos": 19,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Troll 3",
+            "p": 0.0,
+            "pos": 19
+          }
+        ],
+        "rank": 99
+      },
+      {
+        "name": "Babup",
+        "points": 0.0,
+        "points_all": 0.0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 21.0,
+        "best_single": 0.0,
+        "best_pos": 21,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Troll 3",
+            "p": 0.0,
+            "pos": 21
+          }
+        ],
+        "rank": 100
+      },
+      {
+        "name": "gameface",
+        "points": 0.0,
+        "points_all": 0.0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 23.0,
+        "best_single": 0.0,
+        "best_pos": 23,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Troll 3",
+            "p": 0.0,
+            "pos": 23
+          }
+        ],
+        "rank": 101
+      },
+      {
+        "name": "paytonkimpel11",
+        "points": 0.0,
+        "points_all": 0.0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 24.0,
+        "best_single": 0.0,
+        "best_pos": 24,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Troll 3",
+            "p": 0.0,
+            "pos": 24
+          }
+        ],
+        "rank": 102
+      },
+      {
+        "name": "daytime",
+        "points": 0.0,
+        "points_all": 0.0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 24.0,
+        "best_single": 0.0,
+        "best_pos": 24,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Troll 3",
+            "p": 0.0,
+            "pos": 24
+          }
+        ],
+        "rank": 103
+      },
+      {
+        "name": "OccasionallyAmazingGamer",
+        "points": 0.0,
+        "points_all": 0.0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 24.0,
+        "best_single": 0.0,
+        "best_pos": 24,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Troll 3",
+            "p": 0.0,
+            "pos": 24
+          }
+        ],
+        "rank": 104
+      },
+      {
+        "name": "Edwin",
+        "points": 0.0,
+        "points_all": 0.0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 31.0,
+        "best_single": 0.0,
+        "best_pos": 31,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Troll 3",
+            "p": 0.0,
+            "pos": 31
+          }
+        ],
+        "rank": 105
+      },
+      {
+        "name": "MossRover",
+        "points": 0.0,
+        "points_all": 0.0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 31.0,
+        "best_single": 0.0,
+        "best_pos": 31,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Troll 3",
+            "p": 0.0,
+            "pos": 31
           }
         ],
         "rank": 106
@@ -10287,8 +10287,8 @@
       "Round 8": 92.0,
       "Round 9": 88.7,
       "Round 10": 88.2,
-      "Troll 3": 87.3,
-      "Round 12": 91.1
+      "Round 12": 91.1,
+      "Troll 3": 87.3
     }
   },
   "PCDJ Ranking": {
@@ -10440,13 +10440,13 @@
             "pos": 1
           },
           {
-            "r": "Season 3 Troll 3",
-            "p": 100.0,
+            "r": "Season 3 Round 12",
+            "p": 200,
             "pos": 1
           },
           {
-            "r": "Season 3 Round 12",
-            "p": 200,
+            "r": "Season 3 Troll 3",
+            "p": 100.0,
             "pos": 1
           }
         ],
@@ -10833,14 +10833,14 @@
             "pos": 3
           },
           {
-            "r": "Season 3 Troll 3",
-            "p": 90.0,
-            "pos": 2
-          },
-          {
             "r": "Season 3 Round 12",
             "p": 60,
             "pos": 8
+          },
+          {
+            "r": "Season 3 Troll 3",
+            "p": 90.0,
+            "pos": 2
           }
         ],
         "rank": 4
@@ -11344,14 +11344,14 @@
             "pos": 2
           },
           {
-            "r": "Season 3 Troll 3",
-            "p": 50.0,
-            "pos": 6
-          },
-          {
             "r": "Season 3 Round 12",
             "p": 140,
             "pos": 4
+          },
+          {
+            "r": "Season 3 Troll 3",
+            "p": 50.0,
+            "pos": 6
           }
         ],
         "rank": 10
@@ -11446,14 +11446,14 @@
             "pos": 25
           },
           {
-            "r": "Season 3 Troll 3",
-            "p": 10.0,
-            "pos": 10
-          },
-          {
             "r": "Season 3 Round 12",
             "p": 120,
             "pos": 5
+          },
+          {
+            "r": "Season 3 Troll 3",
+            "p": 10.0,
+            "pos": 10
           }
         ],
         "rank": 12
@@ -11956,14 +11956,14 @@
             "pos": 20
           },
           {
-            "r": "Season 3 Troll 3",
-            "p": 0.0,
-            "pos": 24
-          },
-          {
             "r": "Season 3 Round 12",
             "p": 0,
             "pos": 14
+          },
+          {
+            "r": "Season 3 Troll 3",
+            "p": 0.0,
+            "pos": 24
           }
         ],
         "rank": 22
@@ -12048,14 +12048,14 @@
             "pos": 11
           },
           {
-            "r": "Season 3 Troll 3",
-            "p": 60.0,
-            "pos": 5
-          },
-          {
             "r": "Season 3 Round 12",
             "p": 0,
             "pos": 26
+          },
+          {
+            "r": "Season 3 Troll 3",
+            "p": 60.0,
+            "pos": 5
           }
         ],
         "rank": 24
@@ -12216,14 +12216,14 @@
             "pos": 26
           },
           {
-            "r": "Season 3 Troll 3",
-            "p": 40.0,
-            "pos": 7
-          },
-          {
             "r": "Season 3 Round 12",
             "p": 20,
             "pos": 10
+          },
+          {
+            "r": "Season 3 Troll 3",
+            "p": 40.0,
+            "pos": 7
           }
         ],
         "rank": 27
@@ -12446,13 +12446,13 @@
             "pos": 17
           },
           {
-            "r": "Season 3 Troll 3",
-            "p": 0.0,
+            "r": "Season 3 Round 12",
+            "p": 0,
             "pos": 15
           },
           {
-            "r": "Season 3 Round 12",
-            "p": 0,
+            "r": "Season 3 Troll 3",
+            "p": 0.0,
             "pos": 15
           }
         ],
@@ -12637,14 +12637,14 @@
             "pos": 9
           },
           {
-            "r": "Season 3 Troll 3",
-            "p": 0.0,
-            "pos": 11
-          },
-          {
             "r": "Season 3 Round 12",
             "p": 40,
             "pos": 9
+          },
+          {
+            "r": "Season 3 Troll 3",
+            "p": 0.0,
+            "pos": 11
           }
         ],
         "rank": 38
@@ -13521,14 +13521,14 @@
             "pos": 24
           },
           {
-            "r": "Season 3 Troll 3",
-            "p": 0.0,
-            "pos": 14
-          },
-          {
             "r": "Season 3 Round 12",
             "p": 0,
             "pos": 11
+          },
+          {
+            "r": "Season 3 Troll 3",
+            "p": 0.0,
+            "pos": 14
           }
         ],
         "rank": 67
@@ -13837,14 +13837,14 @@
             "pos": 25
           },
           {
-            "r": "Season 3 Troll 3",
-            "p": 0.0,
-            "pos": 21
-          },
-          {
             "r": "Season 3 Round 12",
             "p": 0,
             "pos": 26
+          },
+          {
+            "r": "Season 3 Troll 3",
+            "p": 0.0,
+            "pos": 21
           }
         ],
         "rank": 78
@@ -14018,14 +14018,14 @@
             "pos": 31
           },
           {
-            "r": "Season 3 Troll 3",
-            "p": 0.0,
-            "pos": 15
-          },
-          {
             "r": "Season 3 Round 12",
             "p": 0,
             "pos": 19
+          },
+          {
+            "r": "Season 3 Troll 3",
+            "p": 0.0,
+            "pos": 15
           }
         ],
         "rank": 84
@@ -14703,14 +14703,14 @@
             "pos": 28
           },
           {
-            "r": "Season 3 Troll 3",
-            "p": 0.0,
-            "pos": 18
-          },
-          {
             "r": "Season 3 Round 12",
             "p": 0,
             "pos": 23
+          },
+          {
+            "r": "Season 3 Troll 3",
+            "p": 0.0,
+            "pos": 18
           }
         ],
         "rank": 109
@@ -14794,271 +14794,6 @@
         "rank": 112
       },
       {
-        "name": "Eclipse135",
-        "points": 0.0,
-        "points_all": 0.0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 13.0,
-        "best_single": 0.0,
-        "best_pos": 13,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Season 3 Troll 3",
-            "p": 0.0,
-            "pos": 13
-          }
-        ],
-        "rank": 113
-      },
-      {
-        "name": "Zeus",
-        "points": 0.0,
-        "points_all": 0.0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 19.0,
-        "best_single": 0.0,
-        "best_pos": 19,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Season 3 Troll 3",
-            "p": 0.0,
-            "pos": 19
-          }
-        ],
-        "rank": 114
-      },
-      {
-        "name": "Babup",
-        "points": 0.0,
-        "points_all": 0.0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 21.0,
-        "best_single": 0.0,
-        "best_pos": 21,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Season 3 Troll 3",
-            "p": 0.0,
-            "pos": 21
-          }
-        ],
-        "rank": 115
-      },
-      {
-        "name": "gameface",
-        "points": 0.0,
-        "points_all": 0.0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 23.0,
-        "best_single": 0.0,
-        "best_pos": 23,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Season 3 Troll 3",
-            "p": 0.0,
-            "pos": 23
-          }
-        ],
-        "rank": 116
-      },
-      {
-        "name": "paytonkimpel11",
-        "points": 0.0,
-        "points_all": 0.0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 24.0,
-        "best_single": 0.0,
-        "best_pos": 24,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Season 3 Troll 3",
-            "p": 0.0,
-            "pos": 24
-          }
-        ],
-        "rank": 117
-      },
-      {
-        "name": "daytime",
-        "points": 0.0,
-        "points_all": 0.0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 24.0,
-        "best_single": 0.0,
-        "best_pos": 24,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Season 3 Troll 3",
-            "p": 0.0,
-            "pos": 24
-          }
-        ],
-        "rank": 118
-      },
-      {
-        "name": "OccasionallyAmazingGamer",
-        "points": 0.0,
-        "points_all": 0.0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 24.0,
-        "best_single": 0.0,
-        "best_pos": 24,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Season 3 Troll 3",
-            "p": 0.0,
-            "pos": 24
-          }
-        ],
-        "rank": 119
-      },
-      {
-        "name": "Edwin",
-        "points": 0.0,
-        "points_all": 0.0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 31.0,
-        "best_single": 0.0,
-        "best_pos": 31,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Season 3 Troll 3",
-            "p": 0.0,
-            "pos": 31
-          }
-        ],
-        "rank": 120
-      },
-      {
-        "name": "MossRover",
-        "points": 0.0,
-        "points_all": 0.0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 31.0,
-        "best_single": 0.0,
-        "best_pos": 31,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Season 3 Troll 3",
-            "p": 0.0,
-            "pos": 31
-          }
-        ],
-        "rank": 121
-      },
-      {
-        "name": "Tomixcomics",
-        "points": 0.0,
-        "points_all": 0.0,
-        "rounds": 2,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 28.5,
-        "best_single": 0.0,
-        "best_pos": 26,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Season 3 Troll 3",
-            "p": 0.0,
-            "pos": 31
-          },
-          {
-            "r": "Season 3 Round 12",
-            "p": 0,
-            "pos": 26
-          }
-        ],
-        "rank": 122
-      },
-      {
         "name": "vortex",
         "points": 0,
         "points_all": 0,
@@ -15082,7 +14817,7 @@
             "pos": 16
           }
         ],
-        "rank": 123
+        "rank": 113
       },
       {
         "name": "[CSC]ShyGirlyRaccoon",
@@ -15108,7 +14843,7 @@
             "pos": 17
           }
         ],
-        "rank": 124
+        "rank": 114
       },
       {
         "name": "grop44",
@@ -15134,7 +14869,7 @@
             "pos": 21
           }
         ],
-        "rank": 125
+        "rank": 115
       },
       {
         "name": "Cool",
@@ -15160,7 +14895,7 @@
             "pos": 23
           }
         ],
-        "rank": 126
+        "rank": 116
       },
       {
         "name": "DarthJohansen",
@@ -15186,7 +14921,7 @@
             "pos": 23
           }
         ],
-        "rank": 127
+        "rank": 117
       },
       {
         "name": "Aetherhead",
@@ -15210,6 +14945,271 @@
             "r": "Season 3 Round 12",
             "p": 0,
             "pos": 26
+          }
+        ],
+        "rank": 118
+      },
+      {
+        "name": "Tomixcomics",
+        "points": 0.0,
+        "points_all": 0.0,
+        "rounds": 2,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 28.5,
+        "best_single": 0,
+        "best_pos": 26,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 3 Round 12",
+            "p": 0,
+            "pos": 26
+          },
+          {
+            "r": "Season 3 Troll 3",
+            "p": 0.0,
+            "pos": 31
+          }
+        ],
+        "rank": 119
+      },
+      {
+        "name": "Eclipse135",
+        "points": 0.0,
+        "points_all": 0.0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 13.0,
+        "best_single": 0.0,
+        "best_pos": 13,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 3 Troll 3",
+            "p": 0.0,
+            "pos": 13
+          }
+        ],
+        "rank": 120
+      },
+      {
+        "name": "Zeus",
+        "points": 0.0,
+        "points_all": 0.0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 19.0,
+        "best_single": 0.0,
+        "best_pos": 19,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 3 Troll 3",
+            "p": 0.0,
+            "pos": 19
+          }
+        ],
+        "rank": 121
+      },
+      {
+        "name": "Babup",
+        "points": 0.0,
+        "points_all": 0.0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 21.0,
+        "best_single": 0.0,
+        "best_pos": 21,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 3 Troll 3",
+            "p": 0.0,
+            "pos": 21
+          }
+        ],
+        "rank": 122
+      },
+      {
+        "name": "gameface",
+        "points": 0.0,
+        "points_all": 0.0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 23.0,
+        "best_single": 0.0,
+        "best_pos": 23,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 3 Troll 3",
+            "p": 0.0,
+            "pos": 23
+          }
+        ],
+        "rank": 123
+      },
+      {
+        "name": "paytonkimpel11",
+        "points": 0.0,
+        "points_all": 0.0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 24.0,
+        "best_single": 0.0,
+        "best_pos": 24,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 3 Troll 3",
+            "p": 0.0,
+            "pos": 24
+          }
+        ],
+        "rank": 124
+      },
+      {
+        "name": "daytime",
+        "points": 0.0,
+        "points_all": 0.0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 24.0,
+        "best_single": 0.0,
+        "best_pos": 24,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 3 Troll 3",
+            "p": 0.0,
+            "pos": 24
+          }
+        ],
+        "rank": 125
+      },
+      {
+        "name": "OccasionallyAmazingGamer",
+        "points": 0.0,
+        "points_all": 0.0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 24.0,
+        "best_single": 0.0,
+        "best_pos": 24,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 3 Troll 3",
+            "p": 0.0,
+            "pos": 24
+          }
+        ],
+        "rank": 126
+      },
+      {
+        "name": "Edwin",
+        "points": 0.0,
+        "points_all": 0.0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 31.0,
+        "best_single": 0.0,
+        "best_pos": 31,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 3 Troll 3",
+            "p": 0.0,
+            "pos": 31
+          }
+        ],
+        "rank": 127
+      },
+      {
+        "name": "MossRover",
+        "points": 0.0,
+        "points_all": 0.0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 31.0,
+        "best_single": 0.0,
+        "best_pos": 31,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 3 Troll 3",
+            "p": 0.0,
+            "pos": 31
           }
         ],
         "rank": 128
