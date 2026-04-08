@@ -372,8 +372,19 @@ function roundSortKey(name) {
   const seasonNum = seasonMatch ? parseInt(seasonMatch[1]) * 10000 : 0;
   const numMatch = name.match(/\d+$/);
   const num = numMatch ? parseInt(numMatch[0]) : 0;
-  const type = name.includes('Troll') ? 1000 : name.includes('Roulette') ? 2000 : 0;
-  return seasonNum + type + num;
+  // Troll/Roulette sort by their number among regular rounds (e.g. Troll 3 between Round 10 and Round 12)
+  if (name.includes('Troll') || name.includes('Roulette')) {
+    // Map special cups to their chronological position using PCDJ cup numbers
+    // Troll 2 = after S2 Round 15, Roulette 2 = after S2 Round 16
+    // Troll 3 = after S3 Round 10, Roulette 3 = after S3 Round 20
+    const specialOrder = {
+      'Troll 2': 15.5, 'Roulette 2': 16.5,
+      'Troll 3': 10.5, 'Roulette 3': 20.5,
+    };
+    const key = name.replace(/Season \d+ /, '');
+    return seasonNum + (specialOrder[key] || num + 0.5);
+  }
+  return seasonNum + num;
 }
 
 function updateInfoTip(season) {
