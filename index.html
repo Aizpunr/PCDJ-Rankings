@@ -365,6 +365,7 @@ function ptsColorSingle(pts) {
 }
 
 function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+const customColors={"Lexer":"#10b981","Sandals":"#aa55ff","GuAlexItar":"#f5c842","justMaki":"#dc2626"};
 
 function roundSortKey(name) {
   // Handle "Season N Round M", "Season N Troll N", plain "Round M", etc.
@@ -1040,7 +1041,7 @@ function renderRankings() {
     const zeroClass = p.points === 0 ? ' zero-pts' : '';
     return `<div class="row${compClass}${zeroClass}" data-name="${esc(p.name)}" style="grid-template-columns:${RANK_COLS}">
       <div class="rank">${displayRank}${deltaStr}</div>
-      <div class="player"><span class="dot" style="background:${c};box-shadow:0 0 5px ${c}40"></span><span class="pname">${esc(p.name)}</span>${milestoneStr}</div>
+      <div class="player"><span class="dot" style="background:${c};box-shadow:0 0 5px ${c}40"></span><span class="pname" style="color:${customColors[p.name]||''}">${esc(p.name)}</span>${milestoneStr}</div>
       <div style="text-align:right;font-family:var(--mono);font-weight:700;color:${c}">${prev && p.points > 0 && p.points - prev[1] > 0 ? `<span style="color:var(--green);font-size:10px;margin-right:4px">+${Math.round(p.points - prev[1])}</span>` : ''}${p.points}</div>
       <div style="text-align:right;font-family:var(--mono);color:var(--text-dim)">${p.rounds}</div>
       <div style="text-align:right;font-family:var(--mono);font-weight:600;color:${wc}">${p.wins}</div>
@@ -1185,7 +1186,7 @@ function renderRounds() {
         const cumHtml = cumPts ? `<span style="color:${cumColor}">${cumPts}</span>` : '<span style="color:var(--text-dark)">—</span>';
         h += `<div class="round-player-row" data-player="${esc(p.name)}" style="grid-template-columns:${cols};background:${bg}">
           <div style="font-family:var(--mono);color:var(--text-muted)">${p.pos}</div>
-          <div class="round-player-link" style="font-weight:600;cursor:pointer">${esc(p.name)}</div>
+          <div class="round-player-link" style="font-weight:600;cursor:pointer;color:${customColors[p.name]||''}">${esc(p.name)}</div>
           <div style="text-align:right;font-family:var(--mono);font-size:11px">${cumHtml}</div>
           <div style="text-align:right;font-family:var(--mono);font-weight:700;color:${c}">${p.pts}</div>
         </div>`;
@@ -1536,7 +1537,7 @@ function renderSearch(query) {
     const milestoneStr = milestones.length ? ` <span style="font-size:9px;color:var(--accent)">${milestones.join(' ')}</span>` : '';
     return `<div class="row" data-name="${esc(p.name)}" style="grid-template-columns:${RANK_COLS}">
       <div class="rank">${p.rank}${deltaStr}</div>
-      <div class="player"><span class="dot" style="background:${c};box-shadow:0 0 5px ${c}40"></span><span class="pname">${esc(p.name)}</span>${milestoneStr}</div>
+      <div class="player"><span class="dot" style="background:${c};box-shadow:0 0 5px ${c}40"></span><span class="pname" style="color:${customColors[p.name]||''}">${esc(p.name)}</span>${milestoneStr}</div>
       <div style="text-align:right;font-family:var(--mono);font-weight:700;color:${c}">${prev && p.points - prev[1] > 0 ? `<span style="color:var(--green);font-size:10px;margin-right:4px">+${Math.round(p.points - prev[1])}</span>` : ''}${p.points}</div>
       <div style="text-align:right;font-family:var(--mono);color:var(--text-dim)">${p.rounds}</div>
       <div style="text-align:right;font-family:var(--mono);font-weight:600;color:${wc}">${p.wins}</div>
