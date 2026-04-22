@@ -4390,7 +4390,7 @@
         },
         "top5": 1,
         "avg_pts": 25.0,
-        "avg_pos": 11.5,
+        "avg_pos": 11.4,
         "best_single": 120,
         "best_pos": 5,
         "dropped": 0,
@@ -4433,7 +4433,7 @@
           {
             "r": "Round 14",
             "p": 0,
-            "pos": 12
+            "pos": 11
           }
         ],
         "rank": 18
@@ -6864,9 +6864,9 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 12.0,
+        "avg_pos": 12.3,
         "best_single": 0.0,
-        "best_pos": 11,
+        "best_pos": 12,
         "dropped": 0,
         "history": [
           {
@@ -6882,7 +6882,7 @@
           {
             "r": "Round 14",
             "p": 0,
-            "pos": 11
+            "pos": 12
           }
         ],
         "rank": 92
@@ -8543,7 +8543,7 @@
         },
         "top5": 1,
         "avg_pts": 1.2,
-        "avg_pos": 11.5,
+        "avg_pos": 11.4,
         "best_single": 6,
         "best_pos": 5,
         "dropped": 0,
@@ -8586,7 +8586,7 @@
           {
             "r": "Round 14",
             "p": 0,
-            "pos": 12
+            "pos": 11
           }
         ],
         "rank": 17
@@ -11185,9 +11185,9 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 11.5,
+        "avg_pos": 12.0,
         "best_single": 0,
-        "best_pos": 11,
+        "best_pos": 12,
         "dropped": 0,
         "history": [
           {
@@ -11198,7 +11198,7 @@
           {
             "r": "Round 14",
             "p": 0,
-            "pos": 11
+            "pos": 12
           }
         ],
         "rank": 99
@@ -13805,7 +13805,7 @@
         },
         "top5": 1,
         "avg_pts": 25.0,
-        "avg_pos": 11.5,
+        "avg_pos": 11.4,
         "best_single": 120,
         "best_pos": 5,
         "dropped": 0,
@@ -13848,7 +13848,7 @@
           {
             "r": "Season 3 Round 14",
             "p": 0,
-            "pos": 12
+            "pos": 11
           }
         ],
         "rank": 32
@@ -16362,9 +16362,9 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 12.0,
+        "avg_pos": 12.3,
         "best_single": 0.0,
-        "best_pos": 11,
+        "best_pos": 12,
         "dropped": 0,
         "history": [
           {
@@ -16380,7 +16380,7 @@
           {
             "r": "Season 3 Round 14",
             "p": 0,
-            "pos": 11
+            "pos": 12
           }
         ],
         "rank": 114
@@ -19129,7 +19129,7 @@
         },
         "top5": 1,
         "avg_pts": 1.2,
-        "avg_pos": 11.5,
+        "avg_pos": 11.4,
         "best_single": 6,
         "best_pos": 5,
         "dropped": 0,
@@ -19172,7 +19172,7 @@
           {
             "r": "Season 3 Round 14",
             "p": 0,
-            "pos": 12
+            "pos": 11
           }
         ],
         "rank": 30
@@ -21853,9 +21853,9 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 11.5,
+        "avg_pos": 12.0,
         "best_single": 0,
-        "best_pos": 11,
+        "best_pos": 12,
         "dropped": 0,
         "history": [
           {
@@ -21866,7 +21866,7 @@
           {
             "r": "Season 3 Round 14",
             "p": 0,
-            "pos": 11
+            "pos": 12
           }
         ],
         "rank": 119
