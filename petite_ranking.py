@@ -49,6 +49,7 @@ PETITE_ALIASES = {
     'rtube': 'rtyyyyb',
     'Mu': 'Mμ',
     'Lkat': 'LKat',
+    "Jake Replacement's Replacement": 'LKat',
     'null/plexus': 'null/plexus',
     'Zoman': 'ZOMAN',
     'redal': 'redal',
@@ -231,6 +232,7 @@ FULL_LOBBY_REPLACEMENTS = {
         'Round 13': ('Petite Cups 41-45.xlsx', 'Petite Cup 42'),
         'Round 14': ('Petite Cups 41-45.xlsx', 'Petite Cup 43'),
         'Round 15': ('Petite Cups 41-45.xlsx', 'Petite Cup 44'),
+        'Round 16': ('Petite Cups 41-45.xlsx', 'Petite Cup 45'),
     },
 }
 
