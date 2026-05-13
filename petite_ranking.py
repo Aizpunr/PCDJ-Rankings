@@ -233,11 +233,32 @@ FULL_LOBBY_REPLACEMENTS = {
         'Round 14': ('Petite Cups 41-45.xlsx', 'Petite Cup 43'),
         'Round 15': ('Petite Cups 41-45.xlsx', 'Petite Cup 44'),
         'Round 16': ('Petite Cups 41-45.xlsx', 'Petite Cup 45'),
+        'Round 17': ('Petite Cups 46-50.xlsx', 'Petite Cup 46'),
     },
 }
 
 # Supplementary cups not yet in SGR's spreadsheet
 EXTRA_CUPS = {
+}
+
+# Event dates (UTC). Resolved by matching xlsx finisher times against
+# graphql.zeepki.st records; cup day = dateCreated of the matching record.
+# Only events with full-lobby data are dateable this way.
+EVENT_DATES = {
+    'Season 3': {
+        'Round 5':  '2026-02-18',
+        'Round 6':  '2026-02-25',
+        'Round 8':  '2026-03-11',
+        'Round 9':  '2026-03-18',
+        'Round 10': '2026-03-25',
+        'Troll 3':  '2026-04-01',
+        'Round 12': '2026-04-08',
+        'Round 13': '2026-04-15',
+        'Round 14': '2026-04-22',
+        'Round 15': '2026-04-29',
+        'Round 16': '2026-05-06',
+        'Round 17': '2026-05-13',
+    },
 }
 
 # --- Compute rankings ---
@@ -386,133 +407,180 @@ SEASON_CUP_OFFSET = {
     'Season 3': 29,  # S3 Round 1 = Cup 30
 }
 
-# --- Main ---
-print("Parsing petite cup data...")
-seasons = parse_petite(_p('Results Petite .xlsx'))
-
-# Replace rounds with full-lobby data where available
-for season_name, replacements in FULL_LOBBY_REPLACEMENTS.items():
-    if season_name not in seasons:
-        continue
-    for round_name, (filename, cup_label) in replacements.items():
-        rnd = parse_cup_file(_p(filename), round_name, cup_label=cup_label)
-        rnd['is_half'] = 'Troll' in round_name or 'Roulette' in round_name
-        if rnd['is_half']:
-            for p in rnd['players']:
-                p['points'] *= TROLL_MULT
-        if not rnd['players']:
+def build_seasons():
+    """Parse all sources and return the season->rounds dict with full-lobby
+    replacements applied. Reusable by other scripts that want per-event
+    lobby data without triggering the full ranking pipeline."""
+    seasons = parse_petite(_p('Results Petite .xlsx'))
+    for season_name, replacements in FULL_LOBBY_REPLACEMENTS.items():
+        if season_name not in seasons:
             continue
-        # Find and replace the existing round
-        replaced = False
-        for i, existing in enumerate(seasons[season_name]):
-            if existing['name'] == round_name:
-                seasons[season_name][i] = rnd
-                replaced = True
-                print(f"  Replaced {round_name} with full lobby from {filename}: {len(rnd['players'])} players")
-                break
-        if not replaced:
-            seasons[season_name].append(rnd)
-            print(f"  Added {round_name} from {filename}: {len(rnd['players'])} players")
+        for round_name, (filename, cup_label) in replacements.items():
+            rnd = parse_cup_file(_p(filename), round_name, cup_label=cup_label)
+            rnd['is_half'] = 'Troll' in round_name or 'Roulette' in round_name
+            if rnd['is_half']:
+                for p in rnd['players']:
+                    p['points'] *= TROLL_MULT
+            if not rnd['players']:
+                continue
+            replaced = False
+            for i, existing in enumerate(seasons[season_name]):
+                if existing['name'] == round_name:
+                    seasons[season_name][i] = rnd
+                    replaced = True
+                    break
+            if not replaced:
+                seasons[season_name].append(rnd)
+    for season_name, cups in EXTRA_CUPS.items():
+        if season_name not in seasons:
+            seasons[season_name] = []
+        for filename, round_name in cups:
+            rnd = parse_cup_file(_p(filename), round_name)
+            if rnd['players']:
+                seasons[season_name].append(rnd)
+    return seasons
 
-# Append supplementary cups
-for season_name, cups in EXTRA_CUPS.items():
-    if season_name not in seasons:
-        seasons[season_name] = []
-    for filename, round_name in cups:
-        rnd = parse_cup_file(_p(filename), round_name)
-        if rnd['players']:
-            seasons[season_name].append(rnd)
-            print(f"  Added {round_name} from {filename}: {len(rnd['players'])} top-10 players, {rnd['lobby_size']} total")
-season_names = list(seasons.keys())
 
-output = {}
+def main():
+    print("Parsing petite cup data...")
+    seasons = parse_petite(_p('Results Petite .xlsx'))
 
-# --- Season rankings ---
-for season_name, rounds in seasons.items():
-    regular = [r for r in rounds if not r['is_half']]
-    special = [r for r in rounds if r['is_half']]
-    total_events = SEASON_TOTAL.get(season_name, len(rounds))
-    best_of = round(total_events * BEST_OF_PCT)
-    rounds_played = len(rounds)
-    drops_active = rounds_played > best_of
+    # Replace rounds with full-lobby data where available
+    for season_name, replacements in FULL_LOBBY_REPLACEMENTS.items():
+        if season_name not in seasons:
+            continue
+        for round_name, (filename, cup_label) in replacements.items():
+            rnd = parse_cup_file(_p(filename), round_name, cup_label=cup_label)
+            rnd['is_half'] = 'Troll' in round_name or 'Roulette' in round_name
+            if rnd['is_half']:
+                for p in rnd['players']:
+                    p['points'] *= TROLL_MULT
+            if not rnd['players']:
+                continue
+            # Find and replace the existing round
+            replaced = False
+            for i, existing in enumerate(seasons[season_name]):
+                if existing['name'] == round_name:
+                    seasons[season_name][i] = rnd
+                    replaced = True
+                    print(f"  Replaced {round_name} with full lobby from {filename}: {len(rnd['players'])} players")
+                    break
+            if not replaced:
+                seasons[season_name].append(rnd)
+                print(f"  Added {round_name} from {filename}: {len(rnd['players'])} players")
 
-    print(f"\n=== {season_name} ===")
-    print(f"  {len(regular)} regular + {len(special)} special (half pts)")
-    print(f"  {rounds_played}/{total_events} rounds played, best {best_of} count (70% of {total_events})")
-    if drops_active:
-        print(f"  Drops active — dropping {rounds_played - best_of} worst")
-    else:
-        print(f"  All results count (drops start at round {best_of + 1})")
+    # Append supplementary cups
+    for season_name, cups in EXTRA_CUPS.items():
+        if season_name not in seasons:
+            seasons[season_name] = []
+        for filename, round_name in cups:
+            rnd = parse_cup_file(_p(filename), round_name)
+            if rnd['players']:
+                seasons[season_name].append(rnd)
+                print(f"  Added {round_name} from {filename}: {len(rnd['players'])} top-10 players, {rnd['lobby_size']} total")
+    season_names = list(seasons.keys())
 
-    # Compute cup strength for full-lobby rounds
-    cotd_histories = load_cotd_histories()
-    round_strengths = {}
-    offset = SEASON_CUP_OFFSET.get(season_name, 0)
-    for rnd in rounds:
-        rnum = int(''.join(c for c in rnd['name'] if c.isdigit()) or 0)
-        pcdj_cup = offset + rnum
-        sof = compute_cup_strength(rnd, pcdj_cup, cotd_histories)
-        if sof is not None:
-            round_strengths[rnd['name']] = sof
-            print(f"  {rnd['name']} (PCDJ {pcdj_cup}): SOF {sof}%")
+    output = {}
 
-    rankings = compute_rankings(rounds, best_of, season_mode=True)
-    # Championship points: OLR's original 10-1 scale, no drops, troll/roulette excluded
-    champ_rankings = compute_rankings(rounds, len(rounds), season_mode=False, championship=True)
-    output[season_name] = {
-        'type': 'season',
-        'total_events': total_events,
-        'rounds_played': rounds_played,
-        'rounds_regular': len(regular),
-        'rounds_special': len(special),
-        'best_of': best_of,
-        'drops_active': drops_active,
-        'points_scale': POINTS_SCALE,
-        'rankings': rankings,
-        'championship': champ_rankings,
-        'round_strengths': round_strengths,
-    }
+    # --- Season rankings ---
+    for season_name, rounds in seasons.items():
+        regular = [r for r in rounds if not r['is_half']]
+        special = [r for r in rounds if r['is_half']]
+        total_events = SEASON_TOTAL.get(season_name, len(rounds))
+        best_of = round(total_events * BEST_OF_PCT)
+        rounds_played = len(rounds)
+        drops_active = rounds_played > best_of
 
-    print(f"\n{'#':<4}{'Player':<22}{'Pts':<8}{'Rnds':<6}{'W':<4}{'Pod':<5}{'T5':<4}{'Avg Pts':<9}{'Avg Pos':<9}{'Drop'}")
-    print("=" * 75)
-    for p in rankings[:20]:
-        print(f"{p['rank']:<4}{p['name']:<22}{p['points']:<8.0f}{p['rounds']:<6}{p['wins']:<4}{p['podiums']['gold']}/{p['podiums']['silver']}/{p['podiums']['bronze']:<4}{p['avg_pts']:<9}{p['avg_pos']:<9}{p['dropped']}")
+        print(f"\n=== {season_name} ===")
+        print(f"  {len(regular)} regular + {len(special)} special (half pts)")
+        print(f"  {rounds_played}/{total_events} rounds played, best {best_of} count (70% of {total_events})")
+        if drops_active:
+            print(f"  Drops active — dropping {rounds_played - best_of} worst")
+        else:
+            print(f"  All results count (drops start at round {best_of + 1})")
 
-# --- Trailing ranking (last 2 seasons combined, ATP-style) ---
-if len(season_names) >= 2:
-    trailing_seasons = season_names[-2:]
-    trailing_rounds = []
-    for sn in trailing_seasons:
-        # Prefix round names with season to avoid collisions (both have "Round 1", etc.)
-        for rnd in seasons[sn]:
-            prefixed = dict(rnd)
-            prefixed['name'] = f"{sn} {rnd['name']}"
-            prefixed['players'] = list(rnd['players'])  # shallow copy
-            trailing_rounds.append(prefixed)
-    best_of_trailing = round(len(trailing_rounds) * BEST_OF_PCT)
+        # Compute cup strength for full-lobby rounds
+        cotd_histories = load_cotd_histories()
+        round_strengths = {}
+        offset = SEASON_CUP_OFFSET.get(season_name, 0)
+        for rnd in rounds:
+            rnum = int(''.join(c for c in rnd['name'] if c.isdigit()) or 0)
+            pcdj_cup = offset + rnum
+            sof = compute_cup_strength(rnd, pcdj_cup, cotd_histories)
+            if sof is not None:
+                round_strengths[rnd['name']] = sof
+                print(f"  {rnd['name']} (PCDJ {pcdj_cup}): SOF {sof}%")
 
-    print(f"\n=== PCDJ Ranking ({' + '.join(trailing_seasons)}) ===")
-    print(f"  {len(trailing_rounds)} total rounds, best {best_of_trailing} (70%)")
+        rankings = compute_rankings(rounds, best_of, season_mode=True)
+        # Championship points: OLR's original 10-1 scale, no drops, troll/roulette excluded
+        champ_rankings = compute_rankings(rounds, len(rounds), season_mode=False, championship=True)
+        round_dates = {n: d for n, d in EVENT_DATES.get(season_name, {}).items()
+                       if any(r['name'] == n for r in rounds)}
+        output[season_name] = {
+            'type': 'season',
+            'total_events': total_events,
+            'rounds_played': rounds_played,
+            'rounds_regular': len(regular),
+            'rounds_special': len(special),
+            'best_of': best_of,
+            'drops_active': drops_active,
+            'points_scale': POINTS_SCALE,
+            'rankings': rankings,
+            'championship': champ_rankings,
+            'round_strengths': round_strengths,
+            'round_dates': round_dates,
+        }
 
-    trailing_rankings = compute_rankings(trailing_rounds, best_of_trailing, season_mode=False)
-    trailing_champ = compute_rankings(trailing_rounds, len(trailing_rounds), season_mode=False, championship=True)
-    output['PCDJ Ranking'] = {
-        'type': 'trailing',
-        'seasons': trailing_seasons,
-        'rounds_total': len(trailing_rounds),
-        'best_of': best_of_trailing,
-        'points_scale': POINTS_SCALE,
-        'rankings': trailing_rankings,
-        'championship': trailing_champ,
-        'round_strengths': {},  # trailing combines seasons, strengths are per-season
-    }
+        print(f"\n{'#':<4}{'Player':<22}{'Pts':<8}{'Rnds':<6}{'W':<4}{'Pod':<5}{'T5':<4}{'Avg Pts':<9}{'Avg Pos':<9}{'Drop'}")
+        print("=" * 75)
+        for p in rankings[:20]:
+            print(f"{p['rank']:<4}{p['name']:<22}{p['points']:<8.0f}{p['rounds']:<6}{p['wins']:<4}{p['podiums']['gold']}/{p['podiums']['silver']}/{p['podiums']['bronze']:<4}{p['avg_pts']:<9}{p['avg_pos']:<9}{p['dropped']}")
 
-    print(f"\n{'#':<4}{'Player':<22}{'Pts':<8}{'Rnds':<6}{'W':<4}{'Pod':<5}{'T5':<4}{'Avg Pts':<9}{'Avg Pos':<9}{'Drop'}")
-    print("=" * 75)
-    for p in trailing_rankings[:20]:
-        print(f"{p['rank']:<4}{p['name']:<22}{p['points']:<8.0f}{p['rounds']:<6}{p['wins']:<4}{p['podiums']['gold']}/{p['podiums']['silver']}/{p['podiums']['bronze']:<4}{p['avg_pts']:<9}{p['avg_pos']:<9}{p['dropped']}")
+    # --- Trailing ranking (last 2 seasons combined, ATP-style) ---
+    if len(season_names) >= 2:
+        trailing_seasons = season_names[-2:]
+        trailing_rounds = []
+        for sn in trailing_seasons:
+            # Prefix round names with season to avoid collisions (both have "Round 1", etc.)
+            for rnd in seasons[sn]:
+                prefixed = dict(rnd)
+                prefixed['name'] = f"{sn} {rnd['name']}"
+                prefixed['players'] = list(rnd['players'])  # shallow copy
+                trailing_rounds.append(prefixed)
+        best_of_trailing = round(len(trailing_rounds) * BEST_OF_PCT)
 
-# Save JSON
-with open(_p('petite_rankings.json'), 'w') as f:
-    json.dump(output, f, indent=2)
-print(f"\npetite_rankings.json saved")
+        print(f"\n=== PCDJ Ranking ({' + '.join(trailing_seasons)}) ===")
+        print(f"  {len(trailing_rounds)} total rounds, best {best_of_trailing} (70%)")
+
+        trailing_rankings = compute_rankings(trailing_rounds, best_of_trailing, season_mode=False)
+        trailing_champ = compute_rankings(trailing_rounds, len(trailing_rounds), season_mode=False, championship=True)
+        trailing_dates = {}
+        for sn in trailing_seasons:
+            for n, d in EVENT_DATES.get(sn, {}).items():
+                if any(r['name'] == f'{sn} {n}' for r in trailing_rounds):
+                    trailing_dates[f'{sn} {n}'] = d
+        output['PCDJ Ranking'] = {
+            'type': 'trailing',
+            'seasons': trailing_seasons,
+            'rounds_total': len(trailing_rounds),
+            'best_of': best_of_trailing,
+            'points_scale': POINTS_SCALE,
+            'rankings': trailing_rankings,
+            'championship': trailing_champ,
+            'round_strengths': {},  # trailing combines seasons, strengths are per-season
+            'round_dates': trailing_dates,
+        }
+
+        print(f"\n{'#':<4}{'Player':<22}{'Pts':<8}{'Rnds':<6}{'W':<4}{'Pod':<5}{'T5':<4}{'Avg Pts':<9}{'Avg Pos':<9}{'Drop'}")
+        print("=" * 75)
+        for p in trailing_rankings[:20]:
+            print(f"{p['rank']:<4}{p['name']:<22}{p['points']:<8.0f}{p['rounds']:<6}{p['wins']:<4}{p['podiums']['gold']}/{p['podiums']['silver']}/{p['podiums']['bronze']:<4}{p['avg_pts']:<9}{p['avg_pos']:<9}{p['dropped']}")
+
+    # Save JSON
+    with open(_p('petite_rankings.json'), 'w') as f:
+        json.dump(output, f, indent=2)
+    print(f"\npetite_rankings.json saved")
+
+
+if __name__ == "__main__":
+    main()
