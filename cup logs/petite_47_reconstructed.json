@@ -169,35 +169,35 @@
   },
   {
     "pos": 25,
+    "name": "mofn",
+    "time": 25.406,
+    "round": 2,
+    "note": "LIVE_OVERRIDE_DNF"
+  },
+  {
+    "pos": 26,
     "name": "[BRED] MrSplatoon07",
     "time": null,
     "round": 2,
     "note": "dnf"
   },
   {
-    "pos": 25,
+    "pos": 26,
     "name": "[CCC]Shinikage221",
     "time": null,
     "round": 2,
     "note": "dnf"
   },
   {
-    "pos": 25,
+    "pos": 26,
     "name": "[ZET] zeriv",
     "time": null,
     "round": 2,
     "note": "dnf"
   },
   {
-    "pos": 25,
+    "pos": 26,
     "name": "calebmcr",
-    "time": null,
-    "round": 2,
-    "note": "dnf"
-  },
-  {
-    "pos": 25,
-    "name": "mofn",
     "time": null,
     "round": 2,
     "note": "dnf"

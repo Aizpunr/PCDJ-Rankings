@@ -42,7 +42,7 @@ ws = wb.active
 
 COL = 7  # cup 46 in cols 1-4 (+2 spacer); cup 47 starts at col 7
 ws.cell(row=2, column=COL, value='Petite Cup 47')
-ws.cell(row=3, column=COL, value='Maps: <fill from cup announcement> + <map 2>')
+ws.cell(row=3, column=COL, value='Maps: PCDJ 47 - Neone + PCDJ 47 - Home Sweet Hole')
 ws.cell(row=5, column=COL,   value='Position')
 ws.cell(row=5, column=COL+1, value='Name')
 ws.cell(row=5, column=COL+2, value='Elim Time')

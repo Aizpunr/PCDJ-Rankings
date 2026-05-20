@@ -33,9 +33,19 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-LIVE_ENTRY_RE = re.compile(r'(\d+):(\d{15,20}):(\d+,\d+)')
+LIVE_ENTRY_RE = re.compile(r'(\d+):(\d{15,20}):(\d+[,.]\d+)')
+# Matches BOTH old (PROBE_B|SNAPSHOT) and new (LEADERBOARD) emit formats — the LiveLeaderboardLogger
+# mod changed schema sometime between cup 46 (old) and cup 47 (new). Both carry identical position data:
+#   pos:sid:time,pos:sid:time,... with decimal as '.' (new) or ',' (old).
 LIVE_LINE_RE = re.compile(
-    r'^(\S+) \[LiveLeaderboardLogger\] PROBE_B\|SNAPSHOT\|(\d+)\|(\d+)\|(.+)$'
+    r'^(\S+) \[LiveLeaderboardLogger\] (?:PROBE_B\|SNAPSHOT|LEADERBOARD)\|(\d+)\|(\d+)\|(.*)$'
+)
+ROSTER_LINE_RE = re.compile(
+    r'^(\S+) \[LiveLeaderboardLogger\] ROSTER\|(\d+)\|([^|]*)\|([^|]*)$'
+)
+# ROUND_STARTED|<round>|<hash>|<map name>
+ROUND_STARTED_RE = re.compile(
+    r'^(\S+) \[LiveLeaderboardLogger\] ROUND_STARTED\|(\d+)\|([^|]*)\|(.+)$'
 )
 
 
@@ -96,45 +106,89 @@ def parse_cotdtracker(path):
 
 
 def parse_livelog(path):
-    """Return list of (ts_str, plugin_round, count, [(pos, sid, time_float), ...])."""
+    """Return (snaps, roster, map_names) where:
+      snaps      = list of (ts_str, plugin_round, count, [(pos, sid, time_float), ...])
+      roster     = {sid: name} from ROSTER lines (new schema only; empty for old logs)
+      map_names  = {plugin_round: map_name} from ROUND_STARTED lines (new schema only)
+    """
     snaps = []
+    roster = {}
+    map_names = {}
     for ln in path.read_text(encoding='utf-8', errors='replace').splitlines():
         m = LIVE_LINE_RE.match(ln)
-        if not m:
+        if m:
+            ts, rn, cnt, data = m.group(1), int(m.group(2)), int(m.group(3)), m.group(4)
+            entries = [
+                (int(em.group(1)), em.group(2), float(em.group(3).replace(',', '.')))
+                for em in LIVE_ENTRY_RE.finditer(data)
+            ]
+            snaps.append((ts, rn, cnt, entries))
             continue
-        ts, rn, cnt, data = m.group(1), int(m.group(2)), int(m.group(3)), m.group(4)
-        entries = [
-            (int(em.group(1)), em.group(2), float(em.group(3).replace(',', '.')))
-            for em in LIVE_ENTRY_RE.finditer(data)
-        ]
-        snaps.append((ts, rn, cnt, entries))
-    return snaps
+        m = ROSTER_LINE_RE.match(ln)
+        if m:
+            sid = m.group(2)
+            for name in (m.group(3).strip(), m.group(4).strip()):
+                if name and name != '?':
+                    # Prefer the longer name (usually the tagged lobby form) but keep both
+                    # by always overwriting — later ROSTER updates win.
+                    roster[sid] = name
+            continue
+        m = ROUND_STARTED_RE.match(ln)
+        if m:
+            map_names[int(m.group(2))] = m.group(4).strip()
+            continue
+    return snaps, roster, map_names
 
 
-def build_sid_name_map(cotd_rounds, snaps):
-    """Cross-reference by time-value matches. Returns ({sid: name}, {name: sid}, conflicts)."""
-    name_times = defaultdict(set)
-    for r in cotd_rounds:
-        for name, t in r['block_players'].items():
-            if t is not None:
-                name_times[name].add(round(t, 5))
-    sid_times = defaultdict(set)
-    for _, _, _, entries in snaps:
-        for pos, sid, t in entries:
-            sid_times[sid].add(round(t, 5))
+def build_sid_name_map(cotd_rounds, snaps, roster=None):
+    """Cross-reference sid<->name. If ROSTER is available (new schema), use it as authoritative
+    and only fall back to time-matching for sids not in ROSTER. Returns ({sid: name}, {name: sid}, conflicts)."""
     sid_to_name = {}
     name_to_sid = {}
     conflicts = []
-    for name, times in name_times.items():
-        candidates = [(sid, len(times & sts)) for sid, sts in sid_times.items() if times & sts]
-        candidates.sort(key=lambda x: -x[1])
-        if not candidates:
-            continue
-        if len(candidates) == 1 or candidates[0][1] > candidates[1][1]:
-            sid_to_name[candidates[0][0]] = name
-            name_to_sid[name] = candidates[0][0]
-        else:
-            conflicts.append((name, candidates[:3]))
+
+    cotd_names = set()
+    for r in cotd_rounds:
+        cotd_names.update(r['block_players'].keys())
+
+    # Pass 1: ROSTER (direct, authoritative for new-schema logs)
+    if roster:
+        # Build lookup from cotd_name -> resolved name in roster (handles tag variations)
+        def _strip_tag(n):
+            return re.sub(r'^\[[^\]]*\]\s*', '', n).strip()
+        for sid, roster_name in roster.items():
+            # Find which cotd name matches this roster entry
+            for cotd_name in cotd_names:
+                if (cotd_name == roster_name
+                        or _strip_tag(cotd_name) == _strip_tag(roster_name)
+                        or cotd_name == _strip_tag(roster_name)
+                        or _strip_tag(cotd_name) == roster_name):
+                    if cotd_name not in name_to_sid:
+                        sid_to_name[sid] = cotd_name
+                        name_to_sid[cotd_name] = sid
+
+    # Pass 2: time cross-reference for any names still missing a sid
+    name_times = defaultdict(set)
+    for r in cotd_rounds:
+        for name, t in r['block_players'].items():
+            if t is not None and name not in name_to_sid:
+                name_times[name].add(round(t, 5))
+    if name_times:
+        sid_times = defaultdict(set)
+        for _, _, _, entries in snaps:
+            for pos, sid, t in entries:
+                if sid not in sid_to_name:
+                    sid_times[sid].add(round(t, 5))
+        for name, times in name_times.items():
+            candidates = [(sid, len(times & sts)) for sid, sts in sid_times.items() if times & sts]
+            candidates.sort(key=lambda x: -x[1])
+            if not candidates:
+                continue
+            if len(candidates) == 1 or candidates[0][1] > candidates[1][1]:
+                sid_to_name[candidates[0][0]] = name
+                name_to_sid[name] = candidates[0][0]
+            else:
+                conflicts.append((name, candidates[:3]))
     return sid_to_name, name_to_sid, conflicts
 
 
@@ -337,10 +391,14 @@ def main():
     cotd_rounds, cotd_lines = parse_cotdtracker(cotd_path)
     print(f'  COTDTracker: {len(cotd_rounds)} elim rounds')
 
-    snaps = parse_livelog(live_path)
-    print(f'  LiveLeaderboardLogger: {len(snaps)} snapshots')
+    snaps, roster, map_names = parse_livelog(live_path)
+    print(f'  LiveLeaderboardLogger: {len(snaps)} snapshots, {len(roster)} roster entries, {len(map_names)} map names')
+    if map_names:
+        print(f'  Maps played:')
+        for rn in sorted(map_names.keys()):
+            print(f'    R{rn}: {map_names[rn]}')
 
-    sid_to_name, name_to_sid, conflicts = build_sid_name_map(cotd_rounds, snaps)
+    sid_to_name, name_to_sid, conflicts = build_sid_name_map(cotd_rounds, snaps, roster=roster)
     print(f'  sid-name map: {len(sid_to_name)} matched, {len(conflicts)} conflicts')
     for c in conflicts[:5]:
         safe = (c[0].encode('ascii', 'replace').decode('ascii'), c[1])

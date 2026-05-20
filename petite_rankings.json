@@ -4708,7 +4708,7 @@
         },
         "top5": 0,
         "avg_pts": 15.0,
-        "avg_pos": 14.8,
+        "avg_pos": 14.7,
         "best_single": 60,
         "best_pos": 8,
         "dropped": 0,
@@ -4766,7 +4766,7 @@
           {
             "r": "Round 17",
             "p": 0,
-            "pos": 30
+            "pos": 29
           },
           {
             "r": "Round 18",
@@ -4882,7 +4882,7 @@
         },
         "top5": 0,
         "avg_pts": 12.3,
-        "avg_pos": 16.2,
+        "avg_pos": 16.3,
         "best_single": 100,
         "best_pos": 6,
         "dropped": 0,
@@ -4945,7 +4945,7 @@
           {
             "r": "Round 17",
             "p": 0,
-            "pos": 29
+            "pos": 30
           },
           {
             "r": "Round 18",
@@ -6080,7 +6080,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 22.5,
+        "avg_pos": 22.0,
         "best_single": 0,
         "best_pos": 16,
         "dropped": 0,
@@ -6103,7 +6103,7 @@
           {
             "r": "Round 17",
             "p": 0,
-            "pos": 36
+            "pos": 34
           }
         ],
         "rank": 52
@@ -6416,7 +6416,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 24.6,
+        "avg_pos": 24.8,
         "best_single": 0,
         "best_pos": 21,
         "dropped": 0,
@@ -6444,7 +6444,7 @@
           {
             "r": "Round 18",
             "p": 0,
-            "pos": 25
+            "pos": 26
           }
         ],
         "rank": 63
@@ -7780,7 +7780,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 29.5,
+        "avg_pos": 29.0,
         "best_single": 0,
         "best_pos": 21,
         "dropped": 0,
@@ -7798,7 +7798,7 @@
           {
             "r": "Round 17",
             "p": 0,
-            "pos": 39
+            "pos": 37
           },
           {
             "r": "Round 18",
@@ -8803,15 +8803,15 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 34.0,
+        "avg_pos": 35.0,
         "best_single": 0,
-        "best_pos": 34,
+        "best_pos": 35,
         "dropped": 0,
         "history": [
           {
             "r": "Round 17",
             "p": 0,
-            "pos": 34
+            "pos": 35
           }
         ],
         "rank": 145
@@ -8829,47 +8829,21 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 35.0,
+        "avg_pos": 36.0,
         "best_single": 0,
-        "best_pos": 35,
+        "best_pos": 36,
         "dropped": 0,
         "history": [
           {
             "r": "Round 17",
             "p": 0,
-            "pos": 35
+            "pos": 36
           }
         ],
         "rank": 146
       },
       {
         "name": "Towelie",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 37.0,
-        "best_single": 0,
-        "best_pos": 37,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 17",
-            "p": 0,
-            "pos": 37
-          }
-        ],
-        "rank": 147
-      },
-      {
-        "name": "[RABI]Yksdjcj",
         "points": 0,
         "points_all": 0,
         "rounds": 1,
@@ -8890,6 +8864,32 @@
             "r": "Round 17",
             "p": 0,
             "pos": 38
+          }
+        ],
+        "rank": 147
+      },
+      {
+        "name": "[RABI]Yksdjcj",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 39.0,
+        "best_single": 0,
+        "best_pos": 39,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 17",
+            "p": 0,
+            "pos": 39
           }
         ],
         "rank": 148
@@ -8921,7 +8921,7 @@
         "rank": 149
       },
       {
-        "name": "[BRED] MrSplatoon07",
+        "name": "mofn",
         "points": 0,
         "points_all": 0,
         "rounds": 1,
@@ -8947,6 +8947,32 @@
         "rank": 150
       },
       {
+        "name": "[BRED] MrSplatoon07",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 26.0,
+        "best_single": 0,
+        "best_pos": 26,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 18",
+            "p": 0,
+            "pos": 26
+          }
+        ],
+        "rank": 151
+      },
+      {
         "name": "[ZET] zeriv",
         "points": 0,
         "points_all": 0,
@@ -8959,18 +8985,18 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 25.0,
+        "avg_pos": 26.0,
         "best_single": 0,
-        "best_pos": 25,
+        "best_pos": 26,
         "dropped": 0,
         "history": [
           {
             "r": "Round 18",
             "p": 0,
-            "pos": 25
+            "pos": 26
           }
         ],
-        "rank": 151
+        "rank": 152
       },
       {
         "name": "calebmcr",
@@ -8985,41 +9011,15 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 25.0,
+        "avg_pos": 26.0,
         "best_single": 0,
-        "best_pos": 25,
+        "best_pos": 26,
         "dropped": 0,
         "history": [
           {
             "r": "Round 18",
             "p": 0,
-            "pos": 25
-          }
-        ],
-        "rank": 152
-      },
-      {
-        "name": "mofn",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 25.0,
-        "best_single": 0,
-        "best_pos": 25,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 18",
-            "p": 0,
-            "pos": 25
+            "pos": 26
           }
         ],
         "rank": 153
@@ -10187,7 +10187,7 @@
         },
         "top5": 0,
         "avg_pts": 0.8,
-        "avg_pos": 15.1,
+        "avg_pos": 15.0,
         "best_single": 3,
         "best_pos": 8,
         "dropped": 0,
@@ -10240,7 +10240,7 @@
           {
             "r": "Round 17",
             "p": 0,
-            "pos": 30
+            "pos": 29
           },
           {
             "r": "Round 18",
@@ -10427,7 +10427,7 @@
         },
         "top5": 0,
         "avg_pts": 0.7,
-        "avg_pos": 16.3,
+        "avg_pos": 16.4,
         "best_single": 5,
         "best_pos": 6,
         "dropped": 0,
@@ -10485,7 +10485,7 @@
           {
             "r": "Round 17",
             "p": 0,
-            "pos": 29
+            "pos": 30
           },
           {
             "r": "Round 18",
@@ -11575,7 +11575,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 22.5,
+        "avg_pos": 22.0,
         "best_single": 0,
         "best_pos": 16,
         "dropped": 0,
@@ -11598,7 +11598,7 @@
           {
             "r": "Round 17",
             "p": 0,
-            "pos": 36
+            "pos": 34
           }
         ],
         "rank": 52
@@ -11911,7 +11911,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 25.5,
+        "avg_pos": 25.8,
         "best_single": 0,
         "best_pos": 25,
         "dropped": 0,
@@ -11934,7 +11934,7 @@
           {
             "r": "Round 18",
             "p": 0,
-            "pos": 25
+            "pos": 26
           }
         ],
         "rank": 63
@@ -12996,7 +12996,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 29.5,
+        "avg_pos": 29.0,
         "best_single": 0,
         "best_pos": 21,
         "dropped": 0,
@@ -13014,7 +13014,7 @@
           {
             "r": "Round 17",
             "p": 0,
-            "pos": 39
+            "pos": 37
           },
           {
             "r": "Round 18",
@@ -14107,15 +14107,15 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 34.0,
+        "avg_pos": 35.0,
         "best_single": 0,
-        "best_pos": 34,
+        "best_pos": 35,
         "dropped": 0,
         "history": [
           {
             "r": "Round 17",
             "p": 0,
-            "pos": 34
+            "pos": 35
           }
         ],
         "rank": 139
@@ -14133,47 +14133,21 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 35.0,
+        "avg_pos": 36.0,
         "best_single": 0,
-        "best_pos": 35,
+        "best_pos": 36,
         "dropped": 0,
         "history": [
           {
             "r": "Round 17",
             "p": 0,
-            "pos": 35
+            "pos": 36
           }
         ],
         "rank": 140
       },
       {
         "name": "Towelie",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 37.0,
-        "best_single": 0,
-        "best_pos": 37,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 17",
-            "p": 0,
-            "pos": 37
-          }
-        ],
-        "rank": 141
-      },
-      {
-        "name": "[RABI]Yksdjcj",
         "points": 0,
         "points_all": 0,
         "rounds": 1,
@@ -14194,6 +14168,32 @@
             "r": "Round 17",
             "p": 0,
             "pos": 38
+          }
+        ],
+        "rank": 141
+      },
+      {
+        "name": "[RABI]Yksdjcj",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 39.0,
+        "best_single": 0,
+        "best_pos": 39,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 17",
+            "p": 0,
+            "pos": 39
           }
         ],
         "rank": 142
@@ -14225,7 +14225,7 @@
         "rank": 143
       },
       {
-        "name": "[BRED] MrSplatoon07",
+        "name": "mofn",
         "points": 0,
         "points_all": 0,
         "rounds": 1,
@@ -14251,6 +14251,32 @@
         "rank": 144
       },
       {
+        "name": "[BRED] MrSplatoon07",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 26.0,
+        "best_single": 0,
+        "best_pos": 26,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 18",
+            "p": 0,
+            "pos": 26
+          }
+        ],
+        "rank": 145
+      },
+      {
         "name": "[ZET] zeriv",
         "points": 0,
         "points_all": 0,
@@ -14263,18 +14289,18 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 25.0,
+        "avg_pos": 26.0,
         "best_single": 0,
-        "best_pos": 25,
+        "best_pos": 26,
         "dropped": 0,
         "history": [
           {
             "r": "Round 18",
             "p": 0,
-            "pos": 25
+            "pos": 26
           }
         ],
-        "rank": 145
+        "rank": 146
       },
       {
         "name": "calebmcr",
@@ -14289,41 +14315,15 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 25.0,
+        "avg_pos": 26.0,
         "best_single": 0,
-        "best_pos": 25,
+        "best_pos": 26,
         "dropped": 0,
         "history": [
           {
             "r": "Round 18",
             "p": 0,
-            "pos": 25
-          }
-        ],
-        "rank": 146
-      },
-      {
-        "name": "mofn",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 25.0,
-        "best_single": 0,
-        "best_pos": 25,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 18",
-            "p": 0,
-            "pos": 25
+            "pos": 26
           }
         ],
         "rank": 147
@@ -16855,7 +16855,7 @@
         },
         "top5": 0,
         "avg_pts": 14.3,
-        "avg_pos": 15.7,
+        "avg_pos": 15.8,
         "best_single": 100,
         "best_pos": 6,
         "dropped": 0,
@@ -16923,7 +16923,7 @@
           {
             "r": "Season 3 Round 17",
             "p": 0,
-            "pos": 29
+            "pos": 30
           },
           {
             "r": "Season 3 Round 18",
@@ -16987,7 +16987,7 @@
         },
         "top5": 0,
         "avg_pts": 15.0,
-        "avg_pos": 14.8,
+        "avg_pos": 14.7,
         "best_single": 60,
         "best_pos": 8,
         "dropped": 0,
@@ -17045,7 +17045,7 @@
           {
             "r": "Season 3 Round 17",
             "p": 0,
-            "pos": 30
+            "pos": 29
           },
           {
             "r": "Season 3 Round 18",
@@ -18336,7 +18336,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 22.5,
+        "avg_pos": 22.0,
         "best_single": 0,
         "best_pos": 16,
         "dropped": 0,
@@ -18359,7 +18359,7 @@
           {
             "r": "Season 3 Round 17",
             "p": 0,
-            "pos": 36
+            "pos": 34
           }
         ],
         "rank": 74
@@ -18672,7 +18672,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 24.6,
+        "avg_pos": 24.8,
         "best_single": 0,
         "best_pos": 21,
         "dropped": 0,
@@ -18700,7 +18700,7 @@
           {
             "r": "Season 3 Round 18",
             "p": 0,
-            "pos": 25
+            "pos": 26
           }
         ],
         "rank": 85
@@ -20036,7 +20036,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 29.5,
+        "avg_pos": 29.0,
         "best_single": 0,
         "best_pos": 21,
         "dropped": 0,
@@ -20054,7 +20054,7 @@
           {
             "r": "Season 3 Round 17",
             "p": 0,
-            "pos": 39
+            "pos": 37
           },
           {
             "r": "Season 3 Round 18",
@@ -21033,15 +21033,15 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 34.0,
+        "avg_pos": 35.0,
         "best_single": 0,
-        "best_pos": 34,
+        "best_pos": 35,
         "dropped": 0,
         "history": [
           {
             "r": "Season 3 Round 17",
             "p": 0,
-            "pos": 34
+            "pos": 35
           }
         ],
         "rank": 166
@@ -21059,47 +21059,21 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 35.0,
+        "avg_pos": 36.0,
         "best_single": 0,
-        "best_pos": 35,
+        "best_pos": 36,
         "dropped": 0,
         "history": [
           {
             "r": "Season 3 Round 17",
             "p": 0,
-            "pos": 35
+            "pos": 36
           }
         ],
         "rank": 167
       },
       {
         "name": "Towelie",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 37.0,
-        "best_single": 0,
-        "best_pos": 37,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Season 3 Round 17",
-            "p": 0,
-            "pos": 37
-          }
-        ],
-        "rank": 168
-      },
-      {
-        "name": "[RABI]Yksdjcj",
         "points": 0,
         "points_all": 0,
         "rounds": 1,
@@ -21120,6 +21094,32 @@
             "r": "Season 3 Round 17",
             "p": 0,
             "pos": 38
+          }
+        ],
+        "rank": 168
+      },
+      {
+        "name": "[RABI]Yksdjcj",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 39.0,
+        "best_single": 0,
+        "best_pos": 39,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 3 Round 17",
+            "p": 0,
+            "pos": 39
           }
         ],
         "rank": 169
@@ -21151,7 +21151,7 @@
         "rank": 170
       },
       {
-        "name": "[BRED] MrSplatoon07",
+        "name": "mofn",
         "points": 0,
         "points_all": 0,
         "rounds": 1,
@@ -21177,6 +21177,32 @@
         "rank": 171
       },
       {
+        "name": "[BRED] MrSplatoon07",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 26.0,
+        "best_single": 0,
+        "best_pos": 26,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 3 Round 18",
+            "p": 0,
+            "pos": 26
+          }
+        ],
+        "rank": 172
+      },
+      {
         "name": "[ZET] zeriv",
         "points": 0,
         "points_all": 0,
@@ -21189,18 +21215,18 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 25.0,
+        "avg_pos": 26.0,
         "best_single": 0,
-        "best_pos": 25,
+        "best_pos": 26,
         "dropped": 0,
         "history": [
           {
             "r": "Season 3 Round 18",
             "p": 0,
-            "pos": 25
+            "pos": 26
           }
         ],
-        "rank": 172
+        "rank": 173
       },
       {
         "name": "calebmcr",
@@ -21215,41 +21241,15 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 25.0,
+        "avg_pos": 26.0,
         "best_single": 0,
-        "best_pos": 25,
+        "best_pos": 26,
         "dropped": 0,
         "history": [
           {
             "r": "Season 3 Round 18",
             "p": 0,
-            "pos": 25
-          }
-        ],
-        "rank": 173
-      },
-      {
-        "name": "mofn",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 25.0,
-        "best_single": 0,
-        "best_pos": 25,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Season 3 Round 18",
-            "p": 0,
-            "pos": 25
+            "pos": 26
           }
         ],
         "rank": 174
@@ -23562,7 +23562,7 @@
           {
             "r": "Season 3 Round 17",
             "p": 0,
-            "pos": 29
+            "pos": 30
           },
           {
             "r": "Season 3 Round 18",
@@ -23687,7 +23687,7 @@
         },
         "top5": 0,
         "avg_pts": 0.8,
-        "avg_pos": 15.1,
+        "avg_pos": 15.0,
         "best_single": 3,
         "best_pos": 8,
         "dropped": 0,
@@ -23740,7 +23740,7 @@
           {
             "r": "Season 3 Round 17",
             "p": 0,
-            "pos": 30
+            "pos": 29
           },
           {
             "r": "Season 3 Round 18",
@@ -24980,7 +24980,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 22.5,
+        "avg_pos": 22.0,
         "best_single": 0,
         "best_pos": 16,
         "dropped": 0,
@@ -25003,7 +25003,7 @@
           {
             "r": "Season 3 Round 17",
             "p": 0,
-            "pos": 36
+            "pos": 34
           }
         ],
         "rank": 72
@@ -25316,7 +25316,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 25.5,
+        "avg_pos": 25.8,
         "best_single": 0,
         "best_pos": 25,
         "dropped": 0,
@@ -25339,7 +25339,7 @@
           {
             "r": "Season 3 Round 18",
             "p": 0,
-            "pos": 25
+            "pos": 26
           }
         ],
         "rank": 83
@@ -26401,7 +26401,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 29.5,
+        "avg_pos": 29.0,
         "best_single": 0,
         "best_pos": 21,
         "dropped": 0,
@@ -26419,7 +26419,7 @@
           {
             "r": "Season 3 Round 17",
             "p": 0,
-            "pos": 39
+            "pos": 37
           },
           {
             "r": "Season 3 Round 18",
@@ -27486,15 +27486,15 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 34.0,
+        "avg_pos": 35.0,
         "best_single": 0,
-        "best_pos": 34,
+        "best_pos": 35,
         "dropped": 0,
         "history": [
           {
             "r": "Season 3 Round 17",
             "p": 0,
-            "pos": 34
+            "pos": 35
           }
         ],
         "rank": 158
@@ -27512,47 +27512,21 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 35.0,
+        "avg_pos": 36.0,
         "best_single": 0,
-        "best_pos": 35,
+        "best_pos": 36,
         "dropped": 0,
         "history": [
           {
             "r": "Season 3 Round 17",
             "p": 0,
-            "pos": 35
+            "pos": 36
           }
         ],
         "rank": 159
       },
       {
         "name": "Towelie",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 37.0,
-        "best_single": 0,
-        "best_pos": 37,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Season 3 Round 17",
-            "p": 0,
-            "pos": 37
-          }
-        ],
-        "rank": 160
-      },
-      {
-        "name": "[RABI]Yksdjcj",
         "points": 0,
         "points_all": 0,
         "rounds": 1,
@@ -27573,6 +27547,32 @@
             "r": "Season 3 Round 17",
             "p": 0,
             "pos": 38
+          }
+        ],
+        "rank": 160
+      },
+      {
+        "name": "[RABI]Yksdjcj",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 39.0,
+        "best_single": 0,
+        "best_pos": 39,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 3 Round 17",
+            "p": 0,
+            "pos": 39
           }
         ],
         "rank": 161
@@ -27604,7 +27604,7 @@
         "rank": 162
       },
       {
-        "name": "[BRED] MrSplatoon07",
+        "name": "mofn",
         "points": 0,
         "points_all": 0,
         "rounds": 1,
@@ -27630,6 +27630,32 @@
         "rank": 163
       },
       {
+        "name": "[BRED] MrSplatoon07",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 26.0,
+        "best_single": 0,
+        "best_pos": 26,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 3 Round 18",
+            "p": 0,
+            "pos": 26
+          }
+        ],
+        "rank": 164
+      },
+      {
         "name": "[ZET] zeriv",
         "points": 0,
         "points_all": 0,
@@ -27642,18 +27668,18 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 25.0,
+        "avg_pos": 26.0,
         "best_single": 0,
-        "best_pos": 25,
+        "best_pos": 26,
         "dropped": 0,
         "history": [
           {
             "r": "Season 3 Round 18",
             "p": 0,
-            "pos": 25
+            "pos": 26
           }
         ],
-        "rank": 164
+        "rank": 165
       },
       {
         "name": "calebmcr",
@@ -27668,41 +27694,15 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 25.0,
+        "avg_pos": 26.0,
         "best_single": 0,
-        "best_pos": 25,
+        "best_pos": 26,
         "dropped": 0,
         "history": [
           {
             "r": "Season 3 Round 18",
             "p": 0,
-            "pos": 25
-          }
-        ],
-        "rank": 165
-      },
-      {
-        "name": "mofn",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 25.0,
-        "best_single": 0,
-        "best_pos": 25,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Season 3 Round 18",
-            "p": 0,
-            "pos": 25
+            "pos": 26
           }
         ],
         "rank": 166
