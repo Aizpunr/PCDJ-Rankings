@@ -235,6 +235,7 @@ FULL_LOBBY_REPLACEMENTS = {
         'Round 16': ('Petite Cups 41-45.xlsx', 'Petite Cup 45'),
         'Round 17': ('Petite Cups 46-50.xlsx', 'Petite Cup 46'),
         'Round 18': ('Petite Cups 46-50.xlsx', 'Petite Cup 47'),
+        'Round 19': ('Petite Cups 46-50.xlsx', 'Petite Cup 48'),
     },
 }
 
@@ -260,6 +261,7 @@ EVENT_DATES = {
         'Round 16': '2026-05-06',
         'Round 17': '2026-05-13',
         'Round 18': '2026-05-20',
+        'Round 19': '2026-05-27',
     },
 }
 
