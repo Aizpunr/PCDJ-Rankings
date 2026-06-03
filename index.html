@@ -1164,7 +1164,7 @@ function renderRounds() {
         const roundOrder = [...allRounds].sort((a, b) => roundSortKey(a) - roundSortKey(b));
         const targetIdx = roundOrder.indexOf(pcdjRoundName);
         if (targetIdx >= 0) {
-          const roundsUpTo = new Set(roundOrder.slice(0, targetIdx + 1));
+          const roundsUpTo = new Set(roundOrder.slice(0, targetIdx));
           pcdjSrc.forEach(p => {
             let cum = 0;
             p.history.forEach(h => { if (roundsUpTo.has(h.r)) cum += h.p; });
