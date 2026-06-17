@@ -380,7 +380,8 @@ function roundSortKey(name) {
     // Troll 3 = after S3 Round 10, Roulette 3 = after S3 Round 20
     const specialOrder = {
       'Troll 2': 15.5, 'Roulette 2': 16.5,
-      'Troll 3': 10.5, 'Roulette 3': 20.5,
+      'Troll 3': 10.5, 'Roulette 3': 20.6,
+      'Troll 4': 20.5,
     };
     const key = name.replace(/Season \d+ /, '');
     return seasonNum + (specialOrder[key] || num + 0.5);

@@ -1,0 +1,1319 @@
+[Message:   BepInEx] BepInEx 5.4.22.0 - Zeepkist (15/01/2026 17:20:07)
+[Info   :   BepInEx] Running under Unity v2021.3.10.1867021
+[Info   :   BepInEx] CLR runtime version: 4.0.30319.42000
+[Info   :   BepInEx] Supports SRE: True
+[Info   :   BepInEx] System platform: Bits64, Windows
+[Message:   BepInEx] Preloader started
+[Info   :   BepInEx] Loaded 1 patcher method from [BepInEx.Preloader 5.4.22.0]
+[Info   :   BepInEx] 1 patcher plugin loaded
+[Info   :   BepInEx] Patching [UnityEngine.CoreModule] with [BepInEx.Chainloader]
+[Message:   BepInEx] Preloader finished
+[Message:   BepInEx] Chainloader ready
+[Message:   BepInEx] Chainloader started
+[Info   :   BepInEx] 33 plugins to load
+[Info   :   BepInEx] Loading [TeamX 2.1]
+[Info   :   BepInEx] Loading [Blueprints X 3.2]
+[Info   :   BepInEx] Loading [LocalTranslation 1.0.9.2]
+[Info   :LocalTranslation] Plugin andme123.localtranslation is loaded!
+[Info   :   BepInEx] Loading [Zeep SDK 2.2.0]
+[Info   :  Zeep SDK] Plugin ZeepSDK is loaded!
+[Info   :   BepInEx] Loading [AuthorTimeHunting 1.17.4]
+[Info   :AuthorTimeHunting] StateMachine: Transitioning from null to StateMasterOff
+[Info   :AuthorTimeHunting] Plugin AuthorTimeHunting is loaded!
+[Info   :   BepInEx] Loading [BetterSplits 0.2.2]
+[Info   :BetterSplits] Plugin BetterSplits is loaded!
+[Info   :   BepInEx] Loading [BrokenTracks 0.2.5]
+[Info   :BrokenTracks] Plugin BrokenTracks is loaded!
+[Info   :   BepInEx] Loading [Chat2Playlist 1.0.8]
+[Info   :Chat2Playlist] Plugin Chat2Playlist is loaded!
+[Info   :   BepInEx] Loading [Zeepkist GTR 0.40.3]
+[Info   :   BepInEx] Loading [Delta Bar 0.6.0]
+[Info   : Delta Bar] DeltaBar: finish hook installed (ReadyToReset.HeyYouHitATrigger).
+[Info   : Delta Bar] Delta Bar 0.6.0 loaded (Phase 1).
+[Info   :   BepInEx] Loading [Strength of Field 1.1.0]
+[Info   :Strength of Field] Strength of Field plugin loaded!
+[Info   :   BepInEx] Loading [Topout Tracker 0.1.0]
+[Info   :Topout Tracker] Topout Tracker plugin loaded!
+[Info   :   BepInEx] Loading [Tournament Casting UI 1.0.0]
+[Info   :Tournament Casting UI] Tournament Casting UI 1.0.0-beta.1 loaded. Local pool v2026-06-12, 1936 players (refreshing from repo).
+[Info   :Tournament Casting UI] [config] Disable mouse look in photomode = False; Stay in photomode = False
+[Info   :   BepInEx] Loading [EditorSpeedSplits 1.0.6]
+[Info   :EditorSpeedSplits] Plugin com.andme.editorspeedsplits is loaded!
+[Info   :   BepInEx] Loading [Chat Utilities 1.4]
+[Info   :Chat Utilities] Plugin Chat Utilities is loaded!
+[Info   :   BepInEx] Loading [Grid Scaler 1.3]
+[Info   :Grid Scaler] Plugin GridScaler is loaded!
+[Info   :   BepInEx] Loading [PhotoDrone 1.9.1]
+[Info   :       Zua] Successfully registered type 'UnityEngine.Vector3'.
+[Info   :PhotoDrone] Plugin PhotoDrone is loaded!
+[Info   :   BepInEx] Loading [Practice Mode 1.6]
+[Info   :Practice Mode] Plugin Practice Mode is loaded!
+[Info   :   BepInEx] Loading [Save State 1.3]
+[Info   :Save State] Plugin Save State is loaded.
+[Info   :   BepInEx] Loading [FastStart 1.0.0]
+[Info   : FastStart] Plugin FastStart is loaded!
+[Info   :   BepInEx] Loading [COTDTracker 0.11.1]
+[Info   :COTDTracker] Plugin COTDTracker is loaded!
+[Info   :   BepInEx] Loading [Level Editor Trails 4.0.3]
+[Info   :Level Editor Trails] Plugin LevelEditorTrails is loaded!
+[Info   :   BepInEx] Loading [Medal Times 5.3.1]
+[Info   :Medal Times] Plugin net.tnrd.zeepkist.medaltimes is loaded!
+[Info   :   BepInEx] Loading [Object Properties 7.0.5]
+[Info   :Object Properties] Plugin net.tnrd.zeepkist.objectproperties is loaded!
+[Info   :   BepInEx] Loading [Zeepkist RTM 2.1.2]
+[Info   :Zeepkist RTM] 19:40:38 Patching
+[Info   :Zeepkist RTM] 19:40:38 Found 3 eager services
+[Info   :Zeepkist RTM] 19:40:38 Found eager service '"UnhandledExceptionLoggerService"'
+[Info   :Zeepkist RTM] 19:40:38 Found eager service '"ConfigService"'
+[Info   :Zeepkist RTM] 19:40:38 Found eager service '"CommandsService"'
+[Info   :Zeepkist RTM] 19:40:38 Application started. Press Ctrl+C to shut down.
+[Info   :Zeepkist RTM] 19:40:38 Hosting environment: "Production"
+[Info   :Zeepkist RTM] 19:40:38 Content root path: "C:\Program Files (x86)\Steam\steamapps\common\Zeepkist\BepInEx\plugins\Mods\3285481_6342055"
+[Info   :Zeepkist RTM] Plugin net.tnrd.zeepkist.rtm is loaded!
+[Info   :   BepInEx] Loading [PursuitZK 1.0.4]
+[Info   : PursuitZK] Plugin PursuitZK is loaded!
+[Info   :   BepInEx] Loading [Rushtick 1.0.0]
+[Info   :  Rushtick] Plugin Rushtick is loaded!
+[Info   :   BepInEx] Loading [SpeedSplits 2.0.0]
+[Warning:SpeedSplits] Plugin Speedsplits (Speedsplits) is no longer functional and will not be updated. Please remove this plugin manually or unsubscribe in Modkist if the plugin is still listed.
+[Info   :   BepInEx] Loading [TopOutTournament 1.0.17]
+[Info   :TopOutTournament] Plugin TopOutTournament is loaded!
+[Info   :   BepInEx] Loading [VertexSnapper 3.17.5]
+[Info   :VertexSnapper] Plugin VertexSnapper is loaded!
+[Info   :   BepInEx] Loading [ZtreamerBot 2.0.0]
+[Info   :       Zua] Successfully registered type 'System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]'.
+[Info   :ZtreamerBot] Plugin ZtreamerBot is loaded!
+[Info   :   BepInEx] Loading [Workshop2Playlist 1.3.0]
+[Info   :Workshop2Playlist] Plugin Workshop2Playlist is loaded!
+[Info   :   BepInEx] Loading [ZeepTourney 0.0.9]
+[Info   :ZeepTourney] Plugin ZeepTourney is loaded!
+[Message:   BepInEx] Chainloader startup complete
+[Info   :AuthorTimeHunting] GraphQL client initialized.
+[Info   : Delta Bar] Delta Bar: LevelEditorTrails detected, editor mode armed.
+[Info   : Delta Bar] DeltaBar: level-change hook installed (TrailManager.LoadTrails).
+[Info   :Strength of Field] Cup Strength data loaded: 658 players (divisor=2020)
+[Info   :Strength of Field] SOF data loaded: 2147 players (divisor=1969)
+[Info   :Tournament Casting UI] Pool refreshed from repo: v2026-06-12, 1936 players.
+[Info   :Tournament Casting UI] [compare cam] PhotoDrone API hooked
+[Info   :Zeepkist GTR] 19:40:45 Patching
+[Info   :Zeepkist GTR] 19:40:45 Found 17 eager services
+[Info   :Zeepkist GTR] 19:40:45 Application started. Press Ctrl+C to shut down.
+[Info   :Zeepkist GTR] 19:40:45 Hosting environment: "Production"
+[Info   :Zeepkist GTR] 19:40:45 Content root path: "C:\Program Files (x86)\Steam\steamapps\common\Zeepkist\BepInEx\plugins\Mods\2948039_6688852"
+[Info   :Zeepkist GTR] Plugin net.tnrd.zeepkist.gtr is loaded!
+[Info   :AuthorTimeHunting] Successfully retrieved 5 random levels
+[Info   : Delta Bar] Delta Bar: registered with ZeepSDK UI configurator (bar is movable).
+[Info   : Delta Bar] Delta Bar: resolved GTR GhostPlayer + timing via DI host.
+[Info   :     TeamX]  [TEAMX] Initializing TeamX...
+[Info   :ZtreamerBot] UDP Listener auto-started.
+[Info   :ZtreamerBot] UDP listener thread started on port 12333.
+[Info   :Practice Mode] OnMainMenu: Clearing recordings and creating visualizer.
+[Info   :Zeepkist GTR] 19:41:28 Start processing HTTP request "POST" "https://backend.zeepki.st/auth/login"
+[Info   :Zeepkist GTR] 19:41:28 Sending HTTP request "POST" "https://backend.zeepki.st/auth/login"
+[Info   :VertexSnapper] [VertexSnapper] Config initialized on scene: 3D_MainMenu
+[Info   :CrashlyticsApi] Initializing bugsnag
+[Info   :CrashlyticsApi] Bugsnag initialized
+[Info   :Zeepkist GTR] 19:41:29 Received HTTP response headers after 853.4959ms - 200
+[Info   :Zeepkist GTR] 19:41:29 End processing HTTP request after 865.9609ms - 200
+[Info   :BetterSplits] getting gtr splits
+[Info   :Zeepkist GTR] 19:42:01 Loading personal best...
+[Info   :Zeepkist GTR] 19:42:01 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:42:01 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:42:01 Stopping existing recorder if any
+[Info   :Zeepkist GTR] 19:42:01 Creating new recorder
+[Info   :Zeepkist GTR] 19:42:01 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:42:01 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:42:01 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:42:01 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Error  :BetterSplits] could not get splits
+Response: StatusCode: 400, ReasonPhrase: 'Bad Request', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+Date: Wed, 17 Jun 2026 17:42:02 GMT
+Connection: keep-alive
+access-control-allow-headers: Origin, X-Requested-With, Accept, Authorization, X-Apollo-Tracing, Content-Type, Content-Length, X-PostGraphile-Explain
+access-control-allow-methods: HEAD, GET, POST
+access-control-allow-origin: *
+access-control-expose-headers: X-GraphQL-Event-Stream
+alt-svc: h3=":443"; ma=86400
+vary: Origin
+via: 1.1 Caddy
+x-graphql-event-stream: /stream
+x-query-cost: 115
+cf-cache-status: DYNAMIC
+x-xss-protection: 1; mode=block
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+x-content-type-options: nosniff
+Server-Timing: cfCacheStatus;desc="DYNAMIC", cfEdge;dur=27,cfOrigin;dur=37
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=Dy%2Bkk6wdAu7csIUd6GGlY%2FMRCnAee0ducLgrVxZNxnmk6yNGUK5lg5bhMEDwQfyNh64QaMZISMYuqPagYnmzaLy2gA6lASAtgy1fpOpaGXkkwQO0WUJMRrGxheRG1fcQi3U77A%3D%3D"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+expect-ct: max-age=86400, enforce
+referrer-policy: same-origin
+x-frame-options: SAMEORIGIN
+Server: cloudflare
+CF-RAY: a0d3d936caf4ecae-MAD
+Content-Type: application/json; charset=utf-8
+Content-Length: 172
+} 
+Content: {"errors":[{"message":"Cannot query field \"personalBestGlobalsByIdLevel\" on type \"Level\". Did you mean \"personalBestGlobals\"?","locations":[{"line":1,"column":87}]}]}
+Url: https://graphql.zeepki.st
+Request: {"query":"query BetterSplitsPB($hash: String!, $steamId: BigFloat) { levelByHash(hash: $hash) { personalBestGlobalsByIdLevel(filter: {userByIdUser: {steamId: {equalTo: $steamId}}}) { nodes { recordByIdRecord { speeds splits time }}}}}","variables":{"hash":"ABEB9DD2C206D0ABDC395D84B6D6C89B79402153-2","steamId":"76561197972890120"}}
+[Info   :Zeepkist GTR] 19:42:02 Received HTTP response headers after 97.901ms - 200
+[Info   :Zeepkist GTR] 19:42:02 End processing HTTP request after 98.1698ms - 200
+[Info   :Zeepkist GTR] 19:42:02 Received HTTP response headers after 197.8706ms - 200
+[Info   :Zeepkist GTR] 19:42:02 End processing HTTP request after 198.1243ms - 200
+[Info   :Zeepkist GTR] 19:42:02 Received HTTP response headers after 319.4809ms - 200
+[Info   :Zeepkist GTR] 19:42:02 End processing HTTP request after 319.7823ms - 200
+[Info   :Zeepkist GTR] 19:42:03 Starting recorder
+[Info   :Zeepkist GTR] 19:42:35 Discarding recorder
+[Info   :BetterSplits] getting gtr splits
+[Info   :Zeepkist GTR] 19:42:55 Loading personal best...
+[Info   :Zeepkist GTR] 19:42:55 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:42:55 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:42:55 Stopping existing recorder if any
+[Info   :Zeepkist GTR] 19:42:55 Creating new recorder
+[Info   :Zeepkist GTR] 19:42:55 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:42:55 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:42:55 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:42:55 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Error  :BetterSplits] could not get splits
+Response: StatusCode: 400, ReasonPhrase: 'Bad Request', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+Date: Wed, 17 Jun 2026 17:42:56 GMT
+Connection: keep-alive
+access-control-allow-headers: Origin, X-Requested-With, Accept, Authorization, X-Apollo-Tracing, Content-Type, Content-Length, X-PostGraphile-Explain
+access-control-allow-methods: HEAD, GET, POST
+access-control-allow-origin: *
+access-control-expose-headers: X-GraphQL-Event-Stream
+alt-svc: h3=":443"; ma=86400
+vary: Origin
+via: 1.1 Caddy
+x-graphql-event-stream: /stream
+x-query-cost: 115
+cf-cache-status: DYNAMIC
+x-xss-protection: 1; mode=block
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+x-content-type-options: nosniff
+Server-Timing: cfCacheStatus;desc="DYNAMIC", cfEdge;dur=8,cfOrigin;dur=43
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=EMQqZFDUSfrlGBiUi3MMcS305N%2Bhk%2FMjzC8KrQj5Z%2BsbQaTHO15fKsyYUy4%2F%2BwkM%2FIOePw5y3ccsIgHalWZuhoVQ6tNRGDd4AAoLg%2BhWu1PMPlyWx7DGSKUlViTda0W9I4VDhQ%3D%3D"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+expect-ct: max-age=86400, enforce
+referrer-policy: same-origin
+x-frame-options: SAMEORIGIN
+Server: cloudflare
+CF-RAY: a0d3da87cfafecae-MAD
+Content-Type: application/json; charset=utf-8
+Content-Length: 172
+} 
+Content: {"errors":[{"message":"Cannot query field \"personalBestGlobalsByIdLevel\" on type \"Level\". Did you mean \"personalBestGlobals\"?","locations":[{"line":1,"column":87}]}]}
+Url: https://graphql.zeepki.st
+Request: {"query":"query BetterSplitsPB($hash: String!, $steamId: BigFloat) { levelByHash(hash: $hash) { personalBestGlobalsByIdLevel(filter: {userByIdUser: {steamId: {equalTo: $steamId}}}) { nodes { recordByIdRecord { speeds splits time }}}}}","variables":{"hash":"80BEE822B6F86A8582A29EB0BC44525738335003-2","steamId":"76561197972890120"}}
+[Info   :Zeepkist GTR] 19:42:55 Received HTTP response headers after 140.7545ms - 200
+[Info   :Zeepkist GTR] 19:42:55 End processing HTTP request after 141.1643ms - 200
+[Info   :Zeepkist GTR] 19:42:55 Received HTTP response headers after 178.3982ms - 200
+[Info   :Zeepkist GTR] 19:42:55 End processing HTTP request after 178.6967ms - 200
+[Info   :Zeepkist GTR] 19:42:55 Received HTTP response headers after 202.8312ms - 200
+[Info   :Zeepkist GTR] 19:42:55 End processing HTTP request after 203.0453ms - 200
+[Info   :Zeepkist GTR] 19:42:56 Ghost version: 5
+[Info   :Zeepkist GTR] 19:42:56 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:42:56 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:42:56 Received HTTP response headers after 60.9154ms - 200
+[Info   :Zeepkist GTR] 19:42:56 End processing HTTP request after 61.2061ms - 200
+[Info   :Zeepkist GTR] 19:42:57 Starting recorder
+[Info   :Tournament Casting UI] [mouselook] freeze ON (mouse sensitivity 300 -> 0)
+[Info   :Tournament Casting UI] [mouselook] freeze OFF (restored 300)
+[Info   :Zeepkist GTR] 19:43:35 Loading personal best...
+[Info   :Zeepkist GTR] 19:43:35 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:43:35 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:43:35 Stopping existing recorder if any
+[Info   :Zeepkist GTR] 19:43:35 Creating new recorder
+[Info   :Zeepkist GTR] 19:43:35 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:43:35 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:43:35 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:43:35 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:43:35 Received HTTP response headers after 62.0207ms - 200
+[Info   :Zeepkist GTR] 19:43:35 End processing HTTP request after 62.2593ms - 200
+[Info   :Zeepkist GTR] 19:43:35 Received HTTP response headers after 67.7643ms - 200
+[Info   :Zeepkist GTR] 19:43:35 End processing HTTP request after 68.0087ms - 200
+[Info   :Zeepkist GTR] 19:43:35 Ghost version: 5
+[Info   :Zeepkist GTR] 19:43:35 Received HTTP response headers after 136.2446ms - 200
+[Info   :Zeepkist GTR] 19:43:35 End processing HTTP request after 136.4943ms - 200
+[Info   :Zeepkist GTR] 19:43:35 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:43:35 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:43:35 Received HTTP response headers after 65.6036ms - 200
+[Info   :Zeepkist GTR] 19:43:35 End processing HTTP request after 65.8338ms - 200
+[Info   :Zeepkist GTR] 19:43:37 Starting recorder
+[Info   :Tournament Casting UI] [mouselook] freeze ON (mouse sensitivity 300 -> 0)
+[Info   :Tournament Casting UI] [compare cam] compare cam button visible
+[Info   :Tournament Casting UI] [compare cam] toggle: on
+[Info   :Tournament Casting UI] [compare cam] following JakeAdjacent
+[Info   :Zeepkist GTR] 19:47:53 Discarding recorder
+[Info   :Tournament Casting UI] [mouselook] freeze OFF (restored 300)
+[Info   :BetterSplits] getting gtr splits
+[Info   :Zeepkist GTR] 19:48:08 Loading personal best...
+[Info   :Zeepkist GTR] 19:48:08 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:48:08 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:48:08 Stopping existing recorder if any
+[Info   :Zeepkist GTR] 19:48:08 Creating new recorder
+[Info   :Zeepkist GTR] 19:48:08 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:48:08 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:48:08 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:48:08 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:48:08 Received HTTP response headers after 124.4731ms - 200
+[Info   :Zeepkist GTR] 19:48:08 End processing HTTP request after 124.7138ms - 200
+[Info   :Zeepkist GTR] 19:48:08 Received HTTP response headers after 195.3643ms - 200
+[Info   :Zeepkist GTR] 19:48:08 End processing HTTP request after 195.5706ms - 200
+[Error  :BetterSplits] could not get splits
+Response: StatusCode: 400, ReasonPhrase: 'Bad Request', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+Date: Wed, 17 Jun 2026 17:48:08 GMT
+Connection: keep-alive
+access-control-allow-headers: Origin, X-Requested-With, Accept, Authorization, X-Apollo-Tracing, Content-Type, Content-Length, X-PostGraphile-Explain
+access-control-allow-methods: HEAD, GET, POST
+access-control-allow-origin: *
+access-control-expose-headers: X-GraphQL-Event-Stream
+alt-svc: h3=":443"; ma=86400
+vary: Origin
+via: 1.1 Caddy
+x-graphql-event-stream: /stream
+x-query-cost: 115
+cf-cache-status: DYNAMIC
+x-xss-protection: 1; mode=block
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+x-content-type-options: nosniff
+Server-Timing: cfCacheStatus;desc="DYNAMIC", cfEdge;dur=10,cfOrigin;dur=146
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=7hg4VY%2F61qri%2BweoCsabP0qaA1CYqt2D7iAbhBipMwkowRzIE221ttu7F78ym8rOvXGKm5wJLDIFCOj74vI4xHqYrin63DzLKNRVKCWAfN2%2FQaJ%2Bqqd2jNFr%2Fu6Pl%2FxPMwE3Ng%3D%3D"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+expect-ct: max-age=86400, enforce
+referrer-policy: same-origin
+x-frame-options: SAMEORIGIN
+Server: cloudflare
+CF-RAY: a0d3e22a9fc8ae85-MAD
+Content-Type: application/json; charset=utf-8
+Content-Length: 172
+} 
+Content: {"errors":[{"message":"Cannot query field \"personalBestGlobalsByIdLevel\" on type \"Level\". Did you mean \"personalBestGlobals\"?","locations":[{"line":1,"column":87}]}]}
+Url: https://graphql.zeepki.st
+Request: {"query":"query BetterSplitsPB($hash: String!, $steamId: BigFloat) { levelByHash(hash: $hash) { personalBestGlobalsByIdLevel(filter: {userByIdUser: {steamId: {equalTo: $steamId}}}) { nodes { recordByIdRecord { speeds splits time }}}}}","variables":{"hash":"028200526A841AE81A8254DE04282B23899C560D-2","steamId":"76561197972890120"}}
+[Info   :Zeepkist GTR] 19:48:08 Received HTTP response headers after 243.0344ms - 200
+[Info   :Zeepkist GTR] 19:48:08 End processing HTTP request after 243.2455ms - 200
+[Info   :Zeepkist GTR] 19:48:10 Starting recorder
+[Info   :Tournament Casting UI] [mouselook] freeze ON (mouse sensitivity 300 -> 0)
+[Info   :Zeepkist GTR] 19:53:06 Discarding recorder
+[Info   :Tournament Casting UI] [mouselook] freeze OFF (restored 300)
+[Info   :BetterSplits] getting gtr splits
+[Info   :Zeepkist GTR] 19:53:21 Loading personal best...
+[Info   :Zeepkist GTR] 19:53:21 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:53:21 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:53:21 Stopping existing recorder if any
+[Info   :Zeepkist GTR] 19:53:21 Creating new recorder
+[Info   :Zeepkist GTR] 19:53:21 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:53:21 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:53:21 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:53:21 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:53:21 Received HTTP response headers after 207.5468ms - 200
+[Info   :Zeepkist GTR] 19:53:21 End processing HTTP request after 207.8222ms - 200
+[Info   :Zeepkist GTR] 19:53:21 Received HTTP response headers after 297.0876ms - 200
+[Info   :Zeepkist GTR] 19:53:21 End processing HTTP request after 297.3088ms - 200
+[Error  :BetterSplits] could not get splits
+Response: StatusCode: 400, ReasonPhrase: 'Bad Request', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+Date: Wed, 17 Jun 2026 17:53:22 GMT
+Connection: keep-alive
+access-control-allow-headers: Origin, X-Requested-With, Accept, Authorization, X-Apollo-Tracing, Content-Type, Content-Length, X-PostGraphile-Explain
+access-control-allow-methods: HEAD, GET, POST
+access-control-allow-origin: *
+access-control-expose-headers: X-GraphQL-Event-Stream
+alt-svc: h3=":443"; ma=86400
+vary: Origin
+via: 1.1 Caddy
+x-graphql-event-stream: /stream
+x-query-cost: 115
+cf-cache-status: DYNAMIC
+x-xss-protection: 1; mode=block
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+x-content-type-options: nosniff
+Server-Timing: cfCacheStatus;desc="DYNAMIC", cfEdge;dur=11,cfOrigin;dur=146
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=t%2B%2FePqP7dHY%2FnrpIJqAJPQLIo3AsHoNx3Jx1pO2GWSPC2oST19ReqB6QW4zWbymqV4MKyOKmOgIlicGXg9%2FaUX%2FweHfLIjWWazSJ3AvT%2B325KRjt0440w4U84GqJlVUMBRYVGw%3D%3D"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+expect-ct: max-age=86400, enforce
+referrer-policy: same-origin
+x-frame-options: SAMEORIGIN
+Server: cloudflare
+CF-RAY: a0d3e9cfcf91cfe6-MAD
+Content-Type: application/json; charset=utf-8
+Content-Length: 172
+} 
+Content: {"errors":[{"message":"Cannot query field \"personalBestGlobalsByIdLevel\" on type \"Level\". Did you mean \"personalBestGlobals\"?","locations":[{"line":1,"column":87}]}]}
+Url: https://graphql.zeepki.st
+Request: {"query":"query BetterSplitsPB($hash: String!, $steamId: BigFloat) { levelByHash(hash: $hash) { personalBestGlobalsByIdLevel(filter: {userByIdUser: {steamId: {equalTo: $steamId}}}) { nodes { recordByIdRecord { speeds splits time }}}}}","variables":{"hash":"AA8937B7517CD6FF5E18F1DEF8292C29E66A7D44-3","steamId":"76561197972890120"}}
+[Info   :Zeepkist GTR] 19:53:21 Received HTTP response headers after 284.8679ms - 200
+[Info   :Zeepkist GTR] 19:53:21 End processing HTTP request after 285.0687ms - 200
+[Info   :Zeepkist GTR] 19:53:23 Starting recorder
+[Info   :Tournament Casting UI] [mouselook] freeze ON (mouse sensitivity 300 -> 0)
+[Info   :Tournament Casting UI] [compare cam] following Six
+[Info   :RoundLeaderboardTab] Drawing leaderboard -> forwarding to Instance.DrawTabLeaderboard()
+[Info   :ChampionshipLeaderboardTab] Drawing leaderboard -> forwarding to Instance.DrawTabLeaderboard()
+[Info   :Zeepkist GTR] 19:55:07 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:55:07 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:55:08 Received HTTP response headers after 206.3174ms - 200
+[Info   :Zeepkist GTR] 19:55:08 End processing HTTP request after 206.6172ms - 200
+[Info   :Zeepkist GTR] 19:55:08 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:55:08 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:55:08 Received HTTP response headers after 57.5267ms - 200
+[Info   :Zeepkist GTR] 19:55:08 End processing HTTP request after 57.7831ms - 200
+[Info   :Zeepkist GTR] 19:55:08 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:55:08 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:55:08 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:55:08 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:55:08 Received HTTP response headers after 60.0222ms - 200
+[Info   :Zeepkist GTR] 19:55:08 End processing HTTP request after 60.2989ms - 200
+[Info   :RoundLeaderboardTab] Drawing leaderboard -> forwarding to Instance.DrawTabLeaderboard()
+[Info   :Zeepkist GTR] 19:55:08 Received HTTP response headers after 106.7842ms - 200
+[Info   :Zeepkist GTR] 19:55:08 End processing HTTP request after 107.0247ms - 200
+[Info   :ChampionshipLeaderboardTab] Drawing leaderboard -> forwarding to Instance.DrawTabLeaderboard()
+[Info   :Zeepkist GTR] 19:55:10 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:55:10 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:55:10 Received HTTP response headers after 57.9845ms - 200
+[Info   :Zeepkist GTR] 19:55:10 End processing HTTP request after 58.2613ms - 200
+[Info   :Zeepkist GTR] 19:55:10 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:55:10 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:55:10 Received HTTP response headers after 59.6915ms - 200
+[Info   :Zeepkist GTR] 19:55:10 End processing HTTP request after 60.0024ms - 200
+[Info   :Tournament Casting UI] [compare cam] following Lexer
+[Info   :Tournament Casting UI] [compare cam] following RoundNzt
+[Info   :Tournament Casting UI] [compare cam] following Noxitu
+[Info   :Tournament Casting UI] [compare cam] following R0nanC
+[Info   :RoundLeaderboardTab] Drawing leaderboard -> forwarding to Instance.DrawTabLeaderboard()
+[Info   :Zeepkist GTR] 19:58:19 Discarding recorder
+[Info   :Tournament Casting UI] [mouselook] freeze OFF (restored 300)
+[Info   :BetterSplits] getting gtr splits
+[Info   :Zeepkist GTR] 19:58:34 Loading personal best...
+[Info   :Zeepkist GTR] 19:58:34 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:58:34 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:58:34 Stopping existing recorder if any
+[Info   :Zeepkist GTR] 19:58:34 Creating new recorder
+[Info   :Zeepkist GTR] 19:58:34 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:58:34 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:58:34 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:58:34 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:58:34 Received HTTP response headers after 103.2669ms - 200
+[Info   :Zeepkist GTR] 19:58:34 End processing HTTP request after 103.4812ms - 200
+[Info   :Zeepkist GTR] 19:58:34 Received HTTP response headers after 161.2209ms - 200
+[Info   :Zeepkist GTR] 19:58:34 End processing HTTP request after 161.4378ms - 200
+[Info   :Zeepkist GTR] 19:58:34 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 19:58:34 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Error  :BetterSplits] could not get splits
+Response: StatusCode: 400, ReasonPhrase: 'Bad Request', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+Date: Wed, 17 Jun 2026 17:58:34 GMT
+Connection: keep-alive
+access-control-allow-headers: Origin, X-Requested-With, Accept, Authorization, X-Apollo-Tracing, Content-Type, Content-Length, X-PostGraphile-Explain
+access-control-allow-methods: HEAD, GET, POST
+access-control-allow-origin: *
+access-control-expose-headers: X-GraphQL-Event-Stream
+alt-svc: h3=":443"; ma=86400
+vary: Origin
+via: 1.1 Caddy
+x-graphql-event-stream: /stream
+x-query-cost: 115
+cf-cache-status: DYNAMIC
+x-xss-protection: 1; mode=block
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+x-content-type-options: nosniff
+Server-Timing: cfCacheStatus;desc="DYNAMIC", cfEdge;dur=13,cfOrigin;dur=149
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=rRamjkbOvyFJrUyC0092uzDBgaHFSguEEuPjlIhINUedUo8WdSAtbuK5Rd61aG0ksNNUtix2lUCRVFLVXNsSTL6jYuRcsLPEX0xpi55ml0ZoNgl9bMYqOIC%2BfiqIYAVJ6LSx3A%3D%3D"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+expect-ct: max-age=86400, enforce
+referrer-policy: same-origin
+x-frame-options: SAMEORIGIN
+Server: cloudflare
+CF-RAY: a0d3f1732a1d994f-MAD
+Content-Type: application/json; charset=utf-8
+Content-Length: 172
+} 
+Content: {"errors":[{"message":"Cannot query field \"personalBestGlobalsByIdLevel\" on type \"Level\". Did you mean \"personalBestGlobals\"?","locations":[{"line":1,"column":87}]}]}
+Url: https://graphql.zeepki.st
+Request: {"query":"query BetterSplitsPB($hash: String!, $steamId: BigFloat) { levelByHash(hash: $hash) { personalBestGlobalsByIdLevel(filter: {userByIdUser: {steamId: {equalTo: $steamId}}}) { nodes { recordByIdRecord { speeds splits time }}}}}","variables":{"hash":"41838F5E7B21C2EEBD5349122E4BF6FBCB97CEA9-3","steamId":"76561197972890120"}}
+[Info   :Zeepkist GTR] 19:58:34 Received HTTP response headers after 233.4406ms - 200
+[Info   :Zeepkist GTR] 19:58:34 End processing HTTP request after 233.6786ms - 200
+[Info   :Zeepkist GTR] 19:58:34 Received HTTP response headers after 60.6821ms - 200
+[Info   :Zeepkist GTR] 19:58:34 End processing HTTP request after 60.912ms - 200
+[Info   :Zeepkist GTR] 19:58:34 Ghost version: 5
+[Info   :Zeepkist GTR] 19:58:36 Starting recorder
+[Info   :Tournament Casting UI] [mouselook] freeze ON (mouse sensitivity 300 -> 0)
+[Info   :Tournament Casting UI] [compare cam] following Mμ
+[Info   :Zeepkist GTR] 20:03:32 Discarding recorder
+[Info   :Tournament Casting UI] [mouselook] freeze OFF (restored 300)
+[Info   :BetterSplits] getting gtr splits
+[Info   :Zeepkist GTR] 20:03:47 Loading personal best...
+[Info   :Zeepkist GTR] 20:03:47 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:03:47 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:03:47 Stopping existing recorder if any
+[Info   :Zeepkist GTR] 20:03:47 Creating new recorder
+[Info   :Zeepkist GTR] 20:03:47 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:03:47 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:03:47 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:03:47 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:03:47 Received HTTP response headers after 322.1046ms - 200
+[Info   :Zeepkist GTR] 20:03:47 End processing HTTP request after 322.3488ms - 200
+[Info   :Zeepkist GTR] 20:03:47 Received HTTP response headers after 213.3847ms - 200
+[Info   :Zeepkist GTR] 20:03:47 End processing HTTP request after 213.6154ms - 200
+[Error  :BetterSplits] could not get splits
+Response: StatusCode: 400, ReasonPhrase: 'Bad Request', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+Date: Wed, 17 Jun 2026 18:03:48 GMT
+Connection: keep-alive
+access-control-allow-headers: Origin, X-Requested-With, Accept, Authorization, X-Apollo-Tracing, Content-Type, Content-Length, X-PostGraphile-Explain
+access-control-allow-methods: HEAD, GET, POST
+access-control-allow-origin: *
+access-control-expose-headers: X-GraphQL-Event-Stream
+alt-svc: h3=":443"; ma=86400
+vary: Origin
+via: 1.1 Caddy
+x-graphql-event-stream: /stream
+x-query-cost: 115
+cf-cache-status: DYNAMIC
+x-xss-protection: 1; mode=block
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+x-content-type-options: nosniff
+Server-Timing: cfCacheStatus;desc="DYNAMIC", cfEdge;dur=14,cfOrigin;dur=150
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=SSpfSqjmDYyIJeob2kC339rqYX5vJq13mpQ81A4vZtMvlqOCeT2auyK%2FnJb9Fy01Gero7O3FV1vjZQ3OL54bnislDCBVPyBg2bOponbeaHSfOEF%2F%2BbycuJrvx4fRiDEmuHu83A%3D%3D"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+expect-ct: max-age=86400, enforce
+referrer-policy: same-origin
+x-frame-options: SAMEORIGIN
+Server: cloudflare
+CF-RAY: a0d3f9187f1b2dd2-MAD
+Content-Type: application/json; charset=utf-8
+Content-Length: 172
+} 
+Content: {"errors":[{"message":"Cannot query field \"personalBestGlobalsByIdLevel\" on type \"Level\". Did you mean \"personalBestGlobals\"?","locations":[{"line":1,"column":87}]}]}
+Url: https://graphql.zeepki.st
+Request: {"query":"query BetterSplitsPB($hash: String!, $steamId: BigFloat) { levelByHash(hash: $hash) { personalBestGlobalsByIdLevel(filter: {userByIdUser: {steamId: {equalTo: $steamId}}}) { nodes { recordByIdRecord { speeds splits time }}}}}","variables":{"hash":"4A26CB0638B1B16DFD678EDFC7EE1EEA50896AC2-3","steamId":"76561197972890120"}}
+[Info   :Zeepkist GTR] 20:03:47 Received HTTP response headers after 274.1346ms - 200
+[Info   :Zeepkist GTR] 20:03:47 End processing HTTP request after 274.433ms - 200
+[Info   :Zeepkist GTR] 20:03:49 Starting recorder
+[Info   :Tournament Casting UI] [mouselook] freeze ON (mouse sensitivity 300 -> 0)
+[Info   :   Console] Download started for AppId: 1440670, FileId: 3742174534, Result: OK
+[Info   :Tournament Casting UI] [compare cam] following ZOMAN
+[Info   :Zeepkist GTR] 20:08:45 Discarding recorder
+[Info   :Tournament Casting UI] [mouselook] freeze OFF (restored 300)
+[Info   :BetterSplits] getting gtr splits
+[Info   :Zeepkist GTR] 20:09:00 Loading personal best...
+[Info   :Zeepkist GTR] 20:09:00 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:09:00 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:09:00 Stopping existing recorder if any
+[Info   :Zeepkist GTR] 20:09:00 Creating new recorder
+[Info   :Zeepkist GTR] 20:09:00 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:09:00 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:09:00 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:09:00 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Error  :BetterSplits] could not get splits
+Response: StatusCode: 400, ReasonPhrase: 'Bad Request', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+Date: Wed, 17 Jun 2026 18:09:01 GMT
+Connection: keep-alive
+access-control-allow-headers: Origin, X-Requested-With, Accept, Authorization, X-Apollo-Tracing, Content-Type, Content-Length, X-PostGraphile-Explain
+access-control-allow-methods: HEAD, GET, POST
+access-control-allow-origin: *
+access-control-expose-headers: X-GraphQL-Event-Stream
+alt-svc: h3=":443"; ma=86400
+vary: Origin
+via: 1.1 Caddy
+x-graphql-event-stream: /stream
+x-query-cost: 115
+cf-cache-status: DYNAMIC
+x-xss-protection: 1; mode=block
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+x-content-type-options: nosniff
+Server-Timing: cfCacheStatus;desc="DYNAMIC", cfEdge;dur=10,cfOrigin;dur=148
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=Vbwm7tHRLVlv1bclcVTtCIRDosNTOTPYi8AOlgCzax2IW8YZg5SJOoIZkK08EgK3WYeewQUimeNmkx5Wdgkxt%2BKbe3jK6Mo%2Bd3IENd2cIy50PdjNjeAMmTgHWUV8JJWoiNuSXw%3D%3D"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+expect-ct: max-age=86400, enforce
+referrer-policy: same-origin
+x-frame-options: SAMEORIGIN
+Server: cloudflare
+CF-RAY: a0d400bded4a026b-MAD
+Content-Type: application/json; charset=utf-8
+Content-Length: 172
+} 
+Content: {"errors":[{"message":"Cannot query field \"personalBestGlobalsByIdLevel\" on type \"Level\". Did you mean \"personalBestGlobals\"?","locations":[{"line":1,"column":87}]}]}
+Url: https://graphql.zeepki.st
+Request: {"query":"query BetterSplitsPB($hash: String!, $steamId: BigFloat) { levelByHash(hash: $hash) { personalBestGlobalsByIdLevel(filter: {userByIdUser: {steamId: {equalTo: $steamId}}}) { nodes { recordByIdRecord { speeds splits time }}}}}","variables":{"hash":"268D45B62A6E5B34BF4E7B6527650485CE436265-3","steamId":"76561197972890120"}}
+[Info   :Zeepkist GTR] 20:09:00 Received HTTP response headers after 211.5498ms - 200
+[Info   :Zeepkist GTR] 20:09:00 Received HTTP response headers after 211.999ms - 200
+[Info   :Zeepkist GTR] 20:09:00 End processing HTTP request after 211.7844ms - 200
+[Info   :Zeepkist GTR] 20:09:00 End processing HTTP request after 212.2675ms - 200
+[Info   :Zeepkist GTR] 20:09:01 Received HTTP response headers after 284.1906ms - 200
+[Info   :Zeepkist GTR] 20:09:01 End processing HTTP request after 284.4186ms - 200
+[Info   :Zeepkist GTR] 20:09:02 Starting recorder
+[Info   :   Console] Download started for AppId: 1440670, FileId: 3746425349, Result: OK
+[Info   :Tournament Casting UI] [mouselook] freeze ON (mouse sensitivity 300 -> 0)
+[Info   :Tournament Casting UI] [mouselook] freeze OFF (restored 300)
+[Info   :Zeepkist GTR] 20:09:54 Loading personal best...
+[Info   :Zeepkist GTR] 20:09:54 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:09:54 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:09:54 Stopping existing recorder if any
+[Info   :Zeepkist GTR] 20:09:54 Creating new recorder
+[Info   :Zeepkist GTR] 20:09:54 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:09:54 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:09:54 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:09:54 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:09:54 Received HTTP response headers after 61.195ms - 200
+[Info   :Zeepkist GTR] 20:09:54 End processing HTTP request after 61.4463ms - 200
+[Info   :Zeepkist GTR] 20:09:54 Received HTTP response headers after 63.168ms - 200
+[Info   :Zeepkist GTR] 20:09:54 End processing HTTP request after 63.3821ms - 200
+[Info   :Zeepkist GTR] 20:09:54 Received HTTP response headers after 132.0631ms - 200
+[Info   :Zeepkist GTR] 20:09:54 End processing HTTP request after 132.2921ms - 200
+[Info   :Zeepkist GTR] 20:09:56 Starting recorder
+[Info   :Zeepkist GTR] 20:10:02 Loading personal best...
+[Info   :Zeepkist GTR] 20:10:02 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:10:02 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:10:02 Stopping existing recorder if any
+[Info   :Zeepkist GTR] 20:10:02 Creating new recorder
+[Info   :Zeepkist GTR] 20:10:02 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:10:02 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:10:02 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:10:02 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:10:02 Received HTTP response headers after 56.4659ms - 200
+[Info   :Zeepkist GTR] 20:10:02 End processing HTTP request after 56.6864ms - 200
+[Info   :Zeepkist GTR] 20:10:02 Received HTTP response headers after 59.0646ms - 200
+[Info   :Zeepkist GTR] 20:10:02 End processing HTTP request after 59.2556ms - 200
+[Info   :Zeepkist GTR] 20:10:02 Received HTTP response headers after 118.3373ms - 200
+[Info   :Zeepkist GTR] 20:10:02 End processing HTTP request after 118.5771ms - 200
+[Info   :Zeepkist GTR] 20:10:04 Starting recorder
+[Info   :Zeepkist GTR] 20:10:12 Loading personal best...
+[Info   :Zeepkist GTR] 20:10:12 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:10:12 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:10:12 Stopping existing recorder if any
+[Info   :Zeepkist GTR] 20:10:12 Creating new recorder
+[Info   :Zeepkist GTR] 20:10:12 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:10:12 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:10:12 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:10:12 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:10:12 Received HTTP response headers after 52.6056ms - 200
+[Info   :Zeepkist GTR] 20:10:12 Received HTTP response headers after 52.1991ms - 200
+[Info   :Zeepkist GTR] 20:10:12 End processing HTTP request after 52.8783ms - 200
+[Info   :Zeepkist GTR] 20:10:12 End processing HTTP request after 52.4338ms - 200
+[Info   :Zeepkist GTR] 20:10:12 Received HTTP response headers after 113.8124ms - 200
+[Info   :Zeepkist GTR] 20:10:12 End processing HTTP request after 114.0656ms - 200
+[Info   :Zeepkist GTR] 20:10:14 Starting recorder
+[Info   :Zeepkist GTR] 20:10:22 Loading personal best...
+[Info   :Zeepkist GTR] 20:10:22 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:10:22 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:10:22 Stopping existing recorder if any
+[Info   :Zeepkist GTR] 20:10:22 Creating new recorder
+[Info   :Zeepkist GTR] 20:10:22 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:10:22 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:10:22 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:10:22 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:10:22 Received HTTP response headers after 58.2977ms - 200
+[Info   :Zeepkist GTR] 20:10:22 Received HTTP response headers after 58.8551ms - 200
+[Info   :Zeepkist GTR] 20:10:22 End processing HTTP request after 59.1142ms - 200
+[Info   :Zeepkist GTR] 20:10:22 End processing HTTP request after 58.5536ms - 200
+[Info   :Zeepkist GTR] 20:10:22 Received HTTP response headers after 127.9434ms - 200
+[Info   :Zeepkist GTR] 20:10:22 End processing HTTP request after 128.3258ms - 200
+[Info   :Zeepkist GTR] 20:10:23 Starting recorder
+[Info   :Tournament Casting UI] [mouselook] freeze ON (mouse sensitivity 300 -> 0)
+[Info   :Tournament Casting UI] [compare cam] following justMaki
+[Info   :COTDTracker] Starting cup with exclude list: 
+[Info   :Zeepkist GTR] 20:13:59 Discarding recorder
+[Info   :Tournament Casting UI] [mouselook] freeze OFF (restored 300)
+[Info   :COTDTracker] Doing eliminations with leaderboard:
+[Info   :COTDTracker] Player ZOMAN: Time: 23,56384
+[Info   :COTDTracker] Player [CSC]Tommygaming: Time: 23,63943
+[Info   :COTDTracker] Player justMaki: Time: 23,67338
+[Info   :COTDTracker] Player RoundNzt: Time: 24,19022
+[Info   :COTDTracker] Player Minkus: Time: 24,2177
+[Info   :COTDTracker] Player Lexer: Time: 24,91721
+[Info   :COTDTracker] Player Six: Time: 25,14026
+[Info   :COTDTracker] Player wokonbike: Time: 25,86734
+[Info   :COTDTracker] Player Noxitu: Time: 27,99308
+[Info   :COTDTracker] Player aizpun: Time: DNF
+[Info   :COTDTracker] Player [CSC]ShyGirlyRaccoon: Time: DNF
+[Info   :COTDTracker] Player JakeAdjacent: Time: DNF
+[Info   :COTDTracker] Player PlusMicron: Time: DNF
+[Info   :COTDTracker] Player [XTR]Hawk: Time: DNF
+[Info   :COTDTracker] Player Hellmet: Time: DNF
+[Info   :COTDTracker] Player Maki: Time: DNF
+[Info   :COTDTracker] Player [20x]K410K3N: Time: DNF
+[Info   :COTDTracker] Player Mμ: Time: DNF
+[Info   :COTDTracker] Player SkyPromp: Time: DNF
+[Info   :COTDTracker] Player timesprout: Time: DNF
+[Info   :COTDTracker] Player Solitar: Time: DNF
+[Info   :COTDTracker] Player [IMP]TwoFace: Time: DNF
+[Info   :COTDTracker] Player [GECK]R0nanC: Time: DNF
+[Info   :COTDTracker] Player [TTR]DragonShadow84290: Time: DNF
+[Info   :COTDTracker] Player Microknigh7: Time: DNF
+[Info   :COTDTracker] Player Jsus: Time: DNF
+[Info   :COTDTracker] Player [hi]im boring: Time: DNF
+[Info   :COTDTracker] Player Valco: Time: DNF
+[Info   :COTDTracker] Player 376: Time: DNF
+[Info   :COTDTracker] Player Sterben: Time: DNF
+[Info   :BetterSplits] getting gtr splits
+[Info   :Zeepkist GTR] 20:14:13 Loading personal best...
+[Info   :Zeepkist GTR] 20:14:13 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:14:13 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:14:13 Stopping existing recorder if any
+[Info   :Zeepkist GTR] 20:14:13 Creating new recorder
+[Info   :Zeepkist GTR] 20:14:13 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:14:13 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:14:13 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:14:13 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:14:13 Received HTTP response headers after 146.2916ms - 200
+[Info   :Zeepkist GTR] 20:14:13 End processing HTTP request after 146.523ms - 200
+[Info   :Zeepkist GTR] 20:14:13 Received HTTP response headers after 257.622ms - 200
+[Info   :Zeepkist GTR] 20:14:13 Received HTTP response headers after 346.1382ms - 200
+[Info   :Zeepkist GTR] 20:14:13 End processing HTTP request after 257.8425ms - 200
+[Info   :Zeepkist GTR] 20:14:13 End processing HTTP request after 346.3587ms - 200
+[Error  :BetterSplits] could not get splits
+Response: StatusCode: 400, ReasonPhrase: 'Bad Request', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+Date: Wed, 17 Jun 2026 18:14:14 GMT
+Connection: keep-alive
+access-control-allow-headers: Origin, X-Requested-With, Accept, Authorization, X-Apollo-Tracing, Content-Type, Content-Length, X-PostGraphile-Explain
+access-control-allow-methods: HEAD, GET, POST
+access-control-allow-origin: *
+access-control-expose-headers: X-GraphQL-Event-Stream
+alt-svc: h3=":443"; ma=86400
+vary: Origin
+via: 1.1 Caddy
+x-graphql-event-stream: /stream
+x-query-cost: 115
+cf-cache-status: DYNAMIC
+x-xss-protection: 1; mode=block
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+x-content-type-options: nosniff
+Server-Timing: cfCacheStatus;desc="DYNAMIC", cfEdge;dur=12,cfOrigin;dur=147
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=lswA%2BUnMdzth46RwemQaICKFnZTXWd6%2FZvlkWRHcQFlSXV2i%2BxIkmxlEq8%2BpvQkVK37%2F%2Fxjdj7r51LeWk2GRivKttmIug9lcsgYm3sm8nVX%2BlVG%2FQ9osC1K6bQ0zYuzWJ5A9xg%3D%3D"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+expect-ct: max-age=86400, enforce
+referrer-policy: same-origin
+x-frame-options: SAMEORIGIN
+Server: cloudflare
+CF-RAY: a0d408610a9bec8f-MAD
+Content-Type: application/json; charset=utf-8
+Content-Length: 172
+} 
+Content: {"errors":[{"message":"Cannot query field \"personalBestGlobalsByIdLevel\" on type \"Level\". Did you mean \"personalBestGlobals\"?","locations":[{"line":1,"column":87}]}]}
+Url: https://graphql.zeepki.st
+Request: {"query":"query BetterSplitsPB($hash: String!, $steamId: BigFloat) { levelByHash(hash: $hash) { personalBestGlobalsByIdLevel(filter: {userByIdUser: {steamId: {equalTo: $steamId}}}) { nodes { recordByIdRecord { speeds splits time }}}}}","variables":{"hash":"4A26CB0638B1B16DFD678EDFC7EE1EEA50896AC2-3","steamId":"76561197972890120"}}
+[Info   :Zeepkist GTR] 20:14:15 Starting recorder
+[Info   :Tournament Casting UI] [mouselook] freeze ON (mouse sensitivity 300 -> 0)
+[Info   :Zeepkist GTR] 20:15:24 Discarding recorder
+[Info   :Tournament Casting UI] [mouselook] freeze OFF (restored 300)
+[Info   :COTDTracker] Running update tab leaderboard function
+[Info   :RoundLeaderboardTab] Drawing leaderboard -> forwarding to Instance.DrawTabLeaderboard()
+[Info   :ChampionshipLeaderboardTab] Drawing leaderboard -> forwarding to Instance.DrawTabLeaderboard()
+[Info   :Zeepkist GTR] 20:15:26 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:15:26 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:15:26 Received HTTP response headers after 67.8796ms - 200
+[Info   :Zeepkist GTR] 20:15:26 End processing HTTP request after 68.14ms - 200
+[Error  :Zeepkist RTM] 20:15:26 Unobserved task exception
+[Error  :Zeepkist GTR] 20:15:26 Unobserved task exception
+[Info   :COTDTracker] Doing eliminations with leaderboard:
+[Info   :COTDTracker] Player Mμ: Time: 20,22325
+[Info   :COTDTracker] Player JakeAdjacent: Time: 20,43678
+[Info   :COTDTracker] Player 376: Time: 20,48023
+[Info   :COTDTracker] Player justMaki: Time: 20,75844
+[Info   :COTDTracker] Player Lexer: Time: 21,04738
+[Info   :COTDTracker] Player ZOMAN: Time: 21,09444
+[Info   :COTDTracker] Player Valco: Time: 21,46997
+[Info   :COTDTracker] Player [CSC]Tommygaming: Time: 21,69535
+[Info   :COTDTracker] Player Hellmet: Time: 21,73501
+[Info   :COTDTracker] Player Six: Time: 22,00681
+[Info   :COTDTracker] Player [GECK]R0nanC: Time: 22,21173
+[Info   :COTDTracker] Player [XTR]Hawk: Time: 22,31356
+[Info   :COTDTracker] Player RoundNzt: Time: 22,52608
+[Info   :COTDTracker] Player SkyPromp: Time: 23,83618
+[Info   :COTDTracker] Player wokonbike: Time: 24,828
+[Info   :COTDTracker] Player timesprout: Time: 25,15286
+[Info   :COTDTracker] Player Noxitu: Time: 25,2986
+[Info   :COTDTracker] Player [TTR]DragonShadow84290: Time: 25,44279
+[Info   :COTDTracker] Player [CSC]ShyGirlyRaccoon: Time: 25,66953
+[Info   :COTDTracker] Player Maki: Time: 26,08046
+[Info   :COTDTracker] Player Jsus: Time: 26,77135
+[Info   :COTDTracker] Player Solitar: Time: 30,21748
+[Info   :COTDTracker] Player Minkus: Time: DNF
+[Info   :COTDTracker] Player aizpun: Time: DNF
+[Info   :COTDTracker] Player PlusMicron: Time: DNF
+[Info   :COTDTracker] Player [20x]K410K3N: Time: DNF
+[Info   :COTDTracker] Player [IMP]TwoFace: Time: DNF
+[Info   :COTDTracker] Player Microknigh7: Time: DNF
+[Info   :COTDTracker] Player [hi]im boring: Time: DNF
+[Info   :COTDTracker] Player Sterben: Time: DNF
+[Info   :COTDTracker] Eliminating DNF: Sterben
+[Info   :COTDTracker] Eliminating DNF: [hi]im boring
+[Info   :COTDTracker] Eliminating DNF: Microknigh7
+[Info   :COTDTracker] Eliminating DNF: [IMP]TwoFace
+[Info   :COTDTracker] Eliminating DNF: [20x]K410K3N
+[Info   :COTDTracker] Eliminating DNF: PlusMicron
+[Info   :COTDTracker] Eliminating DNF: aizpun
+[Info   :COTDTracker] Eliminating DNF: Minkus
+[Info   :COTDTracker] Eliminated 8 DNF players
+[Info   :COTDTracker] Eliminating 8 players: 
+[Info   :COTDTracker] Sterben
+[Info   :COTDTracker] [hi]im boring
+[Info   :COTDTracker] Microknigh7
+[Info   :COTDTracker] [IMP]TwoFace
+[Info   :COTDTracker] [20x]K410K3N
+[Info   :COTDTracker] PlusMicron
+[Info   :COTDTracker] aizpun
+[Info   :COTDTracker] Minkus
+[Info   :COTDTracker] Running update tab leaderboard function
+[Info   :RoundLeaderboardTab] Drawing leaderboard -> forwarding to Instance.DrawTabLeaderboard()
+[Info   :RoundLeaderboardTab] Drawing leaderboard -> forwarding to Instance.DrawTabLeaderboard()
+[Info   :BetterSplits] getting gtr splits
+[Info   :Zeepkist GTR] 20:15:38 Loading personal best...
+[Info   :Zeepkist GTR] 20:15:38 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:15:38 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:15:38 Stopping existing recorder if any
+[Info   :Zeepkist GTR] 20:15:38 Creating new recorder
+[Info   :Zeepkist GTR] 20:15:38 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:15:38 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:15:38 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:15:38 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Error  :BetterSplits] could not get splits
+Response: StatusCode: 400, ReasonPhrase: 'Bad Request', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+Date: Wed, 17 Jun 2026 18:15:39 GMT
+Connection: keep-alive
+access-control-allow-headers: Origin, X-Requested-With, Accept, Authorization, X-Apollo-Tracing, Content-Type, Content-Length, X-PostGraphile-Explain
+access-control-allow-methods: HEAD, GET, POST
+access-control-allow-origin: *
+access-control-expose-headers: X-GraphQL-Event-Stream
+alt-svc: h3=":443"; ma=86400
+vary: Origin
+via: 1.1 Caddy
+x-graphql-event-stream: /stream
+x-query-cost: 115
+cf-cache-status: DYNAMIC
+x-xss-protection: 1; mode=block
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+x-content-type-options: nosniff
+Server-Timing: cfCacheStatus;desc="DYNAMIC", cfEdge;dur=8,cfOrigin;dur=39
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=hUC2z%2FxyoOdc36C2zRvpm%2BUER1CZYevKuxF4Ny2AKfPdFq5vwFIHQyHy0DbxkxKNQXjYC7m0eTwUFe3V%2Bx5PsbHEW87OWOw1QItwXAKtmaG2oi3iE9oFJ4ycl2urTEsj%2BPqfKw%3D%3D"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+expect-ct: max-age=86400, enforce
+referrer-policy: same-origin
+x-frame-options: SAMEORIGIN
+Server: cloudflare
+CF-RAY: a0d40a766d41ec8f-MAD
+Content-Type: application/json; charset=utf-8
+Content-Length: 172
+} 
+Content: {"errors":[{"message":"Cannot query field \"personalBestGlobalsByIdLevel\" on type \"Level\". Did you mean \"personalBestGlobals\"?","locations":[{"line":1,"column":87}]}]}
+Url: https://graphql.zeepki.st
+Request: {"query":"query BetterSplitsPB($hash: String!, $steamId: BigFloat) { levelByHash(hash: $hash) { personalBestGlobalsByIdLevel(filter: {userByIdUser: {steamId: {equalTo: $steamId}}}) { nodes { recordByIdRecord { speeds splits time }}}}}","variables":{"hash":"268D45B62A6E5B34BF4E7B6527650485CE436265-3","steamId":"76561197972890120"}}
+[Info   :Zeepkist GTR] 20:15:39 Received HTTP response headers after 66.9956ms - 200
+[Info   :Zeepkist GTR] 20:15:39 Received HTTP response headers after 67.4863ms - 200
+[Info   :Zeepkist GTR] 20:15:39 End processing HTTP request after 67.2297ms - 200
+[Info   :Zeepkist GTR] 20:15:39 End processing HTTP request after 67.7325ms - 200
+[Info   :Zeepkist GTR] 20:15:39 Received HTTP response headers after 146.2551ms - 200
+[Info   :Zeepkist GTR] 20:15:39 End processing HTTP request after 146.4744ms - 200
+[Info   :Tournament Casting UI] [mouselook] freeze ON (mouse sensitivity 300 -> 0)
+[Info   :COTDTracker] Running update tab leaderboard function
+[Info   :Zeepkist GTR] 20:15:40 Starting recorder
+[Info   :RoundLeaderboardTab] Drawing leaderboard -> forwarding to Instance.DrawTabLeaderboard()
+[Info   :ChampionshipLeaderboardTab] Drawing leaderboard -> forwarding to Instance.DrawTabLeaderboard()
+[Info   :Zeepkist GTR] 20:15:41 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:15:41 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:15:41 Received HTTP response headers after 54.8776ms - 200
+[Info   :Zeepkist GTR] 20:15:41 End processing HTTP request after 55.1458ms - 200
+[Error  :Zeepkist RTM] 20:15:41 Unobserved task exception
+[Error  :Zeepkist GTR] 20:15:41 Unobserved task exception
+[Info   :COTDTracker] Running update tab leaderboard function
+[Info   :RoundLeaderboardTab] Drawing leaderboard -> forwarding to Instance.DrawTabLeaderboard()
+[Info   :ChampionshipLeaderboardTab] Drawing leaderboard -> forwarding to Instance.DrawTabLeaderboard()
+[Info   :Zeepkist GTR] 20:16:44 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:16:44 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:16:45 Received HTTP response headers after 117.4272ms - 200
+[Info   :Zeepkist GTR] 20:16:45 End processing HTTP request after 117.6987ms - 200
+[Error  :Zeepkist RTM] 20:16:45 Unobserved task exception
+[Error  :Zeepkist GTR] 20:16:45 Unobserved task exception
+[Info   :COTDTracker] Running update tab leaderboard function
+[Info   :Zeepkist GTR] 20:16:47 Discarding recorder
+[Info   :Tournament Casting UI] [mouselook] freeze OFF (restored 300)
+[Info   :COTDTracker] Doing eliminations with leaderboard:
+[Info   :COTDTracker] Player justMaki: Time: 23,4635
+[Info   :COTDTracker] Player ZOMAN: Time: 23,81385
+[Info   :COTDTracker] Player RoundNzt: Time: 23,91063
+[Info   :COTDTracker] Player JakeAdjacent: Time: 24,06955
+[Info   :COTDTracker] Player [CSC]Tommygaming: Time: 24,31944
+[Info   :COTDTracker] Player Six: Time: 24,33302
+[Info   :COTDTracker] Player Lexer: Time: 25,13853
+[Info   :COTDTracker] Player Noxitu: Time: 25,67064
+[Info   :COTDTracker] Player Mμ: Time: DNF
+[Info   :COTDTracker] Player 376: Time: DNF
+[Info   :COTDTracker] Player Valco: Time: DNF
+[Info   :COTDTracker] Player Hellmet: Time: DNF
+[Info   :COTDTracker] Player [GECK]R0nanC: Time: DNF
+[Info   :COTDTracker] Player [XTR]Hawk: Time: DNF
+[Info   :COTDTracker] Player SkyPromp: Time: DNF
+[Info   :COTDTracker] Player wokonbike: Time: DNF
+[Info   :COTDTracker] Player timesprout: Time: DNF
+[Info   :COTDTracker] Player [TTR]DragonShadow84290: Time: DNF
+[Info   :COTDTracker] Player [CSC]ShyGirlyRaccoon: Time: DNF
+[Info   :COTDTracker] Player Maki: Time: DNF
+[Info   :COTDTracker] Player Jsus: Time: DNF
+[Info   :COTDTracker] Player Solitar: Time: DNF
+[Info   :COTDTracker] Eliminating DNF: Solitar
+[Info   :COTDTracker] Eliminating DNF: Jsus
+[Info   :COTDTracker] Eliminating DNF: Maki
+[Info   :COTDTracker] Eliminating DNF: [CSC]ShyGirlyRaccoon
+[Info   :COTDTracker] Eliminating DNF: [TTR]DragonShadow84290
+[Info   :COTDTracker] Eliminating DNF: timesprout
+[Info   :COTDTracker] Eliminating DNF: wokonbike
+[Info   :COTDTracker] Eliminating DNF: SkyPromp
+[Info   :COTDTracker] Eliminating DNF: [XTR]Hawk
+[Info   :COTDTracker] Eliminating DNF: [GECK]R0nanC
+[Info   :COTDTracker] Eliminating DNF: Hellmet
+[Info   :COTDTracker] Eliminating DNF: Valco
+[Info   :COTDTracker] Eliminating DNF: 376
+[Info   :COTDTracker] Eliminating DNF: Mμ
+[Info   :COTDTracker] Eliminated 14 DNF players
+[Info   :COTDTracker] Eliminating 14 players: 
+[Info   :COTDTracker] Solitar
+[Info   :COTDTracker] Jsus
+[Info   :COTDTracker] Maki
+[Info   :COTDTracker] [CSC]ShyGirlyRaccoon
+[Info   :COTDTracker] [TTR]DragonShadow84290
+[Info   :COTDTracker] timesprout
+[Info   :COTDTracker] wokonbike
+[Info   :COTDTracker] SkyPromp
+[Info   :COTDTracker] [XTR]Hawk
+[Info   :COTDTracker] [GECK]R0nanC
+[Info   :COTDTracker] Hellmet
+[Info   :COTDTracker] Valco
+[Info   :COTDTracker] 376
+[Info   :COTDTracker] Mμ
+[Info   :COTDTracker] Running update tab leaderboard function
+[Info   :BetterSplits] getting gtr splits
+[Info   :Zeepkist GTR] 20:17:01 Loading personal best...
+[Info   :Zeepkist GTR] 20:17:01 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:17:01 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:17:01 Stopping existing recorder if any
+[Info   :Zeepkist GTR] 20:17:01 Creating new recorder
+[Info   :Zeepkist GTR] 20:17:01 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:17:01 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:17:01 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:17:01 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Error  :BetterSplits] could not get splits
+Response: StatusCode: 400, ReasonPhrase: 'Bad Request', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+Date: Wed, 17 Jun 2026 18:17:02 GMT
+Connection: keep-alive
+access-control-allow-headers: Origin, X-Requested-With, Accept, Authorization, X-Apollo-Tracing, Content-Type, Content-Length, X-PostGraphile-Explain
+access-control-allow-methods: HEAD, GET, POST
+access-control-allow-origin: *
+access-control-expose-headers: X-GraphQL-Event-Stream
+alt-svc: h3=":443"; ma=86400
+vary: Origin
+via: 1.1 Caddy
+x-graphql-event-stream: /stream
+x-query-cost: 115
+cf-cache-status: DYNAMIC
+x-xss-protection: 1; mode=block
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+x-content-type-options: nosniff
+Server-Timing: cfCacheStatus;desc="DYNAMIC", cfEdge;dur=7,cfOrigin;dur=37
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=LYFlHnZexUyTZlKOeRRHjlz47%2Bd8%2Bob5VYy2dKZ04J5Bw%2FxvhK6y3%2BVy7wYW03UtRB4cPla1Kf9E14DJeSd0QgpQu32z%2Fqhxgxf2CNwHUwUGuPcYBZFJw%2FtECBm%2BViLNd52scQ%3D%3D"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+expect-ct: max-age=86400, enforce
+referrer-policy: same-origin
+x-frame-options: SAMEORIGIN
+Server: cloudflare
+CF-RAY: a0d40c7b8d0aec8f-MAD
+Content-Type: application/json; charset=utf-8
+Content-Length: 172
+} 
+Content: {"errors":[{"message":"Cannot query field \"personalBestGlobalsByIdLevel\" on type \"Level\". Did you mean \"personalBestGlobals\"?","locations":[{"line":1,"column":87}]}]}
+Url: https://graphql.zeepki.st
+Request: {"query":"query BetterSplitsPB($hash: String!, $steamId: BigFloat) { levelByHash(hash: $hash) { personalBestGlobalsByIdLevel(filter: {userByIdUser: {steamId: {equalTo: $steamId}}}) { nodes { recordByIdRecord { speeds splits time }}}}}","variables":{"hash":"4A26CB0638B1B16DFD678EDFC7EE1EEA50896AC2-3","steamId":"76561197972890120"}}
+[Info   :Zeepkist GTR] 20:17:01 Received HTTP response headers after 64.6342ms - 200
+[Info   :Zeepkist GTR] 20:17:01 End processing HTTP request after 64.8702ms - 200
+[Info   :Zeepkist GTR] 20:17:01 Received HTTP response headers after 89.0667ms - 200
+[Info   :Zeepkist GTR] 20:17:01 End processing HTTP request after 89.2804ms - 200
+[Info   :Zeepkist GTR] 20:17:01 Received HTTP response headers after 117.8153ms - 200
+[Info   :Zeepkist GTR] 20:17:01 End processing HTTP request after 118.0266ms - 200
+[Info   :Tournament Casting UI] [mouselook] freeze ON (mouse sensitivity 300 -> 0)
+[Info   :Zeepkist GTR] 20:17:03 Starting recorder
+[Info   :Zeepkist GTR] 20:18:10 Discarding recorder
+[Info   :Tournament Casting UI] [mouselook] freeze OFF (restored 300)
+[Info   :COTDTracker] Doing eliminations with leaderboard:
+[Info   :COTDTracker] Player justMaki: Time: 20,42509
+[Info   :COTDTracker] Player ZOMAN: Time: 20,44764
+[Info   :COTDTracker] Player [CSC]Tommygaming: Time: 20,52789
+[Info   :COTDTracker] Player RoundNzt: Time: 20,61151
+[Info   :COTDTracker] Player Six: Time: 20,63444
+[Info   :COTDTracker] Player Noxitu: Time: 20,84195
+[Info   :COTDTracker] Player Lexer: Time: 20,99731
+[Info   :COTDTracker] Player JakeAdjacent: Time: DNF
+[Info   :COTDTracker] Eliminating DNF: JakeAdjacent
+[Info   :COTDTracker] Eliminated 1 DNF players
+[Info   :COTDTracker] Eliminating on time: Lexer
+[Info   :COTDTracker] Eliminating 2 players: 
+[Info   :COTDTracker] JakeAdjacent
+[Info   :COTDTracker] Lexer
+[Info   :BetterSplits] getting gtr splits
+[Info   :Zeepkist GTR] 20:18:24 Loading personal best...
+[Info   :Zeepkist GTR] 20:18:24 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:18:24 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:18:24 Stopping existing recorder if any
+[Info   :Zeepkist GTR] 20:18:24 Creating new recorder
+[Info   :Zeepkist GTR] 20:18:24 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:18:24 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:18:24 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:18:24 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:18:25 Received HTTP response headers after 66.2926ms - 200
+[Info   :Zeepkist GTR] 20:18:25 Received HTTP response headers after 65.8816ms - 200
+[Info   :Zeepkist GTR] 20:18:25 End processing HTTP request after 66.1074ms - 200
+[Info   :Zeepkist GTR] 20:18:25 End processing HTTP request after 66.5317ms - 200
+[Error  :BetterSplits] could not get splits
+Response: StatusCode: 400, ReasonPhrase: 'Bad Request', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+Date: Wed, 17 Jun 2026 18:18:25 GMT
+Connection: keep-alive
+access-control-allow-headers: Origin, X-Requested-With, Accept, Authorization, X-Apollo-Tracing, Content-Type, Content-Length, X-PostGraphile-Explain
+access-control-allow-methods: HEAD, GET, POST
+access-control-allow-origin: *
+access-control-expose-headers: X-GraphQL-Event-Stream
+alt-svc: h3=":443"; ma=86400
+vary: Origin
+via: 1.1 Caddy
+x-graphql-event-stream: /stream
+x-query-cost: 115
+cf-cache-status: DYNAMIC
+x-xss-protection: 1; mode=block
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+x-content-type-options: nosniff
+Server-Timing: cfCacheStatus;desc="DYNAMIC", cfEdge;dur=8,cfOrigin;dur=40
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=ahxAQ1yESrBs7H5XUYsX183Rgm3PsSEuVWn1e4ek6uusX%2B15ZSInmcBrUBSMtFplkGogWzEkXFFZ56YpXPepFpbUw0HWId2%2FcIhPzaB5JeublsciGfM7i%2Fr%2FdToChO8KTkr8mw%3D%3D"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+expect-ct: max-age=86400, enforce
+referrer-policy: same-origin
+x-frame-options: SAMEORIGIN
+Server: cloudflare
+CF-RAY: a0d40e83d89aec8f-MAD
+Content-Type: application/json; charset=utf-8
+Content-Length: 172
+} 
+Content: {"errors":[{"message":"Cannot query field \"personalBestGlobalsByIdLevel\" on type \"Level\". Did you mean \"personalBestGlobals\"?","locations":[{"line":1,"column":87}]}]}
+Url: https://graphql.zeepki.st
+Request: {"query":"query BetterSplitsPB($hash: String!, $steamId: BigFloat) { levelByHash(hash: $hash) { personalBestGlobalsByIdLevel(filter: {userByIdUser: {steamId: {equalTo: $steamId}}}) { nodes { recordByIdRecord { speeds splits time }}}}}","variables":{"hash":"268D45B62A6E5B34BF4E7B6527650485CE436265-3","steamId":"76561197972890120"}}
+[Info   :Zeepkist GTR] 20:18:25 Received HTTP response headers after 129.9892ms - 200
+[Info   :Zeepkist GTR] 20:18:25 End processing HTTP request after 130.2087ms - 200
+[Info   :Tournament Casting UI] [mouselook] freeze ON (mouse sensitivity 300 -> 0)
+[Info   :Zeepkist GTR] 20:18:26 Starting recorder
+[Info   :Zeepkist GTR] 20:19:33 Discarding recorder
+[Info   :Tournament Casting UI] [mouselook] freeze OFF (restored 300)
+[Info   :COTDTracker] Doing eliminations with leaderboard:
+[Info   :COTDTracker] Player justMaki: Time: 23,39028
+[Info   :COTDTracker] Player ZOMAN: Time: 23,45922
+[Info   :COTDTracker] Player RoundNzt: Time: 23,72383
+[Info   :COTDTracker] Player Six: Time: 24,37237
+[Info   :COTDTracker] Player [CSC]Tommygaming: Time: 24,53536
+[Info   :COTDTracker] Player Noxitu: Time: 24,68307
+[Info   :COTDTracker] Eliminated 0 DNF players
+[Info   :COTDTracker] Eliminating on time: Noxitu
+[Info   :COTDTracker] Eliminating 1 players: 
+[Info   :COTDTracker] Noxitu
+[Info   :BetterSplits] getting gtr splits
+[Info   :Zeepkist GTR] 20:19:47 Loading personal best...
+[Info   :Zeepkist GTR] 20:19:47 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:19:47 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:19:47 Stopping existing recorder if any
+[Info   :Zeepkist GTR] 20:19:47 Creating new recorder
+[Info   :Zeepkist GTR] 20:19:47 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:19:47 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:19:47 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:19:47 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Error  :BetterSplits] could not get splits
+Response: StatusCode: 400, ReasonPhrase: 'Bad Request', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+Date: Wed, 17 Jun 2026 18:19:48 GMT
+Connection: keep-alive
+access-control-allow-headers: Origin, X-Requested-With, Accept, Authorization, X-Apollo-Tracing, Content-Type, Content-Length, X-PostGraphile-Explain
+access-control-allow-methods: HEAD, GET, POST
+access-control-allow-origin: *
+access-control-expose-headers: X-GraphQL-Event-Stream
+alt-svc: h3=":443"; ma=86400
+vary: Origin
+via: 1.1 Caddy
+x-graphql-event-stream: /stream
+x-query-cost: 115
+cf-cache-status: DYNAMIC
+x-xss-protection: 1; mode=block
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+x-content-type-options: nosniff
+Server-Timing: cfCacheStatus;desc="DYNAMIC", cfEdge;dur=7,cfOrigin;dur=36
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=lFZWVC6lrjDIv4X6%2BNxw1jZjBlyTSixbL9bu%2Ft%2FORa6%2BYAeG%2BFI09BHwut1gha2JWGt35mcHgLcTHlSpS29kVUDyM3zarJkGHFshvri2tI%2F30a2I9qmkJLCsRgS%2Fdu23VslgdQ%3D%3D"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+expect-ct: max-age=86400, enforce
+referrer-policy: same-origin
+x-frame-options: SAMEORIGIN
+Server: cloudflare
+CF-RAY: a0d410892b61ec8f-MAD
+Content-Type: application/json; charset=utf-8
+Content-Length: 172
+} 
+Content: {"errors":[{"message":"Cannot query field \"personalBestGlobalsByIdLevel\" on type \"Level\". Did you mean \"personalBestGlobals\"?","locations":[{"line":1,"column":87}]}]}
+Url: https://graphql.zeepki.st
+Request: {"query":"query BetterSplitsPB($hash: String!, $steamId: BigFloat) { levelByHash(hash: $hash) { personalBestGlobalsByIdLevel(filter: {userByIdUser: {steamId: {equalTo: $steamId}}}) { nodes { recordByIdRecord { speeds splits time }}}}}","variables":{"hash":"4A26CB0638B1B16DFD678EDFC7EE1EEA50896AC2-3","steamId":"76561197972890120"}}
+[Info   :Zeepkist GTR] 20:19:47 Received HTTP response headers after 157.9356ms - 200
+[Info   :Zeepkist GTR] 20:19:47 End processing HTTP request after 158.1637ms - 200
+[Info   :Zeepkist GTR] 20:19:47 Received HTTP response headers after 168.3628ms - 200
+[Info   :Zeepkist GTR] 20:19:47 End processing HTTP request after 168.6273ms - 200
+[Info   :Zeepkist GTR] 20:19:48 Received HTTP response headers after 272.3483ms - 200
+[Info   :Zeepkist GTR] 20:19:48 End processing HTTP request after 272.5669ms - 200
+[Info   :Tournament Casting UI] [mouselook] freeze ON (mouse sensitivity 300 -> 0)
+[Info   :Zeepkist GTR] 20:19:49 Starting recorder
+[Info   :Zeepkist GTR] 20:20:56 Discarding recorder
+[Info   :Tournament Casting UI] [mouselook] freeze OFF (restored 300)
+[Info   :COTDTracker] Doing eliminations with leaderboard:
+[Info   :COTDTracker] Player ZOMAN: Time: 20,11884
+[Info   :COTDTracker] Player [CSC]Tommygaming: Time: 20,38503
+[Info   :COTDTracker] Player justMaki: Time: 20,43404
+[Info   :COTDTracker] Player Six: Time: 21,25582
+[Info   :COTDTracker] Player RoundNzt: Time: 22,23167
+[Info   :COTDTracker] Eliminated 0 DNF players
+[Info   :COTDTracker] Eliminating on time: RoundNzt
+[Info   :COTDTracker] Eliminating 1 players: 
+[Info   :COTDTracker] RoundNzt
+[Info   :BetterSplits] getting gtr splits
+[Info   :Zeepkist GTR] 20:21:11 Loading personal best...
+[Info   :Zeepkist GTR] 20:21:11 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:21:11 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:21:11 Stopping existing recorder if any
+[Info   :Zeepkist GTR] 20:21:11 Creating new recorder
+[Info   :Zeepkist GTR] 20:21:11 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:21:11 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:21:11 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:21:11 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Error  :BetterSplits] could not get splits
+Response: StatusCode: 400, ReasonPhrase: 'Bad Request', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+Date: Wed, 17 Jun 2026 18:21:11 GMT
+Connection: keep-alive
+access-control-allow-headers: Origin, X-Requested-With, Accept, Authorization, X-Apollo-Tracing, Content-Type, Content-Length, X-PostGraphile-Explain
+access-control-allow-methods: HEAD, GET, POST
+access-control-allow-origin: *
+access-control-expose-headers: X-GraphQL-Event-Stream
+alt-svc: h3=":443"; ma=86400
+vary: Origin
+via: 1.1 Caddy
+x-graphql-event-stream: /stream
+x-query-cost: 115
+cf-cache-status: DYNAMIC
+x-xss-protection: 1; mode=block
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+x-content-type-options: nosniff
+Server-Timing: cfCacheStatus;desc="DYNAMIC", cfEdge;dur=6,cfOrigin;dur=40
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=XH9E00lOE%2B2ip7T8DFVoHNpywncdJs4peBShO0vYUmXKiLVJh96%2FCw9FqdwTY8DQB5pLEmAcoMmIBPv%2F5hF5uiqW%2BKbIS4YPBGJg3ynha0%2FoS6C76S8RO963xIwBDD%2BYcPOEOQ%3D%3D"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+expect-ct: max-age=86400, enforce
+referrer-policy: same-origin
+x-frame-options: SAMEORIGIN
+Server: cloudflare
+CF-RAY: a0d4129228e5ec8f-MAD
+Content-Type: application/json; charset=utf-8
+Content-Length: 172
+} 
+Content: {"errors":[{"message":"Cannot query field \"personalBestGlobalsByIdLevel\" on type \"Level\". Did you mean \"personalBestGlobals\"?","locations":[{"line":1,"column":87}]}]}
+Url: https://graphql.zeepki.st
+Request: {"query":"query BetterSplitsPB($hash: String!, $steamId: BigFloat) { levelByHash(hash: $hash) { personalBestGlobalsByIdLevel(filter: {userByIdUser: {steamId: {equalTo: $steamId}}}) { nodes { recordByIdRecord { speeds splits time }}}}}","variables":{"hash":"268D45B62A6E5B34BF4E7B6527650485CE436265-3","steamId":"76561197972890120"}}
+[Info   :Zeepkist GTR] 20:21:11 Received HTTP response headers after 73.6364ms - 200
+[Info   :Zeepkist GTR] 20:21:11 End processing HTTP request after 73.8707ms - 200
+[Info   :Zeepkist GTR] 20:21:11 Received HTTP response headers after 78.4007ms - 200
+[Info   :Zeepkist GTR] 20:21:11 End processing HTTP request after 78.61ms - 200
+[Info   :Zeepkist GTR] 20:21:11 Received HTTP response headers after 133.369ms - 200
+[Info   :Zeepkist GTR] 20:21:11 End processing HTTP request after 133.5763ms - 200
+[Info   :Tournament Casting UI] [mouselook] freeze ON (mouse sensitivity 300 -> 0)
+[Info   :Zeepkist GTR] 20:21:12 Starting recorder
+[Info   :Tournament Casting UI] [compare cam] following [DIRT]Tommygaming
+[Info   :Zeepkist GTR] 20:22:19 Discarding recorder
+[Info   :Tournament Casting UI] [mouselook] freeze OFF (restored 300)
+[Info   :COTDTracker] Doing eliminations with leaderboard:
+[Info   :COTDTracker] Player justMaki: Time: 23,52921
+[Info   :COTDTracker] Player ZOMAN: Time: 23,89924
+[Info   :COTDTracker] Player Six: Time: 24,13087
+[Info   :COTDTracker] Player [CSC]Tommygaming: Time: 24,13248
+[Info   :COTDTracker] Eliminated 0 DNF players
+[Info   :COTDTracker] Eliminating on time: [CSC]Tommygaming
+[Info   :COTDTracker] Eliminating 1 players: 
+[Info   :COTDTracker] [CSC]Tommygaming
+[Info   :BetterSplits] getting gtr splits
+[Info   :Zeepkist GTR] 20:22:33 Loading personal best...
+[Info   :Zeepkist GTR] 20:22:33 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:22:33 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:22:33 Stopping existing recorder if any
+[Info   :Zeepkist GTR] 20:22:33 Creating new recorder
+[Info   :Zeepkist GTR] 20:22:33 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:22:33 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:22:33 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:22:33 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Error  :BetterSplits] could not get splits
+Response: StatusCode: 400, ReasonPhrase: 'Bad Request', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+Date: Wed, 17 Jun 2026 18:22:34 GMT
+Connection: keep-alive
+access-control-allow-headers: Origin, X-Requested-With, Accept, Authorization, X-Apollo-Tracing, Content-Type, Content-Length, X-PostGraphile-Explain
+access-control-allow-methods: HEAD, GET, POST
+access-control-allow-origin: *
+access-control-expose-headers: X-GraphQL-Event-Stream
+alt-svc: h3=":443"; ma=86400
+vary: Origin
+via: 1.1 Caddy
+x-graphql-event-stream: /stream
+x-query-cost: 115
+cf-cache-status: DYNAMIC
+x-xss-protection: 1; mode=block
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+x-content-type-options: nosniff
+Server-Timing: cfCacheStatus;desc="DYNAMIC", cfEdge;dur=7,cfOrigin;dur=41
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=v6jBxYvWhzQ%2Fb5kgy8GgqAseC4wqZCdxGZqqdcSoTm0MQYTbBSh7hs%2FdGSi5VKfKwOqMaT3N3aiI%2BH5qJXjSl7yHsQZaVCZN92Mm4jVHgEaNKFI2Xv97Q1rdsWWbWglsuYbpcg%3D%3D"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+expect-ct: max-age=86400, enforce
+referrer-policy: same-origin
+x-frame-options: SAMEORIGIN
+Server: cloudflare
+CF-RAY: a0d414971f60ec8f-MAD
+Content-Type: application/json; charset=utf-8
+Content-Length: 172
+} 
+Content: {"errors":[{"message":"Cannot query field \"personalBestGlobalsByIdLevel\" on type \"Level\". Did you mean \"personalBestGlobals\"?","locations":[{"line":1,"column":87}]}]}
+Url: https://graphql.zeepki.st
+Request: {"query":"query BetterSplitsPB($hash: String!, $steamId: BigFloat) { levelByHash(hash: $hash) { personalBestGlobalsByIdLevel(filter: {userByIdUser: {steamId: {equalTo: $steamId}}}) { nodes { recordByIdRecord { speeds splits time }}}}}","variables":{"hash":"4A26CB0638B1B16DFD678EDFC7EE1EEA50896AC2-3","steamId":"76561197972890120"}}
+[Info   :Zeepkist GTR] 20:22:33 Received HTTP response headers after 97.9411ms - 200
+[Info   :Zeepkist GTR] 20:22:33 Received HTTP response headers after 98.3836ms - 200
+[Info   :Zeepkist GTR] 20:22:33 End processing HTTP request after 98.1658ms - 200
+[Info   :Zeepkist GTR] 20:22:33 End processing HTTP request after 98.6462ms - 200
+[Info   :Zeepkist GTR] 20:22:33 Received HTTP response headers after 169.359ms - 200
+[Info   :Zeepkist GTR] 20:22:33 End processing HTTP request after 169.573ms - 200
+[Info   :Tournament Casting UI] [mouselook] freeze ON (mouse sensitivity 300 -> 0)
+[Info   :Zeepkist GTR] 20:22:35 Starting recorder
+[Info   :Zeepkist GTR] 20:23:42 Discarding recorder
+[Info   :Tournament Casting UI] [mouselook] freeze OFF (restored 300)
+[Info   :COTDTracker] Doing eliminations with leaderboard:
+[Info   :COTDTracker] Player Six: Time: 20,20053
+[Info   :COTDTracker] Player ZOMAN: Time: 20,23158
+[Info   :COTDTracker] Player justMaki: Time: 20,36172
+[Info   :COTDTracker] Eliminated 0 DNF players
+[Info   :COTDTracker] Eliminating on time: justMaki
+[Info   :COTDTracker] Eliminating 1 players: 
+[Info   :COTDTracker] justMaki
+[Info   :Tournament Casting UI] [compare cam] droneUI not found - window buttons stay visible
+[Info   :Tournament Casting UI] [compare cam] ApplyRect failed: NullReferenceException: Object reference not set to an instance of an object
+[Info   :BetterSplits] getting gtr splits
+[Info   :Zeepkist GTR] 20:23:57 Loading personal best...
+[Info   :Zeepkist GTR] 20:23:57 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:23:57 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:23:57 Stopping existing recorder if any
+[Info   :Zeepkist GTR] 20:23:57 Creating new recorder
+[Info   :Zeepkist GTR] 20:23:57 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:23:57 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:23:57 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:23:57 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Error  :BetterSplits] could not get splits
+Response: StatusCode: 400, ReasonPhrase: 'Bad Request', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+Date: Wed, 17 Jun 2026 18:23:57 GMT
+Connection: keep-alive
+access-control-allow-headers: Origin, X-Requested-With, Accept, Authorization, X-Apollo-Tracing, Content-Type, Content-Length, X-PostGraphile-Explain
+access-control-allow-methods: HEAD, GET, POST
+access-control-allow-origin: *
+access-control-expose-headers: X-GraphQL-Event-Stream
+alt-svc: h3=":443"; ma=86400
+vary: Origin
+via: 1.1 Caddy
+x-graphql-event-stream: /stream
+x-query-cost: 115
+cf-cache-status: DYNAMIC
+x-xss-protection: 1; mode=block
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+x-content-type-options: nosniff
+Server-Timing: cfCacheStatus;desc="DYNAMIC", cfEdge;dur=9,cfOrigin;dur=42
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=fM4LMwlR2lfoPwaf87Zmy9K77B2BzO7ZAx0rdq6Ei%2FXHXFeR9In5fMmhr6qWZOlE%2BJOEvFFzjjZNLGrccSIqiyh3G%2BmuWwm3CGQxhWdYXmzKoqLrCZZjCdijM5gyzFHyMytUBA%3D%3D"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+expect-ct: max-age=86400, enforce
+referrer-policy: same-origin
+x-frame-options: SAMEORIGIN
+Server: cloudflare
+CF-RAY: a0d4169f8d5dec8f-MAD
+Content-Type: application/json; charset=utf-8
+Content-Length: 172
+} 
+Content: {"errors":[{"message":"Cannot query field \"personalBestGlobalsByIdLevel\" on type \"Level\". Did you mean \"personalBestGlobals\"?","locations":[{"line":1,"column":87}]}]}
+Url: https://graphql.zeepki.st
+Request: {"query":"query BetterSplitsPB($hash: String!, $steamId: BigFloat) { levelByHash(hash: $hash) { personalBestGlobalsByIdLevel(filter: {userByIdUser: {steamId: {equalTo: $steamId}}}) { nodes { recordByIdRecord { speeds splits time }}}}}","variables":{"hash":"268D45B62A6E5B34BF4E7B6527650485CE436265-3","steamId":"76561197972890120"}}
+[Info   :Zeepkist GTR] 20:23:57 Received HTTP response headers after 74.5101ms - 200
+[Info   :Zeepkist GTR] 20:23:57 Received HTTP response headers after 74.9853ms - 200
+[Info   :Zeepkist GTR] 20:23:57 End processing HTTP request after 75.2621ms - 200
+[Info   :Zeepkist GTR] 20:23:57 End processing HTTP request after 74.7824ms - 200
+[Info   :Zeepkist GTR] 20:23:57 Received HTTP response headers after 186.5146ms - 200
+[Info   :Zeepkist GTR] 20:23:57 End processing HTTP request after 186.7507ms - 200
+[Info   :Tournament Casting UI] [mouselook] freeze ON (mouse sensitivity 300 -> 0)
+[Info   :Zeepkist GTR] 20:23:58 Starting recorder
+[Info   :Zeepkist GTR] 20:25:05 Discarding recorder
+[Info   :Tournament Casting UI] [mouselook] freeze OFF (restored 300)
+[Info   :COTDTracker] Doing eliminations with leaderboard:
+[Info   :COTDTracker] Player Six: Time: 24,12082
+[Info   :COTDTracker] Player ZOMAN: Time: DNF
+[Info   :COTDTracker] Eliminating DNF: ZOMAN
+[Info   :COTDTracker] Eliminated 1 DNF players
+[Info   :COTDTracker] Eliminating 1 players: 
+[Info   :COTDTracker] ZOMAN
+[Info   :BetterSplits] getting gtr splits
+[Info   :Zeepkist GTR] 20:25:19 Loading personal best...
+[Info   :Zeepkist GTR] 20:25:19 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:25:19 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:25:19 Stopping existing recorder if any
+[Info   :Zeepkist GTR] 20:25:19 Creating new recorder
+[Info   :Zeepkist GTR] 20:25:19 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:25:19 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:25:19 Start processing HTTP request "POST" "https://graphql.zeepki.st/"
+[Info   :Zeepkist GTR] 20:25:19 Sending HTTP request "POST" "https://graphql.zeepki.st/"
+[Error  :BetterSplits] could not get splits
+Response: StatusCode: 400, ReasonPhrase: 'Bad Request', Version: 1.1, Content: System.Net.Http.StreamContent, Headers:
+{
+Date: Wed, 17 Jun 2026 18:25:20 GMT
+Connection: keep-alive
+access-control-allow-headers: Origin, X-Requested-With, Accept, Authorization, X-Apollo-Tracing, Content-Type, Content-Length, X-PostGraphile-Explain
+access-control-allow-methods: HEAD, GET, POST
+access-control-allow-origin: *
+access-control-expose-headers: X-GraphQL-Event-Stream
+alt-svc: h3=":443"; ma=86400
+vary: Origin
+via: 1.1 Caddy
+x-graphql-event-stream: /stream
+x-query-cost: 115
+cf-cache-status: DYNAMIC
+x-xss-protection: 1; mode=block
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+x-content-type-options: nosniff
+Server-Timing: cfCacheStatus;desc="DYNAMIC", cfEdge;dur=11,cfOrigin;dur=38
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=rJIRDHTu1XmrhQQeMQq8Ue0EdAeeb3xoCH4XWalkSDE%2FygoN2OAH8M8TZbYrYkmVz%2FfHIcG2JYQ3q71EgQRwZUc1V2nSKB3cqLy5jaxtJ%2FdLddsoaeKd%2Fbzhj1GxLMgw9VH4aQ%3D%3D"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+expect-ct: max-age=86400, enforce
+referrer-policy: same-origin
+x-frame-options: SAMEORIGIN
+Server: cloudflare
+CF-RAY: a0d418a4a873ec8f-MAD
+Content-Type: application/json; charset=utf-8
+Content-Length: 172
+} 
+Content: {"errors":[{"message":"Cannot query field \"personalBestGlobalsByIdLevel\" on type \"Level\". Did you mean \"personalBestGlobals\"?","locations":[{"line":1,"column":87}]}]}
+Url: https://graphql.zeepki.st
+Request: {"query":"query BetterSplitsPB($hash: String!, $steamId: BigFloat) { levelByHash(hash: $hash) { personalBestGlobalsByIdLevel(filter: {userByIdUser: {steamId: {equalTo: $steamId}}}) { nodes { recordByIdRecord { speeds splits time }}}}}","variables":{"hash":"4A26CB0638B1B16DFD678EDFC7EE1EEA50896AC2-3","steamId":"76561197972890120"}}
+[Info   :Zeepkist GTR] 20:25:19 Received HTTP response headers after 126.7958ms - 200
+[Info   :Zeepkist GTR] 20:25:19 End processing HTTP request after 127.0055ms - 200
+[Info   :Zeepkist GTR] 20:25:19 Received HTTP response headers after 187.4346ms - 200
+[Info   :Zeepkist GTR] 20:25:19 End processing HTTP request after 187.6559ms - 200
+[Info   :Zeepkist GTR] 20:25:19 Received HTTP response headers after 185.1267ms - 200
+[Info   :Zeepkist GTR] 20:25:19 End processing HTTP request after 185.3935ms - 200
+[Info   :Tournament Casting UI] [mouselook] freeze ON (mouse sensitivity 300 -> 0)
+[Info   :Zeepkist GTR] 20:25:21 Starting recorder
+[Info   :TopOutTournament] Ending Top->Out in state Inactive
+[Error  :     TeamX]  [TEAMX] Operation failed: Client is already disconnected.
+[Info   :Zeepkist GTR] 20:27:07 Application is shutting down...
+[Info   :Zeepkist GTR] 20:27:07 Unpatching

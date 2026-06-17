@@ -80,7 +80,7 @@ BEST_OF_PCT = 0.70  # count best 70% of rounds per season
 # Total events per season (from calendar/spreadsheet templates)
 SEASON_TOTAL = {
     'Season 2': 17,   # 15 regular + Troll 2 + Roulette 2
-    'Season 3': 22,   # 20 regular + Troll 3 + Roulette 3
+    'Season 3': 23,   # 20 regular + Troll 3 + Troll 4 + Roulette 3
 }
 
 def base_points(position):
@@ -237,6 +237,7 @@ FULL_LOBBY_REPLACEMENTS = {
         'Round 18': ('Petite Cups 46-50.xlsx', 'Petite Cup 47'),
         'Round 19': ('Petite Cups 46-50.xlsx', 'Petite Cup 48'),
         'Round 20': ('Petite Cups 46-50.xlsx', 'Petite Cup 49'),
+        'Troll 4':  ('Petite Cups 46-50.xlsx', 'Petite Cup 50 (Troll 4)'),
     },
 }
 
@@ -264,6 +265,7 @@ EVENT_DATES = {
         'Round 18': '2026-05-20',
         'Round 19': '2026-05-27',
         'Round 20': '2026-06-03',
+        'Troll 4':  '2026-06-17',
     },
 }
 
