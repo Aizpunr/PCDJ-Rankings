@@ -4,8 +4,8 @@ Source: cup logs/petite_50_reconstructed.json (parsed from local LogOutput.log;
 LiveLeaderboardLogger was stale Jun 7 so map names come from old data — see
 maps placeholder below; edit row 3 manually once confirmed).
 
-No mappers in the lobby — all 30 lobby participants ranked.
-aizpun joined the lobby but DNF'd R1 (effectively didn't compete).
+No mappers in the lobby. aizpun joined briefly but didn't actually compete
+(game registered a R1 DNF but user confirmed no-play) — excluded.
 """
 import json
 import os
@@ -15,7 +15,7 @@ base = os.path.dirname(os.path.abspath(__file__))
 xlsx_path = os.path.join(base, 'Petite Cups 46-50.xlsx')
 json_path = os.path.join(base, 'cup logs', 'petite_50_reconstructed.json')
 
-EXCLUDE = set()
+EXCLUDE = {'aizpun'}
 
 with open(json_path, 'r', encoding='utf-8') as f:
     raw = json.load(f)
@@ -52,7 +52,7 @@ ws.cell(row=5, column=COL+3, value='Elim Round')
 
 for r in range(6, 60):
     for c in range(COL, COL+4):
-        ws.cell(row=r, column=c, value=None)
+        ws.cell(row=r, column=c).value = None
 
 for i, e in enumerate(new_list):
     r = 6 + i

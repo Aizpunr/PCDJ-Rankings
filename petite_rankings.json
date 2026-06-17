@@ -6266,7 +6266,7 @@
         "name": "aizpun",
         "points": 40.0,
         "points_all": 40.0,
-        "rounds": 12,
+        "rounds": 11,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -6274,8 +6274,8 @@
           "bronze": 0
         },
         "top5": 0,
-        "avg_pts": 3.3,
-        "avg_pos": 20.8,
+        "avg_pts": 3.6,
+        "avg_pos": 20.5,
         "best_single": 40,
         "best_pos": 9,
         "dropped": 0,
@@ -6334,11 +6334,6 @@
             "r": "Round 20",
             "p": 0,
             "pos": 18
-          },
-          {
-            "r": "Troll 4",
-            "p": 0.0,
-            "pos": 23
           }
         ],
         "rank": 52
@@ -19846,7 +19841,7 @@
         "name": "aizpun",
         "points": 40.0,
         "points_all": 40.0,
-        "rounds": 12,
+        "rounds": 11,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -19854,8 +19849,8 @@
           "bronze": 0
         },
         "top5": 0,
-        "avg_pts": 3.3,
-        "avg_pos": 20.8,
+        "avg_pts": 3.6,
+        "avg_pos": 20.5,
         "best_single": 40,
         "best_pos": 9,
         "dropped": 0,
@@ -19914,11 +19909,6 @@
             "r": "Season 3 Round 20",
             "p": 0,
             "pos": 18
-          },
-          {
-            "r": "Season 3 Troll 4",
-            "p": 0.0,
-            "pos": 23
           }
         ],
         "rank": 70
