@@ -77,10 +77,13 @@ POINTS_SCALE = 20  # multiplier: 1st=200, 2nd=180, ..., 10th=20
 TROLL_MULT = 0.5   # troll/roulette at half points
 BEST_OF_PCT = 0.70  # count best 70% of rounds per season
 
-# Total events per season (from calendar/spreadsheet templates)
+# Total events per season (from calendar/spreadsheet templates).
+# A season missing from this dict is treated as in-progress: no drops until the
+# real calendar size is known (see best_of computation in main()).
 SEASON_TOTAL = {
     'Season 2': 17,   # 15 regular + Troll 2 + Roulette 2
-    'Season 3': 23,   # 20 regular + Troll 3 + Troll 4 + Roulette 3
+    'Season 3': 21,   # 19 regular (no Round 11) + Troll 3 + Troll 4; Roulette 3 never ran
+    # 'Season 4': ?,  # TODO: set once SGR publishes the S4 calendar
 }
 
 def base_points(position):
@@ -344,24 +347,44 @@ def compute_rankings(rounds, best_of, season_mode=True, championship=False):
     return rankings
 
 # --- Cup Strength (SOF) ---
-# Uses COTD weighted ELO to measure petite lobby quality
-# PCDJ cup N ≈ COTD cup (97 + N) (both weekly events)
+# Uses COTD weighted ELO to measure petite lobby quality.
+# The COTD cup to snapshot ELO at is resolved from the petite event's DATE
+# (EVENT_DATES) against COTD's own cupDates: the latest COTD cup on or before
+# the petite cup. The old `COTD = 97 + petite cup` offset assumed both events
+# run weekly in lockstep — it broke whenever petite skipped a week (already off
+# by one at Cup 50, off by ~13 across the summer 2026 break) and was badly wrong
+# for Troll/Roulette rounds, whose cup number was read from the digits in the
+# round name ("Troll 4" -> cup 4, not cup 50).
 # Strength = avg normalized ELO of 10 highest-rated players IN THE LOBBY (by ELO, not by finish position)
-PCDJ_TO_COTD = 97
+PCDJ_TO_COTD = 97  # fallback only, for rounds with no known date
 POOL_CAP = 196
 
 def load_cotd_histories():
-    """Load COTD player histories for per-cup ELO lookups."""
+    """Load COTD player histories + cup dates for per-cup ELO lookups.
+
+    Returns (histories, cup_dates) or (None, None) if COTD data is unavailable.
+    """
     try:
         with open(os.path.join(elo_dir, 'alldata.json'), encoding='utf-8') as f:
             cotd = json.load(f)
         histories = {}
         for p in cotd['weighted']:
             histories[p['n']] = p['h']
-        return histories
+        cup_dates = {int(c): d for c, d in cotd.get('cupDates', {}).items()}
+        return histories, cup_dates
     except FileNotFoundError:
         print("  WARNING: alldata.json not found, cup strength unavailable")
+        return None, None
+
+def cotd_cup_for_date(date, cup_dates):
+    """Latest COTD cup held on or before `date` (ISO yyyy-mm-dd).
+
+    Returns None if the date predates COTD cup 1 or no date/table is available.
+    """
+    if not date or not cup_dates:
         return None
+    prior = [c for c, d in cup_dates.items() if d <= date]
+    return max(prior) if prior else None
 
 def get_elo_at_cup(histories, name, cotd_cup):
     """Get player's ELO just before a given COTD cup number."""
@@ -375,13 +398,12 @@ def get_elo_at_cup(histories, name, cotd_cup):
         return 1500
     return None
 
-def compute_cup_strength(rnd, pcdj_cup, histories):
-    """Compute strength for a petite round using COTD ELO.
+def compute_cup_strength(rnd, cotd_cup, histories):
+    """Compute strength for a petite round using COTD ELO as of `cotd_cup`.
     Finds the 10 highest-rated players IN THE LOBBY (by ELO, not finish position),
     normalizes their ratings, and averages them."""
-    if not histories or len(rnd['players']) <= 10:
+    if not histories or not cotd_cup or len(rnd['players']) <= 10:
         return None
-    cotd_cup = PCDJ_TO_COTD + pcdj_cup
 
     # Build normalized pool snapshot at this COTD cup
     pool = {}
@@ -413,16 +435,18 @@ def compute_cup_strength(rnd, pcdj_cup, histories):
 SEASON_CUP_OFFSET = {
     'Season 2': 0,   # S2 Round 1 = Cup 1
     'Season 3': 29,  # S3 Round 1 = Cup 30
+    'Season 4': 50,  # S4 Round 1 = Cup 51
 }
 
-def build_seasons():
-    """Parse all sources and return the season->rounds dict with full-lobby
-    replacements applied. Reusable by other scripts that want per-event
-    lobby data without triggering the full ranking pipeline."""
-    seasons = parse_petite(_p('Results Petite .xlsx'))
+def apply_replacements(seasons, verbose=False):
+    """Layer full-lobby xlsx results over SGR's top-10-only spreadsheet data.
+
+    A season with no sheet in SGR's file (a new season, before she adds one) is
+    created here rather than skipped — otherwise its FULL_LOBBY_REPLACEMENTS
+    entries would be silently dropped and the season would never appear.
+    """
     for season_name, replacements in FULL_LOBBY_REPLACEMENTS.items():
-        if season_name not in seasons:
-            continue
+        seasons.setdefault(season_name, [])
         for round_name, (filename, cup_label) in replacements.items():
             rnd = parse_cup_file(_p(filename), round_name, cup_label=cup_label)
             rnd['is_half'] = 'Troll' in round_name or 'Roulette' in round_name
@@ -436,9 +460,21 @@ def build_seasons():
                 if existing['name'] == round_name:
                     seasons[season_name][i] = rnd
                     replaced = True
+                    if verbose:
+                        print(f"  Replaced {round_name} with full lobby from {filename}: {len(rnd['players'])} players")
                     break
             if not replaced:
                 seasons[season_name].append(rnd)
+                if verbose:
+                    print(f"  Added {round_name} from {filename}: {len(rnd['players'])} players")
+    return seasons
+
+def build_seasons():
+    """Parse all sources and return the season->rounds dict with full-lobby
+    replacements applied. Reusable by other scripts that want per-event
+    lobby data without triggering the full ranking pipeline."""
+    seasons = parse_petite(_p('Results Petite .xlsx'))
+    apply_replacements(seasons)
     for season_name, cups in EXTRA_CUPS.items():
         if season_name not in seasons:
             seasons[season_name] = []
@@ -454,28 +490,7 @@ def main():
     seasons = parse_petite(_p('Results Petite .xlsx'))
 
     # Replace rounds with full-lobby data where available
-    for season_name, replacements in FULL_LOBBY_REPLACEMENTS.items():
-        if season_name not in seasons:
-            continue
-        for round_name, (filename, cup_label) in replacements.items():
-            rnd = parse_cup_file(_p(filename), round_name, cup_label=cup_label)
-            rnd['is_half'] = 'Troll' in round_name or 'Roulette' in round_name
-            if rnd['is_half']:
-                for p in rnd['players']:
-                    p['points'] *= TROLL_MULT
-            if not rnd['players']:
-                continue
-            # Find and replace the existing round
-            replaced = False
-            for i, existing in enumerate(seasons[season_name]):
-                if existing['name'] == round_name:
-                    seasons[season_name][i] = rnd
-                    replaced = True
-                    print(f"  Replaced {round_name} with full lobby from {filename}: {len(rnd['players'])} players")
-                    break
-            if not replaced:
-                seasons[season_name].append(rnd)
-                print(f"  Added {round_name} from {filename}: {len(rnd['players'])} players")
+    apply_replacements(seasons, verbose=True)
 
     # Append supplementary cups
     for season_name, cups in EXTRA_CUPS.items():
@@ -494,30 +509,52 @@ def main():
     for season_name, rounds in seasons.items():
         regular = [r for r in rounds if not r['is_half']]
         special = [r for r in rounds if r['is_half']]
-        total_events = SEASON_TOTAL.get(season_name, len(rounds))
-        best_of = round(total_events * BEST_OF_PCT)
         rounds_played = len(rounds)
-        drops_active = rounds_played > best_of
+        total_events = SEASON_TOTAL.get(season_name)
+        calendar_known = total_events is not None
 
         print(f"\n=== {season_name} ===")
         print(f"  {len(regular)} regular + {len(special)} special (half pts)")
-        print(f"  {rounds_played}/{total_events} rounds played, best {best_of} count (70% of {total_events})")
+        if calendar_known:
+            best_of = round(total_events * BEST_OF_PCT)
+            print(f"  {rounds_played}/{total_events} rounds played, best {best_of} count (70% of {total_events})")
+        else:
+            # Calendar size unknown (season in progress, SGR hasn't published it).
+            # Count every result rather than guessing 70% of the rounds played so
+            # far — that would start dropping results from round 2.
+            total_events = rounds_played
+            best_of = rounds_played
+            print(f"  WARNING: {season_name} not in SEASON_TOTAL — calendar size unknown,")
+            print(f"           all {rounds_played} results count (no drops) until it is set")
+        drops_active = rounds_played > best_of
         if drops_active:
             print(f"  Drops active — dropping {rounds_played - best_of} worst")
-        else:
+        elif calendar_known:
             print(f"  All results count (drops start at round {best_of + 1})")
 
         # Compute cup strength for full-lobby rounds
-        cotd_histories = load_cotd_histories()
+        cotd_histories, cotd_dates = load_cotd_histories()
         round_strengths = {}
         offset = SEASON_CUP_OFFSET.get(season_name, 0)
+        season_dates = EVENT_DATES.get(season_name, {})
         for rnd in rounds:
-            rnum = int(''.join(c for c in rnd['name'] if c.isdigit()) or 0)
-            pcdj_cup = offset + rnum
-            sof = compute_cup_strength(rnd, pcdj_cup, cotd_histories)
+            # Resolve the COTD cup to snapshot ELO at from the event's date.
+            # Falls back to the old cup-number offset only when undated — which
+            # is wrong for Troll/Roulette rounds (their name digits aren't a cup
+            # number), so those are skipped rather than mis-rated.
+            date = season_dates.get(rnd['name'])
+            cotd_cup = cotd_cup_for_date(date, cotd_dates)
+            src = f"date {date}"
+            if cotd_cup is None:
+                if rnd['is_half']:
+                    continue
+                rnum = int(''.join(c for c in rnd['name'] if c.isdigit()) or 0)
+                cotd_cup = PCDJ_TO_COTD + offset + rnum
+                src = f"PCDJ {offset + rnum}, no date"
+            sof = compute_cup_strength(rnd, cotd_cup, cotd_histories)
             if sof is not None:
                 round_strengths[rnd['name']] = sof
-                print(f"  {rnd['name']} (PCDJ {pcdj_cup}): SOF {sof}%")
+                print(f"  {rnd['name']} (COTD {cotd_cup} via {src}): SOF {sof}%")
 
         rankings = compute_rankings(rounds, best_of, season_mode=True)
         # Championship points: OLR's original 10-1 scale, no drops, troll/roulette excluded

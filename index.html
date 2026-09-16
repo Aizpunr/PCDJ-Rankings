@@ -339,6 +339,20 @@ const TIER_COLORS = ['#dc2626', '#a855f7', '#3b82f6', '#10b981', '#6b7280'];
 
 function cssVar(name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
 
+// Snapshot lookup for delta arrows. Returns {} when the snapshot can't be
+// compared to the current standings — on a PCDJ season rollover the trailing
+// window slides (S2+S3 -> S3+S4) and an entire season's points leave the table
+// at once, so the deltas would read as a catastrophic one-cup collapse rather
+// than the recalculation it actually is. No baseline means no arrows.
+function snapshotFor(season) {
+  const sd = data[season];
+  if (sd && sd.type === 'trailing') {
+    const was = statusData.pcdj_seasons;
+    if (was && sd.seasons && was.join('|') !== sd.seasons.join('|')) return {};
+  }
+  return statusData[season.toLowerCase().replace(/ /g, '_')] || {};
+}
+
 function ptsColor(pts) {
   const isPCDJ = data && data[currentSeason] && data[currentSeason].type === 'trailing';
   const thresholds = isPCDJ ? PCDJ_THRESHOLDS : SEASON_THRESHOLDS;
@@ -367,24 +381,42 @@ function ptsColorSingle(pts) {
 function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
 const customColors={"Lexer":"#10b981","Sandals":"#aa55ff","GuAlexItar":"#f5c842","justMaki":"#dc2626"};
 
+// Chronological slot for Troll/Roulette cups, derived from round_dates: a
+// special cup sorts just after the last regular round that preceded it.
+// Computed at load time so new seasons need no hardcoded entry — the table
+// below is only a fallback for undated specials (Season 2 has no dates).
+let SPECIAL_ORDER = {
+  'Troll 2': 15.5, 'Roulette 2': 16.5,
+  'Troll 3': 10.5, 'Troll 4': 20.5,
+};
+
+function buildSpecialOrder() {
+  Object.keys(data).forEach(sName => {
+    const sd = data[sName];
+    if (sd.type === 'trailing') return;
+    const dates = sd.round_dates || {};
+    const regular = Object.keys(dates)
+      .filter(n => !/Troll|Roulette/.test(n))
+      .map(n => ({ n, num: parseInt((n.match(/\d+$/) || [0])[0]), date: dates[n] }));
+    Object.keys(dates).forEach(n => {
+      if (!/Troll|Roulette/.test(n)) return;
+      const before = regular.filter(r => r.date < dates[n]).map(r => r.num);
+      SPECIAL_ORDER[n] = (before.length ? Math.max(...before) : 0) + 0.5;
+    });
+  });
+}
+
 function roundSortKey(name) {
   // Handle "Season N Round M", "Season N Troll N", plain "Round M", etc.
   const seasonMatch = name.match(/Season (\d+)/);
   const seasonNum = seasonMatch ? parseInt(seasonMatch[1]) * 10000 : 0;
   const numMatch = name.match(/\d+$/);
   const num = numMatch ? parseInt(numMatch[0]) : 0;
-  // Troll/Roulette sort by their number among regular rounds (e.g. Troll 3 between Round 10 and Round 12)
+  // Troll/Roulette sort among the regular rounds (e.g. Troll 3 between Round 10
+  // and Round 12), NOT by the digit in their name — "Troll 4" is not round 4.
   if (name.includes('Troll') || name.includes('Roulette')) {
-    // Map special cups to their chronological position using PCDJ cup numbers
-    // Troll 2 = after S2 Round 15, Roulette 2 = after S2 Round 16
-    // Troll 3 = after S3 Round 10, Roulette 3 = after S3 Round 20
-    const specialOrder = {
-      'Troll 2': 15.5, 'Roulette 2': 16.5,
-      'Troll 3': 10.5, 'Roulette 3': 20.6,
-      'Troll 4': 20.5,
-    };
     const key = name.replace(/Season \d+ /, '');
-    return seasonNum + (specialOrder[key] || num + 0.5);
+    return seasonNum + (SPECIAL_ORDER[key] || num + 0.5);
   }
   return seasonNum + num;
 }
@@ -459,9 +491,11 @@ function buildRankHistory(playerName) {
   src.forEach(p => p.history.forEach(h => allRounds.add(h.r)));
   const roundOrder = [...allRounds].sort((a, b) => roundSortKey(a) - roundSortKey(b));
 
-  // Find season divider index
-  const s2Rounds = seasonRounds['Season 2'] || [];
-  let seasonDividerIdx = s2Rounds.length; // rounds in S2
+  // Find season divider index: the first of the two trailing seasons ends here.
+  // Follows pcdj.seasons rather than hardcoding "Season 2" so the divider moves
+  // with the rolling window (S2+S3 -> S3+S4 -> ...).
+  const firstTrailing = (pcdj.seasons && pcdj.seasons[0]) || 'Season 2';
+  let seasonDividerIdx = (seasonRounds[firstTrailing] || []).length;
 
   // Compute cumulative points for ALL players after each round
   const cumulative = {};
@@ -488,7 +522,8 @@ function buildRankHistory(playerName) {
 
   snapshots.forEach((snap, i) => {
     // Track per-season cumulative — reset when season changes
-    const rSeason = snap.round.startsWith('Season 3') ? 'S3' : 'S2';
+    const sm = snap.round.match(/Season (\d+)/);
+    const rSeason = sm ? 'S' + sm[1] : '?';
     if (currentSeason && rSeason !== currentSeason) seasonPts = 0;
     currentSeason = rSeason;
 
@@ -998,8 +1033,7 @@ function renderRankings() {
   });
 
   // Status snapshot lookup for rank arrows
-  const statusKey = currentSeason.toLowerCase().replace(/ /g, '_');
-  const snap = statusData[statusKey] || {};
+  const snap = snapshotFor(currentSeason);
 
   const body = document.getElementById('tableBody');
   body.innerHTML = rankings.map((p, i) => {
@@ -1501,8 +1535,7 @@ function renderSearch(query) {
     body.innerHTML = `<div style="padding:24px;color:var(--text-muted);">No players found</div>`;
     return;
   }
-  const statusKey = currentSeason.toLowerCase().replace(/ /g, '_');
-  const snap = statusData[statusKey] || {};
+  const snap = snapshotFor(currentSeason);
   body.innerHTML = matches.map((p, i) => {
     const c = ptsColor(p.points);
     const wc = p.wins > 0 ? 'var(--accent)' : 'var(--text-dark)';
@@ -1582,6 +1615,7 @@ Promise.all([
 ]).then(([d, s]) => {
     data = d;
     statusData = s;
+    buildSpecialOrder();
     const seasons = Object.keys(data);
     // Default to latest season (not trailing/PCDJ)
     const seasonKeys = seasons.filter(s => data[s].type === 'season');

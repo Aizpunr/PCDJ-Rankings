@@ -6,9 +6,12 @@ Usage:
   python status.py 9        → reconstruct Season 3 at round 9 (for retroactive snapshot)
 
 Stores: rank, points, wins, gold, silver, bronze per player.
-Season 2 is excluded (finished). PCDJ is always snapshotted directly.
+Only the newest season is snapshotted (finished seasons get no arrows).
+PCDJ is always snapshotted directly, along with its trailing-season window.
 """
 import json, os, re, sys
+
+sys.stdout.reconfigure(encoding='utf-8')  # player names aren't all cp1252 (e.g. Mμ)
 
 base = os.path.dirname(os.path.abspath(__file__))
 def _p(f): return os.path.join(base, f)
@@ -58,18 +61,24 @@ def snap_at_round(season_data, target):
 # Build snapshot
 snap = {}
 
-# Season 3: reconstruct at target round, or snapshot current
-if 'Season 3' in data:
+# Current season: the highest-numbered one present. Finished seasons are skipped
+# (no arrows), so this follows the rollover without needing an edit each season.
+seasons = [k for k in data if data[k].get('type') == 'season']
+current = max(seasons, key=lambda s: int(re.search(r'\d+', s).group()), default=None)
+if current:
+    key = current.lower().replace(' ', '_')
     if target_round is not None:
-        snap['season_3'] = snap_at_round(data['Season 3'], target_round)
+        snap[key] = snap_at_round(data[current], target_round)
     else:
-        snap['season_3'] = snap_direct(data['Season 3'])
+        snap[key] = snap_direct(data[current])
 
-# PCDJ: always snapshot directly (drops/best-of too complex to reconstruct)
+# PCDJ: always snapshot directly (drops/best-of too complex to reconstruct).
+# Record the trailing window alongside it: when it rolls (S2+S3 -> S3+S4) a whole
+# season's points leave at once, and the site uses this to suppress the resulting
+# bogus deltas instead of showing everyone collapsing on one cup.
 if 'PCDJ Ranking' in data:
     snap['pcdj_ranking'] = snap_direct(data['PCDJ Ranking'])
-
-# Season 2: skip (finished)
+    snap['pcdj_seasons'] = data['PCDJ Ranking'].get('seasons', [])
 
 # Backup existing status.json
 status_path = _p('status.json')
@@ -91,10 +100,10 @@ with open(status_path, 'w', encoding='utf-8') as f:
 label = f"round {target_round}" if target_round else "current"
 print(f"status.json written ({label})")
 
-# Show season 3 top 10
-s3 = snap.get('season_3', {})
+# Show current season top 10
+s3 = snap.get(current.lower().replace(' ', '_'), {}) if current else {}
 if s3:
     top = sorted(s3.items(), key=lambda x: x[1][0])[:10]
-    print(f"\nSeason 3 top 10:")
+    print(f"\n{current} top 10:")
     for name, (rank, pts, wins, g, s, b) in top:
         print(f"  #{rank} {name}: {pts} pts, {wins}W, {g}G/{s}S/{b}B")

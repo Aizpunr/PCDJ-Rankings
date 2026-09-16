@@ -3423,17 +3423,17 @@
   },
   "Season 3": {
     "type": "season",
-    "total_events": 23,
+    "total_events": 21,
     "rounds_played": 21,
     "rounds_regular": 19,
     "rounds_special": 2,
-    "best_of": 16,
+    "best_of": 15,
     "drops_active": true,
     "points_scale": 20,
     "rankings": [
       {
         "name": "justMaki",
-        "points": 3100,
+        "points": 2940,
         "points_all": 3600.0,
         "rounds": 20,
         "wins": 13,
@@ -3447,7 +3447,7 @@
         "avg_pos": 1.6,
         "best_single": 200,
         "best_pos": 1,
-        "dropped": 4,
+        "dropped": 5,
         "history": [
           {
             "r": "Round 1",
@@ -3568,7 +3568,7 @@
         "avg_pos": 3.9,
         "best_single": 200,
         "best_pos": 1,
-        "dropped": 0,
+        "dropped": 1,
         "history": [
           {
             "r": "Round 2",
@@ -3655,7 +3655,7 @@
       },
       {
         "name": "Lexer",
-        "points": 2030.0,
+        "points": 1990.0,
         "points_all": 2050.0,
         "rounds": 18,
         "wins": 0,
@@ -3669,7 +3669,7 @@
         "avg_pos": 5.6,
         "best_single": 180,
         "best_pos": 2,
-        "dropped": 2,
+        "dropped": 3,
         "history": [
           {
             "r": "Round 2",
@@ -5115,7 +5115,7 @@
         "avg_pos": 15.6,
         "best_single": 100.0,
         "best_pos": 1,
-        "dropped": 0,
+        "dropped": 1,
         "history": [
           {
             "r": "Round 5",
@@ -15748,21 +15748,21 @@
     ],
     "round_strengths": {
       "Round 5": 91.8,
-      "Round 6": 89.8,
+      "Round 6": 89.7,
       "Round 8": 92.0,
-      "Round 9": 88.7,
+      "Round 9": 88.5,
       "Round 10": 88.2,
       "Troll 3": 87.3,
-      "Round 12": 91.1,
-      "Round 13": 92.1,
-      "Round 14": 86.0,
+      "Round 12": 91.0,
+      "Round 13": 92.0,
+      "Round 14": 85.9,
       "Round 15": 93.5,
-      "Round 16": 88.6,
+      "Round 16": 88.5,
       "Round 17": 90.8,
       "Round 18": 91.9,
       "Round 19": 86.0,
       "Round 20": 92.8,
-      "Troll 4": 90.6
+      "Troll 4": 91.3
     },
     "round_dates": {
       "Round 5": "2026-02-18",
