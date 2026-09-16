@@ -242,6 +242,9 @@ FULL_LOBBY_REPLACEMENTS = {
         'Round 20': ('Petite Cups 46-50.xlsx', 'Petite Cup 49'),
         'Troll 4':  ('Petite Cups 46-50.xlsx', 'Petite Cup 50 (Troll 4)'),
     },
+    'Season 4': {
+        'Round 1': ('Petite Cups 51-55.xlsx', 'Petite Cup 51'),
+    },
 }
 
 # Supplementary cups not yet in SGR's spreadsheet
@@ -269,6 +272,9 @@ EVENT_DATES = {
         'Round 19': '2026-05-27',
         'Round 20': '2026-06-03',
         'Troll 4':  '2026-06-17',
+    },
+    'Season 4': {
+        'Round 1': '2026-09-16',
     },
 }
 

@@ -106,15 +106,26 @@ def parse_cotdtracker(path):
 
 
 def parse_livelog(path):
-    """Return (snaps, roster, map_names) where:
-      snaps      = list of (ts_str, plugin_round, count, [(pos, sid, time_float), ...])
-      roster     = {sid: name} from ROSTER lines (new schema only; empty for old logs)
-      map_names  = {plugin_round: map_name} from ROUND_STARTED lines (new schema only)
+    """Return (snaps, roster, map_names, round_starts) where:
+      snaps        = list of (ts_str, plugin_round, count, [(pos, sid, time_float), ...])
+      roster       = {sid: name} from ROSTER lines (new schema only; empty for old logs)
+      map_names    = {plugin_round: map_name} from ROUND_STARTED lines (new schema only)
+      round_starts = {plugin_round: ts_str} from ROUND_STARTED lines
+
+    Only the LAST session in the file is kept. LiveLeaderboardLogger appends to one
+    file across weeks, and its plugin round counter restarts at each SESSION_START —
+    so round 12 exists in every session. Without this reset the buckets merge months
+    of unrelated lobbies into each round, and a DNF override can pick up a time set
+    on a different day.
     """
     snaps = []
     roster = {}
     map_names = {}
+    round_starts = {}
     for ln in path.read_text(encoding='utf-8', errors='replace').splitlines():
+        if 'SESSION_START' in ln:
+            snaps, roster, map_names, round_starts = [], {}, {}, {}
+            continue
         m = LIVE_LINE_RE.match(ln)
         if m:
             ts, rn, cnt, data = m.group(1), int(m.group(2)), int(m.group(3)), m.group(4)
@@ -136,8 +147,9 @@ def parse_livelog(path):
         m = ROUND_STARTED_RE.match(ln)
         if m:
             map_names[int(m.group(2))] = m.group(4).strip()
+            round_starts[int(m.group(2))] = m.group(1)
             continue
-    return snaps, roster, map_names
+    return snaps, roster, map_names, round_starts
 
 
 def build_sid_name_map(cotd_rounds, snaps, roster=None):
@@ -243,9 +255,64 @@ def correlate_rounds_to_live_indices(cotd_rounds, snaps, cotd_all_lines):
     return None
 
 
+def cotd_block_times(cotd_rounds, cotd_lines):
+    """Wall-clock time of each COTD elimination decision, as 'HH:MM:SS'.
+
+    COTDTracker's own lines carry no timestamp, but other plugins log into the same
+    BepInEx file with one (e.g. '[Info   :Zeepkist GTR] 20:11:42 ...'), so the nearest
+    preceding timestamped line dates the block closely enough — rounds are ~83s apart
+    and the nearest stamp lands within a few seconds.
+
+    Returns a list aligned with cotd_rounds, None where no timestamp was found.
+    """
+    stamp = re.compile(r'\b(\d{2}:\d{2}:\d{2})\b')
+    out = []
+    for cr in cotd_rounds:
+        t = None
+        for j in range(cr['block_start_line'], -1, -1):
+            m = stamp.search(cotd_lines[j])
+            if m:
+                t = m.group(1)
+                break
+        out.append(t)
+    return out
+
+
+def correlate_by_time(cotd_rounds, cotd_lines, round_starts):
+    """Map each COTD round to the plugin round whose window contains its decision.
+
+    This is the reliable correlation when both logs are timestamped. It is what
+    separates a DISCOVERY round from an elimination round: petite opens with two
+    ~5-minute runs on the two maps so players can learn them, and those carry the
+    full roster, so matching on who is present cannot tell them apart from the
+    first elimination round. Their timing can.
+
+    Returns a list of plugin rounds (None where it can't be resolved), or None if
+    the inputs aren't timestamped.
+    """
+    if not round_starts:
+        return None
+    block_times = cotd_block_times(cotd_rounds, cotd_lines)
+    if not all(block_times):
+        return None
+    # round_starts values are ISO ('2026-09-16T20:10:33.535'); compare on clock time.
+    starts = sorted((ts.split('T')[-1][:8], rn) for rn, ts in round_starts.items())
+    mapping = []
+    for t in block_times:
+        # The decision for a round is logged while that round is still current,
+        # so take the latest round that had started by then.
+        prior = [rn for s, rn in starts if s <= t]
+        mapping.append(prior[-1] if prior else None)
+    return mapping if all(r is not None for r in mapping) else None
+
+
 def correlate_plugin_rounds(cotd_rounds, snaps, name_to_sid):
     """Map each COTD round index to a plugin_round in the live log, advancing monotonically.
-    Pick plugin_round whose union of snap-sids best matches the COTD block's sid set."""
+    Pick plugin_round whose union of snap-sids best matches the COTD block's sid set.
+
+    Fallback only — used when the logs aren't both timestamped. Prefer
+    correlate_by_time(): roster similarity cannot distinguish a discovery round
+    from the first elimination round, because both hold the whole lobby."""
     # Group snap indices by plugin round; also collect sid set per plugin round
     snaps_by_round = defaultdict(list)
     round_sids = defaultdict(set)
@@ -278,7 +345,7 @@ def correlate_plugin_rounds(cotd_rounds, snaps, name_to_sid):
     return mapping, snaps_by_round
 
 
-def reconstruct(cotd_rounds, snaps, sid_to_name, name_to_sid):
+def reconstruct(cotd_rounds, snaps, sid_to_name, name_to_sid, cotd_lines=None, round_starts=None):
     """Return list of {pos, name, time, round, note}. Apply live override for DNFs where valid time exists.
 
     DNF override: for each DNF in round N, look for a valid time in the CORRELATED plugin_round's
@@ -288,7 +355,16 @@ def reconstruct(cotd_rounds, snaps, sid_to_name, name_to_sid):
     for r in cotd_rounds:
         roster.update(r['block_players'].keys())
 
-    plugin_mapping, snaps_by_round = correlate_plugin_rounds(cotd_rounds, snaps, name_to_sid)
+    _, snaps_by_round = correlate_plugin_rounds(cotd_rounds, snaps, name_to_sid)
+    plugin_mapping = None
+    if cotd_lines is not None:
+        plugin_mapping = correlate_by_time(cotd_rounds, cotd_lines, round_starts or {})
+    if plugin_mapping:
+        print(f'  Round correlation: by timestamp (elim R1 -> plugin round {plugin_mapping[0]})')
+    else:
+        plugin_mapping, snaps_by_round = correlate_plugin_rounds(cotd_rounds, snaps, name_to_sid)
+        if snaps:  # silent for the COTD-only comparison pass, which has no live data
+            print('  Round correlation: by roster similarity (no usable timestamps)')
 
     remaining = set(roster)
     results = []
@@ -391,7 +467,7 @@ def main():
     cotd_rounds, cotd_lines = parse_cotdtracker(cotd_path)
     print(f'  COTDTracker: {len(cotd_rounds)} elim rounds')
 
-    snaps, roster, map_names = parse_livelog(live_path)
+    snaps, roster, map_names, round_starts = parse_livelog(live_path)
     print(f'  LiveLeaderboardLogger: {len(snaps)} snapshots, {len(roster)} roster entries, {len(map_names)} map names')
     if map_names:
         print(f'  Maps played:')
@@ -404,7 +480,8 @@ def main():
         safe = (c[0].encode('ascii', 'replace').decode('ascii'), c[1])
         print(f'    [conflict] {safe}')
 
-    results, overrides = reconstruct(cotd_rounds, snaps, sid_to_name, name_to_sid)
+    results, overrides = reconstruct(cotd_rounds, snaps, sid_to_name, name_to_sid,
+                                     cotd_lines=cotd_lines, round_starts=round_starts)
 
     out_path = base / f'petite_{cup}_reconstructed.json'
     out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding='utf-8')

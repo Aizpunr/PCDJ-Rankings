@@ -23,8 +23,11 @@ base = os.path.dirname(os.path.abspath(__file__))
 xlsx_path = os.path.join(base, 'Petite Cups 51-55.xlsx')
 json_path = os.path.join(base, 'cup logs', 'petite_51_reconstructed.json')
 
-EXCLUDE = set()  # <-- mapper(s) in the lobby who weren't competing
-MAPS = 'Maps: TODO'  # <-- row 3 map string
+# Neither mapper was in the lobby (the three non-racers present were DeiRex,
+# timesprout and ElectroSalamander), so nothing to exclude — all 36 raced.
+EXCLUDE = set()
+MAPS = ('Maps: PCDJ #50 - Pocket Spring by [CSC] variableferret'
+        ' + PCDJ #50 - Null Star by [Fenn]Lilly Fenn')
 
 with open(json_path, 'r', encoding='utf-8') as f:
     raw = json.load(f)
