@@ -1064,13 +1064,19 @@ function renderRankings() {
       deltaStr = `<span style="color:var(--green);font-size:10px;margin-left:4px">NEW</span>`;
     }
     // Milestone indicators: [rank, pts, wins, gold, silver, bronze]
+    // A player absent from the snapshot had 0 points, which means no win and no
+    // podium (either would have scored) — so treat missing as zeros rather than
+    // skipping. Otherwise someone whose first win IS their first scoring cup
+    // gets no badge at all. Still gated on the snapshot existing, so a
+    // suppressed rollover stays silent.
     let milestones = [];
-    if (prev && p.points > 0) {
-      const [, , oldW, oldG, oldS, oldB] = prev;
+    if (Object.keys(snap).length > 0 && p.points > 0) {
+      const [, , oldW, oldG, oldS, oldB] = prev || [0, 0, 0, 0, 0, 0];
       const totalPodOld = oldG + oldS + oldB;
       const totalPodNew = p.podiums.gold + p.podiums.silver + p.podiums.bronze;
+      // A win is already a podium, so never show both.
       if (p.wins > 0 && oldW === 0) milestones.push('🏆 1st Win!');
-      if (totalPodNew > 0 && totalPodOld === 0) milestones.push('🥇 1st Podium!');
+      else if (totalPodNew > 0 && totalPodOld === 0) milestones.push('🥇 1st Podium!');
     }
     const milestoneStr = milestones.length ? ` <span style="font-size:9px;color:var(--accent)">${milestones.join(' ')}</span>` : '';
     const zeroClass = p.points === 0 ? ' zero-pts' : '';
@@ -1561,12 +1567,13 @@ function renderSearch(query) {
       deltaStr = `<span style="color:var(--green);font-size:10px;margin-left:4px">NEW</span>`;
     }
     let milestones = [];
-    if (prev) {
-      const [, , oldW, oldG, oldS, oldB] = prev;
+    if (Object.keys(snap).length > 0 && p.points > 0) {
+      const [, , oldW, oldG, oldS, oldB] = prev || [0, 0, 0, 0, 0, 0];
       const totalPodOld = oldG + oldS + oldB;
       const totalPodNew = p.podiums.gold + p.podiums.silver + p.podiums.bronze;
+      // A win is already a podium, so never show both.
       if (p.wins > 0 && oldW === 0) milestones.push('🏆 1st Win!');
-      if (totalPodNew > 0 && totalPodOld === 0) milestones.push('🥇 1st Podium!');
+      else if (totalPodNew > 0 && totalPodOld === 0) milestones.push('🥇 1st Podium!');
     }
     const milestoneStr = milestones.length ? ` <span style="font-size:9px;color:var(--accent)">${milestones.join(' ')}</span>` : '';
     return `<div class="row" data-name="${esc(p.name)}" style="grid-template-columns:${RANK_COLS}">
