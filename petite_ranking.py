@@ -244,6 +244,7 @@ FULL_LOBBY_REPLACEMENTS = {
     },
     'Season 4': {
         'Round 1': ('Petite Cups 51-55.xlsx', 'Petite Cup 51'),
+        'Round 2': ('Petite Cups 51-55.xlsx', 'Petite Cup 52'),
     },
 }
 
@@ -275,6 +276,7 @@ EVENT_DATES = {
     },
     'Season 4': {
         'Round 1': '2026-09-16',
+        'Round 2': '2026-09-23',
     },
 }
 
@@ -369,6 +371,12 @@ def load_cotd_histories():
     """Load COTD player histories + cup dates for per-cup ELO lookups.
 
     Returns (histories, cup_dates) or (None, None) if COTD data is unavailable.
+
+    Dates come from cups.json, the COTD project's source of truth. alldata.json
+    also carries a 'cupDates' map, but only when build_altrank.py has run — a
+    failed COTD build leaves alldata.json half-written without it (as happened
+    2026-09-21), which silently dropped every petite cup back to the old offset
+    model. cups.json is read first for that reason; cupDates is the fallback.
     """
     try:
         with open(os.path.join(elo_dir, 'alldata.json'), encoding='utf-8') as f:
@@ -376,11 +384,26 @@ def load_cotd_histories():
         histories = {}
         for p in cotd['weighted']:
             histories[p['n']] = p['h']
-        cup_dates = {int(c): d for c, d in cotd.get('cupDates', {}).items()}
-        return histories, cup_dates
     except FileNotFoundError:
         print("  WARNING: alldata.json not found, cup strength unavailable")
         return None, None
+
+    cup_dates = {}
+    try:
+        with open(os.path.join(elo_dir, 'cups.json'), encoding='utf-8') as f:
+            for cup in json.load(f):
+                m = re.search(r'(\d+)', cup.get('id', ''))
+                if m and cup.get('date'):
+                    cup_dates[int(m.group(1))] = cup['date']
+    except FileNotFoundError:
+        pass
+    if not cup_dates:
+        cup_dates = {int(c): d for c, d in cotd.get('cupDates', {}).items()}
+    if not cup_dates:
+        print("  WARNING: no COTD cup dates (cups.json missing and alldata.json has no")
+        print("           cupDates -- rerun build_altrank.py). Cup strength falls back to")
+        print("           the cup-number offset, which is WRONG across any petite break.")
+    return histories, cup_dates
 
 def cotd_cup_for_date(date, cup_dates):
     """Latest COTD cup held on or before `date` (ISO yyyy-mm-dd).

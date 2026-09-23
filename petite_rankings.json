@@ -9708,7 +9708,7 @@
         "rank": 166
       },
       {
-        "name": "dtmittens",
+        "name": "cipi",
         "points": 0,
         "points_all": 0,
         "rounds": 1,
@@ -15616,7 +15616,7 @@
         "rank": 154
       },
       {
-        "name": "dtmittens",
+        "name": "cipi",
         "points": 0,
         "points_all": 0,
         "rounds": 1,
@@ -15757,7 +15757,7 @@
       "Round 13": 92.0,
       "Round 14": 85.9,
       "Round 15": 93.5,
-      "Round 16": 88.5,
+      "Round 16": 88.6,
       "Round 17": 90.8,
       "Round 18": 91.9,
       "Round 19": 86.0,
@@ -15785,14 +15785,76 @@
   },
   "Season 4": {
     "type": "season",
-    "total_events": 1,
-    "rounds_played": 1,
-    "rounds_regular": 1,
+    "total_events": 2,
+    "rounds_played": 2,
+    "rounds_regular": 2,
     "rounds_special": 0,
-    "best_of": 1,
+    "best_of": 2,
     "drops_active": false,
     "points_scale": 20,
     "rankings": [
+      {
+        "name": "JakeAdjacent",
+        "points": 340,
+        "points_all": 340,
+        "rounds": 2,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 1,
+          "bronze": 1
+        },
+        "top5": 2,
+        "avg_pts": 170.0,
+        "avg_pos": 2.5,
+        "best_single": 180,
+        "best_pos": 2,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 1",
+            "p": 160,
+            "pos": 3
+          },
+          {
+            "r": "Round 2",
+            "p": 180,
+            "pos": 2
+          }
+        ],
+        "rank": 1
+      },
+      {
+        "name": "RoundNzt",
+        "points": 280,
+        "points_all": 280,
+        "rounds": 2,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1
+        },
+        "top5": 2,
+        "avg_pts": 140.0,
+        "avg_pos": 4.0,
+        "best_single": 160,
+        "best_pos": 3,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 1",
+            "p": 120,
+            "pos": 5
+          },
+          {
+            "r": "Round 2",
+            "p": 160,
+            "pos": 3
+          }
+        ],
+        "rank": 2
+      },
       {
         "name": "Kernkob",
         "points": 200,
@@ -15817,7 +15879,38 @@
             "pos": 1
           }
         ],
-        "rank": 1
+        "rank": 3
+      },
+      {
+        "name": "Warsnac",
+        "points": 200,
+        "points_all": 200,
+        "rounds": 2,
+        "wins": 1,
+        "podiums": {
+          "gold": 1,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 1,
+        "avg_pts": 100.0,
+        "avg_pos": 7.0,
+        "best_single": 200,
+        "best_pos": 1,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 1",
+            "p": 0,
+            "pos": 13
+          },
+          {
+            "r": "Round 2",
+            "p": 200,
+            "pos": 1
+          }
+        ],
+        "rank": 4
       },
       {
         "name": "justMaki",
@@ -15843,33 +15936,7 @@
             "pos": 2
           }
         ],
-        "rank": 2
-      },
-      {
-        "name": "JakeAdjacent",
-        "points": 160,
-        "points_all": 160,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 1
-        },
-        "top5": 1,
-        "avg_pts": 160.0,
-        "avg_pos": 3.0,
-        "best_single": 160,
-        "best_pos": 3,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 1",
-            "p": 160,
-            "pos": 3
-          }
-        ],
-        "rank": 3
+        "rank": 5
       },
       {
         "name": "Eclipse135",
@@ -15895,12 +15962,12 @@
             "pos": 4
           }
         ],
-        "rank": 4
+        "rank": 6
       },
       {
-        "name": "RoundNzt",
-        "points": 120,
-        "points_all": 120,
+        "name": "IronDragon111000",
+        "points": 140,
+        "points_all": 140,
         "rounds": 1,
         "wins": 0,
         "podiums": {
@@ -15909,25 +15976,25 @@
           "bronze": 0
         },
         "top5": 1,
-        "avg_pts": 120.0,
-        "avg_pos": 5.0,
-        "best_single": 120,
-        "best_pos": 5,
+        "avg_pts": 140.0,
+        "avg_pos": 4.0,
+        "best_single": 140,
+        "best_pos": 4,
         "dropped": 0,
         "history": [
           {
-            "r": "Round 1",
-            "p": 120,
-            "pos": 5
+            "r": "Round 2",
+            "p": 140,
+            "pos": 4
           }
         ],
-        "rank": 5
+        "rank": 7
       },
       {
         "name": "ZOMAN",
-        "points": 100,
-        "points_all": 100,
-        "rounds": 1,
+        "points": 140,
+        "points_all": 140,
+        "rounds": 2,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -15935,8 +16002,8 @@
           "bronze": 0
         },
         "top5": 0,
-        "avg_pts": 100.0,
-        "avg_pos": 6.0,
+        "avg_pts": 70.0,
+        "avg_pos": 7.5,
         "best_single": 100,
         "best_pos": 6,
         "dropped": 0,
@@ -15945,15 +16012,51 @@
             "r": "Round 1",
             "p": 100,
             "pos": 6
+          },
+          {
+            "r": "Round 2",
+            "p": 40,
+            "pos": 9
           }
         ],
-        "rank": 6
+        "rank": 8
       },
       {
-        "name": "M\u03bc",
-        "points": 80,
-        "points_all": 80,
-        "rounds": 1,
+        "name": "gilgool",
+        "points": 120,
+        "points_all": 120,
+        "rounds": 2,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 1,
+        "avg_pts": 60.0,
+        "avg_pos": 13.0,
+        "best_single": 120,
+        "best_pos": 5,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 1",
+            "p": 0,
+            "pos": 21
+          },
+          {
+            "r": "Round 2",
+            "p": 120,
+            "pos": 5
+          }
+        ],
+        "rank": 9
+      },
+      {
+        "name": "Minkus",
+        "points": 100,
+        "points_all": 100,
+        "rounds": 2,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -15961,8 +16064,39 @@
           "bronze": 0
         },
         "top5": 0,
-        "avg_pts": 80.0,
-        "avg_pos": 7.0,
+        "avg_pts": 50.0,
+        "avg_pos": 10.0,
+        "best_single": 100,
+        "best_pos": 6,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 1",
+            "p": 0,
+            "pos": 14
+          },
+          {
+            "r": "Round 2",
+            "p": 100,
+            "pos": 6
+          }
+        ],
+        "rank": 10
+      },
+      {
+        "name": "M\u03bc",
+        "points": 80,
+        "points_all": 80,
+        "rounds": 2,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 40.0,
+        "avg_pos": 11.0,
         "best_single": 80,
         "best_pos": 7,
         "dropped": 0,
@@ -15971,15 +16105,20 @@
             "r": "Round 1",
             "p": 80,
             "pos": 7
+          },
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 15
           }
         ],
-        "rank": 7
+        "rank": 11
       },
       {
-        "name": "PlusMicron",
-        "points": 60,
-        "points_all": 60,
-        "rounds": 1,
+        "name": "Lexer",
+        "points": 80,
+        "points_all": 80,
+        "rounds": 2,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -15987,8 +16126,70 @@
           "bronze": 0
         },
         "top5": 0,
-        "avg_pts": 60.0,
-        "avg_pos": 8.0,
+        "avg_pts": 40.0,
+        "avg_pos": 9.0,
+        "best_single": 60,
+        "best_pos": 8,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 1",
+            "p": 20,
+            "pos": 10
+          },
+          {
+            "r": "Round 2",
+            "p": 60,
+            "pos": 8
+          }
+        ],
+        "rank": 12
+      },
+      {
+        "name": "Gimpel",
+        "points": 80,
+        "points_all": 80,
+        "rounds": 2,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 40.0,
+        "avg_pos": 15.5,
+        "best_single": 80,
+        "best_pos": 7,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 1",
+            "p": 0,
+            "pos": 24
+          },
+          {
+            "r": "Round 2",
+            "p": 80,
+            "pos": 7
+          }
+        ],
+        "rank": 13
+      },
+      {
+        "name": "PlusMicron",
+        "points": 60,
+        "points_all": 60,
+        "rounds": 2,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 30.0,
+        "avg_pos": 15.5,
         "best_single": 60,
         "best_pos": 8,
         "dropped": 0,
@@ -15997,9 +16198,14 @@
             "r": "Round 1",
             "p": 60,
             "pos": 8
+          },
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 23
           }
         ],
-        "rank": 8
+        "rank": 14
       },
       {
         "name": "brrryy",
@@ -16025,33 +16231,7 @@
             "pos": 9
           }
         ],
-        "rank": 9
-      },
-      {
-        "name": "Lexer",
-        "points": 20,
-        "points_all": 20,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 20.0,
-        "avg_pos": 10.0,
-        "best_single": 20,
-        "best_pos": 10,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 1",
-            "p": 20,
-            "pos": 10
-          }
-        ],
-        "rank": 10
+        "rank": 15
       },
       {
         "name": "MALIYO",
@@ -16077,13 +16257,13 @@
             "pos": 10
           }
         ],
-        "rank": 11
+        "rank": 16
       },
       {
         "name": "Sterben",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 1,
+        "points": 20,
+        "points_all": 20,
+        "rounds": 2,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -16091,71 +16271,24 @@
           "bronze": 0
         },
         "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 12.0,
-        "best_single": 0,
-        "best_pos": 12,
+        "avg_pts": 10.0,
+        "avg_pos": 11.0,
+        "best_single": 20,
+        "best_pos": 10,
         "dropped": 0,
         "history": [
           {
             "r": "Round 1",
             "p": 0,
             "pos": 12
-          }
-        ],
-        "rank": 12
-      },
-      {
-        "name": "Warsnac",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 13.0,
-        "best_single": 0,
-        "best_pos": 13,
-        "dropped": 0,
-        "history": [
+          },
           {
-            "r": "Round 1",
-            "p": 0,
-            "pos": 13
+            "r": "Round 2",
+            "p": 20,
+            "pos": 10
           }
         ],
-        "rank": 13
-      },
-      {
-        "name": "Minkus",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 14.0,
-        "best_single": 0,
-        "best_pos": 14,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 1",
-            "p": 0,
-            "pos": 14
-          }
-        ],
-        "rank": 14
+        "rank": 17
       },
       {
         "name": "Six",
@@ -16181,13 +16314,13 @@
             "pos": 15
           }
         ],
-        "rank": 15
+        "rank": 18
       },
       {
         "name": "Victor",
         "points": 0,
         "points_all": 0,
-        "rounds": 1,
+        "rounds": 2,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -16196,7 +16329,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 16.0,
+        "avg_pos": 20.0,
         "best_single": 0,
         "best_pos": 16,
         "dropped": 0,
@@ -16205,15 +16338,20 @@
             "r": "Round 1",
             "p": 0,
             "pos": 16
+          },
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 24
           }
         ],
-        "rank": 16
+        "rank": 19
       },
       {
         "name": "aizpun",
         "points": 0,
         "points_all": 0,
-        "rounds": 1,
+        "rounds": 2,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -16222,18 +16360,23 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 17.0,
+        "avg_pos": 15.5,
         "best_single": 0,
-        "best_pos": 17,
+        "best_pos": 14,
         "dropped": 0,
         "history": [
           {
             "r": "Round 1",
             "p": 0,
             "pos": 17
+          },
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 14
           }
         ],
-        "rank": 17
+        "rank": 20
       },
       {
         "name": "[EEN] Hang Chang-Pang",
@@ -16259,7 +16402,7 @@
             "pos": 18
           }
         ],
-        "rank": 18
+        "rank": 21
       },
       {
         "name": "Naomi",
@@ -16285,7 +16428,7 @@
             "pos": 19
           }
         ],
-        "rank": 19
+        "rank": 22
       },
       {
         "name": "Mortishade",
@@ -16311,39 +16454,13 @@
             "pos": 20
           }
         ],
-        "rank": 20
-      },
-      {
-        "name": "gilgool",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 21.0,
-        "best_single": 0,
-        "best_pos": 21,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 1",
-            "p": 0,
-            "pos": 21
-          }
-        ],
-        "rank": 21
+        "rank": 23
       },
       {
         "name": "Noxitu",
         "points": 0,
         "points_all": 0,
-        "rounds": 1,
+        "rounds": 2,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -16352,7 +16469,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 22.0,
+        "avg_pos": 25.0,
         "best_single": 0,
         "best_pos": 22,
         "dropped": 0,
@@ -16361,9 +16478,14 @@
             "r": "Round 1",
             "p": 0,
             "pos": 22
+          },
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 28
           }
         ],
-        "rank": 22
+        "rank": 24
       },
       {
         "name": "Cypher Ocelot",
@@ -16389,33 +16511,7 @@
             "pos": 23
           }
         ],
-        "rank": 23
-      },
-      {
-        "name": "Gimpel",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 24.0,
-        "best_single": 0,
-        "best_pos": 24,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 1",
-            "p": 0,
-            "pos": 24
-          }
-        ],
-        "rank": 24
+        "rank": 25
       },
       {
         "name": "CodeingerCat",
@@ -16441,7 +16537,7 @@
             "pos": 25
           }
         ],
-        "rank": 25
+        "rank": 26
       },
       {
         "name": "Hibbie",
@@ -16467,13 +16563,13 @@
             "pos": 25
           }
         ],
-        "rank": 26
+        "rank": 27
       },
       {
         "name": "LKat",
         "points": 0,
         "points_all": 0,
-        "rounds": 1,
+        "rounds": 2,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -16482,7 +16578,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 25.0,
+        "avg_pos": 26.5,
         "best_single": 0,
         "best_pos": 25,
         "dropped": 0,
@@ -16491,15 +16587,20 @@
             "r": "Round 1",
             "p": 0,
             "pos": 25
+          },
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 28
           }
         ],
-        "rank": 27
+        "rank": 28
       },
       {
         "name": "Matic_D",
         "points": 0,
         "points_all": 0,
-        "rounds": 1,
+        "rounds": 2,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -16508,18 +16609,23 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 25.0,
+        "avg_pos": 21.0,
         "best_single": 0,
-        "best_pos": 25,
+        "best_pos": 17,
         "dropped": 0,
         "history": [
           {
             "r": "Round 1",
             "p": 0,
             "pos": 25
+          },
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 17
           }
         ],
-        "rank": 28
+        "rank": 29
       },
       {
         "name": "Squarefish",
@@ -16545,13 +16651,13 @@
             "pos": 25
           }
         ],
-        "rank": 29
+        "rank": 30
       },
       {
         "name": "Shinikage221",
         "points": 0,
         "points_all": 0,
-        "rounds": 1,
+        "rounds": 2,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -16569,9 +16675,14 @@
             "r": "Round 1",
             "p": 0,
             "pos": 25
+          },
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 25
           }
         ],
-        "rank": 30
+        "rank": 31
       },
       {
         "name": "kentback",
@@ -16597,13 +16708,13 @@
             "pos": 25
           }
         ],
-        "rank": 31
+        "rank": 32
       },
       {
         "name": "Quickracer10",
         "points": 0,
         "points_all": 0,
-        "rounds": 1,
+        "rounds": 2,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -16612,18 +16723,23 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 25.0,
+        "avg_pos": 21.5,
         "best_single": 0,
-        "best_pos": 25,
+        "best_pos": 18,
         "dropped": 0,
         "history": [
           {
             "r": "Round 1",
             "p": 0,
             "pos": 25
+          },
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 18
           }
         ],
-        "rank": 32
+        "rank": 33
       },
       {
         "name": "Orb Bee Bob",
@@ -16649,13 +16765,13 @@
             "pos": 33
           }
         ],
-        "rank": 33
+        "rank": 34
       },
       {
         "name": "[MMM]Kreeeeee",
         "points": 0,
         "points_all": 0,
-        "rounds": 1,
+        "rounds": 2,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -16664,18 +16780,23 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 33.0,
+        "avg_pos": 27.0,
         "best_single": 0,
-        "best_pos": 33,
+        "best_pos": 21,
         "dropped": 0,
         "history": [
           {
             "r": "Round 1",
             "p": 0,
             "pos": 33
+          },
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 21
           }
         ],
-        "rank": 34
+        "rank": 35
       },
       {
         "name": "liz1rd",
@@ -16701,7 +16822,7 @@
             "pos": 33
           }
         ],
-        "rank": 35
+        "rank": 36
       },
       {
         "name": "wokonbike",
@@ -16727,10 +16848,384 @@
             "pos": 33
           }
         ],
-        "rank": 36
+        "rank": 37
+      },
+      {
+        "name": "icRS",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 11.0,
+        "best_single": 0,
+        "best_pos": 11,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 11
+          }
+        ],
+        "rank": 38
+      },
+      {
+        "name": "M4rv",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 12.0,
+        "best_single": 0,
+        "best_pos": 12,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 12
+          }
+        ],
+        "rank": 39
+      },
+      {
+        "name": "M4DSCOTSM4N",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 13.0,
+        "best_single": 0,
+        "best_pos": 13,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 13
+          }
+        ],
+        "rank": 40
+      },
+      {
+        "name": "K410K3N",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 16.0,
+        "best_single": 0,
+        "best_pos": 16,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 16
+          }
+        ],
+        "rank": 41
+      },
+      {
+        "name": "DeiRex",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 19.0,
+        "best_single": 0,
+        "best_pos": 19,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 19
+          }
+        ],
+        "rank": 42
+      },
+      {
+        "name": "Zeus",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 20.0,
+        "best_single": 0,
+        "best_pos": 20,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 20
+          }
+        ],
+        "rank": 43
+      },
+      {
+        "name": "timesprout",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 22.0,
+        "best_single": 0,
+        "best_pos": 22,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 22
+          }
+        ],
+        "rank": 44
+      },
+      {
+        "name": "Robgamer",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 26.0,
+        "best_single": 0,
+        "best_pos": 26,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 26
+          }
+        ],
+        "rank": 45
+      },
+      {
+        "name": "Akane",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 27.0,
+        "best_single": 0,
+        "best_pos": 27,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 27
+          }
+        ],
+        "rank": 46
+      },
+      {
+        "name": "Waaksaam",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 28.0,
+        "best_single": 0,
+        "best_pos": 28,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 28
+          }
+        ],
+        "rank": 47
+      },
+      {
+        "name": "variableferret",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 28.0,
+        "best_single": 0,
+        "best_pos": 28,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 28
+          }
+        ],
+        "rank": 48
+      },
+      {
+        "name": "[RABI]Yksdjcj",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 28.0,
+        "best_single": 0,
+        "best_pos": 28,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 28
+          }
+        ],
+        "rank": 49
       }
     ],
     "championship": [
+      {
+        "name": "JakeAdjacent",
+        "points": 17,
+        "points_all": 17,
+        "rounds": 2,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 1,
+          "bronze": 1
+        },
+        "top5": 2,
+        "avg_pts": 8.5,
+        "avg_pos": 2.5,
+        "best_single": 9,
+        "best_pos": 2,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 1",
+            "p": 8,
+            "pos": 3
+          },
+          {
+            "r": "Round 2",
+            "p": 9,
+            "pos": 2
+          }
+        ],
+        "rank": 1
+      },
+      {
+        "name": "RoundNzt",
+        "points": 14,
+        "points_all": 14,
+        "rounds": 2,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1
+        },
+        "top5": 2,
+        "avg_pts": 7.0,
+        "avg_pos": 4.0,
+        "best_single": 8,
+        "best_pos": 3,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 1",
+            "p": 6,
+            "pos": 5
+          },
+          {
+            "r": "Round 2",
+            "p": 8,
+            "pos": 3
+          }
+        ],
+        "rank": 2
+      },
       {
         "name": "Kernkob",
         "points": 10,
@@ -16755,7 +17250,38 @@
             "pos": 1
           }
         ],
-        "rank": 1
+        "rank": 3
+      },
+      {
+        "name": "Warsnac",
+        "points": 10,
+        "points_all": 10,
+        "rounds": 2,
+        "wins": 1,
+        "podiums": {
+          "gold": 1,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 1,
+        "avg_pts": 5.0,
+        "avg_pos": 7.0,
+        "best_single": 10,
+        "best_pos": 1,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 1",
+            "p": 0,
+            "pos": 13
+          },
+          {
+            "r": "Round 2",
+            "p": 10,
+            "pos": 1
+          }
+        ],
+        "rank": 4
       },
       {
         "name": "justMaki",
@@ -16781,33 +17307,7 @@
             "pos": 2
           }
         ],
-        "rank": 2
-      },
-      {
-        "name": "JakeAdjacent",
-        "points": 8,
-        "points_all": 8,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 1
-        },
-        "top5": 1,
-        "avg_pts": 8.0,
-        "avg_pos": 3.0,
-        "best_single": 8,
-        "best_pos": 3,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 1",
-            "p": 8,
-            "pos": 3
-          }
-        ],
-        "rank": 3
+        "rank": 5
       },
       {
         "name": "Eclipse135",
@@ -16833,12 +17333,12 @@
             "pos": 4
           }
         ],
-        "rank": 4
+        "rank": 6
       },
       {
-        "name": "RoundNzt",
-        "points": 6,
-        "points_all": 6,
+        "name": "IronDragon111000",
+        "points": 7,
+        "points_all": 7,
         "rounds": 1,
         "wins": 0,
         "podiums": {
@@ -16847,25 +17347,25 @@
           "bronze": 0
         },
         "top5": 1,
-        "avg_pts": 6.0,
-        "avg_pos": 5.0,
-        "best_single": 6,
-        "best_pos": 5,
+        "avg_pts": 7.0,
+        "avg_pos": 4.0,
+        "best_single": 7,
+        "best_pos": 4,
         "dropped": 0,
         "history": [
           {
-            "r": "Round 1",
-            "p": 6,
-            "pos": 5
+            "r": "Round 2",
+            "p": 7,
+            "pos": 4
           }
         ],
-        "rank": 5
+        "rank": 7
       },
       {
         "name": "ZOMAN",
-        "points": 5,
-        "points_all": 5,
-        "rounds": 1,
+        "points": 7,
+        "points_all": 7,
+        "rounds": 2,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -16873,8 +17373,8 @@
           "bronze": 0
         },
         "top5": 0,
-        "avg_pts": 5.0,
-        "avg_pos": 6.0,
+        "avg_pts": 3.5,
+        "avg_pos": 7.5,
         "best_single": 5,
         "best_pos": 6,
         "dropped": 0,
@@ -16883,15 +17383,51 @@
             "r": "Round 1",
             "p": 5,
             "pos": 6
+          },
+          {
+            "r": "Round 2",
+            "p": 2,
+            "pos": 9
           }
         ],
-        "rank": 6
+        "rank": 8
       },
       {
-        "name": "M\u03bc",
-        "points": 4,
-        "points_all": 4,
-        "rounds": 1,
+        "name": "gilgool",
+        "points": 6,
+        "points_all": 6,
+        "rounds": 2,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 1,
+        "avg_pts": 3.0,
+        "avg_pos": 13.0,
+        "best_single": 6,
+        "best_pos": 5,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 1",
+            "p": 0,
+            "pos": 21
+          },
+          {
+            "r": "Round 2",
+            "p": 6,
+            "pos": 5
+          }
+        ],
+        "rank": 9
+      },
+      {
+        "name": "Minkus",
+        "points": 5,
+        "points_all": 5,
+        "rounds": 2,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -16899,8 +17435,39 @@
           "bronze": 0
         },
         "top5": 0,
-        "avg_pts": 4.0,
-        "avg_pos": 7.0,
+        "avg_pts": 2.5,
+        "avg_pos": 10.0,
+        "best_single": 5,
+        "best_pos": 6,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 1",
+            "p": 0,
+            "pos": 14
+          },
+          {
+            "r": "Round 2",
+            "p": 5,
+            "pos": 6
+          }
+        ],
+        "rank": 10
+      },
+      {
+        "name": "M\u03bc",
+        "points": 4,
+        "points_all": 4,
+        "rounds": 2,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 2.0,
+        "avg_pos": 11.0,
         "best_single": 4,
         "best_pos": 7,
         "dropped": 0,
@@ -16909,15 +17476,20 @@
             "r": "Round 1",
             "p": 4,
             "pos": 7
+          },
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 15
           }
         ],
-        "rank": 7
+        "rank": 11
       },
       {
-        "name": "PlusMicron",
-        "points": 3,
-        "points_all": 3,
-        "rounds": 1,
+        "name": "Lexer",
+        "points": 4,
+        "points_all": 4,
+        "rounds": 2,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -16925,8 +17497,70 @@
           "bronze": 0
         },
         "top5": 0,
-        "avg_pts": 3.0,
-        "avg_pos": 8.0,
+        "avg_pts": 2.0,
+        "avg_pos": 9.0,
+        "best_single": 3,
+        "best_pos": 8,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 1",
+            "p": 1,
+            "pos": 10
+          },
+          {
+            "r": "Round 2",
+            "p": 3,
+            "pos": 8
+          }
+        ],
+        "rank": 12
+      },
+      {
+        "name": "Gimpel",
+        "points": 4,
+        "points_all": 4,
+        "rounds": 2,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 2.0,
+        "avg_pos": 15.5,
+        "best_single": 4,
+        "best_pos": 7,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 1",
+            "p": 0,
+            "pos": 24
+          },
+          {
+            "r": "Round 2",
+            "p": 4,
+            "pos": 7
+          }
+        ],
+        "rank": 13
+      },
+      {
+        "name": "PlusMicron",
+        "points": 3,
+        "points_all": 3,
+        "rounds": 2,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 1.5,
+        "avg_pos": 15.5,
         "best_single": 3,
         "best_pos": 8,
         "dropped": 0,
@@ -16935,9 +17569,14 @@
             "r": "Round 1",
             "p": 3,
             "pos": 8
+          },
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 23
           }
         ],
-        "rank": 8
+        "rank": 14
       },
       {
         "name": "brrryy",
@@ -16963,33 +17602,7 @@
             "pos": 9
           }
         ],
-        "rank": 9
-      },
-      {
-        "name": "Lexer",
-        "points": 1,
-        "points_all": 1,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 1.0,
-        "avg_pos": 10.0,
-        "best_single": 1,
-        "best_pos": 10,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 1",
-            "p": 1,
-            "pos": 10
-          }
-        ],
-        "rank": 10
+        "rank": 15
       },
       {
         "name": "MALIYO",
@@ -17015,13 +17628,13 @@
             "pos": 10
           }
         ],
-        "rank": 11
+        "rank": 16
       },
       {
         "name": "Sterben",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 1,
+        "points": 1,
+        "points_all": 1,
+        "rounds": 2,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -17029,71 +17642,24 @@
           "bronze": 0
         },
         "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 12.0,
-        "best_single": 0,
-        "best_pos": 12,
+        "avg_pts": 0.5,
+        "avg_pos": 11.0,
+        "best_single": 1,
+        "best_pos": 10,
         "dropped": 0,
         "history": [
           {
             "r": "Round 1",
             "p": 0,
             "pos": 12
-          }
-        ],
-        "rank": 12
-      },
-      {
-        "name": "Warsnac",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 13.0,
-        "best_single": 0,
-        "best_pos": 13,
-        "dropped": 0,
-        "history": [
+          },
           {
-            "r": "Round 1",
-            "p": 0,
-            "pos": 13
+            "r": "Round 2",
+            "p": 1,
+            "pos": 10
           }
         ],
-        "rank": 13
-      },
-      {
-        "name": "Minkus",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 14.0,
-        "best_single": 0,
-        "best_pos": 14,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 1",
-            "p": 0,
-            "pos": 14
-          }
-        ],
-        "rank": 14
+        "rank": 17
       },
       {
         "name": "Six",
@@ -17119,13 +17685,13 @@
             "pos": 15
           }
         ],
-        "rank": 15
+        "rank": 18
       },
       {
         "name": "Victor",
         "points": 0,
         "points_all": 0,
-        "rounds": 1,
+        "rounds": 2,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -17134,7 +17700,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 16.0,
+        "avg_pos": 20.0,
         "best_single": 0,
         "best_pos": 16,
         "dropped": 0,
@@ -17143,15 +17709,20 @@
             "r": "Round 1",
             "p": 0,
             "pos": 16
+          },
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 24
           }
         ],
-        "rank": 16
+        "rank": 19
       },
       {
         "name": "aizpun",
         "points": 0,
         "points_all": 0,
-        "rounds": 1,
+        "rounds": 2,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -17160,18 +17731,23 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 17.0,
+        "avg_pos": 15.5,
         "best_single": 0,
-        "best_pos": 17,
+        "best_pos": 14,
         "dropped": 0,
         "history": [
           {
             "r": "Round 1",
             "p": 0,
             "pos": 17
+          },
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 14
           }
         ],
-        "rank": 17
+        "rank": 20
       },
       {
         "name": "[EEN] Hang Chang-Pang",
@@ -17197,7 +17773,7 @@
             "pos": 18
           }
         ],
-        "rank": 18
+        "rank": 21
       },
       {
         "name": "Naomi",
@@ -17223,7 +17799,7 @@
             "pos": 19
           }
         ],
-        "rank": 19
+        "rank": 22
       },
       {
         "name": "Mortishade",
@@ -17249,39 +17825,13 @@
             "pos": 20
           }
         ],
-        "rank": 20
-      },
-      {
-        "name": "gilgool",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 21.0,
-        "best_single": 0,
-        "best_pos": 21,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 1",
-            "p": 0,
-            "pos": 21
-          }
-        ],
-        "rank": 21
+        "rank": 23
       },
       {
         "name": "Noxitu",
         "points": 0,
         "points_all": 0,
-        "rounds": 1,
+        "rounds": 2,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -17290,7 +17840,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 22.0,
+        "avg_pos": 25.0,
         "best_single": 0,
         "best_pos": 22,
         "dropped": 0,
@@ -17299,9 +17849,14 @@
             "r": "Round 1",
             "p": 0,
             "pos": 22
+          },
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 28
           }
         ],
-        "rank": 22
+        "rank": 24
       },
       {
         "name": "Cypher Ocelot",
@@ -17327,33 +17882,7 @@
             "pos": 23
           }
         ],
-        "rank": 23
-      },
-      {
-        "name": "Gimpel",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 1,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 24.0,
-        "best_single": 0,
-        "best_pos": 24,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 1",
-            "p": 0,
-            "pos": 24
-          }
-        ],
-        "rank": 24
+        "rank": 25
       },
       {
         "name": "CodeingerCat",
@@ -17379,7 +17908,7 @@
             "pos": 25
           }
         ],
-        "rank": 25
+        "rank": 26
       },
       {
         "name": "Hibbie",
@@ -17405,13 +17934,13 @@
             "pos": 25
           }
         ],
-        "rank": 26
+        "rank": 27
       },
       {
         "name": "LKat",
         "points": 0,
         "points_all": 0,
-        "rounds": 1,
+        "rounds": 2,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -17420,7 +17949,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 25.0,
+        "avg_pos": 26.5,
         "best_single": 0,
         "best_pos": 25,
         "dropped": 0,
@@ -17429,15 +17958,20 @@
             "r": "Round 1",
             "p": 0,
             "pos": 25
+          },
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 28
           }
         ],
-        "rank": 27
+        "rank": 28
       },
       {
         "name": "Matic_D",
         "points": 0,
         "points_all": 0,
-        "rounds": 1,
+        "rounds": 2,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -17446,18 +17980,23 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 25.0,
+        "avg_pos": 21.0,
         "best_single": 0,
-        "best_pos": 25,
+        "best_pos": 17,
         "dropped": 0,
         "history": [
           {
             "r": "Round 1",
             "p": 0,
             "pos": 25
+          },
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 17
           }
         ],
-        "rank": 28
+        "rank": 29
       },
       {
         "name": "Squarefish",
@@ -17483,13 +18022,13 @@
             "pos": 25
           }
         ],
-        "rank": 29
+        "rank": 30
       },
       {
         "name": "Shinikage221",
         "points": 0,
         "points_all": 0,
-        "rounds": 1,
+        "rounds": 2,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -17507,9 +18046,14 @@
             "r": "Round 1",
             "p": 0,
             "pos": 25
+          },
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 25
           }
         ],
-        "rank": 30
+        "rank": 31
       },
       {
         "name": "kentback",
@@ -17535,13 +18079,13 @@
             "pos": 25
           }
         ],
-        "rank": 31
+        "rank": 32
       },
       {
         "name": "Quickracer10",
         "points": 0,
         "points_all": 0,
-        "rounds": 1,
+        "rounds": 2,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -17550,18 +18094,23 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 25.0,
+        "avg_pos": 21.5,
         "best_single": 0,
-        "best_pos": 25,
+        "best_pos": 18,
         "dropped": 0,
         "history": [
           {
             "r": "Round 1",
             "p": 0,
             "pos": 25
+          },
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 18
           }
         ],
-        "rank": 32
+        "rank": 33
       },
       {
         "name": "Orb Bee Bob",
@@ -17587,13 +18136,13 @@
             "pos": 33
           }
         ],
-        "rank": 33
+        "rank": 34
       },
       {
         "name": "[MMM]Kreeeeee",
         "points": 0,
         "points_all": 0,
-        "rounds": 1,
+        "rounds": 2,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -17602,18 +18151,23 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 33.0,
+        "avg_pos": 27.0,
         "best_single": 0,
-        "best_pos": 33,
+        "best_pos": 21,
         "dropped": 0,
         "history": [
           {
             "r": "Round 1",
             "p": 0,
             "pos": 33
+          },
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 21
           }
         ],
-        "rank": 34
+        "rank": 35
       },
       {
         "name": "liz1rd",
@@ -17639,7 +18193,7 @@
             "pos": 33
           }
         ],
-        "rank": 35
+        "rank": 36
       },
       {
         "name": "wokonbike",
@@ -17665,14 +18219,328 @@
             "pos": 33
           }
         ],
-        "rank": 36
+        "rank": 37
+      },
+      {
+        "name": "icRS",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 11.0,
+        "best_single": 0,
+        "best_pos": 11,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 11
+          }
+        ],
+        "rank": 38
+      },
+      {
+        "name": "M4rv",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 12.0,
+        "best_single": 0,
+        "best_pos": 12,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 12
+          }
+        ],
+        "rank": 39
+      },
+      {
+        "name": "M4DSCOTSM4N",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 13.0,
+        "best_single": 0,
+        "best_pos": 13,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 13
+          }
+        ],
+        "rank": 40
+      },
+      {
+        "name": "K410K3N",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 16.0,
+        "best_single": 0,
+        "best_pos": 16,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 16
+          }
+        ],
+        "rank": 41
+      },
+      {
+        "name": "DeiRex",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 19.0,
+        "best_single": 0,
+        "best_pos": 19,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 19
+          }
+        ],
+        "rank": 42
+      },
+      {
+        "name": "Zeus",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 20.0,
+        "best_single": 0,
+        "best_pos": 20,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 20
+          }
+        ],
+        "rank": 43
+      },
+      {
+        "name": "timesprout",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 22.0,
+        "best_single": 0,
+        "best_pos": 22,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 22
+          }
+        ],
+        "rank": 44
+      },
+      {
+        "name": "Robgamer",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 26.0,
+        "best_single": 0,
+        "best_pos": 26,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 26
+          }
+        ],
+        "rank": 45
+      },
+      {
+        "name": "Akane",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 27.0,
+        "best_single": 0,
+        "best_pos": 27,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 27
+          }
+        ],
+        "rank": 46
+      },
+      {
+        "name": "Waaksaam",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 28.0,
+        "best_single": 0,
+        "best_pos": 28,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 28
+          }
+        ],
+        "rank": 47
+      },
+      {
+        "name": "variableferret",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 28.0,
+        "best_single": 0,
+        "best_pos": 28,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 28
+          }
+        ],
+        "rank": 48
+      },
+      {
+        "name": "[RABI]Yksdjcj",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 28.0,
+        "best_single": 0,
+        "best_pos": 28,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 2",
+            "p": 0,
+            "pos": 28
+          }
+        ],
+        "rank": 49
       }
     ],
     "round_strengths": {
-      "Round 1": 96.0
+      "Round 1": 96.0,
+      "Round 2": 89.8
     },
     "round_dates": {
-      "Round 1": "2026-09-16"
+      "Round 1": "2026-09-16",
+      "Round 2": "2026-09-23"
     }
   },
   "PCDJ Ranking": {
@@ -17681,13 +18549,13 @@
       "Season 3",
       "Season 4"
     ],
-    "rounds_total": 22,
-    "best_of": 15,
+    "rounds_total": 23,
+    "best_of": 16,
     "points_scale": 20,
     "rankings": [
       {
         "name": "justMaki",
-        "points": 2940,
+        "points": 3120,
         "points_all": 3780.0,
         "rounds": 21,
         "wins": 13,
@@ -17701,7 +18569,7 @@
         "avg_pos": 1.6,
         "best_single": 200,
         "best_pos": 1,
-        "dropped": 6,
+        "dropped": 5,
         "history": [
           {
             "r": "Season 3 Round 1",
@@ -17813,18 +18681,18 @@
       },
       {
         "name": "JakeAdjacent",
-        "points": 2400,
-        "points_all": 2430.0,
-        "rounds": 17,
+        "points": 2580,
+        "points_all": 2610.0,
+        "rounds": 18,
         "wins": 2,
         "podiums": {
           "gold": 2,
-          "silver": 5,
+          "silver": 6,
           "bronze": 3
         },
-        "top5": 14,
-        "avg_pts": 142.9,
-        "avg_pos": 3.8,
+        "top5": 15,
+        "avg_pts": 145.0,
+        "avg_pos": 3.7,
         "best_single": 200,
         "best_pos": 1,
         "dropped": 2,
@@ -17913,15 +18781,20 @@
             "r": "Season 4 Round 1",
             "p": 160,
             "pos": 3
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 180,
+            "pos": 2
           }
         ],
         "rank": 2
       },
       {
         "name": "Lexer",
-        "points": 1990.0,
-        "points_all": 2070.0,
-        "rounds": 19,
+        "points": 2050.0,
+        "points_all": 2130.0,
+        "rounds": 20,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -17929,8 +18802,8 @@
           "bronze": 2
         },
         "top5": 11,
-        "avg_pts": 108.9,
-        "avg_pos": 5.8,
+        "avg_pts": 106.5,
+        "avg_pos": 6.0,
         "best_single": 180,
         "best_pos": 2,
         "dropped": 4,
@@ -18029,24 +18902,29 @@
             "r": "Season 4 Round 1",
             "p": 20,
             "pos": 10
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 60,
+            "pos": 8
           }
         ],
         "rank": 3
       },
       {
         "name": "RoundNzt",
-        "points": 1670.0,
-        "points_all": 1670.0,
-        "rounds": 16,
+        "points": 1830.0,
+        "points_all": 1830.0,
+        "rounds": 17,
         "wins": 1,
         "podiums": {
           "gold": 1,
           "silver": 4,
-          "bronze": 0
+          "bronze": 1
         },
-        "top5": 9,
-        "avg_pts": 104.4,
-        "avg_pos": 6.8,
+        "top5": 10,
+        "avg_pts": 107.6,
+        "avg_pos": 6.5,
         "best_single": 200,
         "best_pos": 1,
         "dropped": 1,
@@ -18130,6 +19008,11 @@
             "r": "Season 4 Round 1",
             "p": 120,
             "pos": 5
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 160,
+            "pos": 3
           }
         ],
         "rank": 4
@@ -18138,7 +19021,7 @@
         "name": "Quickracer10",
         "points": 1400.0,
         "points_all": 1400.0,
-        "rounds": 14,
+        "rounds": 15,
         "wins": 2,
         "podiums": {
           "gold": 2,
@@ -18146,8 +19029,8 @@
           "bronze": 1
         },
         "top5": 7,
-        "avg_pts": 100.0,
-        "avg_pos": 8.1,
+        "avg_pts": 93.3,
+        "avg_pos": 8.7,
         "best_single": 200,
         "best_pos": 1,
         "dropped": 0,
@@ -18221,15 +19104,20 @@
             "r": "Season 4 Round 1",
             "p": 0,
             "pos": 25
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 18
           }
         ],
         "rank": 5
       },
       {
         "name": "ZOMAN",
-        "points": 1290.0,
-        "points_all": 1290.0,
-        "rounds": 9,
+        "points": 1330.0,
+        "points_all": 1330.0,
+        "rounds": 10,
         "wins": 2,
         "podiums": {
           "gold": 2,
@@ -18237,8 +19125,8 @@
           "bronze": 2
         },
         "top5": 7,
-        "avg_pts": 143.3,
-        "avg_pos": 3.3,
+        "avg_pts": 133.0,
+        "avg_pos": 3.9,
         "best_single": 200,
         "best_pos": 1,
         "dropped": 0,
@@ -18287,6 +19175,11 @@
             "r": "Season 4 Round 1",
             "p": 100,
             "pos": 6
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 40,
+            "pos": 9
           }
         ],
         "rank": 6
@@ -18379,9 +19272,9 @@
       },
       {
         "name": "Sterben",
-        "points": 760.0,
-        "points_all": 760.0,
-        "rounds": 9,
+        "points": 780.0,
+        "points_all": 780.0,
+        "rounds": 10,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -18389,8 +19282,8 @@
           "bronze": 0
         },
         "top5": 4,
-        "avg_pts": 84.4,
-        "avg_pos": 8.2,
+        "avg_pts": 78.0,
+        "avg_pos": 8.4,
         "best_single": 180,
         "best_pos": 2,
         "dropped": 0,
@@ -18439,6 +19332,11 @@
             "r": "Season 4 Round 1",
             "p": 0,
             "pos": 12
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 20,
+            "pos": 10
           }
         ],
         "rank": 8
@@ -18447,7 +19345,7 @@
         "name": "M\u03bc",
         "points": 760.0,
         "points_all": 760.0,
-        "rounds": 8,
+        "rounds": 9,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -18455,8 +19353,8 @@
           "bronze": 1
         },
         "top5": 3,
-        "avg_pts": 95.0,
-        "avg_pos": 6.1,
+        "avg_pts": 84.4,
+        "avg_pos": 7.1,
         "best_single": 160,
         "best_pos": 3,
         "dropped": 0,
@@ -18500,6 +19398,11 @@
             "r": "Season 4 Round 1",
             "p": 80,
             "pos": 7
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 15
           }
         ],
         "rank": 9
@@ -18615,7 +19518,7 @@
         "name": "LKat",
         "points": 620,
         "points_all": 620,
-        "rounds": 8,
+        "rounds": 9,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -18623,8 +19526,8 @@
           "bronze": 1
         },
         "top5": 4,
-        "avg_pts": 77.5,
-        "avg_pos": 10.9,
+        "avg_pts": 68.9,
+        "avg_pos": 12.8,
         "best_single": 160,
         "best_pos": 3,
         "dropped": 0,
@@ -18668,9 +19571,80 @@
             "r": "Season 4 Round 1",
             "p": 0,
             "pos": 25
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 28
           }
         ],
         "rank": 12
+      },
+      {
+        "name": "Warsnac",
+        "points": 480,
+        "points_all": 480,
+        "rounds": 9,
+        "wins": 1,
+        "podiums": {
+          "gold": 1,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 1,
+        "avg_pts": 53.3,
+        "avg_pos": 10.1,
+        "best_single": 200,
+        "best_pos": 1,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 3 Round 3",
+            "p": 100,
+            "pos": 6
+          },
+          {
+            "r": "Season 3 Round 5",
+            "p": 20,
+            "pos": 10
+          },
+          {
+            "r": "Season 3 Round 6",
+            "p": 0,
+            "pos": 13
+          },
+          {
+            "r": "Season 3 Round 8",
+            "p": 100,
+            "pos": 6
+          },
+          {
+            "r": "Season 3 Round 10",
+            "p": 0,
+            "pos": 13
+          },
+          {
+            "r": "Season 3 Round 17",
+            "p": 60,
+            "pos": 8
+          },
+          {
+            "r": "Season 3 Round 20",
+            "p": 0,
+            "pos": 21
+          },
+          {
+            "r": "Season 4 Round 1",
+            "p": 0,
+            "pos": 13
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 200,
+            "pos": 1
+          }
+        ],
+        "rank": 13
       },
       {
         "name": "Eclipse135",
@@ -18726,13 +19700,13 @@
             "pos": 4
           }
         ],
-        "rank": 13
+        "rank": 14
       },
       {
         "name": "Victor",
         "points": 440.0,
         "points_all": 440.0,
-        "rounds": 14,
+        "rounds": 15,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -18740,8 +19714,8 @@
           "bronze": 1
         },
         "top5": 3,
-        "avg_pts": 31.4,
-        "avg_pos": 12.2,
+        "avg_pts": 29.3,
+        "avg_pos": 13.0,
         "best_single": 160,
         "best_pos": 3,
         "dropped": 0,
@@ -18815,9 +19789,14 @@
             "r": "Season 4 Round 1",
             "p": 0,
             "pos": 16
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 24
           }
         ],
-        "rank": 14
+        "rank": 15
       },
       {
         "name": "Sandals",
@@ -18848,7 +19827,7 @@
             "pos": 3
           }
         ],
-        "rank": 15
+        "rank": 16
       },
       {
         "name": "AndMe",
@@ -18904,13 +19883,13 @@
             "pos": 9
           }
         ],
-        "rank": 16
+        "rank": 17
       },
       {
         "name": "Noxitu",
         "points": 290.0,
         "points_all": 290.0,
-        "rounds": 16,
+        "rounds": 17,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -18918,8 +19897,8 @@
           "bronze": 0
         },
         "top5": 0,
-        "avg_pts": 18.1,
-        "avg_pos": 14.9,
+        "avg_pts": 17.1,
+        "avg_pos": 15.6,
         "best_single": 60,
         "best_pos": 6,
         "dropped": 1,
@@ -19003,67 +19982,11 @@
             "r": "Season 4 Round 1",
             "p": 0,
             "pos": 22
-          }
-        ],
-        "rank": 17
-      },
-      {
-        "name": "Warsnac",
-        "points": 280,
-        "points_all": 280,
-        "rounds": 8,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 35.0,
-        "avg_pos": 11.2,
-        "best_single": 100,
-        "best_pos": 6,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Season 3 Round 3",
-            "p": 100,
-            "pos": 6
           },
           {
-            "r": "Season 3 Round 5",
-            "p": 20,
-            "pos": 10
-          },
-          {
-            "r": "Season 3 Round 6",
+            "r": "Season 4 Round 2",
             "p": 0,
-            "pos": 13
-          },
-          {
-            "r": "Season 3 Round 8",
-            "p": 100,
-            "pos": 6
-          },
-          {
-            "r": "Season 3 Round 10",
-            "p": 0,
-            "pos": 13
-          },
-          {
-            "r": "Season 3 Round 17",
-            "p": 60,
-            "pos": 8
-          },
-          {
-            "r": "Season 3 Round 20",
-            "p": 0,
-            "pos": 21
-          },
-          {
-            "r": "Season 4 Round 1",
-            "p": 0,
-            "pos": 13
+            "pos": 28
           }
         ],
         "rank": 18
@@ -19176,10 +20099,10 @@
         "rank": 20
       },
       {
-        "name": "icRS",
+        "name": "gilgool",
         "points": 220,
         "points_all": 220,
-        "rounds": 10,
+        "rounds": 5,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -19187,7 +20110,99 @@
           "bronze": 0
         },
         "top5": 1,
-        "avg_pts": 22.0,
+        "avg_pts": 44.0,
+        "avg_pos": 13.2,
+        "best_single": 120,
+        "best_pos": 5,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 3 Round 1",
+            "p": 100,
+            "pos": 6
+          },
+          {
+            "r": "Season 3 Round 5",
+            "p": 0,
+            "pos": 14
+          },
+          {
+            "r": "Season 3 Round 6",
+            "p": 0,
+            "pos": 20
+          },
+          {
+            "r": "Season 4 Round 1",
+            "p": 0,
+            "pos": 21
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 120,
+            "pos": 5
+          }
+        ],
+        "rank": 21
+      },
+      {
+        "name": "Minkus",
+        "points": 220.0,
+        "points_all": 220.0,
+        "rounds": 5,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 1,
+        "avg_pts": 44.0,
+        "avg_pos": 12.6,
+        "best_single": 120,
+        "best_pos": 5,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 3 Round 18",
+            "p": 120,
+            "pos": 5
+          },
+          {
+            "r": "Season 3 Round 20",
+            "p": 0,
+            "pos": 15
+          },
+          {
+            "r": "Season 3 Troll 4",
+            "p": 0.0,
+            "pos": 23
+          },
+          {
+            "r": "Season 4 Round 1",
+            "p": 0,
+            "pos": 14
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 100,
+            "pos": 6
+          }
+        ],
+        "rank": 22
+      },
+      {
+        "name": "icRS",
+        "points": 220,
+        "points_all": 220,
+        "rounds": 11,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 1,
+        "avg_pts": 20.0,
         "avg_pos": 11.5,
         "best_single": 120,
         "best_pos": 5,
@@ -19242,9 +20257,14 @@
             "r": "Season 3 Round 19",
             "p": 20,
             "pos": 10
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 11
           }
         ],
-        "rank": 21
+        "rank": 23
       },
       {
         "name": "Kernkob",
@@ -19270,7 +20290,7 @@
             "pos": 1
           }
         ],
-        "rank": 22
+        "rank": 24
       },
       {
         "name": "Hi Im Yolo",
@@ -19351,13 +20371,13 @@
             "pos": 12
           }
         ],
-        "rank": 23
+        "rank": 25
       },
       {
-        "name": "Matic_D",
+        "name": "Gimpel",
         "points": 200.0,
         "points_all": 200.0,
-        "rounds": 16,
+        "rounds": 14,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -19365,7 +20385,98 @@
           "bronze": 0
         },
         "top5": 0,
-        "avg_pts": 12.5,
+        "avg_pts": 14.3,
+        "avg_pos": 15.6,
+        "best_single": 80,
+        "best_pos": 7,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 3 Round 3",
+            "p": 20,
+            "pos": 10
+          },
+          {
+            "r": "Season 3 Round 5",
+            "p": 0,
+            "pos": 27
+          },
+          {
+            "r": "Season 3 Round 6",
+            "p": 0,
+            "pos": 17
+          },
+          {
+            "r": "Season 3 Round 8",
+            "p": 0,
+            "pos": 14
+          },
+          {
+            "r": "Season 3 Round 10",
+            "p": 0,
+            "pos": 23
+          },
+          {
+            "r": "Season 3 Troll 3",
+            "p": 20.0,
+            "pos": 9
+          },
+          {
+            "r": "Season 3 Round 13",
+            "p": 0,
+            "pos": 15
+          },
+          {
+            "r": "Season 3 Round 14",
+            "p": 80,
+            "pos": 7
+          },
+          {
+            "r": "Season 3 Round 15",
+            "p": 0,
+            "pos": 12
+          },
+          {
+            "r": "Season 3 Round 16",
+            "p": 0,
+            "pos": 22
+          },
+          {
+            "r": "Season 3 Round 17",
+            "p": 0,
+            "pos": 15
+          },
+          {
+            "r": "Season 3 Round 18",
+            "p": 0,
+            "pos": 16
+          },
+          {
+            "r": "Season 4 Round 1",
+            "p": 0,
+            "pos": 24
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 80,
+            "pos": 7
+          }
+        ],
+        "rank": 26
+      },
+      {
+        "name": "Matic_D",
+        "points": 200.0,
+        "points_all": 200.0,
+        "rounds": 17,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 11.8,
         "avg_pos": 16.6,
         "best_single": 100,
         "best_pos": 6,
@@ -19450,9 +20561,14 @@
             "r": "Season 4 Round 1",
             "p": 0,
             "pos": 25
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 17
           }
         ],
-        "rank": 24
+        "rank": 27
       },
       {
         "name": "Six",
@@ -19470,7 +20586,7 @@
         "avg_pos": 15.5,
         "best_single": 100.0,
         "best_pos": 1,
-        "dropped": 2,
+        "dropped": 1,
         "history": [
           {
             "r": "Season 3 Round 5",
@@ -19558,7 +20674,7 @@
             "pos": 15
           }
         ],
-        "rank": 25
+        "rank": 28
       },
       {
         "name": "B_ES",
@@ -19584,7 +20700,7 @@
             "pos": 3
           }
         ],
-        "rank": 26
+        "rank": 29
       },
       {
         "name": "Stick",
@@ -19625,7 +20741,43 @@
             "pos": 12
           }
         ],
-        "rank": 27
+        "rank": 30
+      },
+      {
+        "name": "IronDragon111000",
+        "points": 140,
+        "points_all": 140,
+        "rounds": 3,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 1,
+        "avg_pts": 46.7,
+        "avg_pos": 16.7,
+        "best_single": 140,
+        "best_pos": 4,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 3 Round 9",
+            "p": 0,
+            "pos": 19
+          },
+          {
+            "r": "Season 3 Round 20",
+            "p": 0,
+            "pos": 27
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 140,
+            "pos": 4
+          }
+        ],
+        "rank": 31
       },
       {
         "name": "rtyyyyb",
@@ -19661,7 +20813,7 @@
             "pos": 5
           }
         ],
-        "rank": 28
+        "rank": 32
       },
       {
         "name": "null/plexus",
@@ -19687,7 +20839,7 @@
             "pos": 5
           }
         ],
-        "rank": 29
+        "rank": 33
       },
       {
         "name": "Heart-TGV",
@@ -19723,140 +20875,13 @@
             "pos": 5
           }
         ],
-        "rank": 30
-      },
-      {
-        "name": "Minkus",
-        "points": 120.0,
-        "points_all": 120.0,
-        "rounds": 4,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 1,
-        "avg_pts": 30.0,
-        "avg_pos": 14.2,
-        "best_single": 120,
-        "best_pos": 5,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Season 3 Round 18",
-            "p": 120,
-            "pos": 5
-          },
-          {
-            "r": "Season 3 Round 20",
-            "p": 0,
-            "pos": 15
-          },
-          {
-            "r": "Season 3 Troll 4",
-            "p": 0.0,
-            "pos": 23
-          },
-          {
-            "r": "Season 4 Round 1",
-            "p": 0,
-            "pos": 14
-          }
-        ],
-        "rank": 31
-      },
-      {
-        "name": "Gimpel",
-        "points": 120.0,
-        "points_all": 120.0,
-        "rounds": 13,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 9.2,
-        "avg_pos": 16.2,
-        "best_single": 80,
-        "best_pos": 7,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Season 3 Round 3",
-            "p": 20,
-            "pos": 10
-          },
-          {
-            "r": "Season 3 Round 5",
-            "p": 0,
-            "pos": 27
-          },
-          {
-            "r": "Season 3 Round 6",
-            "p": 0,
-            "pos": 17
-          },
-          {
-            "r": "Season 3 Round 8",
-            "p": 0,
-            "pos": 14
-          },
-          {
-            "r": "Season 3 Round 10",
-            "p": 0,
-            "pos": 23
-          },
-          {
-            "r": "Season 3 Troll 3",
-            "p": 20.0,
-            "pos": 9
-          },
-          {
-            "r": "Season 3 Round 13",
-            "p": 0,
-            "pos": 15
-          },
-          {
-            "r": "Season 3 Round 14",
-            "p": 80,
-            "pos": 7
-          },
-          {
-            "r": "Season 3 Round 15",
-            "p": 0,
-            "pos": 12
-          },
-          {
-            "r": "Season 3 Round 16",
-            "p": 0,
-            "pos": 22
-          },
-          {
-            "r": "Season 3 Round 17",
-            "p": 0,
-            "pos": 15
-          },
-          {
-            "r": "Season 3 Round 18",
-            "p": 0,
-            "pos": 16
-          },
-          {
-            "r": "Season 4 Round 1",
-            "p": 0,
-            "pos": 24
-          }
-        ],
-        "rank": 32
+        "rank": 34
       },
       {
         "name": "PlusMicron",
         "points": 120.0,
         "points_all": 120.0,
-        "rounds": 14,
+        "rounds": 15,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -19864,8 +20889,8 @@
           "bronze": 0
         },
         "top5": 0,
-        "avg_pts": 8.6,
-        "avg_pos": 17.1,
+        "avg_pts": 8.0,
+        "avg_pos": 17.5,
         "best_single": 60,
         "best_pos": 8,
         "dropped": 0,
@@ -19939,9 +20964,14 @@
             "r": "Season 4 Round 1",
             "p": 60,
             "pos": 8
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 23
           }
         ],
-        "rank": 33
+        "rank": 35
       },
       {
         "name": "Pants",
@@ -19967,7 +20997,7 @@
             "pos": 6
           }
         ],
-        "rank": 34
+        "rank": 36
       },
       {
         "name": "Magical",
@@ -19993,7 +21023,7 @@
             "pos": 6
           }
         ],
-        "rank": 35
+        "rank": 37
       },
       {
         "name": "MackCheesy",
@@ -20019,7 +21049,7 @@
             "pos": 6
           }
         ],
-        "rank": 36
+        "rank": 38
       },
       {
         "name": "Hydro",
@@ -20045,48 +21075,7 @@
             "pos": 6
           }
         ],
-        "rank": 37
-      },
-      {
-        "name": "gilgool",
-        "points": 100,
-        "points_all": 100,
-        "rounds": 4,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 25.0,
-        "avg_pos": 15.2,
-        "best_single": 100,
-        "best_pos": 6,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Season 3 Round 1",
-            "p": 100,
-            "pos": 6
-          },
-          {
-            "r": "Season 3 Round 5",
-            "p": 0,
-            "pos": 14
-          },
-          {
-            "r": "Season 3 Round 6",
-            "p": 0,
-            "pos": 20
-          },
-          {
-            "r": "Season 4 Round 1",
-            "p": 0,
-            "pos": 21
-          }
-        ],
-        "rank": 38
+        "rank": 39
       },
       {
         "name": "redal",
@@ -20142,7 +21131,7 @@
             "pos": 11
           }
         ],
-        "rank": 39
+        "rank": 40
       },
       {
         "name": "B_es",
@@ -20168,7 +21157,7 @@
             "pos": 7
           }
         ],
-        "rank": 40
+        "rank": 41
       },
       {
         "name": "Renergy",
@@ -20194,7 +21183,7 @@
             "pos": 7
           }
         ],
-        "rank": 41
+        "rank": 42
       },
       {
         "name": "Clowny",
@@ -20225,7 +21214,7 @@
             "pos": 24
           }
         ],
-        "rank": 42
+        "rank": 43
       },
       {
         "name": "microways",
@@ -20256,13 +21245,13 @@
             "pos": 7
           }
         ],
-        "rank": 43
+        "rank": 44
       },
       {
         "name": "K410K3N",
         "points": 80.0,
         "points_all": 80.0,
-        "rounds": 12,
+        "rounds": 13,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -20270,8 +21259,8 @@
           "bronze": 0
         },
         "top5": 0,
-        "avg_pts": 6.7,
-        "avg_pos": 21.1,
+        "avg_pts": 6.2,
+        "avg_pos": 20.7,
         "best_single": 80,
         "best_pos": 7,
         "dropped": 0,
@@ -20335,9 +21324,14 @@
             "r": "Season 3 Troll 4",
             "p": 0.0,
             "pos": 23
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 16
           }
         ],
-        "rank": 44
+        "rank": 45
       },
       {
         "name": "Shattersmith",
@@ -20363,7 +21357,7 @@
             "pos": 8
           }
         ],
-        "rank": 45
+        "rank": 46
       },
       {
         "name": "Redstony",
@@ -20394,7 +21388,7 @@
             "pos": 12
           }
         ],
-        "rank": 46
+        "rank": 47
       },
       {
         "name": "R0nanC",
@@ -20470,7 +21464,7 @@
             "pos": 9
           }
         ],
-        "rank": 47
+        "rank": 48
       },
       {
         "name": "GuAlexItar",
@@ -20496,7 +21490,7 @@
             "pos": 9
           }
         ],
-        "rank": 48
+        "rank": 49
       },
       {
         "name": "ferinine",
@@ -20527,7 +21521,7 @@
             "pos": 20
           }
         ],
-        "rank": 49
+        "rank": 50
       },
       {
         "name": "Murrl",
@@ -20559,42 +21553,6 @@
           },
           {
             "r": "Season 3 Round 9",
-            "p": 20,
-            "pos": 10
-          }
-        ],
-        "rank": 50
-      },
-      {
-        "name": "M4rv",
-        "points": 40,
-        "points_all": 40,
-        "rounds": 3,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 13.3,
-        "avg_pos": 13.0,
-        "best_single": 20,
-        "best_pos": 10,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Season 3 Round 10",
-            "p": 20,
-            "pos": 10
-          },
-          {
-            "r": "Season 3 Round 16",
-            "p": 0,
-            "pos": 19
-          },
-          {
-            "r": "Season 3 Round 17",
             "p": 20,
             "pos": 10
           }
@@ -20643,10 +21601,10 @@
         "rank": 52
       },
       {
-        "name": "aizpun",
-        "points": 40.0,
-        "points_all": 40.0,
-        "rounds": 12,
+        "name": "M4rv",
+        "points": 40,
+        "points_all": 40,
+        "rounds": 4,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -20654,8 +21612,49 @@
           "bronze": 0
         },
         "top5": 0,
-        "avg_pts": 3.3,
-        "avg_pos": 20.2,
+        "avg_pts": 10.0,
+        "avg_pos": 12.8,
+        "best_single": 20,
+        "best_pos": 10,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 3 Round 10",
+            "p": 20,
+            "pos": 10
+          },
+          {
+            "r": "Season 3 Round 16",
+            "p": 0,
+            "pos": 19
+          },
+          {
+            "r": "Season 3 Round 17",
+            "p": 20,
+            "pos": 10
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 12
+          }
+        ],
+        "rank": 53
+      },
+      {
+        "name": "aizpun",
+        "points": 40.0,
+        "points_all": 40.0,
+        "rounds": 13,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 3.1,
+        "avg_pos": 19.8,
         "best_single": 40,
         "best_pos": 9,
         "dropped": 0,
@@ -20719,9 +21718,14 @@
             "r": "Season 4 Round 1",
             "p": 0,
             "pos": 17
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 14
           }
         ],
-        "rank": 53
+        "rank": 54
       },
       {
         "name": "St Nicholas",
@@ -20747,7 +21751,7 @@
             "pos": 10
           }
         ],
-        "rank": 54
+        "rank": 55
       },
       {
         "name": "Hellmet",
@@ -20773,7 +21777,7 @@
             "pos": 9
           }
         ],
-        "rank": 55
+        "rank": 56
       },
       {
         "name": "Jsus",
@@ -20799,7 +21803,7 @@
             "pos": 9
           }
         ],
-        "rank": 56
+        "rank": 57
       },
       {
         "name": "Maki",
@@ -20825,7 +21829,7 @@
             "pos": 9
           }
         ],
-        "rank": 57
+        "rank": 58
       },
       {
         "name": "SkyPromp",
@@ -20851,7 +21855,7 @@
             "pos": 9
           }
         ],
-        "rank": 58
+        "rank": 59
       },
       {
         "name": "Solitar",
@@ -20877,7 +21881,7 @@
             "pos": 9
           }
         ],
-        "rank": 59
+        "rank": 60
       },
       {
         "name": "Valco",
@@ -20903,7 +21907,7 @@
             "pos": 9
           }
         ],
-        "rank": 60
+        "rank": 61
       },
       {
         "name": "[XTR]Hawk",
@@ -20929,7 +21933,7 @@
             "pos": 9
           }
         ],
-        "rank": 61
+        "rank": 62
       },
       {
         "name": "376",
@@ -20960,7 +21964,7 @@
             "pos": 9
           }
         ],
-        "rank": 62
+        "rank": 63
       },
       {
         "name": "void",
@@ -20991,7 +21995,7 @@
             "pos": 10
           }
         ],
-        "rank": 63
+        "rank": 64
       },
       {
         "name": "[TTR]DragonShadow84290",
@@ -21027,7 +22031,7 @@
             "pos": 9
           }
         ],
-        "rank": 64
+        "rank": 65
       },
       {
         "name": "MALIYO",
@@ -21063,7 +22067,7 @@
             "pos": 10
           }
         ],
-        "rank": 65
+        "rank": 66
       },
       {
         "name": "[CSC]ShyGirlyRaccoon",
@@ -21114,7 +22118,7 @@
             "pos": 9
           }
         ],
-        "rank": 66
+        "rank": 67
       },
       {
         "name": "wokonbike",
@@ -21175,13 +22179,13 @@
             "pos": 33
           }
         ],
-        "rank": 67
+        "rank": 68
       },
       {
         "name": "timesprout",
         "points": 20.0,
         "points_all": 20.0,
-        "rounds": 9,
+        "rounds": 10,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -21189,7 +22193,7 @@
           "bronze": 0
         },
         "top5": 0,
-        "avg_pts": 2.2,
+        "avg_pts": 2.0,
         "avg_pos": 22.0,
         "best_single": 20.0,
         "best_pos": 9,
@@ -21239,9 +22243,14 @@
             "r": "Season 3 Troll 4",
             "p": 20.0,
             "pos": 9
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 22
           }
         ],
-        "rank": 68
+        "rank": 69
       },
       {
         "name": "alpa",
@@ -21282,7 +22291,7 @@
             "pos": 34
           }
         ],
-        "rank": 69
+        "rank": 70
       },
       {
         "name": "Socks242",
@@ -21308,7 +22317,7 @@
             "pos": 20
           }
         ],
-        "rank": 70
+        "rank": 71
       },
       {
         "name": "Form",
@@ -21339,7 +22348,7 @@
             "pos": 29
           }
         ],
-        "rank": 71
+        "rank": 72
       },
       {
         "name": "Gnomo",
@@ -21370,7 +22379,7 @@
             "pos": 29
           }
         ],
-        "rank": 72
+        "rank": 73
       },
       {
         "name": "[png]breadcrumb_",
@@ -21396,7 +22405,7 @@
             "pos": 28
           }
         ],
-        "rank": 73
+        "rank": 74
       },
       {
         "name": "OLR94",
@@ -21427,7 +22436,7 @@
             "pos": 25
           }
         ],
-        "rank": 74
+        "rank": 75
       },
       {
         "name": "OccasionallyAmazingGamer",
@@ -21478,7 +22487,7 @@
             "pos": 16
           }
         ],
-        "rank": 75
+        "rank": 76
       },
       {
         "name": "John Xina",
@@ -21504,7 +22513,7 @@
             "pos": 32
           }
         ],
-        "rank": 76
+        "rank": 77
       },
       {
         "name": "cookie",
@@ -21530,7 +22539,7 @@
             "pos": 32
           }
         ],
-        "rank": 77
+        "rank": 78
       },
       {
         "name": "del23111107300239392952",
@@ -21556,13 +22565,13 @@
             "pos": 15
           }
         ],
-        "rank": 78
+        "rank": 79
       },
       {
         "name": "Shinikage221",
         "points": 0.0,
         "points_all": 0.0,
-        "rounds": 8,
+        "rounds": 9,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -21615,9 +22624,14 @@
             "r": "Season 4 Round 1",
             "p": 0,
             "pos": 25
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 25
           }
         ],
-        "rank": 79
+        "rank": 80
       },
       {
         "name": "Mokster",
@@ -21648,7 +22662,7 @@
             "pos": 29
           }
         ],
-        "rank": 80
+        "rank": 81
       },
       {
         "name": "Dartho Mas",
@@ -21679,7 +22693,7 @@
             "pos": 23
           }
         ],
-        "rank": 81
+        "rank": 82
       },
       {
         "name": "AAredstone",
@@ -21705,7 +22719,7 @@
             "pos": 27
           }
         ],
-        "rank": 82
+        "rank": 83
       },
       {
         "name": "stindt",
@@ -21741,7 +22755,7 @@
             "pos": 25
           }
         ],
-        "rank": 83
+        "rank": 84
       },
       {
         "name": "Lilly Fenn",
@@ -21782,7 +22796,7 @@
             "pos": 14
           }
         ],
-        "rank": 84
+        "rank": 85
       },
       {
         "name": "SharKy",
@@ -21813,7 +22827,7 @@
             "pos": 25
           }
         ],
-        "rank": 85
+        "rank": 86
       },
       {
         "name": "Brachaldis",
@@ -21839,7 +22853,7 @@
             "pos": 27
           }
         ],
-        "rank": 86
+        "rank": 87
       },
       {
         "name": "Gh0stChicken",
@@ -21865,7 +22879,7 @@
             "pos": 29
           }
         ],
-        "rank": 87
+        "rank": 88
       },
       {
         "name": "koz",
@@ -21896,7 +22910,7 @@
             "pos": 21
           }
         ],
-        "rank": 88
+        "rank": 89
       },
       {
         "name": "imagineaclevernamehere",
@@ -21932,7 +22946,7 @@
             "pos": 22
           }
         ],
-        "rank": 89
+        "rank": 90
       },
       {
         "name": "sailingman",
@@ -21958,7 +22972,7 @@
             "pos": 32
           }
         ],
-        "rank": 90
+        "rank": 91
       },
       {
         "name": "[MBT] MOW BIG T",
@@ -21984,7 +22998,7 @@
             "pos": 33
           }
         ],
-        "rank": 91
+        "rank": 92
       },
       {
         "name": "TwoFace",
@@ -22015,7 +23029,7 @@
             "pos": 23
           }
         ],
-        "rank": 92
+        "rank": 93
       },
       {
         "name": "Sir Pickelsworth",
@@ -22041,7 +23055,7 @@
             "pos": 34
           }
         ],
-        "rank": 93
+        "rank": 94
       },
       {
         "name": "dencar85",
@@ -22065,37 +23079,6 @@
             "r": "Season 3 Round 9",
             "p": 0,
             "pos": 11
-          }
-        ],
-        "rank": 94
-      },
-      {
-        "name": "IronDragon111000",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 2,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 23.0,
-        "best_single": 0,
-        "best_pos": 19,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Season 3 Round 9",
-            "p": 0,
-            "pos": 19
-          },
-          {
-            "r": "Season 3 Round 20",
-            "p": 0,
-            "pos": 27
           }
         ],
         "rank": 95
@@ -22291,7 +23274,7 @@
         "name": "Zeus",
         "points": 0.0,
         "points_all": 0.0,
-        "rounds": 4,
+        "rounds": 5,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -22300,7 +23283,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 23.0,
+        "avg_pos": 22.4,
         "best_single": 0,
         "best_pos": 18,
         "dropped": 0,
@@ -22324,6 +23307,11 @@
             "r": "Season 3 Round 20",
             "p": 0,
             "pos": 33
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 20
           }
         ],
         "rank": 103
@@ -22363,7 +23351,7 @@
         "name": "M4DSCOTSM4N",
         "points": 0.0,
         "points_all": 0.0,
-        "rounds": 9,
+        "rounds": 10,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -22372,9 +23360,9 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 24.2,
+        "avg_pos": 23.1,
         "best_single": 0,
-        "best_pos": 16,
+        "best_pos": 13,
         "dropped": 0,
         "history": [
           {
@@ -22421,6 +23409,11 @@
             "r": "Season 3 Round 19",
             "p": 0,
             "pos": 21
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 13
           }
         ],
         "rank": 105
@@ -23400,7 +24393,7 @@
         "name": "Waaksaam",
         "points": 0,
         "points_all": 0,
-        "rounds": 4,
+        "rounds": 5,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -23409,7 +24402,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 27.0,
+        "avg_pos": 27.2,
         "best_single": 0,
         "best_pos": 25,
         "dropped": 0,
@@ -23433,6 +24426,11 @@
             "r": "Season 3 Round 20",
             "p": 0,
             "pos": 25
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 28
           }
         ],
         "rank": 142
@@ -23830,7 +24828,7 @@
         "name": "[RABI]Yksdjcj",
         "points": 0,
         "points_all": 0,
-        "rounds": 1,
+        "rounds": 2,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -23839,15 +24837,20 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 39.0,
+        "avg_pos": 33.5,
         "best_single": 0,
-        "best_pos": 39,
+        "best_pos": 28,
         "dropped": 0,
         "history": [
           {
             "r": "Season 3 Round 17",
             "p": 0,
             "pos": 39
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 28
           }
         ],
         "rank": 157
@@ -24118,7 +25121,7 @@
         "rank": 167
       },
       {
-        "name": "dtmittens",
+        "name": "cipi",
         "points": 0,
         "points_all": 0,
         "rounds": 1,
@@ -24485,7 +25488,7 @@
         "name": "[MMM]Kreeeeee",
         "points": 0,
         "points_all": 0,
-        "rounds": 1,
+        "rounds": 2,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -24494,15 +25497,20 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 33.0,
+        "avg_pos": 27.0,
         "best_single": 0,
-        "best_pos": 33,
+        "best_pos": 21,
         "dropped": 0,
         "history": [
           {
             "r": "Season 4 Round 1",
             "p": 0,
             "pos": 33
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 21
           }
         ],
         "rank": 182
@@ -24532,6 +25540,110 @@
           }
         ],
         "rank": 183
+      },
+      {
+        "name": "DeiRex",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 19.0,
+        "best_single": 0,
+        "best_pos": 19,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 19
+          }
+        ],
+        "rank": 184
+      },
+      {
+        "name": "Robgamer",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 26.0,
+        "best_single": 0,
+        "best_pos": 26,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 26
+          }
+        ],
+        "rank": 185
+      },
+      {
+        "name": "Akane",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 27.0,
+        "best_single": 0,
+        "best_pos": 27,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 27
+          }
+        ],
+        "rank": 186
+      },
+      {
+        "name": "variableferret",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 28.0,
+        "best_single": 0,
+        "best_pos": 28,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 28
+          }
+        ],
+        "rank": 187
       }
     ],
     "championship": [
@@ -24653,18 +25765,18 @@
       },
       {
         "name": "JakeAdjacent",
-        "points": 120,
-        "points_all": 120,
-        "rounds": 16,
+        "points": 129,
+        "points_all": 129,
+        "rounds": 17,
         "wins": 2,
         "podiums": {
           "gold": 2,
-          "silver": 5,
+          "silver": 6,
           "bronze": 3
         },
-        "top5": 14,
-        "avg_pts": 7.5,
-        "avg_pos": 3.6,
+        "top5": 15,
+        "avg_pts": 7.6,
+        "avg_pos": 3.5,
         "best_single": 10,
         "best_pos": 1,
         "dropped": 0,
@@ -24748,15 +25860,20 @@
             "r": "Season 4 Round 1",
             "p": 8,
             "pos": 3
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 9,
+            "pos": 2
           }
         ],
         "rank": 2
       },
       {
         "name": "Lexer",
-        "points": 97,
-        "points_all": 97,
-        "rounds": 17,
+        "points": 100,
+        "points_all": 100,
+        "rounds": 18,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -24764,8 +25881,8 @@
           "bronze": 2
         },
         "top5": 10,
-        "avg_pts": 5.7,
-        "avg_pos": 6.0,
+        "avg_pts": 5.6,
+        "avg_pos": 6.1,
         "best_single": 9,
         "best_pos": 2,
         "dropped": 0,
@@ -24854,24 +25971,29 @@
             "r": "Season 4 Round 1",
             "p": 1,
             "pos": 10
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 3,
+            "pos": 8
           }
         ],
         "rank": 3
       },
       {
         "name": "RoundNzt",
-        "points": 78,
-        "points_all": 78,
-        "rounds": 14,
+        "points": 86,
+        "points_all": 86,
+        "rounds": 15,
         "wins": 1,
         "podiums": {
           "gold": 1,
           "silver": 4,
-          "bronze": 0
+          "bronze": 1
         },
-        "top5": 8,
-        "avg_pts": 5.6,
-        "avg_pos": 6.9,
+        "top5": 9,
+        "avg_pts": 5.7,
+        "avg_pos": 6.7,
         "best_single": 10,
         "best_pos": 1,
         "dropped": 0,
@@ -24945,6 +26067,11 @@
             "r": "Season 4 Round 1",
             "p": 6,
             "pos": 5
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 8,
+            "pos": 3
           }
         ],
         "rank": 4
@@ -24953,7 +26080,7 @@
         "name": "Quickracer10",
         "points": 70,
         "points_all": 70,
-        "rounds": 13,
+        "rounds": 14,
         "wins": 2,
         "podiums": {
           "gold": 2,
@@ -24961,8 +26088,8 @@
           "bronze": 1
         },
         "top5": 7,
-        "avg_pts": 5.4,
-        "avg_pos": 6.8,
+        "avg_pts": 5.0,
+        "avg_pos": 7.6,
         "best_single": 10,
         "best_pos": 1,
         "dropped": 0,
@@ -25031,15 +26158,20 @@
             "r": "Season 4 Round 1",
             "p": 0,
             "pos": 25
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 18
           }
         ],
         "rank": 5
       },
       {
         "name": "ZOMAN",
-        "points": 60,
-        "points_all": 60,
-        "rounds": 8,
+        "points": 62,
+        "points_all": 62,
+        "rounds": 9,
         "wins": 2,
         "podiums": {
           "gold": 2,
@@ -25047,8 +26179,8 @@
           "bronze": 2
         },
         "top5": 6,
-        "avg_pts": 7.5,
-        "avg_pos": 3.5,
+        "avg_pts": 6.9,
+        "avg_pos": 4.1,
         "best_single": 10,
         "best_pos": 1,
         "dropped": 0,
@@ -25092,15 +26224,20 @@
             "r": "Season 4 Round 1",
             "p": 5,
             "pos": 6
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 2,
+            "pos": 9
           }
         ],
         "rank": 6
       },
       {
         "name": "Sterben",
-        "points": 38,
-        "points_all": 38,
-        "rounds": 8,
+        "points": 39,
+        "points_all": 39,
+        "rounds": 9,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -25108,8 +26245,8 @@
           "bronze": 0
         },
         "top5": 4,
-        "avg_pts": 4.8,
-        "avg_pos": 6.4,
+        "avg_pts": 4.3,
+        "avg_pos": 6.8,
         "best_single": 9,
         "best_pos": 2,
         "dropped": 0,
@@ -25153,6 +26290,11 @@
             "r": "Season 4 Round 1",
             "p": 0,
             "pos": 12
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 1,
+            "pos": 10
           }
         ],
         "rank": 7
@@ -25161,7 +26303,7 @@
         "name": "M\u03bc",
         "points": 37,
         "points_all": 37,
-        "rounds": 7,
+        "rounds": 8,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -25169,8 +26311,8 @@
           "bronze": 1
         },
         "top5": 3,
-        "avg_pts": 5.3,
-        "avg_pos": 5.7,
+        "avg_pts": 4.6,
+        "avg_pos": 6.9,
         "best_single": 8,
         "best_pos": 3,
         "dropped": 0,
@@ -25209,6 +26351,11 @@
             "r": "Season 4 Round 1",
             "p": 4,
             "pos": 7
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 15
           }
         ],
         "rank": 8
@@ -25349,7 +26496,7 @@
         "name": "LKat",
         "points": 31,
         "points_all": 31,
-        "rounds": 8,
+        "rounds": 9,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -25357,8 +26504,8 @@
           "bronze": 1
         },
         "top5": 4,
-        "avg_pts": 3.9,
-        "avg_pos": 10.9,
+        "avg_pts": 3.4,
+        "avg_pos": 12.8,
         "best_single": 8,
         "best_pos": 3,
         "dropped": 0,
@@ -25402,6 +26549,11 @@
             "r": "Season 4 Round 1",
             "p": 0,
             "pos": 25
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 28
           }
         ],
         "rank": 11
@@ -25453,6 +26605,72 @@
         "rank": 12
       },
       {
+        "name": "Warsnac",
+        "points": 24,
+        "points_all": 24,
+        "rounds": 9,
+        "wins": 1,
+        "podiums": {
+          "gold": 1,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 1,
+        "avg_pts": 2.7,
+        "avg_pos": 10.1,
+        "best_single": 10,
+        "best_pos": 1,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 3 Round 3",
+            "p": 5,
+            "pos": 6
+          },
+          {
+            "r": "Season 3 Round 5",
+            "p": 1,
+            "pos": 10
+          },
+          {
+            "r": "Season 3 Round 6",
+            "p": 0,
+            "pos": 13
+          },
+          {
+            "r": "Season 3 Round 8",
+            "p": 5,
+            "pos": 6
+          },
+          {
+            "r": "Season 3 Round 10",
+            "p": 0,
+            "pos": 13
+          },
+          {
+            "r": "Season 3 Round 17",
+            "p": 3,
+            "pos": 8
+          },
+          {
+            "r": "Season 3 Round 20",
+            "p": 0,
+            "pos": 21
+          },
+          {
+            "r": "Season 4 Round 1",
+            "p": 0,
+            "pos": 13
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 10,
+            "pos": 1
+          }
+        ],
+        "rank": 13
+      },
+      {
         "name": "Eclipse135",
         "points": 22,
         "points_all": 22,
@@ -25501,13 +26719,13 @@
             "pos": 4
           }
         ],
-        "rank": 13
+        "rank": 14
       },
       {
         "name": "Victor",
         "points": 19,
         "points_all": 19,
-        "rounds": 13,
+        "rounds": 14,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -25515,8 +26733,8 @@
           "bronze": 1
         },
         "top5": 2,
-        "avg_pts": 1.5,
-        "avg_pos": 12.8,
+        "avg_pts": 1.4,
+        "avg_pos": 13.6,
         "best_single": 8,
         "best_pos": 3,
         "dropped": 0,
@@ -25585,9 +26803,14 @@
             "r": "Season 4 Round 1",
             "p": 0,
             "pos": 16
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 24
           }
         ],
-        "rank": 14
+        "rank": 15
       },
       {
         "name": "Sandals",
@@ -25618,7 +26841,7 @@
             "pos": 3
           }
         ],
-        "rank": 15
+        "rank": 16
       },
       {
         "name": "AndMe",
@@ -25674,67 +26897,6 @@
             "pos": 9
           }
         ],
-        "rank": 16
-      },
-      {
-        "name": "Warsnac",
-        "points": 14,
-        "points_all": 14,
-        "rounds": 8,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 1.8,
-        "avg_pos": 11.2,
-        "best_single": 5,
-        "best_pos": 6,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Season 3 Round 3",
-            "p": 5,
-            "pos": 6
-          },
-          {
-            "r": "Season 3 Round 5",
-            "p": 1,
-            "pos": 10
-          },
-          {
-            "r": "Season 3 Round 6",
-            "p": 0,
-            "pos": 13
-          },
-          {
-            "r": "Season 3 Round 8",
-            "p": 5,
-            "pos": 6
-          },
-          {
-            "r": "Season 3 Round 10",
-            "p": 0,
-            "pos": 13
-          },
-          {
-            "r": "Season 3 Round 17",
-            "p": 3,
-            "pos": 8
-          },
-          {
-            "r": "Season 3 Round 20",
-            "p": 0,
-            "pos": 21
-          },
-          {
-            "r": "Season 4 Round 1",
-            "p": 0,
-            "pos": 13
-          }
-        ],
         "rank": 17
       },
       {
@@ -25772,7 +26934,7 @@
         "name": "Noxitu",
         "points": 12,
         "points_all": 12,
-        "rounds": 14,
+        "rounds": 15,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -25780,8 +26942,8 @@
           "bronze": 0
         },
         "top5": 0,
-        "avg_pts": 0.9,
-        "avg_pos": 15.8,
+        "avg_pts": 0.8,
+        "avg_pos": 16.6,
         "best_single": 3,
         "best_pos": 8,
         "dropped": 0,
@@ -25855,15 +27017,20 @@
             "r": "Season 4 Round 1",
             "p": 0,
             "pos": 22
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 28
           }
         ],
         "rank": 19
       },
       {
-        "name": "icRS",
+        "name": "Minkus",
         "points": 11,
         "points_all": 11,
-        "rounds": 10,
+        "rounds": 4,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -25871,64 +27038,80 @@
           "bronze": 0
         },
         "top5": 1,
-        "avg_pts": 1.1,
-        "avg_pos": 11.5,
+        "avg_pts": 2.8,
+        "avg_pos": 10.0,
+        "best_single": 6,
+        "best_pos": 5,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 3 Round 18",
+            "p": 6,
+            "pos": 5
+          },
+          {
+            "r": "Season 3 Round 20",
+            "p": 0,
+            "pos": 15
+          },
+          {
+            "r": "Season 4 Round 1",
+            "p": 0,
+            "pos": 14
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 5,
+            "pos": 6
+          }
+        ],
+        "rank": 20
+      },
+      {
+        "name": "gilgool",
+        "points": 11,
+        "points_all": 11,
+        "rounds": 5,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 1,
+        "avg_pts": 2.2,
+        "avg_pos": 13.2,
         "best_single": 6,
         "best_pos": 5,
         "dropped": 0,
         "history": [
           {
             "r": "Season 3 Round 1",
-            "p": 2,
-            "pos": 9
-          },
-          {
-            "r": "Season 3 Round 4",
-            "p": 2,
-            "pos": 9
+            "p": 5,
+            "pos": 6
           },
           {
             "r": "Season 3 Round 5",
-            "p": 6,
-            "pos": 5
-          },
-          {
-            "r": "Season 3 Round 6",
-            "p": 0,
-            "pos": 12
-          },
-          {
-            "r": "Season 3 Round 8",
-            "p": 0,
-            "pos": 11
-          },
-          {
-            "r": "Season 3 Round 9",
-            "p": 0,
-            "pos": 16
-          },
-          {
-            "r": "Season 3 Round 10",
-            "p": 0,
-            "pos": 18
-          },
-          {
-            "r": "Season 3 Round 14",
-            "p": 0,
-            "pos": 11
-          },
-          {
-            "r": "Season 3 Round 15",
             "p": 0,
             "pos": 14
           },
           {
-            "r": "Season 3 Round 19",
-            "p": 1,
-            "pos": 10
+            "r": "Season 3 Round 6",
+            "p": 0,
+            "pos": 20
+          },
+          {
+            "r": "Season 4 Round 1",
+            "p": 0,
+            "pos": 21
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 6,
+            "pos": 5
           }
         ],
-        "rank": 20
+        "rank": 21
       },
       {
         "name": "brrryy",
@@ -25999,7 +27182,83 @@
             "pos": 9
           }
         ],
-        "rank": 21
+        "rank": 22
+      },
+      {
+        "name": "icRS",
+        "points": 11,
+        "points_all": 11,
+        "rounds": 11,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 1,
+        "avg_pts": 1.0,
+        "avg_pos": 11.5,
+        "best_single": 6,
+        "best_pos": 5,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 3 Round 1",
+            "p": 2,
+            "pos": 9
+          },
+          {
+            "r": "Season 3 Round 4",
+            "p": 2,
+            "pos": 9
+          },
+          {
+            "r": "Season 3 Round 5",
+            "p": 6,
+            "pos": 5
+          },
+          {
+            "r": "Season 3 Round 6",
+            "p": 0,
+            "pos": 12
+          },
+          {
+            "r": "Season 3 Round 8",
+            "p": 0,
+            "pos": 11
+          },
+          {
+            "r": "Season 3 Round 9",
+            "p": 0,
+            "pos": 16
+          },
+          {
+            "r": "Season 3 Round 10",
+            "p": 0,
+            "pos": 18
+          },
+          {
+            "r": "Season 3 Round 14",
+            "p": 0,
+            "pos": 11
+          },
+          {
+            "r": "Season 3 Round 15",
+            "p": 0,
+            "pos": 14
+          },
+          {
+            "r": "Season 3 Round 19",
+            "p": 1,
+            "pos": 10
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 11
+          }
+        ],
+        "rank": 23
       },
       {
         "name": "Kernkob",
@@ -26025,13 +27284,13 @@
             "pos": 1
           }
         ],
-        "rank": 22
+        "rank": 24
       },
       {
         "name": "Matic_D",
         "points": 10,
         "points_all": 10,
-        "rounds": 15,
+        "rounds": 16,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -26039,7 +27298,7 @@
           "bronze": 0
         },
         "top5": 0,
-        "avg_pts": 0.7,
+        "avg_pts": 0.6,
         "avg_pos": 16.7,
         "best_single": 5,
         "best_pos": 6,
@@ -26119,9 +27378,100 @@
             "r": "Season 4 Round 1",
             "p": 0,
             "pos": 25
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 17
           }
         ],
-        "rank": 23
+        "rank": 25
+      },
+      {
+        "name": "Gimpel",
+        "points": 9,
+        "points_all": 9,
+        "rounds": 13,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.7,
+        "avg_pos": 16.1,
+        "best_single": 4,
+        "best_pos": 7,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 3 Round 3",
+            "p": 1,
+            "pos": 10
+          },
+          {
+            "r": "Season 3 Round 5",
+            "p": 0,
+            "pos": 27
+          },
+          {
+            "r": "Season 3 Round 6",
+            "p": 0,
+            "pos": 17
+          },
+          {
+            "r": "Season 3 Round 8",
+            "p": 0,
+            "pos": 14
+          },
+          {
+            "r": "Season 3 Round 10",
+            "p": 0,
+            "pos": 23
+          },
+          {
+            "r": "Season 3 Round 13",
+            "p": 0,
+            "pos": 15
+          },
+          {
+            "r": "Season 3 Round 14",
+            "p": 4,
+            "pos": 7
+          },
+          {
+            "r": "Season 3 Round 15",
+            "p": 0,
+            "pos": 12
+          },
+          {
+            "r": "Season 3 Round 16",
+            "p": 0,
+            "pos": 22
+          },
+          {
+            "r": "Season 3 Round 17",
+            "p": 0,
+            "pos": 15
+          },
+          {
+            "r": "Season 3 Round 18",
+            "p": 0,
+            "pos": 16
+          },
+          {
+            "r": "Season 4 Round 1",
+            "p": 0,
+            "pos": 24
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 4,
+            "pos": 7
+          }
+        ],
+        "rank": 26
       },
       {
         "name": "B_ES",
@@ -26147,7 +27497,7 @@
             "pos": 3
           }
         ],
-        "rank": 24
+        "rank": 27
       },
       {
         "name": "Stick",
@@ -26188,7 +27538,7 @@
             "pos": 12
           }
         ],
-        "rank": 25
+        "rank": 28
       },
       {
         "name": "Hi Im Yolo",
@@ -26264,7 +27614,43 @@
             "pos": 12
           }
         ],
-        "rank": 26
+        "rank": 29
+      },
+      {
+        "name": "IronDragon111000",
+        "points": 7,
+        "points_all": 7,
+        "rounds": 3,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 1,
+        "avg_pts": 2.3,
+        "avg_pos": 16.7,
+        "best_single": 7,
+        "best_pos": 4,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 3 Round 9",
+            "p": 0,
+            "pos": 19
+          },
+          {
+            "r": "Season 3 Round 20",
+            "p": 0,
+            "pos": 27
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 7,
+            "pos": 4
+          }
+        ],
+        "rank": 30
       },
       {
         "name": "null/plexus",
@@ -26290,7 +27676,7 @@
             "pos": 5
           }
         ],
-        "rank": 27
+        "rank": 31
       },
       {
         "name": "rtyyyyb",
@@ -26321,7 +27707,7 @@
             "pos": 5
           }
         ],
-        "rank": 28
+        "rank": 32
       },
       {
         "name": "Heart-TGV",
@@ -26357,49 +27743,13 @@
             "pos": 5
           }
         ],
-        "rank": 29
-      },
-      {
-        "name": "Minkus",
-        "points": 6,
-        "points_all": 6,
-        "rounds": 3,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 1,
-        "avg_pts": 2.0,
-        "avg_pos": 11.3,
-        "best_single": 6,
-        "best_pos": 5,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Season 3 Round 18",
-            "p": 6,
-            "pos": 5
-          },
-          {
-            "r": "Season 3 Round 20",
-            "p": 0,
-            "pos": 15
-          },
-          {
-            "r": "Season 4 Round 1",
-            "p": 0,
-            "pos": 14
-          }
-        ],
-        "rank": 30
+        "rank": 33
       },
       {
         "name": "PlusMicron",
         "points": 6,
         "points_all": 6,
-        "rounds": 12,
+        "rounds": 13,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -26408,7 +27758,7 @@
         },
         "top5": 0,
         "avg_pts": 0.5,
-        "avg_pos": 17.1,
+        "avg_pos": 17.5,
         "best_single": 3,
         "best_pos": 8,
         "dropped": 0,
@@ -26472,9 +27822,14 @@
             "r": "Season 4 Round 1",
             "p": 3,
             "pos": 8
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 23
           }
         ],
-        "rank": 31
+        "rank": 34
       },
       {
         "name": "Pants",
@@ -26500,7 +27855,7 @@
             "pos": 6
           }
         ],
-        "rank": 32
+        "rank": 35
       },
       {
         "name": "Magical",
@@ -26526,7 +27881,7 @@
             "pos": 6
           }
         ],
-        "rank": 33
+        "rank": 36
       },
       {
         "name": "MackCheesy",
@@ -26552,7 +27907,7 @@
             "pos": 6
           }
         ],
-        "rank": 34
+        "rank": 37
       },
       {
         "name": "Hydro",
@@ -26578,48 +27933,7 @@
             "pos": 6
           }
         ],
-        "rank": 35
-      },
-      {
-        "name": "gilgool",
-        "points": 5,
-        "points_all": 5,
-        "rounds": 4,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 1.2,
-        "avg_pos": 15.2,
-        "best_single": 5,
-        "best_pos": 6,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Season 3 Round 1",
-            "p": 5,
-            "pos": 6
-          },
-          {
-            "r": "Season 3 Round 5",
-            "p": 0,
-            "pos": 14
-          },
-          {
-            "r": "Season 3 Round 6",
-            "p": 0,
-            "pos": 20
-          },
-          {
-            "r": "Season 4 Round 1",
-            "p": 0,
-            "pos": 21
-          }
-        ],
-        "rank": 36
+        "rank": 38
       },
       {
         "name": "redal",
@@ -26675,88 +27989,7 @@
             "pos": 11
           }
         ],
-        "rank": 37
-      },
-      {
-        "name": "Gimpel",
-        "points": 5,
-        "points_all": 5,
-        "rounds": 12,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.4,
-        "avg_pos": 16.8,
-        "best_single": 4,
-        "best_pos": 7,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Season 3 Round 3",
-            "p": 1,
-            "pos": 10
-          },
-          {
-            "r": "Season 3 Round 5",
-            "p": 0,
-            "pos": 27
-          },
-          {
-            "r": "Season 3 Round 6",
-            "p": 0,
-            "pos": 17
-          },
-          {
-            "r": "Season 3 Round 8",
-            "p": 0,
-            "pos": 14
-          },
-          {
-            "r": "Season 3 Round 10",
-            "p": 0,
-            "pos": 23
-          },
-          {
-            "r": "Season 3 Round 13",
-            "p": 0,
-            "pos": 15
-          },
-          {
-            "r": "Season 3 Round 14",
-            "p": 4,
-            "pos": 7
-          },
-          {
-            "r": "Season 3 Round 15",
-            "p": 0,
-            "pos": 12
-          },
-          {
-            "r": "Season 3 Round 16",
-            "p": 0,
-            "pos": 22
-          },
-          {
-            "r": "Season 3 Round 17",
-            "p": 0,
-            "pos": 15
-          },
-          {
-            "r": "Season 3 Round 18",
-            "p": 0,
-            "pos": 16
-          },
-          {
-            "r": "Season 4 Round 1",
-            "p": 0,
-            "pos": 24
-          }
-        ],
-        "rank": 38
+        "rank": 39
       },
       {
         "name": "B_es",
@@ -26782,7 +28015,7 @@
             "pos": 7
           }
         ],
-        "rank": 39
+        "rank": 40
       },
       {
         "name": "Clowny",
@@ -26808,7 +28041,7 @@
             "pos": 7
           }
         ],
-        "rank": 40
+        "rank": 41
       },
       {
         "name": "Renergy",
@@ -26834,7 +28067,7 @@
             "pos": 7
           }
         ],
-        "rank": 41
+        "rank": 42
       },
       {
         "name": "microways",
@@ -26865,13 +28098,13 @@
             "pos": 7
           }
         ],
-        "rank": 42
+        "rank": 43
       },
       {
         "name": "K410K3N",
         "points": 4,
         "points_all": 4,
-        "rounds": 10,
+        "rounds": 11,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -26880,7 +28113,7 @@
         },
         "top5": 0,
         "avg_pts": 0.4,
-        "avg_pos": 20.6,
+        "avg_pos": 20.2,
         "best_single": 4,
         "best_pos": 7,
         "dropped": 0,
@@ -26934,9 +28167,14 @@
             "r": "Season 3 Round 19",
             "p": 0,
             "pos": 16
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 16
           }
         ],
-        "rank": 43
+        "rank": 44
       },
       {
         "name": "Shattersmith",
@@ -26962,7 +28200,7 @@
             "pos": 8
           }
         ],
-        "rank": 44
+        "rank": 45
       },
       {
         "name": "Redstony",
@@ -26993,7 +28231,7 @@
             "pos": 12
           }
         ],
-        "rank": 45
+        "rank": 46
       },
       {
         "name": "Six",
@@ -27089,7 +28327,7 @@
             "pos": 15
           }
         ],
-        "rank": 46
+        "rank": 47
       },
       {
         "name": "GuAlexItar",
@@ -27115,7 +28353,7 @@
             "pos": 9
           }
         ],
-        "rank": 47
+        "rank": 48
       },
       {
         "name": "ferinine",
@@ -27146,7 +28384,7 @@
             "pos": 20
           }
         ],
-        "rank": 48
+        "rank": 49
       },
       {
         "name": "Murrl",
@@ -27182,7 +28420,7 @@
             "pos": 10
           }
         ],
-        "rank": 49
+        "rank": 50
       },
       {
         "name": "BB_Benji",
@@ -27218,13 +28456,13 @@
             "pos": 15
           }
         ],
-        "rank": 50
+        "rank": 51
       },
       {
         "name": "M4rv",
         "points": 2,
         "points_all": 2,
-        "rounds": 3,
+        "rounds": 4,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -27232,8 +28470,8 @@
           "bronze": 0
         },
         "top5": 0,
-        "avg_pts": 0.7,
-        "avg_pos": 13.0,
+        "avg_pts": 0.5,
+        "avg_pos": 12.8,
         "best_single": 1,
         "best_pos": 10,
         "dropped": 0,
@@ -27252,9 +28490,14 @@
             "r": "Season 3 Round 17",
             "p": 1,
             "pos": 10
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 12
           }
         ],
-        "rank": 51
+        "rank": 52
       },
       {
         "name": "R0nanC",
@@ -27320,13 +28563,13 @@
             "pos": 16
           }
         ],
-        "rank": 52
+        "rank": 53
       },
       {
         "name": "aizpun",
         "points": 2,
         "points_all": 2,
-        "rounds": 11,
+        "rounds": 12,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -27335,7 +28578,7 @@
         },
         "top5": 0,
         "avg_pts": 0.2,
-        "avg_pos": 20.7,
+        "avg_pos": 20.2,
         "best_single": 2,
         "best_pos": 9,
         "dropped": 0,
@@ -27394,9 +28637,14 @@
             "r": "Season 4 Round 1",
             "p": 0,
             "pos": 17
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 14
           }
         ],
-        "rank": 53
+        "rank": 54
       },
       {
         "name": "St Nicholas",
@@ -27422,7 +28670,7 @@
             "pos": 10
           }
         ],
-        "rank": 54
+        "rank": 55
       },
       {
         "name": "void",
@@ -27453,7 +28701,7 @@
             "pos": 10
           }
         ],
-        "rank": 55
+        "rank": 56
       },
       {
         "name": "MALIYO",
@@ -27489,7 +28737,7 @@
             "pos": 10
           }
         ],
-        "rank": 56
+        "rank": 57
       },
       {
         "name": "alpa",
@@ -27530,7 +28778,7 @@
             "pos": 34
           }
         ],
-        "rank": 57
+        "rank": 58
       },
       {
         "name": "Socks242",
@@ -27556,7 +28804,7 @@
             "pos": 20
           }
         ],
-        "rank": 58
+        "rank": 59
       },
       {
         "name": "376",
@@ -27582,7 +28830,7 @@
             "pos": 22
           }
         ],
-        "rank": 59
+        "rank": 60
       },
       {
         "name": "Form",
@@ -27613,7 +28861,7 @@
             "pos": 29
           }
         ],
-        "rank": 60
+        "rank": 61
       },
       {
         "name": "Gnomo",
@@ -27644,7 +28892,7 @@
             "pos": 29
           }
         ],
-        "rank": 61
+        "rank": 62
       },
       {
         "name": "[png]breadcrumb_",
@@ -27670,7 +28918,7 @@
             "pos": 28
           }
         ],
-        "rank": 62
+        "rank": 63
       },
       {
         "name": "OLR94",
@@ -27701,7 +28949,7 @@
             "pos": 25
           }
         ],
-        "rank": 63
+        "rank": 64
       },
       {
         "name": "OccasionallyAmazingGamer",
@@ -27747,7 +28995,7 @@
             "pos": 16
           }
         ],
-        "rank": 64
+        "rank": 65
       },
       {
         "name": "John Xina",
@@ -27773,7 +29021,7 @@
             "pos": 32
           }
         ],
-        "rank": 65
+        "rank": 66
       },
       {
         "name": "cookie",
@@ -27799,7 +29047,7 @@
             "pos": 32
           }
         ],
-        "rank": 66
+        "rank": 67
       },
       {
         "name": "del23111107300239392952",
@@ -27825,13 +29073,13 @@
             "pos": 15
           }
         ],
-        "rank": 67
+        "rank": 68
       },
       {
         "name": "Shinikage221",
         "points": 0,
         "points_all": 0,
-        "rounds": 7,
+        "rounds": 8,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -27840,7 +29088,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 25.9,
+        "avg_pos": 25.8,
         "best_single": 0,
         "best_pos": 24,
         "dropped": 0,
@@ -27879,9 +29127,14 @@
             "r": "Season 4 Round 1",
             "p": 0,
             "pos": 25
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 25
           }
         ],
-        "rank": 68
+        "rank": 69
       },
       {
         "name": "Mokster",
@@ -27912,7 +29165,7 @@
             "pos": 29
           }
         ],
-        "rank": 69
+        "rank": 70
       },
       {
         "name": "Dartho Mas",
@@ -27943,7 +29196,7 @@
             "pos": 23
           }
         ],
-        "rank": 70
+        "rank": 71
       },
       {
         "name": "AAredstone",
@@ -27969,7 +29222,7 @@
             "pos": 27
           }
         ],
-        "rank": 71
+        "rank": 72
       },
       {
         "name": "stindt",
@@ -28005,7 +29258,7 @@
             "pos": 25
           }
         ],
-        "rank": 72
+        "rank": 73
       },
       {
         "name": "Lilly Fenn",
@@ -28046,7 +29299,7 @@
             "pos": 14
           }
         ],
-        "rank": 73
+        "rank": 74
       },
       {
         "name": "SharKy",
@@ -28077,7 +29330,7 @@
             "pos": 25
           }
         ],
-        "rank": 74
+        "rank": 75
       },
       {
         "name": "Brachaldis",
@@ -28103,13 +29356,13 @@
             "pos": 27
           }
         ],
-        "rank": 75
+        "rank": 76
       },
       {
         "name": "timesprout",
         "points": 0,
         "points_all": 0,
-        "rounds": 8,
+        "rounds": 9,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -28118,7 +29371,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 23.6,
+        "avg_pos": 23.4,
         "best_single": 0,
         "best_pos": 19,
         "dropped": 0,
@@ -28162,9 +29415,14 @@
             "r": "Season 3 Round 20",
             "p": 0,
             "pos": 24
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 22
           }
         ],
-        "rank": 76
+        "rank": 77
       },
       {
         "name": "Gh0stChicken",
@@ -28190,7 +29448,7 @@
             "pos": 29
           }
         ],
-        "rank": 77
+        "rank": 78
       },
       {
         "name": "koz",
@@ -28221,7 +29479,7 @@
             "pos": 21
           }
         ],
-        "rank": 78
+        "rank": 79
       },
       {
         "name": "imagineaclevernamehere",
@@ -28257,7 +29515,7 @@
             "pos": 22
           }
         ],
-        "rank": 79
+        "rank": 80
       },
       {
         "name": "sailingman",
@@ -28283,7 +29541,7 @@
             "pos": 32
           }
         ],
-        "rank": 80
+        "rank": 81
       },
       {
         "name": "[MBT] MOW BIG T",
@@ -28309,7 +29567,7 @@
             "pos": 33
           }
         ],
-        "rank": 81
+        "rank": 82
       },
       {
         "name": "TwoFace",
@@ -28335,7 +29593,7 @@
             "pos": 34
           }
         ],
-        "rank": 82
+        "rank": 83
       },
       {
         "name": "Sir Pickelsworth",
@@ -28361,7 +29619,7 @@
             "pos": 34
           }
         ],
-        "rank": 83
+        "rank": 84
       },
       {
         "name": "[TTR]DragonShadow84290",
@@ -28392,7 +29650,7 @@
             "pos": 25
           }
         ],
-        "rank": 84
+        "rank": 85
       },
       {
         "name": "dencar85",
@@ -28416,37 +29674,6 @@
             "r": "Season 3 Round 9",
             "p": 0,
             "pos": 11
-          }
-        ],
-        "rank": 85
-      },
-      {
-        "name": "IronDragon111000",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 2,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 23.0,
-        "best_single": 0,
-        "best_pos": 19,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Season 3 Round 9",
-            "p": 0,
-            "pos": 19
-          },
-          {
-            "r": "Season 3 Round 20",
-            "p": 0,
-            "pos": 27
           }
         ],
         "rank": 86
@@ -28642,7 +29869,7 @@
         "name": "Zeus",
         "points": 0,
         "points_all": 0,
-        "rounds": 3,
+        "rounds": 4,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -28651,7 +29878,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 24.3,
+        "avg_pos": 23.2,
         "best_single": 0,
         "best_pos": 18,
         "dropped": 0,
@@ -28670,6 +29897,11 @@
             "r": "Season 3 Round 20",
             "p": 0,
             "pos": 33
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 20
           }
         ],
         "rank": 94
@@ -28760,7 +29992,7 @@
         "name": "M4DSCOTSM4N",
         "points": 0,
         "points_all": 0,
-        "rounds": 8,
+        "rounds": 9,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -28769,9 +30001,9 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 25.0,
+        "avg_pos": 23.7,
         "best_single": 0,
-        "best_pos": 16,
+        "best_pos": 13,
         "dropped": 0,
         "history": [
           {
@@ -28813,6 +30045,11 @@
             "r": "Season 3 Round 19",
             "p": 0,
             "pos": 21
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 13
           }
         ],
         "rank": 97
@@ -29698,7 +30935,7 @@
         "name": "Waaksaam",
         "points": 0,
         "points_all": 0,
-        "rounds": 4,
+        "rounds": 5,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -29707,7 +30944,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 27.0,
+        "avg_pos": 27.2,
         "best_single": 0,
         "best_pos": 25,
         "dropped": 0,
@@ -29731,6 +30968,11 @@
             "r": "Season 3 Round 20",
             "p": 0,
             "pos": 25
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 28
           }
         ],
         "rank": 130
@@ -30128,7 +31370,7 @@
         "name": "[RABI]Yksdjcj",
         "points": 0,
         "points_all": 0,
-        "rounds": 1,
+        "rounds": 2,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -30137,15 +31379,20 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 39.0,
+        "avg_pos": 33.5,
         "best_single": 0,
-        "best_pos": 39,
+        "best_pos": 28,
         "dropped": 0,
         "history": [
           {
             "r": "Season 3 Round 17",
             "p": 0,
             "pos": 39
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 28
           }
         ],
         "rank": 145
@@ -30416,7 +31663,7 @@
         "rank": 155
       },
       {
-        "name": "dtmittens",
+        "name": "cipi",
         "points": 0,
         "points_all": 0,
         "rounds": 1,
@@ -30731,7 +31978,7 @@
         "name": "[MMM]Kreeeeee",
         "points": 0,
         "points_all": 0,
-        "rounds": 1,
+        "rounds": 2,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -30740,15 +31987,20 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 33.0,
+        "avg_pos": 27.0,
         "best_single": 0,
-        "best_pos": 33,
+        "best_pos": 21,
         "dropped": 0,
         "history": [
           {
             "r": "Season 4 Round 1",
             "p": 0,
             "pos": 33
+          },
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 21
           }
         ],
         "rank": 168
@@ -30778,6 +32030,110 @@
           }
         ],
         "rank": 169
+      },
+      {
+        "name": "DeiRex",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 19.0,
+        "best_single": 0,
+        "best_pos": 19,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 19
+          }
+        ],
+        "rank": 170
+      },
+      {
+        "name": "Robgamer",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 26.0,
+        "best_single": 0,
+        "best_pos": 26,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 26
+          }
+        ],
+        "rank": 171
+      },
+      {
+        "name": "Akane",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 27.0,
+        "best_single": 0,
+        "best_pos": 27,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 27
+          }
+        ],
+        "rank": 172
+      },
+      {
+        "name": "variableferret",
+        "points": 0,
+        "points_all": 0,
+        "rounds": 1,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 0.0,
+        "avg_pos": 28.0,
+        "best_single": 0,
+        "best_pos": 28,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Season 4 Round 2",
+            "p": 0,
+            "pos": 28
+          }
+        ],
+        "rank": 173
       }
     ],
     "round_strengths": {},
@@ -30798,7 +32154,8 @@
       "Season 3 Round 19": "2026-05-27",
       "Season 3 Round 20": "2026-06-03",
       "Season 3 Troll 4": "2026-06-17",
-      "Season 4 Round 1": "2026-09-16"
+      "Season 4 Round 1": "2026-09-16",
+      "Season 4 Round 2": "2026-09-23"
     }
   }
 }
