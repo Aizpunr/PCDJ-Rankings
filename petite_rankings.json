@@ -1332,7 +1332,7 @@
         "rank": 27
       },
       {
-        "name": "TheRockingSheep",
+        "name": "[MIB]TheRockingSheep",
         "points": 80,
         "points_all": 80,
         "rounds": 1,
@@ -2997,7 +2997,7 @@
         "rank": 26
       },
       {
-        "name": "TheRockingSheep",
+        "name": "[MIB]TheRockingSheep",
         "points": 4,
         "points_all": 4,
         "rounds": 1,
@@ -15785,11 +15785,11 @@
   },
   "Season 4": {
     "type": "season",
-    "total_events": 2,
+    "total_events": 19,
     "rounds_played": 2,
     "rounds_regular": 2,
     "rounds_special": 0,
-    "best_of": 2,
+    "best_of": 13,
     "drops_active": false,
     "points_scale": 20,
     "rankings": [

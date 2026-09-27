@@ -83,7 +83,7 @@ BEST_OF_PCT = 0.70  # count best 70% of rounds per season
 SEASON_TOTAL = {
     'Season 2': 17,   # 15 regular + Troll 2 + Roulette 2
     'Season 3': 21,   # 19 regular (no Round 11) + Troll 3 + Troll 4; Roulette 3 never ran
-    # 'Season 4': ?,  # TODO: set once SGR publishes the S4 calendar
+    'Season 4': 19,   # 17 regular (community PCDJ #50-#66) + Troll 5 + Roulette 4
 }
 
 def base_points(position):
