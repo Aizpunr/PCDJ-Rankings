@@ -5,6 +5,10 @@ Usage: python parse_petite_log.py <cup_number>
 Reads:
   cup logs/petite_<N>.log                  — COTDTracker (cup structure + baseline times)
   cup logs/petite_<N>_liveleaderboard.log  — LiveLeaderboardLogger (override for mid-round leavers)
+                                             OPTIONAL: without it the COTDTracker result stands
+                                             (identical for every cup except 43 and 47).
+
+new_petite.py calls parse() directly with explicit paths.
 
 Approach:
   COTDTracker is the scaffold for the cup structure (round count, who was eliminated when).
@@ -150,6 +154,24 @@ def parse_livelog(path):
             round_starts[int(m.group(2))] = m.group(1)
             continue
     return snaps, roster, map_names, round_starts
+
+
+def livelog_session_date(path):
+    """Date ('YYYY-MM-DD') of the last SESSION_START in a livelog, or None.
+
+    parse_livelog() keeps only that session, so this is the day the data comes from.
+    A livelog copied without playing that day still holds an older session."""
+    last = None
+    for ln in path.read_text(encoding='utf-8', errors='replace').splitlines():
+        if 'SESSION_START' in ln:
+            m = re.search(r'(\d{4}-\d{2}-\d{2})T', ln)
+            if m:
+                last = m.group(1)
+    return last
+
+
+class AmbiguousWinnerError(ValueError):
+    """More than one player was never eliminated, so there is no single winner."""
 
 
 def build_sid_name_map(cotd_rounds, snaps, roster=None):
@@ -418,7 +440,7 @@ def reconstruct(cotd_rounds, snaps, sid_to_name, name_to_sid, cotd_lines=None, r
 
         timed = sorted(
             [(n, time_for[n]) for n in all_elim if time_for[n] is not None],
-            key=lambda x: x[1],
+            key=lambda x: (x[1], x[0]),  # name breaks an exact tie: set order is not stable
         )
         untimed = [n for n in all_elim if time_for[n] is None]
         remaining -= all_elim
@@ -441,6 +463,9 @@ def reconstruct(cotd_rounds, snaps, sid_to_name, name_to_sid, cotd_lines=None, r
                 'note': note_for[n],
             })
 
+    if len(remaining) > 1:
+        raise AmbiguousWinnerError(
+            f'{len(remaining)} players were never eliminated: {sorted(remaining)}')
     if remaining:
         winner = next(iter(remaining))
         wt = cotd_rounds[-1]['block_players'].get(winner)
@@ -450,24 +475,31 @@ def reconstruct(cotd_rounds, snaps, sid_to_name, name_to_sid, cotd_lines=None, r
     return results, overrides
 
 
-def main():
-    if len(sys.argv) != 2:
-        print(__doc__)
-        sys.exit(1)
-    cup = sys.argv[1]
-    base = Path(__file__).parent / 'cup logs'
-    cotd_path = base / f'petite_{cup}.log'
-    live_path = base / f'petite_{cup}_liveleaderboard.log'
-    if not cotd_path.exists():
-        print(f'ERROR: {cotd_path} not found'); sys.exit(1)
-    if not live_path.exists():
-        print(f'ERROR: {live_path} not found'); sys.exit(1)
+def parse(cotd_path, live_path=None, cup_date=None):
+    """Reconstruct a cup. Returns (results, overrides).
 
-    print(f'Parsing cup {cup}...')
+    live_path is optional. With cup_date ('YYYY-MM-DD') given, a livelog whose last
+    session is more than a day away from it is ignored with a warning: it is a stale
+    copy and its rounds belong to another lobby.
+    Raises AmbiguousWinnerError if more than one player is left standing."""
+    cotd_path = Path(cotd_path)
     cotd_rounds, cotd_lines = parse_cotdtracker(cotd_path)
     print(f'  COTDTracker: {len(cotd_rounds)} elim rounds')
+    if not cotd_rounds:
+        raise ValueError(f'no elimination rounds in {cotd_path.name}')
 
-    snaps, roster, map_names, round_starts = parse_livelog(live_path)
+    if live_path is not None and cup_date:
+        from datetime import date
+        sess = livelog_session_date(Path(live_path))
+        if sess is None or abs((date.fromisoformat(sess) - date.fromisoformat(cup_date)).days) > 1:
+            print(f'  WARNING: livelog session date {sess} is not the cup date {cup_date}; ignoring the livelog')
+            live_path = None
+
+    if live_path is None:
+        print('  LiveLeaderboardLogger: none, COTDTracker result stands')
+        return reconstruct(cotd_rounds, [], {}, {})
+
+    snaps, roster, map_names, round_starts = parse_livelog(Path(live_path))
     print(f'  LiveLeaderboardLogger: {len(snaps)} snapshots, {len(roster)} roster entries, {len(map_names)} map names')
     if map_names:
         print(f'  Maps played:')
@@ -482,10 +514,6 @@ def main():
 
     results, overrides = reconstruct(cotd_rounds, snaps, sid_to_name, name_to_sid,
                                      cotd_lines=cotd_lines, round_starts=round_starts)
-
-    out_path = base / f'petite_{cup}_reconstructed.json'
-    out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding='utf-8')
-    print(f'  Wrote {out_path}')
 
     if not overrides:
         print('\n  No DNF overrides — all COTDTracker DNFs are true DNFs.')
@@ -514,6 +542,33 @@ def main():
         for name, o, t in pos_diffs:
             safe = name.encode('ascii', 'replace').decode('ascii')
             print(f'    {safe:<35} {t["pos"]} -> {o["pos"]} ({o.get("note","")})')
+    return results, overrides
+
+
+def write_results(results, out_path):
+    Path(out_path).write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding='utf-8')
+
+
+def main():
+    if len(sys.argv) != 2:
+        print(__doc__)
+        sys.exit(1)
+    cup = sys.argv[1]
+    base = Path(__file__).parent / 'cup logs'
+    cotd_path = base / f'petite_{cup}.log'
+    live_path = base / f'petite_{cup}_liveleaderboard.log'
+    if not cotd_path.exists():
+        print(f'ERROR: {cotd_path} not found'); sys.exit(1)
+
+    print(f'Parsing cup {cup}...')
+    try:
+        results, _ = parse(cotd_path, live_path if live_path.exists() else None)
+    except ValueError as e:
+        print(f'ERROR: {e}'); sys.exit(1)
+
+    out_path = base / f'petite_{cup}_reconstructed.json'
+    write_results(results, out_path)
+    print(f'  Wrote {out_path}')
 
 
 if __name__ == '__main__':

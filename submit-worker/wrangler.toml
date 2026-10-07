@@ -1,0 +1,22 @@
+# Cloudflare Worker that receives PCDJ cup logs from submit.html.
+# Setup steps: see README.md. Secrets (TURNSTILE_SECRET, POLLER_TOKEN) are
+# set with `npx wrangler secret put`, never written here.
+name = "pcdj-submit"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+workers_dev = true
+
+[[kv_namespaces]]
+binding = "SUBMISSIONS"
+# Replace both with the ids printed by:
+#   npx wrangler kv namespace create PCDJ_SUBMISSIONS
+#   npx wrangler kv namespace create PCDJ_SUBMISSIONS --preview
+id = "5e81f26b8f194ca8a10b43d8a857b7dd"
+preview_id = "ba5cc55882bf46c6bd537635a825468b"
+
+[vars]
+ALLOWED_ORIGINS = "https://aizpunr.github.io,http://localhost:9001,http://127.0.0.1:9001"
+TURNSTILE_HOSTNAMES = "aizpunr.github.io,localhost,127.0.0.1"
+MAX_BYTES = "5242880"
+MAX_INDEX = "200"
+DAILY_SUBMIT_CAP = "20"

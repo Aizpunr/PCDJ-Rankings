@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+*.tmp
+
+# new_petite.py pre-cup xlsx backups (local safety net, not site data)
+backups/
+
+# Submit-a-cup flow: poller config holds the Worker token (local only),
+# downloaded submissions and poller state stay on this PC
+submit_config.json
+cup logs/submissions/
+submit-worker/.dev.vars
+submit-worker/node_modules/
+submit-worker/.wrangler/

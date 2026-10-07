@@ -1,0 +1,7 @@
+{
+  "_comment": "Cups whose saved petite_N_reconstructed.json a fresh parse of LogOutput.log alone cannot reproduce, and why.",
+  "43": "needs the livelog: one DNF -> live time override moves 2 rows (it does reproduce with the livelog)",
+  "46": "hand-corrected after parsing (commit bc7f650)",
+  "47": "hand-corrected after parsing (commit bc7f650), and a livelog DNF override",
+  "48": "no logs: reconstructed from a VOD"
+}

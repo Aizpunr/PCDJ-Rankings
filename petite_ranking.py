@@ -6,7 +6,9 @@ _dir = os.path.dirname(os.path.abspath(__file__))
 _p = lambda f: os.path.join(_dir, f)
 
 # Import CANONICAL from elo_engine.py
-elo_dir = os.path.join(os.path.dirname(_dir), 'zeepkist cotd elo')
+# PETITE_COTD_DIR: for a scratch copy of this folder (tests, rehearsals) that
+# no longer sits next to the COTD repo. COTD files are only read, never written.
+elo_dir = os.environ.get('PETITE_COTD_DIR') or os.path.join(os.path.dirname(_dir), 'zeepkist cotd elo')
 sys.path.insert(0, elo_dir)
 from elo_engine import CANONICAL
 
@@ -242,11 +244,7 @@ FULL_LOBBY_REPLACEMENTS = {
         'Round 20': ('Petite Cups 46-50.xlsx', 'Petite Cup 49'),
         'Troll 4':  ('Petite Cups 46-50.xlsx', 'Petite Cup 50 (Troll 4)'),
     },
-    'Season 4': {
-        'Round 1': ('Petite Cups 51-55.xlsx', 'Petite Cup 51'),
-        'Round 2': ('Petite Cups 51-55.xlsx', 'Petite Cup 52'),
-        'Round 3': ('Petite Cups 51-55.xlsx', 'Petite Cup 53'),
-    },
+    # Season 4 onward: cup_meta.json
 }
 
 # Supplementary cups not yet in SGR's spreadsheet
@@ -275,12 +273,41 @@ EVENT_DATES = {
         'Round 20': '2026-06-03',
         'Troll 4':  '2026-06-17',
     },
-    'Season 4': {
-        'Round 1': '2026-09-16',
-        'Round 2': '2026-09-23',
-        'Round 3': '2026-09-30',
-    },
+    # Season 4 onward: cup_meta.json
 }
+
+# Cups processed by new_petite.py live in cup_meta.json, not in the dicts above
+# (those are frozen history). Merged here at import, not in main(), because
+# zeepkist holistic/build_allsofdata.py imports this module and reads EVENT_DATES.
+CUP_META_PATH = _p('cup_meta.json')
+
+def cup_number(label):
+    """'Petite Cup 53' -> 53, 'Petite Cup 50 (Troll 4)' -> 50."""
+    return int(re.match(r'Petite Cup (\d+)', label).group(1))
+
+def load_cup_meta():
+    if not os.path.exists(CUP_META_PATH):
+        return {}
+    with open(CUP_META_PATH, encoding='utf-8') as f:
+        return json.load(f)
+
+def merge_cup_meta(meta):
+    """Add each cup to FULL_LOBBY_REPLACEMENTS and EVENT_DATES in cup order.
+    An entry also present in a literal dict must agree with it exactly."""
+    for label in sorted(meta, key=cup_number):
+        m = meta[label]
+        season, rnd = m['season'], m['round']
+        repl = (m['xlsx'], label)
+        have = FULL_LOBBY_REPLACEMENTS.get(season, {}).get(rnd)
+        if have is not None and tuple(have) != repl:
+            raise ValueError(f'cup_meta.json {label}: {season} {rnd} is already {have}')
+        have_date = EVENT_DATES.get(season, {}).get(rnd)
+        if have_date is not None and have_date != m['date']:
+            raise ValueError(f'cup_meta.json {label}: {season} {rnd} is already dated {have_date}')
+        FULL_LOBBY_REPLACEMENTS.setdefault(season, {})[rnd] = repl
+        EVENT_DATES.setdefault(season, {})[rnd] = m['date']
+
+merge_cup_meta(load_cup_meta())
 
 # --- Compute rankings ---
 def compute_rankings(rounds, best_of, season_mode=True, championship=False):
