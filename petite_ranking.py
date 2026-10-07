@@ -70,7 +70,13 @@ def normalize(name):
         return NAME_MAP[name]
     # Auto-strip: [TAG]Name -> Name if Name is a canonical key
     stripped = strip_tag(name)
-    if stripped != name and (stripped in CANONICAL or stripped in NAME_MAP.values()):
+    # Accept the bare name if the registry knows it in ANY role: a canonical
+    # name, a canonical value, or an alias key. Without the alias-key case
+    # '[CSC]ShyGirlyRaccoon' never reached 'ShyGirlyRaccoon' -> 'SGR', so her
+    # results sat under the tagged name and would split the day she dropped
+    # the tag.
+    if stripped != name and (stripped in CANONICAL or stripped in NAME_MAP
+                             or stripped in NAME_MAP.values()):
         return NAME_MAP.get(stripped, stripped)
     return name
 

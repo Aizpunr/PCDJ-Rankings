@@ -331,6 +331,10 @@ def main():
         if hits:
             excluded += [h for h in hits if h not in excluded]
             notes.append(f'excluded {x} ({", ".join(hits)})')
+            # Not a mapper, so nothing else would mention it: surface it as a
+            # warning so the player count on the site is explained rather than
+            # just being one lower than the lobby.
+            print(f'  WARNING: {", ".join(hits)} removed by hand (not a mapper)')
         else:
             print(f'  WARNING: excluded name {x!r} is not in the results; nothing to remove')
     for s in notes:
@@ -342,6 +346,21 @@ def main():
         if e['pos'] != prev_pos:
             new_pos, prev_pos = seen, e['pos']
         rows.append({**e, 'new_pos': new_pos})
+    # A scoring finisher the registry has never seen is usually a known player
+    # under a new display name, not a newcomer -- 'Vael' took 3rd at PCDJ #53
+    # before anyone noticed he was B_ES. Only the top 10 score, so only warn there.
+    try:
+        import petite_ranking as _pr
+        with open(os.path.join(_pr.elo_dir, 'steam_ids.json'), encoding='utf-8') as _f:
+            _known = set(json.load(_f))
+        for _r in rows[:10]:
+            _c = _pr.normalize(_r['name'])
+            if _c not in _known:
+                print(f"  WARNING: {_r['name']!r} finished {_r['new_pos']} but is not in "
+                      f"the player registry; check it is not a known player renamed")
+    except Exception as _e:
+        print(f'  WARNING: could not check finishers against the registry ({_e})')
+
     if not rows or rows[0]['new_pos'] != 1 or sum(r['new_pos'] == 1 for r in rows) != 1:
         fail('the results have no single winner after exclusions')
     winner = rows[0]
