@@ -5,7 +5,7 @@ community PCDJ number instead of a cup number. Run by Windows Task Scheduler
 every 15 minutes (see submit-worker/README.md). Each pass:
 
   1. Asks the pcdj-submit Worker for pending submissions.
-  2. Marks 'processed' cups that are now on origin/main as 'published'.
+  2. Marks 'processed' cups that are now on origin/master as 'published'.
   3. For 'received' ones: downloads the log, skips cups that are already
      processed ('duplicate'), keeps the most complete log when several were
      sent for one cup ('superseded'), and runs
@@ -22,7 +22,7 @@ Config: submit_config.json next to this script (gitignored):
     {"worker_url": "https://pcdj-submit.cotd-submit.workers.dev",
      "poller_token": "<same value as the Worker's POLLER_TOKEN secret>"}
 Optional keys: repo_dir, python, toast (true), git_remote ("origin"),
-git_branch ("main").
+git_branch ("master", this repo's branch).
 
 Files live in "cup logs/submissions/" (gitignored): downloaded logs,
 new_petite.py output (<id>.out), state.json, poll.log, and a PAUSE marker:
@@ -76,7 +76,7 @@ class Ctx:
             self.python = os.path.join(os.path.dirname(self.python), 'python.exe')
         self.toast = cfg.get('toast', True)
         self.remote = cfg.get('git_remote', 'origin')
-        self.branch = cfg.get('git_branch', 'main')
+        self.branch = cfg.get('git_branch', 'master')
         self.dry_run = args.dry_run
         self.no_git = args.no_git
         self.only_id = args.id

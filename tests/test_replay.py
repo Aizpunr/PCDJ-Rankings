@@ -50,7 +50,12 @@ def new_petite(repo, n, *extra):
 
 @pytest.fixture
 def emptied(scratch):
-    """The scratch repo as it was after Cup 50: Season 4 removed. Returns (repo, baseline rankings)."""
+    """The scratch repo as it was after Cup 50: Season 4 removed. Returns (repo, baseline rankings).
+    The baseline is the rankings with exactly the replayed cups (51-53), whatever came later."""
+    meta_path = scratch / 'cup_meta.json'
+    meta = json.loads(meta_path.read_text(encoding='utf-8'))
+    meta = {k: v for k, v in meta.items() if int(k.split()[-1]) in CUPS}
+    meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     rc, out = run_script(scratch, 'petite_ranking.py')
     assert rc == 0, out
     baseline = (scratch / 'petite_rankings.json').read_bytes()
@@ -79,6 +84,8 @@ def test_replay_51_to_53(emptied):
     meta = json.loads((repo / 'cup_meta.json').read_text(encoding='utf-8'))
     seeds = json.loads((REPO / 'cup_meta.json').read_text(encoding='utf-8'))
     for label, seed in seeds.items():
+        if int(label.split()[-1]) not in CUPS:
+            continue
         for key in ('season', 'round', 'xlsx', 'date', 'community', 'excluded'):
             assert meta[label][key] == seed[key], (label, key)
     assert meta['Petite Cup 51']['created_xlsx'] is True
@@ -86,25 +93,31 @@ def test_replay_51_to_53(emptied):
 
 
 def test_guards(scratch):
-    repo = scratch  # holds Cups 51-53 already, as the real repo does
+    """Run against the repo's real latest cup, whichever it is."""
+    import datetime
+    repo = scratch
+    meta = json.loads((repo / 'cup_meta.json').read_text(encoding='utf-8'))
+    last = max(meta.values(), key=lambda m: (m['date'], m['community']))
+    nxt, last_date = last['community'] + 1, datetime.date.fromisoformat(last['date'])
+    log = ['--log', str(LOGS / 'petite_53.log'), '--no-open']
 
-    rc, out = new_petite(repo, 53)
+    def args(community, date):
+        return ['--community', str(community), '--date', date.isoformat(),
+                '--map1', 'A', '--map2', 'B'] + log
+
+    rc, out = run_script(repo, 'new_petite.py', *args(last['community'], last_date))
     assert rc == 1 and 'is already processed' in out
 
-    # Next cup is #53. A two-week date gap means a cup is missing in between.
-    args = CUPS[53][:]
-    args[1], args[3] = '53', '2026-10-14'
-    rc, out = run_script(repo, 'new_petite.py', *args, '--log', str(LOGS / 'petite_53.log'), '--no-open')
+    # A two-week date gap means a cup is missing in between.
+    rc, out = run_script(repo, 'new_petite.py', *args(nxt, last_date + datetime.timedelta(days=14)))
     assert rc == 1 and 'not one week' in out
 
     # A community number that skips one.
-    args[1], args[3] = '54', '2026-10-07'
-    rc, out = run_script(repo, 'new_petite.py', *args, '--log', str(LOGS / 'petite_53.log'), '--no-open')
-    assert rc == 1 and 'does not follow PCDJ #52' in out
+    rc, out = run_script(repo, 'new_petite.py', *args(nxt + 1, last_date + datetime.timedelta(days=7)))
+    assert rc == 1 and f'does not follow PCDJ #{last["community"]}' in out
 
     # Nothing was written by the refusals.
-    assert json.loads((repo / 'cup_meta.json').read_text(encoding='utf-8')).keys() == \
-        json.loads((REPO / 'cup_meta.json').read_text(encoding='utf-8')).keys()
+    assert json.loads((repo / 'cup_meta.json').read_text(encoding='utf-8')) == meta
 
 
 def test_reprocess_latest(emptied):
