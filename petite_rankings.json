@@ -4781,7 +4781,7 @@
         "rank": 19
       },
       {
-        "name": "Vael",
+        "name": "B_ES",
         "points": 240,
         "points_all": 240,
         "rounds": 2,
@@ -11044,7 +11044,7 @@
         "rank": 18
       },
       {
-        "name": "Vael",
+        "name": "B_ES",
         "points": 12,
         "points_all": 12,
         "rounds": 2,
@@ -16122,7 +16122,7 @@
         "rank": 10
       },
       {
-        "name": "Vael",
+        "name": "B_ES",
         "points": 160,
         "points_all": 160,
         "rounds": 2,
@@ -18144,7 +18144,7 @@
         "rank": 10
       },
       {
-        "name": "Vael",
+        "name": "B_ES",
         "points": 8,
         "points_all": 8,
         "rounds": 2,
@@ -19797,8 +19797,8 @@
     "round_strengths": {
       "Round 1": 96.0,
       "Round 2": 89.8,
-      "Round 3": 88.7,
-      "Round 4": 91.9
+      "Round 3": 88.8,
+      "Round 4": 92.0
     },
     "round_dates": {
       "Round 1": "2026-09-16",
@@ -21148,7 +21148,7 @@
         "rank": 15
       },
       {
-        "name": "Vael",
+        "name": "B_ES",
         "points": 400,
         "points_all": 400,
         "rounds": 4,
@@ -28507,7 +28507,7 @@
         "rank": 14
       },
       {
-        "name": "Vael",
+        "name": "B_ES",
         "points": 20,
         "points_all": 20,
         "rounds": 4,

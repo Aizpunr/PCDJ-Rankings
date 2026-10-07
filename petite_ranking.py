@@ -58,9 +58,6 @@ PETITE_ALIASES = {
     'A2 Zecklord': 'A2 Zecklord',
     'OLR94': 'SGR',
     'ShyGirlyRaccoon': 'SGR',
-    'B_ES': 'Vael',
-    'B_es': 'Vael',
-    'what_is_tatari_2008': 'ZOMAN',
 }
 NAME_MAP.update(PETITE_ALIASES)
 
