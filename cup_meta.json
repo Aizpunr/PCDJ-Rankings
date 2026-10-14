@@ -48,5 +48,26 @@
     "excluded": [
       "[CSC] variableferret"
     ]
+  },
+  "Petite Cup 55": {
+    "season": "Season 4",
+    "round": "Round 5",
+    "xlsx": "Petite Cups 51-55.xlsx",
+    "date": "2026-10-14",
+    "community": 54,
+    "maps": [
+      {
+        "name": "PCDJ #54 Deep Depths",
+        "mapper": "IronDragon111000"
+      },
+      {
+        "name": "PCDJ #54 - Cobalt Dust",
+        "mapper": "Tommygaming"
+      }
+    ],
+    "maps_label": "Maps: PCDJ #54 Deep Depths by IronDragon111000 + PCDJ #54 - Cobalt Dust by Tommygaming",
+    "excluded": [
+      "[CSC]IronDragon111000"
+    ]
   }
 }
