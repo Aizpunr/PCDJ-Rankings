@@ -69,5 +69,28 @@
     "excluded": [
       "[CSC]IronDragon111000"
     ]
+  },
+  "Petite Cup 56": {
+    "season": "Season 4",
+    "round": "Round 6",
+    "xlsx": "Petite Cups 56-60.xlsx",
+    "date": "2026-10-21",
+    "community": 55,
+    "maps": [
+      {
+        "name": "PCDJ #55 - Tori",
+        "mapper": "[CSC] PlusMicron"
+      },
+      {
+        "name": "PCDJ #55 - Inline",
+        "mapper": "felix"
+      }
+    ],
+    "maps_label": "Maps: PCDJ #55 - Tori by [CSC] PlusMicron + PCDJ #55 - Inline by felix",
+    "excluded": [
+      "[CSC] PlusMicron",
+      "felix"
+    ],
+    "created_xlsx": true
   }
 }
