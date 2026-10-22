@@ -353,6 +353,10 @@ def main():
         import petite_ranking as _pr
         with open(os.path.join(_pr.elo_dir, 'steam_ids.json'), encoding='utf-8') as _f:
             _known = set(json.load(_f))
+        # A canonical entry counts as known: it is only added once someone has
+        # worked out who the player is, which can happen before a steam id for
+        # them ever turns up.
+        _known |= set(_pr.CANONICAL)
         for _r in rows[:10]:
             _c = _pr.normalize(_r['name'])
             if _c not in _known:

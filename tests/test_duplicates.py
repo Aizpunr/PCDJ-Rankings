@@ -65,3 +65,37 @@ def test_published_result_reads_back_the_excluded_lobby():
     assert have['players'] == 33
     # Excluded mappers must not reappear in the published side either.
     assert '[CSC] PlusMicron' not in have['podium']
+
+
+# ── re-deriving a stored summary ──────────────────────────────────────
+# A summary is frozen when the cup is submitted, so it keeps the names the
+# log used and whatever went wrong that night. Neither should outlive the
+# facts changing.
+
+def test_resummarize_resolves_merged_aliases():
+    # PCDJ #53 was submitted before Vael was known to be B_ES and
+    # tatari_lover2008 to be Sterben.
+    got = sp.rebuild_summary(Ctx(), '54')
+    names = [p['name'] for p in got['podium']]
+    assert 'Vael' not in names and 'tatari_lover2008' not in names
+    assert names == ['justMaki', 'Sterben', 'B_ES']
+
+
+def test_resummarize_drops_warnings_that_no_longer_hold():
+    # Cup 56's stored summary carries the cross-comp failure from that night
+    # and a registry warning for shmoogl, who has since been registered.
+    got = sp.rebuild_summary(Ctx(), '56')
+    assert got['warnings'] == []
+    assert got['winner'] == 'ZOMAN'
+    assert got['players'] == 33
+
+
+def test_an_unregistered_scorer_still_warns(monkeypatch):
+    # The warning must only go quiet because someone registered the player,
+    # never because the check was loosened.
+    import petite_ranking as pr
+    monkeypatch.setattr(pr, 'CANONICAL', {})
+    monkeypatch.setattr(pr, 'normalize', lambda n: 'nobody-has-ever-seen-this')
+    got = sp.rebuild_summary(Ctx(), '56')
+    assert got['warnings'], 'an unknown scoring finisher must still be flagged'
+    assert 'not in the player registry' in got['warnings'][0]

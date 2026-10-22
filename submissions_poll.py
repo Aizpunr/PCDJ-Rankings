@@ -340,6 +340,79 @@ def toast(ctx, title, body):
 
 # ── running new_petite.py ────────────────────────────────────────────
 
+def rebuild_summary(ctx, cup):
+    """The stored summary of a cup, re-derived from the repo as it stands now.
+
+    A summary is frozen at submission time, so it keeps whatever the log called
+    each player and whatever went wrong that evening. Once an alias is merged
+    the receipt disagrees with the site: PCDJ #53 still reads 'tatari_lover2008'
+    and 'Vael' for Sterben and B_ES. Names are resolved through the current
+    registry here, and the warnings are recomputed rather than carried over, so
+    operational noise from that night does not outlive the problem."""
+    sys.path.insert(0, HERE)
+    import petite_ranking as pr
+    results = load_json(os.path.join(ctx.repo, 'cup logs',
+                                     f'petite_{cup}_reconstructed.json'), None)
+    if not results:
+        return None
+    meta = load_json(os.path.join(ctx.repo, 'cup_meta.json'), {}).get(f'Petite Cup {cup}', {})
+    excluded = set(meta.get('excluded') or [])
+    players = [r for r in results if r['name'] not in excluded]
+    if not players:
+        return None
+    ms = lambda t: round(t * 1000) if isinstance(t, (int, float)) else 'DNF'
+    name = lambda n: pr.normalize(n)
+
+    warnings = []
+    try:
+        with open(os.path.join(pr.elo_dir, 'steam_ids.json'), encoding='utf-8') as f:
+            known = set(json.load(f))
+        # A canonical entry counts as known: adding one is a deliberate act of
+        # recognition, and a player can be identified before anyone has
+        # captured a steam id for them (shmoogl, PCDJ #55, no livelog).
+        known |= set(pr.CANONICAL)
+        for i, r in enumerate(players[:10], start=1):
+            if name(r['name']) not in known:
+                warnings.append(f"{r['name']!r} finished {i} but is not in the player "
+                                f"registry; check it is not a known player renamed")
+    except OSError:
+        warnings.append('the player registry could not be read')
+
+    return {'winner': name(players[0]['name']),
+            'podium': [{'name': name(p['name']), 'time': ms(p['time'])} for p in players[:3]],
+            'players': len(players),
+            'rounds': max((p['round'] or 0) for p in players),
+            'warnings': warnings}
+
+
+def resummarize(ctx, only_id=None):
+    """Re-derive the stored summaries of cups this repo already holds."""
+    subs = api(ctx, 'GET', '/status').get('submissions', [])
+    cups = local_communities(ctx)
+    done = 0
+    for sub in subs:
+        if only_id and sub['id'] != only_id:
+            continue
+        label = cups.get(sub.get('community'))
+        if not label:
+            log.info('%s: PCDJ #%s is not in cup_meta.json, left alone',
+                     sub['id'], sub.get('community'))
+            continue
+        fresh = rebuild_summary(ctx, label.split()[-1])
+        if not fresh:
+            log.warning('%s: %s could not be re-read, left alone', sub['id'], label)
+            continue
+        if fresh == sub.get('summary'):
+            log.info('%s: %s already current', sub['id'], label)
+            continue
+        note = (sub.get('note') or '').split(' [re-derived')[0]
+        note += f" [re-derived {datetime.date.today().isoformat()} from the current registry]"
+        post_status(ctx, sub['id'], sub.get('status') or 'published', note.strip(), fresh)
+        done += 1
+    log.info('resummarize: %d record(s) updated', done)
+    return 0
+
+
 def published_result(ctx, cup):
     """Winner, top 3 and player count of the cup already in the repo, built the
     same way summarize() builds them: the saved reconstruction minus the
@@ -645,6 +718,9 @@ def main():
     ap.add_argument('--id', help='only handle this submission id')
     ap.add_argument('--no-git', action='store_true', help='skip git fetch / publish detection')
     ap.add_argument('--reindex', action='store_true', help='ask the Worker to rebuild its index first')
+    ap.add_argument('--resummarize', nargs='?', const=True, default=None,
+                    help='re-derive stored summaries from the current repo and registry '
+                         '(optionally just one submission id), then exit')
     ap.add_argument('--rehearsal', action='store_true',
                     help='set PETITE_SKIP_EXTERNAL=1 so new_petite.py leaves other repos and port 9001 alone')
     ap.add_argument('-v', '--verbose', action='store_true')
@@ -655,6 +731,9 @@ def main():
     if args.rehearsal and os.path.isdir(os.path.join(ctx.repo, '.git')):
         log.warning('--rehearsal in a git checkout (%s): out-of-repo steps are skipped, but the cup is still '
                     'processed in this repo', ctx.repo)
+
+    if args.resummarize is not None:
+        sys.exit(resummarize(ctx, None if args.resummarize is True else args.resummarize))
 
     if args.loop:
         while True:
