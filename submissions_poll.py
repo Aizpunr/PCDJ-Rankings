@@ -6,9 +6,10 @@ every 15 minutes (see submit-worker/README.md). Each pass:
 
   1. Asks the pcdj-submit Worker for pending submissions.
   2. Marks 'processed' cups that are now on origin/master as 'published'.
-  3. For 'received' ones: downloads the log, skips cups that are already
-     processed ('duplicate'), keeps the most complete log when several were
-     sent for one cup ('superseded'), and runs
+  3. For 'received' ones: downloads the log, re-reads a cup that is already
+     processed and compares it with the published result ('duplicate', with
+     'REVIEW:' when they disagree), keeps the most complete log when several
+     were sent for one cup ('superseded'), and runs
         new_petite.py --community=M --map1=... --date=... --log=<file> --no-open
      for AT MOST ONE cup per pass. new_petite.py assigns the internal cup
      number and refuses (failed) when a cup in between is missing.
@@ -38,6 +39,7 @@ import argparse
 import base64
 import datetime
 import hashlib
+import io
 import json
 import logging
 import logging.handlers
@@ -338,6 +340,78 @@ def toast(ctx, title, body):
 
 # ── running new_petite.py ────────────────────────────────────────────
 
+def published_result(ctx, cup):
+    """Winner, top 3 and player count of the cup already in the repo, built the
+    same way summarize() builds them: the saved reconstruction minus the
+    exclusions new_petite.py recorded."""
+    results = load_json(os.path.join(ctx.repo, 'cup logs',
+                                     f'petite_{cup}_reconstructed.json'), None)
+    if not results:
+        return None
+    meta = load_json(os.path.join(ctx.repo, 'cup_meta.json'), {}).get(f'Petite Cup {cup}', {})
+    excluded = set(meta.get('excluded') or [])
+    players = [r for r in results if r['name'] not in excluded]
+    if not players:
+        return None
+    return {'winner': players[0]['name'],
+            'podium': [p['name'] for p in players[:3]],
+            'players': len(players)}
+
+
+def submitted_result(sub, log_path):
+    """The same three facts read out of a newly submitted log, using THAT
+    submitter's mappers and exclusions. Nothing is written to the repo."""
+    sys.path.insert(0, HERE)
+    import contextlib
+    import parse_petite_log as ppl
+    import new_petite as np
+    try:
+        # The parser narrates to stdout; that belongs in a cup run, not in the
+        # poller's log for a duplicate.
+        with contextlib.redirect_stdout(io.StringIO()):
+            results, _ = ppl.parse(log_path, None, cup_date=sub.get('date'))
+    except Exception as e:
+        raise ValueError(str(e))
+    names = [r['name'] for r in results]
+    excluded = []
+    for who in (sub.get('mapper1'), sub.get('mapper2'), *(sub.get('exclude') or [])):
+        if not who:
+            continue
+        excluded += [x for x in names if np.same_player(x, who) and x not in excluded]
+    players = [r for r in results if r['name'] not in excluded]
+    if not players:
+        raise ValueError('every player was excluded')
+    return {'winner': players[0]['name'],
+            'podium': [p['name'] for p in players[:3]],
+            'players': len(players)}
+
+
+def compare_with_published(ctx, sub, log_path, cup):
+    """Does a log sent for an already-processed cup agree with what was
+    published? Returns (note, needs_review). A resend that matches is routine;
+    one that disagrees is how abuse or a bad ruling shows up, so it is the
+    whole point of keeping every log."""
+    have = published_result(ctx, cup)
+    if not have:
+        return 'the published cup could not be read back for comparison', True
+    try:
+        got = submitted_result(sub, log_path)
+    except Exception as e:
+        return f'this log could not be parsed for comparison ({e})', True
+
+    diffs = []
+    if got['winner'] != have['winner']:
+        diffs.append(f"winner {got['winner']} (published {have['winner']})")
+    elif got['podium'] != have['podium']:
+        diffs.append(f"podium {', '.join(got['podium'])} "
+                     f"(published {', '.join(have['podium'])})")
+    if got['players'] != have['players']:
+        diffs.append(f"{got['players']} players (published {have['players']})")
+    if diffs:
+        return 'DIFFERS from the published result: ' + '; '.join(diffs), True
+    return 'matches the published result', False
+
+
 def new_petite_command(ctx, sub, log_path):
     # --flag=value: argparse would read a value that starts with "-" as a flag.
     cmd = [ctx.python, os.path.join(ctx.repo, 'new_petite.py'),
@@ -527,12 +601,17 @@ def _pass(ctx, args):
             label = local_meta.get(cup) or remote_meta.get(cup)
             existing = os.path.join(ctx.repo, 'cup logs', f"petite_{label.split()[-1]}.log")
             have = count_blocks(existing) if os.path.exists(existing) else 0
+            cup_n = label.split()[-1]
             for sub in subs:
                 n = blocks[sub['id']]
                 note = f'{cup_id} is already processed ({n} leaderboards in this log vs {have} in the one used)'
-                if n > have:
+                verdict, review = compare_with_published(ctx, sub, paths[sub['id']], cup_n)
+                note += f'; {verdict}'
+                if n > have or review:
                     note = 'REVIEW: ' + note
-                    toast(ctx, f'{cup_id}: a more complete log arrived', note)
+                    headline = (f'{cup_id}: a resent log disagrees with the published result' if review
+                                else f'{cup_id}: a more complete log arrived')
+                    toast(ctx, headline, note)
                 post_status(ctx, sub['id'], 'duplicate', note)
             continue
 

@@ -263,7 +263,7 @@
       <span class="pill received">received</span><span>Waiting for aizpun's PC to pick it up (about every 15 minutes while it is on).</span>
       <span class="pill processed">processed</span><span>Rankings computed. Waiting for aizpun to check and publish.</span>
       <span class="pill published">published</span><span>Live on the rankings.</span>
-      <span class="pill duplicate">duplicate</span><span>That cup was already processed, or this exact file was already sent.</span>
+      <span class="pill duplicate">duplicate</span><span>That cup was already processed, or this exact file was already sent. The log is still kept and checked against the published result, so send it anyway if you think something is wrong.</span>
       <span class="pill superseded">superseded</span><span>Someone sent a more complete log for the same cup.</span>
       <span class="pill failed">failed</span><span>The pipeline stopped. The note says why; ping aizpun.</span>
     </div>
@@ -567,7 +567,7 @@ function refreshSubmit() {
   var problems = formProblems();
   var c = Number($('communityInput').value);
   var note = problems.length ? 'Still needed: ' + problems.join(', ') : '';
-  if (!problems.length && state.lastCommunity && c <= state.lastCommunity) note = 'PCDJ #' + c + ' is already on the site; this will be marked duplicate.';
+  if (!problems.length && state.lastCommunity && c <= state.lastCommunity) note = 'PCDJ #' + c + ' is already on the site. This will be marked duplicate, but the log is still kept and compared with the published result.';
   if (!CONFIGURED) note = 'Submissions are not open yet.';
   $('missing').textContent = note;
   $('submitBtn').disabled = !CONFIGURED || problems.length > 0 || state.submitting;
@@ -601,7 +601,8 @@ $('submitBtn').addEventListener('click', function () {
       if (mine.indexOf(res.id) === -1) mine.push(res.id);
       store(MY_KEY, mine.slice(-50));
       $('submitMsg').innerHTML = res.status === 'duplicate'
-        ? msg('warn', 'This exact log was already sent (submission ' + esc(res.id) + '). Nothing new was stored.')
+        ? msg('warn', 'This exact log was already sent. Your submission ' + esc(res.id) + ' is kept on record and '
+            + 'will be checked against the published result.')
         : msg('ok', 'Received. Thank you! Submission ' + esc(res.id) + '. Watch its status below.');
       loadStatus();
     } else {

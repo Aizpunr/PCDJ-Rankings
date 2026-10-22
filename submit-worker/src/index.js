@@ -126,12 +126,8 @@ async function submit(request, env, cors, origin) {
     return err(cors, 403, 'turnstile_failed', 'The anti-bot check failed. Complete it again and resubmit.', { codes: ts.codes });
   }
 
-  const sha256 = await sha256Hex(bytes);
-  const existing = await env.SUBMISSIONS.get('sha:' + sha256);
-  if (existing) {
-    return json(cors, 200, { ok: true, id: existing, status: 'duplicate', message: 'This exact log was already submitted.' });
-  }
-
+  // The cap is checked before the dedupe so a flood of identical files still
+  // counts against it.
   const index = await readIndex(env);
   const cap = intVar(env.DAILY_SUBMIT_CAP, 40);
   const dayAgo = Date.now() - 24 * 3600 * 1000;
@@ -140,6 +136,51 @@ async function submit(request, env, cors, origin) {
   }
 
   const now = new Date().toISOString();
+
+  // Every log stays on record. A byte-identical resend used to return the first
+  // submission's id and store nothing, which hid who sent it and when. It now
+  // gets its own record, so a second sender is visible even though the bytes
+  // are only stored once.
+  const sha256 = await sha256Hex(bytes);
+  const firstId = await env.SUBMISSIONS.get('sha:' + sha256);
+  if (firstId) {
+    const first = await readJson(env, 'sub:' + firstId);
+    const sameCup = !first || first.community === fields.community;
+    let note = 'same file as ' + firstId;
+    if (!sameCup) note += ', which was sent as PCDJ ' + first.community;
+    if (!sameCup) note = 'REVIEW: ' + note;
+    const dup = {
+      id: makeId(),
+      community: fields.community,
+      map1: fields.map1,
+      mapper1: fields.mapper1,
+      map2: fields.map2,
+      mapper2: fields.mapper2,
+      exclude: fields.exclude,
+      date: fields.date,
+      submitter: fields.submitter,
+      created: now,
+      updated: now,
+      status: 'duplicate',
+      size: bytes.byteLength,
+      sha256,
+      n_blocks: nBlocks,
+      preview: fields.preview,
+      summary: null,
+      same_file_as: firstId,
+      note,
+    };
+    await env.SUBMISSIONS.put('sub:' + dup.id, JSON.stringify(dup));
+    await writeIndexWith(env, dup);
+    return json(cors, 200, {
+      ok: true,
+      id: dup.id,
+      status: 'duplicate',
+      same_file_as: firstId,
+      message: 'This exact log was already submitted. It is kept on record anyway.',
+    });
+  }
+
   const id = makeId();
   const rec = {
     id,
@@ -310,6 +351,16 @@ function cleanSummary(s) {
 // The index is read-modify-written, so two writes landing together can drop
 // one record from it. sub:<id> stays authoritative: /status/<id> re-inserts a
 // missing record and /reindex rebuilds the whole index from sub: keys.
+
+async function readJson(env, key) {
+  const raw = await env.SUBMISSIONS.get(key);
+  if (!raw) return null;
+  try {
+    return JSON.parse(raw);
+  } catch (e) {
+    return null;
+  }
+}
 
 async function readIndex(env) {
   const raw = await env.SUBMISSIONS.get('index');
