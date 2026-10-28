@@ -1,0 +1,275 @@
+[
+  {
+    "pos": 1,
+    "name": "Jake",
+    "time": 20.12153,
+    "round": null,
+    "note": "winner"
+  },
+  {
+    "pos": 2,
+    "name": "[KBW]microways",
+    "time": null,
+    "round": 16,
+    "note": "dnf"
+  },
+  {
+    "pos": 3,
+    "name": "Sterben",
+    "time": 19.85596,
+    "round": 15,
+    "note": "cotd"
+  },
+  {
+    "pos": 4,
+    "name": "[MMM]LKat",
+    "time": 20.37223,
+    "round": 14,
+    "note": "cotd"
+  },
+  {
+    "pos": 5,
+    "name": "justMaki",
+    "time": 19.85143,
+    "round": 13,
+    "note": "cotd"
+  },
+  {
+    "pos": 6,
+    "name": "ZOMAN",
+    "time": 20.45766,
+    "round": 12,
+    "note": "cotd"
+  },
+  {
+    "pos": 7,
+    "name": "[CSC]Tommygaming",
+    "time": 19.82093,
+    "round": 11,
+    "note": "cotd"
+  },
+  {
+    "pos": 8,
+    "name": "Minkus",
+    "time": 19.91285,
+    "round": 11,
+    "note": "cotd"
+  },
+  {
+    "pos": 9,
+    "name": "[WASH] Quickracer10",
+    "time": 20.50894,
+    "round": 10,
+    "note": "cotd"
+  },
+  {
+    "pos": 10,
+    "name": "[CSC]AndMe18",
+    "time": 20.56719,
+    "round": 10,
+    "note": "cotd"
+  },
+  {
+    "pos": 11,
+    "name": "[CSC] PlusMicron",
+    "time": 19.95048,
+    "round": 9,
+    "note": "cotd"
+  },
+  {
+    "pos": 12,
+    "name": "[MMM]Victor",
+    "time": 19.99004,
+    "round": 9,
+    "note": "cotd"
+  },
+  {
+    "pos": 13,
+    "name": "Hi Im Yolo",
+    "time": 20.99734,
+    "round": 8,
+    "note": "cotd"
+  },
+  {
+    "pos": 14,
+    "name": "Mμ",
+    "time": null,
+    "round": 8,
+    "note": "dnf"
+  },
+  {
+    "pos": 15,
+    "name": "aizpun",
+    "time": 20.10806,
+    "round": 7,
+    "note": "cotd"
+  },
+  {
+    "pos": 16,
+    "name": "Gimpel",
+    "time": 20.15303,
+    "round": 7,
+    "note": "cotd"
+  },
+  {
+    "pos": 17,
+    "name": "[CSC] variableferret",
+    "time": 20.1722,
+    "round": 7,
+    "note": "cotd"
+  },
+  {
+    "pos": 18,
+    "name": "MALIYO",
+    "time": null,
+    "round": 6,
+    "note": "dnf"
+  },
+  {
+    "pos": 18,
+    "name": "brrryy",
+    "time": null,
+    "round": 6,
+    "note": "dnf"
+  },
+  {
+    "pos": 18,
+    "name": "jandje",
+    "time": null,
+    "round": 6,
+    "note": "dnf"
+  },
+  {
+    "pos": 21,
+    "name": "[MMM]Kreeeeee",
+    "time": 20.20749,
+    "round": 5,
+    "note": "cotd"
+  },
+  {
+    "pos": 22,
+    "name": "cookie",
+    "time": 20.2574,
+    "round": 5,
+    "note": "cotd"
+  },
+  {
+    "pos": 23,
+    "name": "wokonbike",
+    "time": 20.42944,
+    "round": 5,
+    "note": "cotd"
+  },
+  {
+    "pos": 24,
+    "name": "Jorts",
+    "time": null,
+    "round": 4,
+    "note": "dnf"
+  },
+  {
+    "pos": 24,
+    "name": "[CSC]IronDragon111000",
+    "time": null,
+    "round": 4,
+    "note": "dnf"
+  },
+  {
+    "pos": 24,
+    "name": "[SLOW]Zeus",
+    "time": null,
+    "round": 4,
+    "note": "dnf"
+  },
+  {
+    "pos": 24,
+    "name": "gilgool",
+    "time": null,
+    "round": 4,
+    "note": "dnf"
+  },
+  {
+    "pos": 28,
+    "name": "Matic_D",
+    "time": 20.4619,
+    "round": 3,
+    "note": "cotd"
+  },
+  {
+    "pos": 29,
+    "name": "timesprout",
+    "time": 20.5721,
+    "round": 3,
+    "note": "cotd"
+  },
+  {
+    "pos": 30,
+    "name": "ActuallyRuben",
+    "time": 21.00119,
+    "round": 3,
+    "note": "cotd"
+  },
+  {
+    "pos": 31,
+    "name": "DaimyoN",
+    "time": null,
+    "round": 2,
+    "note": "dnf"
+  },
+  {
+    "pos": 31,
+    "name": "Shinikage221",
+    "time": null,
+    "round": 2,
+    "note": "dnf"
+  },
+  {
+    "pos": 31,
+    "name": "[CSC]K410K3N",
+    "time": null,
+    "round": 2,
+    "note": "dnf"
+  },
+  {
+    "pos": 31,
+    "name": "linx200",
+    "time": null,
+    "round": 2,
+    "note": "dnf"
+  },
+  {
+    "pos": 31,
+    "name": "meganuke22",
+    "time": null,
+    "round": 2,
+    "note": "dnf"
+  },
+  {
+    "pos": 31,
+    "name": "󠀡󠀡᠌ ⁧⁧Thalli",
+    "time": null,
+    "round": 2,
+    "note": "dnf"
+  },
+  {
+    "pos": 37,
+    "name": "AndrewIF",
+    "time": 21.2,
+    "round": 1,
+    "note": "LIVE_OVERRIDE_DNF"
+  },
+  {
+    "pos": 38,
+    "name": "Six",
+    "time": null,
+    "round": 1,
+    "note": "dnf"
+  },
+  {
+    "pos": 38,
+    "name": "rtube",
+    "time": null,
+    "round": 1,
+    "note": "dnf"
+  }
+]

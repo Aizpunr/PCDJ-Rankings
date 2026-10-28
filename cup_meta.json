@@ -92,5 +92,24 @@
       "felix"
     ],
     "created_xlsx": true
+  },
+  "Petite Cup 57": {
+    "season": "Season 4",
+    "round": "Round 7",
+    "xlsx": "Petite Cups 56-60.xlsx",
+    "date": "2026-10-28",
+    "community": 56,
+    "maps": [
+      {
+        "name": "PCDJ #56 - Mountain Coppice",
+        "mapper": "redal"
+      },
+      {
+        "name": "PCDJ #56 Tiny Radiant Halls",
+        "mapper": "sanhe"
+      }
+    ],
+    "maps_label": "Maps: PCDJ #56 - Mountain Coppice by redal + PCDJ #56 Tiny Radiant Halls by sanhe",
+    "excluded": []
   }
 }
