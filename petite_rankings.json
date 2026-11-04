@@ -1758,7 +1758,7 @@
         "rank": 43
       },
       {
-        "name": "SGR",
+        "name": "ShyGirlyRaccoon",
         "points": 10.0,
         "points_all": 10.0,
         "rounds": 1,
@@ -6603,57 +6603,6 @@
         "rank": 61
       },
       {
-        "name": "SGR",
-        "points": 20.0,
-        "points_all": 20.0,
-        "rounds": 6,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 3.3,
-        "avg_pos": 20.7,
-        "best_single": 20.0,
-        "best_pos": 9,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 12",
-            "p": 0,
-            "pos": 17
-          },
-          {
-            "r": "Round 14",
-            "p": 0,
-            "pos": 18
-          },
-          {
-            "r": "Round 15",
-            "p": 0,
-            "pos": 30
-          },
-          {
-            "r": "Round 16",
-            "p": 0,
-            "pos": 23
-          },
-          {
-            "r": "Round 17",
-            "p": 0,
-            "pos": 27
-          },
-          {
-            "r": "Troll 4",
-            "p": 20.0,
-            "pos": 9
-          }
-        ],
-        "rank": 62
-      },
-      {
         "name": "wokonbike",
         "points": 20.0,
         "points_all": 20.0,
@@ -6700,6 +6649,67 @@
             "r": "Round 17",
             "p": 0,
             "pos": 31
+          },
+          {
+            "r": "Troll 4",
+            "p": 20.0,
+            "pos": 9
+          }
+        ],
+        "rank": 62
+      },
+      {
+        "name": "ShyGirlyRaccoon",
+        "points": 20.0,
+        "points_all": 20.0,
+        "rounds": 8,
+        "wins": 0,
+        "podiums": {
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0
+        },
+        "top5": 0,
+        "avg_pts": 2.5,
+        "avg_pos": 22.2,
+        "best_single": 20.0,
+        "best_pos": 9,
+        "dropped": 0,
+        "history": [
+          {
+            "r": "Round 5",
+            "p": 0,
+            "pos": 29
+          },
+          {
+            "r": "Round 6",
+            "p": 0,
+            "pos": 25
+          },
+          {
+            "r": "Round 12",
+            "p": 0,
+            "pos": 17
+          },
+          {
+            "r": "Round 14",
+            "p": 0,
+            "pos": 18
+          },
+          {
+            "r": "Round 15",
+            "p": 0,
+            "pos": 30
+          },
+          {
+            "r": "Round 16",
+            "p": 0,
+            "pos": 23
+          },
+          {
+            "r": "Round 17",
+            "p": 0,
+            "pos": 27
           },
           {
             "r": "Troll 4",
@@ -6931,37 +6941,6 @@
         "rank": 69
       },
       {
-        "name": "OLR94",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 2,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 27.0,
-        "best_single": 0,
-        "best_pos": 25,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 5",
-            "p": 0,
-            "pos": 29
-          },
-          {
-            "r": "Round 6",
-            "p": 0,
-            "pos": 25
-          }
-        ],
-        "rank": 70
-      },
-      {
         "name": "OccasionallyAmazingGamer",
         "points": 0.0,
         "points_all": 0.0,
@@ -7010,7 +6989,7 @@
             "pos": 16
           }
         ],
-        "rank": 71
+        "rank": 70
       },
       {
         "name": "John Xina",
@@ -7036,7 +7015,7 @@
             "pos": 32
           }
         ],
-        "rank": 72
+        "rank": 71
       },
       {
         "name": "cookie",
@@ -7062,7 +7041,7 @@
             "pos": 32
           }
         ],
-        "rank": 73
+        "rank": 72
       },
       {
         "name": "del23111107300239392952",
@@ -7088,7 +7067,7 @@
             "pos": 15
           }
         ],
-        "rank": 74
+        "rank": 73
       },
       {
         "name": "Shinikage221",
@@ -7144,7 +7123,7 @@
             "pos": 29
           }
         ],
-        "rank": 75
+        "rank": 74
       },
       {
         "name": "Mokster",
@@ -7175,7 +7154,7 @@
             "pos": 29
           }
         ],
-        "rank": 76
+        "rank": 75
       },
       {
         "name": "Dartho Mas",
@@ -7206,7 +7185,7 @@
             "pos": 23
           }
         ],
-        "rank": 77
+        "rank": 76
       },
       {
         "name": "AAredstone",
@@ -7232,7 +7211,7 @@
             "pos": 27
           }
         ],
-        "rank": 78
+        "rank": 77
       },
       {
         "name": "stindt",
@@ -7268,7 +7247,7 @@
             "pos": 25
           }
         ],
-        "rank": 79
+        "rank": 78
       },
       {
         "name": "Lilly Fenn",
@@ -7309,7 +7288,7 @@
             "pos": 14
           }
         ],
-        "rank": 80
+        "rank": 79
       },
       {
         "name": "SharKy",
@@ -7340,7 +7319,7 @@
             "pos": 25
           }
         ],
-        "rank": 81
+        "rank": 80
       },
       {
         "name": "Brachaldis",
@@ -7366,7 +7345,7 @@
             "pos": 27
           }
         ],
-        "rank": 82
+        "rank": 81
       },
       {
         "name": "Gh0stChicken",
@@ -7392,7 +7371,7 @@
             "pos": 29
           }
         ],
-        "rank": 83
+        "rank": 82
       },
       {
         "name": "koz",
@@ -7423,7 +7402,7 @@
             "pos": 21
           }
         ],
-        "rank": 84
+        "rank": 83
       },
       {
         "name": "imagineaclevernamehere",
@@ -7459,7 +7438,7 @@
             "pos": 22
           }
         ],
-        "rank": 85
+        "rank": 84
       },
       {
         "name": "sailingman",
@@ -7485,7 +7464,7 @@
             "pos": 32
           }
         ],
-        "rank": 86
+        "rank": 85
       },
       {
         "name": "[MBT] MOW BIG T",
@@ -7511,7 +7490,7 @@
             "pos": 33
           }
         ],
-        "rank": 87
+        "rank": 86
       },
       {
         "name": "TwoFace",
@@ -7542,7 +7521,7 @@
             "pos": 23
           }
         ],
-        "rank": 88
+        "rank": 87
       },
       {
         "name": "Sir Pickelsworth",
@@ -7568,7 +7547,7 @@
             "pos": 34
           }
         ],
-        "rank": 89
+        "rank": 88
       },
       {
         "name": "dencar85",
@@ -7594,7 +7573,7 @@
             "pos": 11
           }
         ],
-        "rank": 90
+        "rank": 89
       },
       {
         "name": "IronDragon111000",
@@ -7625,7 +7604,7 @@
             "pos": 27
           }
         ],
-        "rank": 91
+        "rank": 90
       },
       {
         "name": "aglahir",
@@ -7651,7 +7630,7 @@
             "pos": 24
           }
         ],
-        "rank": 92
+        "rank": 91
       },
       {
         "name": "Kyn",
@@ -7677,7 +7656,7 @@
             "pos": 29
           }
         ],
-        "rank": 93
+        "rank": 92
       },
       {
         "name": "Baked Shark",
@@ -7703,7 +7682,7 @@
             "pos": 29
           }
         ],
-        "rank": 94
+        "rank": 93
       },
       {
         "name": "Neon_King2",
@@ -7729,7 +7708,7 @@
             "pos": 29
           }
         ],
-        "rank": 95
+        "rank": 94
       },
       {
         "name": "Savage Package",
@@ -7760,7 +7739,7 @@
             "pos": 23
           }
         ],
-        "rank": 96
+        "rank": 95
       },
       {
         "name": "Mr. Hubub",
@@ -7786,7 +7765,7 @@
             "pos": 14
           }
         ],
-        "rank": 97
+        "rank": 96
       },
       {
         "name": "tonk.pils",
@@ -7812,7 +7791,7 @@
             "pos": 19
           }
         ],
-        "rank": 98
+        "rank": 97
       },
       {
         "name": "Zeus",
@@ -7853,7 +7832,7 @@
             "pos": 33
           }
         ],
-        "rank": 99
+        "rank": 98
       },
       {
         "name": "lucanakin",
@@ -7884,7 +7863,7 @@
             "pos": 18
           }
         ],
-        "rank": 100
+        "rank": 99
       },
       {
         "name": "M4DSCOTSM4N",
@@ -7950,7 +7929,7 @@
             "pos": 21
           }
         ],
-        "rank": 101
+        "rank": 100
       },
       {
         "name": "Ruckooe",
@@ -7976,7 +7955,7 @@
             "pos": 29
           }
         ],
-        "rank": 102
+        "rank": 101
       },
       {
         "name": "Fu\u042ci",
@@ -8002,7 +7981,7 @@
             "pos": 30
           }
         ],
-        "rank": 103
+        "rank": 102
       },
       {
         "name": "KB",
@@ -8028,7 +8007,7 @@
             "pos": 32
           }
         ],
-        "rank": 104
+        "rank": 103
       },
       {
         "name": "Babup",
@@ -8054,7 +8033,7 @@
             "pos": 21
           }
         ],
-        "rank": 105
+        "rank": 104
       },
       {
         "name": "gameface",
@@ -8080,7 +8059,7 @@
             "pos": 23
           }
         ],
-        "rank": 106
+        "rank": 105
       },
       {
         "name": "paytonkimpel11",
@@ -8106,7 +8085,7 @@
             "pos": 24
           }
         ],
-        "rank": 107
+        "rank": 106
       },
       {
         "name": "daytime",
@@ -8137,7 +8116,7 @@
             "pos": 24
           }
         ],
-        "rank": 108
+        "rank": 107
       },
       {
         "name": "Edwin",
@@ -8163,7 +8142,7 @@
             "pos": 31
           }
         ],
-        "rank": 109
+        "rank": 108
       },
       {
         "name": "MossRover",
@@ -8189,7 +8168,7 @@
             "pos": 31
           }
         ],
-        "rank": 110
+        "rank": 109
       },
       {
         "name": "Tomixcomics",
@@ -8220,7 +8199,7 @@
             "pos": 26
           }
         ],
-        "rank": 111
+        "rank": 110
       },
       {
         "name": "vortex",
@@ -8246,7 +8225,7 @@
             "pos": 16
           }
         ],
-        "rank": 112
+        "rank": 111
       },
       {
         "name": "grop44",
@@ -8287,7 +8266,7 @@
             "pos": 30
           }
         ],
-        "rank": 113
+        "rank": 112
       },
       {
         "name": "Cool",
@@ -8313,7 +8292,7 @@
             "pos": 23
           }
         ],
-        "rank": 114
+        "rank": 113
       },
       {
         "name": "DarthJohansen",
@@ -8339,7 +8318,7 @@
             "pos": 23
           }
         ],
-        "rank": 115
+        "rank": 114
       },
       {
         "name": "Aetherhead",
@@ -8365,7 +8344,7 @@
             "pos": 26
           }
         ],
-        "rank": 116
+        "rank": 115
       },
       {
         "name": "cactuzhead",
@@ -8391,7 +8370,7 @@
             "pos": 17
           }
         ],
-        "rank": 117
+        "rank": 116
       },
       {
         "name": "MadZitrone",
@@ -8417,7 +8396,7 @@
             "pos": 25
           }
         ],
-        "rank": 118
+        "rank": 117
       },
       {
         "name": "Fly8oy",
@@ -8443,7 +8422,7 @@
             "pos": 28
           }
         ],
-        "rank": 119
+        "rank": 118
       },
       {
         "name": "it_is_nic",
@@ -8469,7 +8448,7 @@
             "pos": 30
           }
         ],
-        "rank": 120
+        "rank": 119
       },
       {
         "name": "FF_11",
@@ -8495,7 +8474,7 @@
             "pos": 31
           }
         ],
-        "rank": 121
+        "rank": 120
       },
       {
         "name": "True Chaotic Neutral",
@@ -8521,7 +8500,7 @@
             "pos": 31
           }
         ],
-        "rank": 122
+        "rank": 121
       },
       {
         "name": "ElectricCaveman",
@@ -8547,7 +8526,7 @@
             "pos": 19
           }
         ],
-        "rank": 123
+        "rank": 122
       },
       {
         "name": "\u0e56\u06e3\u06dcNamo \u30c4",
@@ -8573,7 +8552,7 @@
             "pos": 20
           }
         ],
-        "rank": 124
+        "rank": 123
       },
       {
         "name": "PewX [.de]",
@@ -8599,7 +8578,7 @@
             "pos": 22
           }
         ],
-        "rank": 125
+        "rank": 124
       },
       {
         "name": "Kilandor",
@@ -8625,7 +8604,7 @@
             "pos": 23
           }
         ],
-        "rank": 126
+        "rank": 125
       },
       {
         "name": "FedtStensDyr",
@@ -8651,7 +8630,7 @@
             "pos": 24
           }
         ],
-        "rank": 127
+        "rank": 126
       },
       {
         "name": "Spatial",
@@ -8677,7 +8656,7 @@
             "pos": 25
           }
         ],
-        "rank": 128
+        "rank": 127
       },
       {
         "name": "Articus",
@@ -8703,7 +8682,7 @@
             "pos": 28
           }
         ],
-        "rank": 129
+        "rank": 128
       },
       {
         "name": "duff_mans_jnr",
@@ -8729,7 +8708,7 @@
             "pos": 29
           }
         ],
-        "rank": 130
+        "rank": 129
       },
       {
         "name": "Arepuz",
@@ -8755,7 +8734,7 @@
             "pos": 17
           }
         ],
-        "rank": 131
+        "rank": 130
       },
       {
         "name": "Andrew8Kavanagh",
@@ -8781,7 +8760,7 @@
             "pos": 21
           }
         ],
-        "rank": 132
+        "rank": 131
       },
       {
         "name": "DragonBlood91D",
@@ -8807,7 +8786,7 @@
             "pos": 27
           }
         ],
-        "rank": 133
+        "rank": 132
       },
       {
         "name": "Orb Bee Bob",
@@ -8838,7 +8817,7 @@
             "pos": 32
           }
         ],
-        "rank": 134
+        "rank": 133
       },
       {
         "name": "Es3en",
@@ -8864,7 +8843,7 @@
             "pos": 30
           }
         ],
-        "rank": 135
+        "rank": 134
       },
       {
         "name": "Gruselda1",
@@ -8890,7 +8869,7 @@
             "pos": 30
           }
         ],
-        "rank": 136
+        "rank": 135
       },
       {
         "name": "Minixerces2116",
@@ -8916,7 +8895,7 @@
             "pos": 30
           }
         ],
-        "rank": 137
+        "rank": 136
       },
       {
         "name": "Waaksaam",
@@ -8957,7 +8936,7 @@
             "pos": 25
           }
         ],
-        "rank": 138
+        "rank": 137
       },
       {
         "name": "[MIT] nilswa",
@@ -8983,7 +8962,7 @@
             "pos": 30
           }
         ],
-        "rank": 139
+        "rank": 138
       },
       {
         "name": "felix",
@@ -9009,7 +8988,7 @@
             "pos": 12
           }
         ],
-        "rank": 140
+        "rank": 139
       },
       {
         "name": "MALIYO",
@@ -9040,7 +9019,7 @@
             "pos": 24
           }
         ],
-        "rank": 141
+        "rank": 140
       },
       {
         "name": "penqwin",
@@ -9066,7 +9045,7 @@
             "pos": 20
           }
         ],
-        "rank": 142
+        "rank": 141
       },
       {
         "name": "[EEN] Hang Chang-Pang",
@@ -9097,7 +9076,7 @@
             "pos": 12
           }
         ],
-        "rank": 143
+        "rank": 142
       },
       {
         "name": "wunderBarr",
@@ -9123,7 +9102,7 @@
             "pos": 23
           }
         ],
-        "rank": 144
+        "rank": 143
       },
       {
         "name": "Timmer933",
@@ -9149,7 +9128,7 @@
             "pos": 28
           }
         ],
-        "rank": 145
+        "rank": 144
       },
       {
         "name": "racemaniac",
@@ -9180,7 +9159,7 @@
             "pos": 11
           }
         ],
-        "rank": 146
+        "rank": 145
       },
       {
         "name": "huhconduct",
@@ -9206,7 +9185,7 @@
             "pos": 31
           }
         ],
-        "rank": 147
+        "rank": 146
       },
       {
         "name": "Shadynook",
@@ -9232,7 +9211,7 @@
             "pos": 14
           }
         ],
-        "rank": 148
+        "rank": 147
       },
       {
         "name": "Jorts",
@@ -9268,7 +9247,7 @@
             "pos": 17
           }
         ],
-        "rank": 149
+        "rank": 148
       },
       {
         "name": "[ZLOW] Milkaholic",
@@ -9294,7 +9273,7 @@
             "pos": 33
           }
         ],
-        "rank": 150
+        "rank": 149
       },
       {
         "name": "[MMM]Milk Man",
@@ -9320,7 +9299,7 @@
             "pos": 35
           }
         ],
-        "rank": 151
+        "rank": 150
       },
       {
         "name": "\u0287\u0250\u0254\u0500",
@@ -9346,7 +9325,7 @@
             "pos": 36
           }
         ],
-        "rank": 152
+        "rank": 151
       },
       {
         "name": "Towelie",
@@ -9372,7 +9351,7 @@
             "pos": 38
           }
         ],
-        "rank": 153
+        "rank": 152
       },
       {
         "name": "[RABI]Yksdjcj",
@@ -9398,7 +9377,7 @@
             "pos": 39
           }
         ],
-        "rank": 154
+        "rank": 153
       },
       {
         "name": "mofn",
@@ -9424,7 +9403,7 @@
             "pos": 25
           }
         ],
-        "rank": 155
+        "rank": 154
       },
       {
         "name": "[BRED] MrSplatoon07",
@@ -9450,7 +9429,7 @@
             "pos": 26
           }
         ],
-        "rank": 156
+        "rank": 155
       },
       {
         "name": "[ZET] zeriv",
@@ -9476,7 +9455,7 @@
             "pos": 26
           }
         ],
-        "rank": 157
+        "rank": 156
       },
       {
         "name": "calebmcr",
@@ -9502,7 +9481,7 @@
             "pos": 26
           }
         ],
-        "rank": 158
+        "rank": 157
       },
       {
         "name": "Tudge Boat",
@@ -9533,7 +9512,7 @@
             "pos": 22
           }
         ],
-        "rank": 159
+        "rank": 158
       },
       {
         "name": "[MIB]Joe Beidl",
@@ -9559,7 +9538,7 @@
             "pos": 18
           }
         ],
-        "rank": 160
+        "rank": 159
       },
       {
         "name": "Ooohbilly",
@@ -9585,7 +9564,7 @@
             "pos": 20
           }
         ],
-        "rank": 161
+        "rank": 160
       },
       {
         "name": "Telion",
@@ -9611,7 +9590,7 @@
             "pos": 23
           }
         ],
-        "rank": 162
+        "rank": 161
       },
       {
         "name": "taagern",
@@ -9637,7 +9616,7 @@
             "pos": 25
           }
         ],
-        "rank": 163
+        "rank": 162
       },
       {
         "name": "Diabler",
@@ -9663,7 +9642,7 @@
             "pos": 11
           }
         ],
-        "rank": 164
+        "rank": 163
       },
       {
         "name": "cipi",
@@ -9689,7 +9668,7 @@
             "pos": 23
           }
         ],
-        "rank": 165
+        "rank": 164
       },
       {
         "name": "pannekoekbijter",
@@ -9715,7 +9694,7 @@
             "pos": 28
           }
         ],
-        "rank": 166
+        "rank": 165
       },
       {
         "name": "[Buny]Lunarbunny",
@@ -9741,7 +9720,7 @@
             "pos": 31
           }
         ],
-        "rank": 167
+        "rank": 166
       },
       {
         "name": "SuperHeavy",
@@ -9767,7 +9746,7 @@
             "pos": 34
           }
         ],
-        "rank": 168
+        "rank": 167
       },
       {
         "name": "CaptainD54321 (they/she)",
@@ -9793,7 +9772,7 @@
             "pos": 35
           }
         ],
-        "rank": 169
+        "rank": 168
       },
       {
         "name": "Microknigh7",
@@ -9819,7 +9798,7 @@
             "pos": 23
           }
         ],
-        "rank": 170
+        "rank": 169
       },
       {
         "name": "[hi]im boring",
@@ -9845,7 +9824,7 @@
             "pos": 23
           }
         ],
-        "rank": 171
+        "rank": 170
       }
     ],
     "championship": [
@@ -12778,10 +12757,10 @@
         "rank": 58
       },
       {
-        "name": "OLR94",
+        "name": "ShyGirlyRaccoon",
         "points": 0,
         "points_all": 0,
-        "rounds": 2,
+        "rounds": 7,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -12790,9 +12769,9 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 27.0,
+        "avg_pos": 24.1,
         "best_single": 0,
-        "best_pos": 25,
+        "best_pos": 17,
         "dropped": 0,
         "history": [
           {
@@ -12804,6 +12783,31 @@
             "r": "Round 6",
             "p": 0,
             "pos": 25
+          },
+          {
+            "r": "Round 12",
+            "p": 0,
+            "pos": 17
+          },
+          {
+            "r": "Round 14",
+            "p": 0,
+            "pos": 18
+          },
+          {
+            "r": "Round 15",
+            "p": 0,
+            "pos": 30
+          },
+          {
+            "r": "Round 16",
+            "p": 0,
+            "pos": 23
+          },
+          {
+            "r": "Round 17",
+            "p": 0,
+            "pos": 27
           }
         ],
         "rank": 59
@@ -14017,52 +14021,6 @@
         "rank": 97
       },
       {
-        "name": "SGR",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 5,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 23.0,
-        "best_single": 0,
-        "best_pos": 17,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Round 12",
-            "p": 0,
-            "pos": 17
-          },
-          {
-            "r": "Round 14",
-            "p": 0,
-            "pos": 18
-          },
-          {
-            "r": "Round 15",
-            "p": 0,
-            "pos": 30
-          },
-          {
-            "r": "Round 16",
-            "p": 0,
-            "pos": 23
-          },
-          {
-            "r": "Round 17",
-            "p": 0,
-            "pos": 27
-          }
-        ],
-        "rank": 98
-      },
-      {
         "name": "grop44",
         "points": 0,
         "points_all": 0,
@@ -14101,7 +14059,7 @@
             "pos": 30
           }
         ],
-        "rank": 99
+        "rank": 98
       },
       {
         "name": "Cool",
@@ -14127,7 +14085,7 @@
             "pos": 23
           }
         ],
-        "rank": 100
+        "rank": 99
       },
       {
         "name": "DarthJohansen",
@@ -14153,7 +14111,7 @@
             "pos": 23
           }
         ],
-        "rank": 101
+        "rank": 100
       },
       {
         "name": "Aetherhead",
@@ -14179,7 +14137,7 @@
             "pos": 26
           }
         ],
-        "rank": 102
+        "rank": 101
       },
       {
         "name": "Tomixcomics",
@@ -14205,7 +14163,7 @@
             "pos": 26
           }
         ],
-        "rank": 103
+        "rank": 102
       },
       {
         "name": "cactuzhead",
@@ -14231,7 +14189,7 @@
             "pos": 17
           }
         ],
-        "rank": 104
+        "rank": 103
       },
       {
         "name": "MadZitrone",
@@ -14257,7 +14215,7 @@
             "pos": 25
           }
         ],
-        "rank": 105
+        "rank": 104
       },
       {
         "name": "Fly8oy",
@@ -14283,7 +14241,7 @@
             "pos": 28
           }
         ],
-        "rank": 106
+        "rank": 105
       },
       {
         "name": "it_is_nic",
@@ -14309,7 +14267,7 @@
             "pos": 30
           }
         ],
-        "rank": 107
+        "rank": 106
       },
       {
         "name": "FF_11",
@@ -14335,7 +14293,7 @@
             "pos": 31
           }
         ],
-        "rank": 108
+        "rank": 107
       },
       {
         "name": "True Chaotic Neutral",
@@ -14361,7 +14319,7 @@
             "pos": 31
           }
         ],
-        "rank": 109
+        "rank": 108
       },
       {
         "name": "ElectricCaveman",
@@ -14387,7 +14345,7 @@
             "pos": 19
           }
         ],
-        "rank": 110
+        "rank": 109
       },
       {
         "name": "\u0e56\u06e3\u06dcNamo \u30c4",
@@ -14413,7 +14371,7 @@
             "pos": 20
           }
         ],
-        "rank": 111
+        "rank": 110
       },
       {
         "name": "PewX [.de]",
@@ -14439,7 +14397,7 @@
             "pos": 22
           }
         ],
-        "rank": 112
+        "rank": 111
       },
       {
         "name": "Kilandor",
@@ -14465,7 +14423,7 @@
             "pos": 23
           }
         ],
-        "rank": 113
+        "rank": 112
       },
       {
         "name": "FedtStensDyr",
@@ -14491,7 +14449,7 @@
             "pos": 24
           }
         ],
-        "rank": 114
+        "rank": 113
       },
       {
         "name": "Spatial",
@@ -14517,7 +14475,7 @@
             "pos": 25
           }
         ],
-        "rank": 115
+        "rank": 114
       },
       {
         "name": "Articus",
@@ -14543,7 +14501,7 @@
             "pos": 28
           }
         ],
-        "rank": 116
+        "rank": 115
       },
       {
         "name": "duff_mans_jnr",
@@ -14569,7 +14527,7 @@
             "pos": 29
           }
         ],
-        "rank": 117
+        "rank": 116
       },
       {
         "name": "Arepuz",
@@ -14595,7 +14553,7 @@
             "pos": 17
           }
         ],
-        "rank": 118
+        "rank": 117
       },
       {
         "name": "Andrew8Kavanagh",
@@ -14621,7 +14579,7 @@
             "pos": 21
           }
         ],
-        "rank": 119
+        "rank": 118
       },
       {
         "name": "daytime",
@@ -14647,7 +14605,7 @@
             "pos": 24
           }
         ],
-        "rank": 120
+        "rank": 119
       },
       {
         "name": "DragonBlood91D",
@@ -14673,7 +14631,7 @@
             "pos": 27
           }
         ],
-        "rank": 121
+        "rank": 120
       },
       {
         "name": "Orb Bee Bob",
@@ -14704,7 +14662,7 @@
             "pos": 32
           }
         ],
-        "rank": 122
+        "rank": 121
       },
       {
         "name": "Es3en",
@@ -14730,7 +14688,7 @@
             "pos": 30
           }
         ],
-        "rank": 123
+        "rank": 122
       },
       {
         "name": "Gruselda1",
@@ -14756,7 +14714,7 @@
             "pos": 30
           }
         ],
-        "rank": 124
+        "rank": 123
       },
       {
         "name": "Minixerces2116",
@@ -14782,7 +14740,7 @@
             "pos": 30
           }
         ],
-        "rank": 125
+        "rank": 124
       },
       {
         "name": "Waaksaam",
@@ -14823,7 +14781,7 @@
             "pos": 25
           }
         ],
-        "rank": 126
+        "rank": 125
       },
       {
         "name": "[MIT] nilswa",
@@ -14849,7 +14807,7 @@
             "pos": 30
           }
         ],
-        "rank": 127
+        "rank": 126
       },
       {
         "name": "felix",
@@ -14875,7 +14833,7 @@
             "pos": 12
           }
         ],
-        "rank": 128
+        "rank": 127
       },
       {
         "name": "MALIYO",
@@ -14906,7 +14864,7 @@
             "pos": 24
           }
         ],
-        "rank": 129
+        "rank": 128
       },
       {
         "name": "penqwin",
@@ -14932,7 +14890,7 @@
             "pos": 20
           }
         ],
-        "rank": 130
+        "rank": 129
       },
       {
         "name": "[EEN] Hang Chang-Pang",
@@ -14963,7 +14921,7 @@
             "pos": 12
           }
         ],
-        "rank": 131
+        "rank": 130
       },
       {
         "name": "wunderBarr",
@@ -14989,7 +14947,7 @@
             "pos": 23
           }
         ],
-        "rank": 132
+        "rank": 131
       },
       {
         "name": "Timmer933",
@@ -15015,7 +14973,7 @@
             "pos": 28
           }
         ],
-        "rank": 133
+        "rank": 132
       },
       {
         "name": "racemaniac",
@@ -15046,7 +15004,7 @@
             "pos": 11
           }
         ],
-        "rank": 134
+        "rank": 133
       },
       {
         "name": "huhconduct",
@@ -15072,7 +15030,7 @@
             "pos": 31
           }
         ],
-        "rank": 135
+        "rank": 134
       },
       {
         "name": "Shadynook",
@@ -15098,7 +15056,7 @@
             "pos": 14
           }
         ],
-        "rank": 136
+        "rank": 135
       },
       {
         "name": "Jorts",
@@ -15134,7 +15092,7 @@
             "pos": 17
           }
         ],
-        "rank": 137
+        "rank": 136
       },
       {
         "name": "[ZLOW] Milkaholic",
@@ -15160,7 +15118,7 @@
             "pos": 33
           }
         ],
-        "rank": 138
+        "rank": 137
       },
       {
         "name": "[MMM]Milk Man",
@@ -15186,7 +15144,7 @@
             "pos": 35
           }
         ],
-        "rank": 139
+        "rank": 138
       },
       {
         "name": "\u0287\u0250\u0254\u0500",
@@ -15212,7 +15170,7 @@
             "pos": 36
           }
         ],
-        "rank": 140
+        "rank": 139
       },
       {
         "name": "Towelie",
@@ -15238,7 +15196,7 @@
             "pos": 38
           }
         ],
-        "rank": 141
+        "rank": 140
       },
       {
         "name": "[RABI]Yksdjcj",
@@ -15264,7 +15222,7 @@
             "pos": 39
           }
         ],
-        "rank": 142
+        "rank": 141
       },
       {
         "name": "mofn",
@@ -15290,7 +15248,7 @@
             "pos": 25
           }
         ],
-        "rank": 143
+        "rank": 142
       },
       {
         "name": "[BRED] MrSplatoon07",
@@ -15316,7 +15274,7 @@
             "pos": 26
           }
         ],
-        "rank": 144
+        "rank": 143
       },
       {
         "name": "[ZET] zeriv",
@@ -15342,7 +15300,7 @@
             "pos": 26
           }
         ],
-        "rank": 145
+        "rank": 144
       },
       {
         "name": "calebmcr",
@@ -15368,7 +15326,7 @@
             "pos": 26
           }
         ],
-        "rank": 146
+        "rank": 145
       },
       {
         "name": "Tudge Boat",
@@ -15399,7 +15357,7 @@
             "pos": 22
           }
         ],
-        "rank": 147
+        "rank": 146
       },
       {
         "name": "[MIB]Joe Beidl",
@@ -15425,7 +15383,7 @@
             "pos": 18
           }
         ],
-        "rank": 148
+        "rank": 147
       },
       {
         "name": "Ooohbilly",
@@ -15451,7 +15409,7 @@
             "pos": 20
           }
         ],
-        "rank": 149
+        "rank": 148
       },
       {
         "name": "Telion",
@@ -15477,7 +15435,7 @@
             "pos": 23
           }
         ],
-        "rank": 150
+        "rank": 149
       },
       {
         "name": "taagern",
@@ -15503,7 +15461,7 @@
             "pos": 25
           }
         ],
-        "rank": 151
+        "rank": 150
       },
       {
         "name": "Diabler",
@@ -15529,7 +15487,7 @@
             "pos": 11
           }
         ],
-        "rank": 152
+        "rank": 151
       },
       {
         "name": "cipi",
@@ -15555,7 +15513,7 @@
             "pos": 23
           }
         ],
-        "rank": 153
+        "rank": 152
       },
       {
         "name": "pannekoekbijter",
@@ -15581,7 +15539,7 @@
             "pos": 28
           }
         ],
-        "rank": 154
+        "rank": 153
       },
       {
         "name": "[Buny]Lunarbunny",
@@ -15607,7 +15565,7 @@
             "pos": 31
           }
         ],
-        "rank": 155
+        "rank": 154
       },
       {
         "name": "SuperHeavy",
@@ -15633,7 +15591,7 @@
             "pos": 34
           }
         ],
-        "rank": 156
+        "rank": 155
       },
       {
         "name": "CaptainD54321 (they/she)",
@@ -15659,7 +15617,7 @@
             "pos": 35
           }
         ],
-        "rank": 157
+        "rank": 156
       }
     ],
     "round_strengths": {
@@ -18250,7 +18208,7 @@
         "rank": 65
       },
       {
-        "name": "SGR",
+        "name": "ShyGirlyRaccoon",
         "points": 0,
         "points_all": 0,
         "rounds": 2,
@@ -21597,7 +21555,7 @@
         "rank": 65
       },
       {
-        "name": "SGR",
+        "name": "ShyGirlyRaccoon",
         "points": 0,
         "points_all": 0,
         "rounds": 2,
@@ -26631,10 +26589,10 @@
         "rank": 67
       },
       {
-        "name": "SGR",
+        "name": "ShyGirlyRaccoon",
         "points": 20.0,
         "points_all": 20.0,
-        "rounds": 8,
+        "rounds": 10,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -26642,12 +26600,22 @@
           "bronze": 0
         },
         "top5": 0,
-        "avg_pts": 2.5,
-        "avg_pos": 22.0,
+        "avg_pts": 2.0,
+        "avg_pos": 23.0,
         "best_single": 20.0,
         "best_pos": 9,
         "dropped": 0,
         "history": [
+          {
+            "r": "Season 3 Round 5",
+            "p": 0,
+            "pos": 29
+          },
+          {
+            "r": "Season 3 Round 6",
+            "p": 0,
+            "pos": 25
+          },
           {
             "r": "Season 3 Round 12",
             "p": 0,
@@ -27039,37 +27007,6 @@
         "rank": 75
       },
       {
-        "name": "OLR94",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 2,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 27.0,
-        "best_single": 0,
-        "best_pos": 25,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Season 3 Round 5",
-            "p": 0,
-            "pos": 29
-          },
-          {
-            "r": "Season 3 Round 6",
-            "p": 0,
-            "pos": 25
-          }
-        ],
-        "rank": 76
-      },
-      {
         "name": "OccasionallyAmazingGamer",
         "points": 0.0,
         "points_all": 0.0,
@@ -27118,7 +27055,7 @@
             "pos": 16
           }
         ],
-        "rank": 77
+        "rank": 76
       },
       {
         "name": "John Xina",
@@ -27144,7 +27081,7 @@
             "pos": 32
           }
         ],
-        "rank": 78
+        "rank": 77
       },
       {
         "name": "cookie",
@@ -27180,7 +27117,7 @@
             "pos": 22
           }
         ],
-        "rank": 79
+        "rank": 78
       },
       {
         "name": "del23111107300239392952",
@@ -27206,7 +27143,7 @@
             "pos": 15
           }
         ],
-        "rank": 80
+        "rank": 79
       },
       {
         "name": "Shinikage221",
@@ -27297,7 +27234,7 @@
             "pos": 27
           }
         ],
-        "rank": 81
+        "rank": 80
       },
       {
         "name": "Mokster",
@@ -27328,7 +27265,7 @@
             "pos": 29
           }
         ],
-        "rank": 82
+        "rank": 81
       },
       {
         "name": "Dartho Mas",
@@ -27359,7 +27296,7 @@
             "pos": 23
           }
         ],
-        "rank": 83
+        "rank": 82
       },
       {
         "name": "AAredstone",
@@ -27385,7 +27322,7 @@
             "pos": 27
           }
         ],
-        "rank": 84
+        "rank": 83
       },
       {
         "name": "stindt",
@@ -27421,7 +27358,7 @@
             "pos": 25
           }
         ],
-        "rank": 85
+        "rank": 84
       },
       {
         "name": "Lilly Fenn",
@@ -27462,7 +27399,7 @@
             "pos": 14
           }
         ],
-        "rank": 86
+        "rank": 85
       },
       {
         "name": "SharKy",
@@ -27493,7 +27430,7 @@
             "pos": 25
           }
         ],
-        "rank": 87
+        "rank": 86
       },
       {
         "name": "Brachaldis",
@@ -27519,7 +27456,7 @@
             "pos": 27
           }
         ],
-        "rank": 88
+        "rank": 87
       },
       {
         "name": "Gh0stChicken",
@@ -27545,7 +27482,7 @@
             "pos": 29
           }
         ],
-        "rank": 89
+        "rank": 88
       },
       {
         "name": "koz",
@@ -27576,7 +27513,7 @@
             "pos": 21
           }
         ],
-        "rank": 90
+        "rank": 89
       },
       {
         "name": "imagineaclevernamehere",
@@ -27617,7 +27554,7 @@
             "pos": 31
           }
         ],
-        "rank": 91
+        "rank": 90
       },
       {
         "name": "sailingman",
@@ -27643,7 +27580,7 @@
             "pos": 32
           }
         ],
-        "rank": 92
+        "rank": 91
       },
       {
         "name": "[MBT] MOW BIG T",
@@ -27669,7 +27606,7 @@
             "pos": 33
           }
         ],
-        "rank": 93
+        "rank": 92
       },
       {
         "name": "TwoFace",
@@ -27700,7 +27637,7 @@
             "pos": 23
           }
         ],
-        "rank": 94
+        "rank": 93
       },
       {
         "name": "Sir Pickelsworth",
@@ -27726,7 +27663,7 @@
             "pos": 34
           }
         ],
-        "rank": 95
+        "rank": 94
       },
       {
         "name": "dencar85",
@@ -27752,7 +27689,7 @@
             "pos": 11
           }
         ],
-        "rank": 96
+        "rank": 95
       },
       {
         "name": "aglahir",
@@ -27778,7 +27715,7 @@
             "pos": 24
           }
         ],
-        "rank": 97
+        "rank": 96
       },
       {
         "name": "Kyn",
@@ -27804,7 +27741,7 @@
             "pos": 29
           }
         ],
-        "rank": 98
+        "rank": 97
       },
       {
         "name": "Baked Shark",
@@ -27830,7 +27767,7 @@
             "pos": 29
           }
         ],
-        "rank": 99
+        "rank": 98
       },
       {
         "name": "Neon_King2",
@@ -27856,7 +27793,7 @@
             "pos": 29
           }
         ],
-        "rank": 100
+        "rank": 99
       },
       {
         "name": "Savage Package",
@@ -27887,7 +27824,7 @@
             "pos": 23
           }
         ],
-        "rank": 101
+        "rank": 100
       },
       {
         "name": "Mr. Hubub",
@@ -27913,7 +27850,7 @@
             "pos": 14
           }
         ],
-        "rank": 102
+        "rank": 101
       },
       {
         "name": "tonk.pils",
@@ -27939,7 +27876,7 @@
             "pos": 19
           }
         ],
-        "rank": 103
+        "rank": 102
       },
       {
         "name": "Zeus",
@@ -28000,7 +27937,7 @@
             "pos": 24
           }
         ],
-        "rank": 104
+        "rank": 103
       },
       {
         "name": "lucanakin",
@@ -28031,7 +27968,7 @@
             "pos": 18
           }
         ],
-        "rank": 105
+        "rank": 104
       },
       {
         "name": "M4DSCOTSM4N",
@@ -28112,7 +28049,7 @@
             "pos": 29
           }
         ],
-        "rank": 106
+        "rank": 105
       },
       {
         "name": "Ruckooe",
@@ -28143,7 +28080,7 @@
             "pos": 21
           }
         ],
-        "rank": 107
+        "rank": 106
       },
       {
         "name": "Fu\u042ci",
@@ -28169,7 +28106,7 @@
             "pos": 30
           }
         ],
-        "rank": 108
+        "rank": 107
       },
       {
         "name": "KB",
@@ -28195,7 +28132,7 @@
             "pos": 32
           }
         ],
-        "rank": 109
+        "rank": 108
       },
       {
         "name": "Babup",
@@ -28221,7 +28158,7 @@
             "pos": 21
           }
         ],
-        "rank": 110
+        "rank": 109
       },
       {
         "name": "gameface",
@@ -28247,7 +28184,7 @@
             "pos": 23
           }
         ],
-        "rank": 111
+        "rank": 110
       },
       {
         "name": "paytonkimpel11",
@@ -28273,7 +28210,7 @@
             "pos": 24
           }
         ],
-        "rank": 112
+        "rank": 111
       },
       {
         "name": "daytime",
@@ -28304,7 +28241,7 @@
             "pos": 24
           }
         ],
-        "rank": 113
+        "rank": 112
       },
       {
         "name": "Edwin",
@@ -28330,7 +28267,7 @@
             "pos": 31
           }
         ],
-        "rank": 114
+        "rank": 113
       },
       {
         "name": "MossRover",
@@ -28356,7 +28293,7 @@
             "pos": 31
           }
         ],
-        "rank": 115
+        "rank": 114
       },
       {
         "name": "Tomixcomics",
@@ -28392,7 +28329,7 @@
             "pos": 33
           }
         ],
-        "rank": 116
+        "rank": 115
       },
       {
         "name": "vortex",
@@ -28418,7 +28355,7 @@
             "pos": 16
           }
         ],
-        "rank": 117
+        "rank": 116
       },
       {
         "name": "grop44",
@@ -28459,7 +28396,7 @@
             "pos": 30
           }
         ],
-        "rank": 118
+        "rank": 117
       },
       {
         "name": "Cool",
@@ -28485,7 +28422,7 @@
             "pos": 23
           }
         ],
-        "rank": 119
+        "rank": 118
       },
       {
         "name": "DarthJohansen",
@@ -28511,7 +28448,7 @@
             "pos": 23
           }
         ],
-        "rank": 120
+        "rank": 119
       },
       {
         "name": "Aetherhead",
@@ -28537,7 +28474,7 @@
             "pos": 26
           }
         ],
-        "rank": 121
+        "rank": 120
       },
       {
         "name": "cactuzhead",
@@ -28563,7 +28500,7 @@
             "pos": 17
           }
         ],
-        "rank": 122
+        "rank": 121
       },
       {
         "name": "MadZitrone",
@@ -28589,7 +28526,7 @@
             "pos": 25
           }
         ],
-        "rank": 123
+        "rank": 122
       },
       {
         "name": "Fly8oy",
@@ -28615,7 +28552,7 @@
             "pos": 28
           }
         ],
-        "rank": 124
+        "rank": 123
       },
       {
         "name": "it_is_nic",
@@ -28641,7 +28578,7 @@
             "pos": 30
           }
         ],
-        "rank": 125
+        "rank": 124
       },
       {
         "name": "FF_11",
@@ -28667,7 +28604,7 @@
             "pos": 31
           }
         ],
-        "rank": 126
+        "rank": 125
       },
       {
         "name": "True Chaotic Neutral",
@@ -28693,7 +28630,7 @@
             "pos": 31
           }
         ],
-        "rank": 127
+        "rank": 126
       },
       {
         "name": "ElectricCaveman",
@@ -28719,7 +28656,7 @@
             "pos": 19
           }
         ],
-        "rank": 128
+        "rank": 127
       },
       {
         "name": "\u0e56\u06e3\u06dcNamo \u30c4",
@@ -28745,7 +28682,7 @@
             "pos": 20
           }
         ],
-        "rank": 129
+        "rank": 128
       },
       {
         "name": "PewX [.de]",
@@ -28771,7 +28708,7 @@
             "pos": 22
           }
         ],
-        "rank": 130
+        "rank": 129
       },
       {
         "name": "Kilandor",
@@ -28797,7 +28734,7 @@
             "pos": 23
           }
         ],
-        "rank": 131
+        "rank": 130
       },
       {
         "name": "FedtStensDyr",
@@ -28823,7 +28760,7 @@
             "pos": 24
           }
         ],
-        "rank": 132
+        "rank": 131
       },
       {
         "name": "Spatial",
@@ -28849,7 +28786,7 @@
             "pos": 25
           }
         ],
-        "rank": 133
+        "rank": 132
       },
       {
         "name": "Articus",
@@ -28875,7 +28812,7 @@
             "pos": 28
           }
         ],
-        "rank": 134
+        "rank": 133
       },
       {
         "name": "duff_mans_jnr",
@@ -28901,7 +28838,7 @@
             "pos": 29
           }
         ],
-        "rank": 135
+        "rank": 134
       },
       {
         "name": "Arepuz",
@@ -28927,7 +28864,7 @@
             "pos": 17
           }
         ],
-        "rank": 136
+        "rank": 135
       },
       {
         "name": "Andrew8Kavanagh",
@@ -28953,7 +28890,7 @@
             "pos": 21
           }
         ],
-        "rank": 137
+        "rank": 136
       },
       {
         "name": "DragonBlood91D",
@@ -28979,7 +28916,7 @@
             "pos": 27
           }
         ],
-        "rank": 138
+        "rank": 137
       },
       {
         "name": "Orb Bee Bob",
@@ -29020,7 +28957,7 @@
             "pos": 22
           }
         ],
-        "rank": 139
+        "rank": 138
       },
       {
         "name": "Es3en",
@@ -29046,7 +28983,7 @@
             "pos": 30
           }
         ],
-        "rank": 140
+        "rank": 139
       },
       {
         "name": "Gruselda1",
@@ -29072,7 +29009,7 @@
             "pos": 30
           }
         ],
-        "rank": 141
+        "rank": 140
       },
       {
         "name": "Minixerces2116",
@@ -29098,7 +29035,7 @@
             "pos": 30
           }
         ],
-        "rank": 142
+        "rank": 141
       },
       {
         "name": "Waaksaam",
@@ -29144,7 +29081,7 @@
             "pos": 28
           }
         ],
-        "rank": 143
+        "rank": 142
       },
       {
         "name": "[MIT] nilswa",
@@ -29170,7 +29107,7 @@
             "pos": 30
           }
         ],
-        "rank": 144
+        "rank": 143
       },
       {
         "name": "felix",
@@ -29196,7 +29133,7 @@
             "pos": 12
           }
         ],
-        "rank": 145
+        "rank": 144
       },
       {
         "name": "penqwin",
@@ -29222,7 +29159,7 @@
             "pos": 20
           }
         ],
-        "rank": 146
+        "rank": 145
       },
       {
         "name": "[EEN] Hang Chang-Pang",
@@ -29258,7 +29195,7 @@
             "pos": 18
           }
         ],
-        "rank": 147
+        "rank": 146
       },
       {
         "name": "Timmer933",
@@ -29294,7 +29231,7 @@
             "pos": 22
           }
         ],
-        "rank": 148
+        "rank": 147
       },
       {
         "name": "racemaniac",
@@ -29325,7 +29262,7 @@
             "pos": 11
           }
         ],
-        "rank": 149
+        "rank": 148
       },
       {
         "name": "huhconduct",
@@ -29351,7 +29288,7 @@
             "pos": 31
           }
         ],
-        "rank": 150
+        "rank": 149
       },
       {
         "name": "Shadynook",
@@ -29377,7 +29314,7 @@
             "pos": 14
           }
         ],
-        "rank": 151
+        "rank": 150
       },
       {
         "name": "Jorts",
@@ -29433,7 +29370,7 @@
             "pos": 23
           }
         ],
-        "rank": 152
+        "rank": 151
       },
       {
         "name": "[ZLOW] Milkaholic",
@@ -29459,7 +29396,7 @@
             "pos": 33
           }
         ],
-        "rank": 153
+        "rank": 152
       },
       {
         "name": "[MMM]Milk Man",
@@ -29485,7 +29422,7 @@
             "pos": 35
           }
         ],
-        "rank": 154
+        "rank": 153
       },
       {
         "name": "\u0287\u0250\u0254\u0500",
@@ -29511,7 +29448,7 @@
             "pos": 36
           }
         ],
-        "rank": 155
+        "rank": 154
       },
       {
         "name": "Towelie",
@@ -29537,7 +29474,7 @@
             "pos": 38
           }
         ],
-        "rank": 156
+        "rank": 155
       },
       {
         "name": "[RABI]Yksdjcj",
@@ -29568,7 +29505,7 @@
             "pos": 28
           }
         ],
-        "rank": 157
+        "rank": 156
       },
       {
         "name": "mofn",
@@ -29594,7 +29531,7 @@
             "pos": 25
           }
         ],
-        "rank": 158
+        "rank": 157
       },
       {
         "name": "[BRED] MrSplatoon07",
@@ -29620,7 +29557,7 @@
             "pos": 26
           }
         ],
-        "rank": 159
+        "rank": 158
       },
       {
         "name": "[ZET] zeriv",
@@ -29646,7 +29583,7 @@
             "pos": 26
           }
         ],
-        "rank": 160
+        "rank": 159
       },
       {
         "name": "calebmcr",
@@ -29672,7 +29609,7 @@
             "pos": 26
           }
         ],
-        "rank": 161
+        "rank": 160
       },
       {
         "name": "Tudge Boat",
@@ -29703,7 +29640,7 @@
             "pos": 22
           }
         ],
-        "rank": 162
+        "rank": 161
       },
       {
         "name": "[MIB]Joe Beidl",
@@ -29734,7 +29671,7 @@
             "pos": 24
           }
         ],
-        "rank": 163
+        "rank": 162
       },
       {
         "name": "Ooohbilly",
@@ -29760,7 +29697,7 @@
             "pos": 20
           }
         ],
-        "rank": 164
+        "rank": 163
       },
       {
         "name": "Telion",
@@ -29786,7 +29723,7 @@
             "pos": 23
           }
         ],
-        "rank": 165
+        "rank": 164
       },
       {
         "name": "taagern",
@@ -29812,7 +29749,7 @@
             "pos": 25
           }
         ],
-        "rank": 166
+        "rank": 165
       },
       {
         "name": "Diabler",
@@ -29838,7 +29775,7 @@
             "pos": 11
           }
         ],
-        "rank": 167
+        "rank": 166
       },
       {
         "name": "cipi",
@@ -29864,7 +29801,7 @@
             "pos": 23
           }
         ],
-        "rank": 168
+        "rank": 167
       },
       {
         "name": "pannekoekbijter",
@@ -29890,7 +29827,7 @@
             "pos": 28
           }
         ],
-        "rank": 169
+        "rank": 168
       },
       {
         "name": "[Buny]Lunarbunny",
@@ -29916,7 +29853,7 @@
             "pos": 31
           }
         ],
-        "rank": 170
+        "rank": 169
       },
       {
         "name": "SuperHeavy",
@@ -29947,7 +29884,7 @@
             "pos": 17
           }
         ],
-        "rank": 171
+        "rank": 170
       },
       {
         "name": "CaptainD54321 (they/she)",
@@ -29973,7 +29910,7 @@
             "pos": 35
           }
         ],
-        "rank": 172
+        "rank": 171
       },
       {
         "name": "Microknigh7",
@@ -29999,7 +29936,7 @@
             "pos": 23
           }
         ],
-        "rank": 173
+        "rank": 172
       },
       {
         "name": "[hi]im boring",
@@ -30025,7 +29962,7 @@
             "pos": 23
           }
         ],
-        "rank": 174
+        "rank": 173
       },
       {
         "name": "Naomi",
@@ -30051,7 +29988,7 @@
             "pos": 19
           }
         ],
-        "rank": 175
+        "rank": 174
       },
       {
         "name": "Mortishade",
@@ -30077,7 +30014,7 @@
             "pos": 20
           }
         ],
-        "rank": 176
+        "rank": 175
       },
       {
         "name": "Cypher Ocelot",
@@ -30103,7 +30040,7 @@
             "pos": 23
           }
         ],
-        "rank": 177
+        "rank": 176
       },
       {
         "name": "CodeingerCat",
@@ -30129,7 +30066,7 @@
             "pos": 25
           }
         ],
-        "rank": 178
+        "rank": 177
       },
       {
         "name": "Hibbie",
@@ -30155,7 +30092,7 @@
             "pos": 25
           }
         ],
-        "rank": 179
+        "rank": 178
       },
       {
         "name": "Squarefish",
@@ -30181,7 +30118,7 @@
             "pos": 25
           }
         ],
-        "rank": 180
+        "rank": 179
       },
       {
         "name": "kentback",
@@ -30207,7 +30144,7 @@
             "pos": 25
           }
         ],
-        "rank": 181
+        "rank": 180
       },
       {
         "name": "[MMM]Kreeeeee",
@@ -30248,7 +30185,7 @@
             "pos": 21
           }
         ],
-        "rank": 182
+        "rank": 181
       },
       {
         "name": "liz1rd",
@@ -30274,7 +30211,7 @@
             "pos": 33
           }
         ],
-        "rank": 183
+        "rank": 182
       },
       {
         "name": "Robgamer",
@@ -30300,7 +30237,7 @@
             "pos": 26
           }
         ],
-        "rank": 184
+        "rank": 183
       },
       {
         "name": "Akane",
@@ -30336,7 +30273,7 @@
             "pos": 21
           }
         ],
-        "rank": 185
+        "rank": 184
       },
       {
         "name": "variableferret",
@@ -30382,7 +30319,7 @@
             "pos": 17
           }
         ],
-        "rank": 186
+        "rank": 185
       },
       {
         "name": "Crispy",
@@ -30408,7 +30345,7 @@
             "pos": 27
           }
         ],
-        "rank": 187
+        "rank": 186
       },
       {
         "name": "DaimyoN",
@@ -30439,7 +30376,7 @@
             "pos": 31
           }
         ],
-        "rank": 188
+        "rank": 187
       },
       {
         "name": "OwenTheOmnipotent",
@@ -30465,7 +30402,7 @@
             "pos": 27
           }
         ],
-        "rank": 189
+        "rank": 188
       },
       {
         "name": "VroomVroomer",
@@ -30491,7 +30428,7 @@
             "pos": 28
           }
         ],
-        "rank": 190
+        "rank": 189
       },
       {
         "name": "lele514",
@@ -30517,7 +30454,7 @@
             "pos": 32
           }
         ],
-        "rank": 191
+        "rank": 190
       },
       {
         "name": "J0k3r_97",
@@ -30543,7 +30480,7 @@
             "pos": 33
           }
         ],
-        "rank": 192
+        "rank": 191
       },
       {
         "name": "[bad]kkincaid97",
@@ -30579,7 +30516,7 @@
             "pos": 30
           }
         ],
-        "rank": 193
+        "rank": 192
       },
       {
         "name": "BrickEdwards",
@@ -30605,7 +30542,7 @@
             "pos": 18
           }
         ],
-        "rank": 194
+        "rank": 193
       },
       {
         "name": "Olee",
@@ -30631,7 +30568,7 @@
             "pos": 24
           }
         ],
-        "rank": 195
+        "rank": 194
       },
       {
         "name": "Aranay",
@@ -30657,7 +30594,7 @@
             "pos": 29
           }
         ],
-        "rank": 196
+        "rank": 195
       },
       {
         "name": "_treymundo_",
@@ -30683,7 +30620,7 @@
             "pos": 29
           }
         ],
-        "rank": 197
+        "rank": 196
       },
       {
         "name": "jandje",
@@ -30709,7 +30646,7 @@
             "pos": 18
           }
         ],
-        "rank": 198
+        "rank": 197
       },
       {
         "name": "ActuallyRuben",
@@ -30735,7 +30672,7 @@
             "pos": 30
           }
         ],
-        "rank": 199
+        "rank": 198
       },
       {
         "name": "linx200",
@@ -30761,7 +30698,7 @@
             "pos": 31
           }
         ],
-        "rank": 200
+        "rank": 199
       },
       {
         "name": "meganuke22",
@@ -30787,7 +30724,7 @@
             "pos": 31
           }
         ],
-        "rank": 201
+        "rank": 200
       },
       {
         "name": "\udb40\udc21\udb40\udc21\u180c \u2067\u2067Thalli",
@@ -30813,7 +30750,7 @@
             "pos": 31
           }
         ],
-        "rank": 202
+        "rank": 201
       },
       {
         "name": "AndrewIF",
@@ -30839,7 +30776,7 @@
             "pos": 37
           }
         ],
-        "rank": 203
+        "rank": 202
       },
       {
         "name": "MAGS3",
@@ -30865,7 +30802,7 @@
             "pos": 20
           }
         ],
-        "rank": 204
+        "rank": 203
       },
       {
         "name": "Pigmyninja",
@@ -30891,7 +30828,7 @@
             "pos": 24
           }
         ],
-        "rank": 205
+        "rank": 204
       },
       {
         "name": "NyxeonFox",
@@ -30917,7 +30854,7 @@
             "pos": 29
           }
         ],
-        "rank": 206
+        "rank": 205
       },
       {
         "name": "sunset_shimmer7",
@@ -30943,7 +30880,7 @@
             "pos": 31
           }
         ],
-        "rank": 207
+        "rank": 206
       },
       {
         "name": "Fatboy",
@@ -30969,7 +30906,7 @@
             "pos": 33
           }
         ],
-        "rank": 208
+        "rank": 207
       },
       {
         "name": "Zwerggo",
@@ -30995,7 +30932,7 @@
             "pos": 33
           }
         ],
-        "rank": 209
+        "rank": 208
       }
     ],
     "championship": [
@@ -34944,10 +34881,10 @@
         "rank": 64
       },
       {
-        "name": "OLR94",
+        "name": "ShyGirlyRaccoon",
         "points": 0,
         "points_all": 0,
-        "rounds": 2,
+        "rounds": 9,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -34956,9 +34893,9 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 27.0,
+        "avg_pos": 24.6,
         "best_single": 0,
-        "best_pos": 25,
+        "best_pos": 17,
         "dropped": 0,
         "history": [
           {
@@ -34970,6 +34907,41 @@
             "r": "Season 3 Round 6",
             "p": 0,
             "pos": 25
+          },
+          {
+            "r": "Season 3 Round 12",
+            "p": 0,
+            "pos": 17
+          },
+          {
+            "r": "Season 3 Round 14",
+            "p": 0,
+            "pos": 18
+          },
+          {
+            "r": "Season 3 Round 15",
+            "p": 0,
+            "pos": 30
+          },
+          {
+            "r": "Season 3 Round 16",
+            "p": 0,
+            "pos": 23
+          },
+          {
+            "r": "Season 3 Round 17",
+            "p": 0,
+            "pos": 27
+          },
+          {
+            "r": "Season 4 Round 4",
+            "p": 0,
+            "pos": 29
+          },
+          {
+            "r": "Season 4 Round 5",
+            "p": 0,
+            "pos": 23
           }
         ],
         "rank": 65
@@ -36317,62 +36289,6 @@
         "rank": 102
       },
       {
-        "name": "SGR",
-        "points": 0,
-        "points_all": 0,
-        "rounds": 7,
-        "wins": 0,
-        "podiums": {
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0
-        },
-        "top5": 0,
-        "avg_pts": 0.0,
-        "avg_pos": 23.9,
-        "best_single": 0,
-        "best_pos": 17,
-        "dropped": 0,
-        "history": [
-          {
-            "r": "Season 3 Round 12",
-            "p": 0,
-            "pos": 17
-          },
-          {
-            "r": "Season 3 Round 14",
-            "p": 0,
-            "pos": 18
-          },
-          {
-            "r": "Season 3 Round 15",
-            "p": 0,
-            "pos": 30
-          },
-          {
-            "r": "Season 3 Round 16",
-            "p": 0,
-            "pos": 23
-          },
-          {
-            "r": "Season 3 Round 17",
-            "p": 0,
-            "pos": 27
-          },
-          {
-            "r": "Season 4 Round 4",
-            "p": 0,
-            "pos": 29
-          },
-          {
-            "r": "Season 4 Round 5",
-            "p": 0,
-            "pos": 23
-          }
-        ],
-        "rank": 103
-      },
-      {
         "name": "grop44",
         "points": 0,
         "points_all": 0,
@@ -36411,7 +36327,7 @@
             "pos": 30
           }
         ],
-        "rank": 104
+        "rank": 103
       },
       {
         "name": "Cool",
@@ -36437,7 +36353,7 @@
             "pos": 23
           }
         ],
-        "rank": 105
+        "rank": 104
       },
       {
         "name": "DarthJohansen",
@@ -36463,7 +36379,7 @@
             "pos": 23
           }
         ],
-        "rank": 106
+        "rank": 105
       },
       {
         "name": "Aetherhead",
@@ -36489,7 +36405,7 @@
             "pos": 26
           }
         ],
-        "rank": 107
+        "rank": 106
       },
       {
         "name": "Tomixcomics",
@@ -36520,7 +36436,7 @@
             "pos": 33
           }
         ],
-        "rank": 108
+        "rank": 107
       },
       {
         "name": "cactuzhead",
@@ -36546,7 +36462,7 @@
             "pos": 17
           }
         ],
-        "rank": 109
+        "rank": 108
       },
       {
         "name": "MadZitrone",
@@ -36572,7 +36488,7 @@
             "pos": 25
           }
         ],
-        "rank": 110
+        "rank": 109
       },
       {
         "name": "Fly8oy",
@@ -36598,7 +36514,7 @@
             "pos": 28
           }
         ],
-        "rank": 111
+        "rank": 110
       },
       {
         "name": "it_is_nic",
@@ -36624,7 +36540,7 @@
             "pos": 30
           }
         ],
-        "rank": 112
+        "rank": 111
       },
       {
         "name": "FF_11",
@@ -36650,7 +36566,7 @@
             "pos": 31
           }
         ],
-        "rank": 113
+        "rank": 112
       },
       {
         "name": "True Chaotic Neutral",
@@ -36676,7 +36592,7 @@
             "pos": 31
           }
         ],
-        "rank": 114
+        "rank": 113
       },
       {
         "name": "ElectricCaveman",
@@ -36702,7 +36618,7 @@
             "pos": 19
           }
         ],
-        "rank": 115
+        "rank": 114
       },
       {
         "name": "\u0e56\u06e3\u06dcNamo \u30c4",
@@ -36728,7 +36644,7 @@
             "pos": 20
           }
         ],
-        "rank": 116
+        "rank": 115
       },
       {
         "name": "PewX [.de]",
@@ -36754,7 +36670,7 @@
             "pos": 22
           }
         ],
-        "rank": 117
+        "rank": 116
       },
       {
         "name": "Kilandor",
@@ -36780,7 +36696,7 @@
             "pos": 23
           }
         ],
-        "rank": 118
+        "rank": 117
       },
       {
         "name": "FedtStensDyr",
@@ -36806,7 +36722,7 @@
             "pos": 24
           }
         ],
-        "rank": 119
+        "rank": 118
       },
       {
         "name": "Spatial",
@@ -36832,7 +36748,7 @@
             "pos": 25
           }
         ],
-        "rank": 120
+        "rank": 119
       },
       {
         "name": "Articus",
@@ -36858,7 +36774,7 @@
             "pos": 28
           }
         ],
-        "rank": 121
+        "rank": 120
       },
       {
         "name": "duff_mans_jnr",
@@ -36884,7 +36800,7 @@
             "pos": 29
           }
         ],
-        "rank": 122
+        "rank": 121
       },
       {
         "name": "Arepuz",
@@ -36910,7 +36826,7 @@
             "pos": 17
           }
         ],
-        "rank": 123
+        "rank": 122
       },
       {
         "name": "Andrew8Kavanagh",
@@ -36936,7 +36852,7 @@
             "pos": 21
           }
         ],
-        "rank": 124
+        "rank": 123
       },
       {
         "name": "daytime",
@@ -36962,7 +36878,7 @@
             "pos": 24
           }
         ],
-        "rank": 125
+        "rank": 124
       },
       {
         "name": "DragonBlood91D",
@@ -36988,7 +36904,7 @@
             "pos": 27
           }
         ],
-        "rank": 126
+        "rank": 125
       },
       {
         "name": "Orb Bee Bob",
@@ -37029,7 +36945,7 @@
             "pos": 22
           }
         ],
-        "rank": 127
+        "rank": 126
       },
       {
         "name": "Es3en",
@@ -37055,7 +36971,7 @@
             "pos": 30
           }
         ],
-        "rank": 128
+        "rank": 127
       },
       {
         "name": "Gruselda1",
@@ -37081,7 +36997,7 @@
             "pos": 30
           }
         ],
-        "rank": 129
+        "rank": 128
       },
       {
         "name": "Minixerces2116",
@@ -37107,7 +37023,7 @@
             "pos": 30
           }
         ],
-        "rank": 130
+        "rank": 129
       },
       {
         "name": "Waaksaam",
@@ -37153,7 +37069,7 @@
             "pos": 28
           }
         ],
-        "rank": 131
+        "rank": 130
       },
       {
         "name": "[MIT] nilswa",
@@ -37179,7 +37095,7 @@
             "pos": 30
           }
         ],
-        "rank": 132
+        "rank": 131
       },
       {
         "name": "felix",
@@ -37205,7 +37121,7 @@
             "pos": 12
           }
         ],
-        "rank": 133
+        "rank": 132
       },
       {
         "name": "penqwin",
@@ -37231,7 +37147,7 @@
             "pos": 20
           }
         ],
-        "rank": 134
+        "rank": 133
       },
       {
         "name": "[EEN] Hang Chang-Pang",
@@ -37267,7 +37183,7 @@
             "pos": 18
           }
         ],
-        "rank": 135
+        "rank": 134
       },
       {
         "name": "Timmer933",
@@ -37303,7 +37219,7 @@
             "pos": 22
           }
         ],
-        "rank": 136
+        "rank": 135
       },
       {
         "name": "racemaniac",
@@ -37334,7 +37250,7 @@
             "pos": 11
           }
         ],
-        "rank": 137
+        "rank": 136
       },
       {
         "name": "huhconduct",
@@ -37360,7 +37276,7 @@
             "pos": 31
           }
         ],
-        "rank": 138
+        "rank": 137
       },
       {
         "name": "Shadynook",
@@ -37386,7 +37302,7 @@
             "pos": 14
           }
         ],
-        "rank": 139
+        "rank": 138
       },
       {
         "name": "Jorts",
@@ -37442,7 +37358,7 @@
             "pos": 23
           }
         ],
-        "rank": 140
+        "rank": 139
       },
       {
         "name": "[ZLOW] Milkaholic",
@@ -37468,7 +37384,7 @@
             "pos": 33
           }
         ],
-        "rank": 141
+        "rank": 140
       },
       {
         "name": "[MMM]Milk Man",
@@ -37494,7 +37410,7 @@
             "pos": 35
           }
         ],
-        "rank": 142
+        "rank": 141
       },
       {
         "name": "\u0287\u0250\u0254\u0500",
@@ -37520,7 +37436,7 @@
             "pos": 36
           }
         ],
-        "rank": 143
+        "rank": 142
       },
       {
         "name": "Towelie",
@@ -37546,7 +37462,7 @@
             "pos": 38
           }
         ],
-        "rank": 144
+        "rank": 143
       },
       {
         "name": "[RABI]Yksdjcj",
@@ -37577,7 +37493,7 @@
             "pos": 28
           }
         ],
-        "rank": 145
+        "rank": 144
       },
       {
         "name": "mofn",
@@ -37603,7 +37519,7 @@
             "pos": 25
           }
         ],
-        "rank": 146
+        "rank": 145
       },
       {
         "name": "[BRED] MrSplatoon07",
@@ -37629,7 +37545,7 @@
             "pos": 26
           }
         ],
-        "rank": 147
+        "rank": 146
       },
       {
         "name": "[ZET] zeriv",
@@ -37655,7 +37571,7 @@
             "pos": 26
           }
         ],
-        "rank": 148
+        "rank": 147
       },
       {
         "name": "calebmcr",
@@ -37681,7 +37597,7 @@
             "pos": 26
           }
         ],
-        "rank": 149
+        "rank": 148
       },
       {
         "name": "Tudge Boat",
@@ -37712,7 +37628,7 @@
             "pos": 22
           }
         ],
-        "rank": 150
+        "rank": 149
       },
       {
         "name": "[MIB]Joe Beidl",
@@ -37743,7 +37659,7 @@
             "pos": 24
           }
         ],
-        "rank": 151
+        "rank": 150
       },
       {
         "name": "Ooohbilly",
@@ -37769,7 +37685,7 @@
             "pos": 20
           }
         ],
-        "rank": 152
+        "rank": 151
       },
       {
         "name": "Telion",
@@ -37795,7 +37711,7 @@
             "pos": 23
           }
         ],
-        "rank": 153
+        "rank": 152
       },
       {
         "name": "taagern",
@@ -37821,7 +37737,7 @@
             "pos": 25
           }
         ],
-        "rank": 154
+        "rank": 153
       },
       {
         "name": "Diabler",
@@ -37847,7 +37763,7 @@
             "pos": 11
           }
         ],
-        "rank": 155
+        "rank": 154
       },
       {
         "name": "cipi",
@@ -37873,7 +37789,7 @@
             "pos": 23
           }
         ],
-        "rank": 156
+        "rank": 155
       },
       {
         "name": "pannekoekbijter",
@@ -37899,7 +37815,7 @@
             "pos": 28
           }
         ],
-        "rank": 157
+        "rank": 156
       },
       {
         "name": "[Buny]Lunarbunny",
@@ -37925,7 +37841,7 @@
             "pos": 31
           }
         ],
-        "rank": 158
+        "rank": 157
       },
       {
         "name": "SuperHeavy",
@@ -37956,7 +37872,7 @@
             "pos": 17
           }
         ],
-        "rank": 159
+        "rank": 158
       },
       {
         "name": "CaptainD54321 (they/she)",
@@ -37982,7 +37898,7 @@
             "pos": 35
           }
         ],
-        "rank": 160
+        "rank": 159
       },
       {
         "name": "Naomi",
@@ -38008,7 +37924,7 @@
             "pos": 19
           }
         ],
-        "rank": 161
+        "rank": 160
       },
       {
         "name": "Mortishade",
@@ -38034,7 +37950,7 @@
             "pos": 20
           }
         ],
-        "rank": 162
+        "rank": 161
       },
       {
         "name": "Cypher Ocelot",
@@ -38060,7 +37976,7 @@
             "pos": 23
           }
         ],
-        "rank": 163
+        "rank": 162
       },
       {
         "name": "CodeingerCat",
@@ -38086,7 +38002,7 @@
             "pos": 25
           }
         ],
-        "rank": 164
+        "rank": 163
       },
       {
         "name": "Hibbie",
@@ -38112,7 +38028,7 @@
             "pos": 25
           }
         ],
-        "rank": 165
+        "rank": 164
       },
       {
         "name": "Squarefish",
@@ -38138,7 +38054,7 @@
             "pos": 25
           }
         ],
-        "rank": 166
+        "rank": 165
       },
       {
         "name": "kentback",
@@ -38164,7 +38080,7 @@
             "pos": 25
           }
         ],
-        "rank": 167
+        "rank": 166
       },
       {
         "name": "[MMM]Kreeeeee",
@@ -38205,7 +38121,7 @@
             "pos": 21
           }
         ],
-        "rank": 168
+        "rank": 167
       },
       {
         "name": "liz1rd",
@@ -38231,7 +38147,7 @@
             "pos": 33
           }
         ],
-        "rank": 169
+        "rank": 168
       },
       {
         "name": "Robgamer",
@@ -38257,7 +38173,7 @@
             "pos": 26
           }
         ],
-        "rank": 170
+        "rank": 169
       },
       {
         "name": "Akane",
@@ -38293,7 +38209,7 @@
             "pos": 21
           }
         ],
-        "rank": 171
+        "rank": 170
       },
       {
         "name": "variableferret",
@@ -38339,7 +38255,7 @@
             "pos": 17
           }
         ],
-        "rank": 172
+        "rank": 171
       },
       {
         "name": "Crispy",
@@ -38365,7 +38281,7 @@
             "pos": 27
           }
         ],
-        "rank": 173
+        "rank": 172
       },
       {
         "name": "DaimyoN",
@@ -38396,7 +38312,7 @@
             "pos": 31
           }
         ],
-        "rank": 174
+        "rank": 173
       },
       {
         "name": "OwenTheOmnipotent",
@@ -38422,7 +38338,7 @@
             "pos": 27
           }
         ],
-        "rank": 175
+        "rank": 174
       },
       {
         "name": "VroomVroomer",
@@ -38448,7 +38364,7 @@
             "pos": 28
           }
         ],
-        "rank": 176
+        "rank": 175
       },
       {
         "name": "lele514",
@@ -38474,7 +38390,7 @@
             "pos": 32
           }
         ],
-        "rank": 177
+        "rank": 176
       },
       {
         "name": "J0k3r_97",
@@ -38500,7 +38416,7 @@
             "pos": 33
           }
         ],
-        "rank": 178
+        "rank": 177
       },
       {
         "name": "[bad]kkincaid97",
@@ -38536,7 +38452,7 @@
             "pos": 30
           }
         ],
-        "rank": 179
+        "rank": 178
       },
       {
         "name": "Hellmet",
@@ -38562,7 +38478,7 @@
             "pos": 29
           }
         ],
-        "rank": 180
+        "rank": 179
       },
       {
         "name": "BrickEdwards",
@@ -38588,7 +38504,7 @@
             "pos": 18
           }
         ],
-        "rank": 181
+        "rank": 180
       },
       {
         "name": "Olee",
@@ -38614,7 +38530,7 @@
             "pos": 24
           }
         ],
-        "rank": 182
+        "rank": 181
       },
       {
         "name": "Aranay",
@@ -38640,7 +38556,7 @@
             "pos": 29
           }
         ],
-        "rank": 183
+        "rank": 182
       },
       {
         "name": "_treymundo_",
@@ -38666,7 +38582,7 @@
             "pos": 29
           }
         ],
-        "rank": 184
+        "rank": 183
       },
       {
         "name": "jandje",
@@ -38692,7 +38608,7 @@
             "pos": 18
           }
         ],
-        "rank": 185
+        "rank": 184
       },
       {
         "name": "ActuallyRuben",
@@ -38718,7 +38634,7 @@
             "pos": 30
           }
         ],
-        "rank": 186
+        "rank": 185
       },
       {
         "name": "linx200",
@@ -38744,7 +38660,7 @@
             "pos": 31
           }
         ],
-        "rank": 187
+        "rank": 186
       },
       {
         "name": "meganuke22",
@@ -38770,7 +38686,7 @@
             "pos": 31
           }
         ],
-        "rank": 188
+        "rank": 187
       },
       {
         "name": "\udb40\udc21\udb40\udc21\u180c \u2067\u2067Thalli",
@@ -38796,7 +38712,7 @@
             "pos": 31
           }
         ],
-        "rank": 189
+        "rank": 188
       },
       {
         "name": "AndrewIF",
@@ -38822,7 +38738,7 @@
             "pos": 37
           }
         ],
-        "rank": 190
+        "rank": 189
       },
       {
         "name": "MAGS3",
@@ -38848,7 +38764,7 @@
             "pos": 20
           }
         ],
-        "rank": 191
+        "rank": 190
       },
       {
         "name": "Pigmyninja",
@@ -38874,7 +38790,7 @@
             "pos": 24
           }
         ],
-        "rank": 192
+        "rank": 191
       },
       {
         "name": "NyxeonFox",
@@ -38900,7 +38816,7 @@
             "pos": 29
           }
         ],
-        "rank": 193
+        "rank": 192
       },
       {
         "name": "sunset_shimmer7",
@@ -38926,7 +38842,7 @@
             "pos": 31
           }
         ],
-        "rank": 194
+        "rank": 193
       },
       {
         "name": "Fatboy",
@@ -38952,7 +38868,7 @@
             "pos": 33
           }
         ],
-        "rank": 195
+        "rank": 194
       },
       {
         "name": "Zwerggo",
@@ -38978,7 +38894,7 @@
             "pos": 33
           }
         ],
-        "rank": 196
+        "rank": 195
       }
     ],
     "round_strengths": {},

@@ -49,8 +49,6 @@ PETITE_ALIASES = {
     'Lkat': 'LKat',
     "Jake Replacement's Replacement": 'LKat',
     'Zoman': 'ZOMAN',
-    'OLR94': 'SGR',
-    'ShyGirlyRaccoon': 'SGR',
 }
 NAME_MAP.update(PETITE_ALIASES)
 
