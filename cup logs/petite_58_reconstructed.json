@@ -1,0 +1,254 @@
+[
+  {
+    "pos": 1,
+    "name": "ZOMAN",
+    "time": 21.16749,
+    "round": null,
+    "note": "winner"
+  },
+  {
+    "pos": 2,
+    "name": "justMaki",
+    "time": 21.18019,
+    "round": 14,
+    "note": "cotd"
+  },
+  {
+    "pos": 3,
+    "name": "Jake",
+    "time": 24.33,
+    "round": 13,
+    "note": "cotd"
+  },
+  {
+    "pos": 4,
+    "name": "RoundNzt",
+    "time": 21.32609,
+    "round": 12,
+    "note": "cotd"
+  },
+  {
+    "pos": 5,
+    "name": "Sterben",
+    "time": 24.42233,
+    "round": 11,
+    "note": "cotd"
+  },
+  {
+    "pos": 6,
+    "name": "Lexer",
+    "time": 21.33363,
+    "round": 10,
+    "note": "cotd"
+  },
+  {
+    "pos": 7,
+    "name": "icRS",
+    "time": 24.51112,
+    "round": 9,
+    "note": "cotd"
+  },
+  {
+    "pos": 8,
+    "name": "[WASH] Quickracer10",
+    "time": 24.55606,
+    "round": 9,
+    "note": "cotd"
+  },
+  {
+    "pos": 9,
+    "name": "rtube",
+    "time": 21.49732,
+    "round": 8,
+    "note": "cotd"
+  },
+  {
+    "pos": 10,
+    "name": "Mμ",
+    "time": 21.50241,
+    "round": 8,
+    "note": "cotd"
+  },
+  {
+    "pos": 11,
+    "name": "[CSC]AndMe18",
+    "time": 24.64631,
+    "round": 7,
+    "note": "cotd"
+  },
+  {
+    "pos": 12,
+    "name": "Minkus",
+    "time": 24.64942,
+    "round": 7,
+    "note": "cotd"
+  },
+  {
+    "pos": 13,
+    "name": "Matic_D",
+    "time": 21.50744,
+    "round": 6,
+    "note": "cotd"
+  },
+  {
+    "pos": 14,
+    "name": "[CSC] PlusMicron",
+    "time": 21.66629,
+    "round": 6,
+    "note": "cotd"
+  },
+  {
+    "pos": 15,
+    "name": "[MMM]Victor",
+    "time": 21.68233,
+    "round": 6,
+    "note": "cotd"
+  },
+  {
+    "pos": 16,
+    "name": "Noxitu",
+    "time": 22.08008,
+    "round": 6,
+    "note": "cotd"
+  },
+  {
+    "pos": 17,
+    "name": "SuperHeavy",
+    "time": 24.8525,
+    "round": 5,
+    "note": "cotd"
+  },
+  {
+    "pos": 18,
+    "name": "aizpun",
+    "time": 25.08638,
+    "round": 5,
+    "note": "cotd"
+  },
+  {
+    "pos": 19,
+    "name": "Gimpel",
+    "time": 25.29092,
+    "round": 5,
+    "note": "cotd"
+  },
+  {
+    "pos": 20,
+    "name": "MAGS3",
+    "time": 25.42715,
+    "round": 5,
+    "note": "cotd"
+  },
+  {
+    "pos": 21,
+    "name": "LKat",
+    "time": 22.37035,
+    "round": 4,
+    "note": "cotd"
+  },
+  {
+    "pos": 22,
+    "name": "Timmer933",
+    "time": 22.44059,
+    "round": 4,
+    "note": "cotd"
+  },
+  {
+    "pos": 23,
+    "name": "Jorts",
+    "time": 22.478,
+    "round": 4,
+    "note": "LIVE_OVERRIDE_DNF"
+  },
+  {
+    "pos": 24,
+    "name": "Pigmyninja",
+    "time": 23.78641,
+    "round": 4,
+    "note": "cotd"
+  },
+  {
+    "pos": 25,
+    "name": "timesprout",
+    "time": 25.85468,
+    "round": 3,
+    "note": "cotd"
+  },
+  {
+    "pos": 26,
+    "name": "wokonbike",
+    "time": 25.99616,
+    "round": 3,
+    "note": "cotd"
+  },
+  {
+    "pos": 27,
+    "name": "Shinikage221",
+    "time": 26.04821,
+    "round": 3,
+    "note": "cotd"
+  },
+  {
+    "pos": 28,
+    "name": "MALIYO",
+    "time": null,
+    "round": 3,
+    "note": "dnf"
+  },
+  {
+    "pos": 29,
+    "name": "NyxeonFox",
+    "time": 22.86261,
+    "round": 2,
+    "note": "cotd"
+  },
+  {
+    "pos": 30,
+    "name": "[bad]kkincaid97",
+    "time": 23.02733,
+    "round": 2,
+    "note": "cotd"
+  },
+  {
+    "pos": 31,
+    "name": "sunset_shimmer7",
+    "time": 24.19992,
+    "round": 2,
+    "note": "cotd"
+  },
+  {
+    "pos": 32,
+    "name": "[TTR]DragonShadow84290",
+    "time": 26.19254,
+    "round": 2,
+    "note": "cotd"
+  },
+  {
+    "pos": 33,
+    "name": "Fatboy",
+    "time": null,
+    "round": 1,
+    "note": "dnf"
+  },
+  {
+    "pos": 33,
+    "name": "Tomixcomics",
+    "time": null,
+    "round": 1,
+    "note": "dnf"
+  },
+  {
+    "pos": 33,
+    "name": "Zwerggo",
+    "time": null,
+    "round": 1,
+    "note": "dnf"
+  },
+  {
+    "pos": 33,
+    "name": "[CSC] variableferret",
+    "time": null,
+    "round": 1,
+    "note": "dnf"
+  }
+]

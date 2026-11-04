@@ -111,5 +111,26 @@
     ],
     "maps_label": "Maps: PCDJ #56 - Mountain Coppice by redal + PCDJ #56 Tiny Radiant Halls by sanhe",
     "excluded": []
+  },
+  "Petite Cup 58": {
+    "season": "Season 4",
+    "round": "Round 8",
+    "xlsx": "Petite Cups 56-60.xlsx",
+    "date": "2026-11-04",
+    "community": 57,
+    "maps": [
+      {
+        "name": "PCDJ #57 - Fragments Of Who I Never Was",
+        "mapper": "[TTR] Tigerplaysonpc"
+      },
+      {
+        "name": "PCDJ #57 - Panic Button",
+        "mapper": "[CSC] variableferret"
+      }
+    ],
+    "maps_label": "Maps: PCDJ #57 - Fragments Of Who I Never Was by [TTR] Tigerplaysonpc + PCDJ #57 - Panic Button by [CSC] variableferret",
+    "excluded": [
+      "[CSC] variableferret"
+    ]
   }
 }

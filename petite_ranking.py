@@ -45,8 +45,6 @@ PETITE_ALIASES = {
     'Clowney': 'Clowny',
     'Brrryy': 'brrryy',
     'Redstoney': 'Redstony',
-    'r-tube': 'rtyyyyb',
-    'rtube': 'rtyyyyb',
     'Mu': 'Mμ',
     'Lkat': 'LKat',
     "Jake Replacement's Replacement": 'LKat',
