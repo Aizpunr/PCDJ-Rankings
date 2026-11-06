@@ -30,10 +30,26 @@ def test_log_alone_reproduces_saved(n):
     assert results == saved(n)
 
 
-def test_livelog_override_cup_43():
-    results, overrides = quiet(ppl.parse, LOGS / 'petite_43.log', LOGS / 'petite_43_liveleaderboard.log')
+# Excluded from the log-alone test because the livelog corrects them, so they
+# still have to reproduce WITH it: exclusion must not mean no coverage.
+@pytest.mark.parametrize('n', [43, 57, 58])
+def test_livelog_override_reproduces_saved(n):
+    results, overrides = quiet(ppl.parse, LOGS / f'petite_{n}.log',
+                               LOGS / f'petite_{n}_liveleaderboard.log')
     assert len(overrides) == 1
-    assert results == saved(43)
+    assert results == saved(n)
+
+
+def test_saved_livelogs_hold_one_session_only():
+    """The logger's file is cumulative: every copy used to carry months of
+    earlier sessions, 113 MB across the repo, and only the last session is
+    ever read. That weight is what stopped GitHub Pages deploying, so the
+    saved copies start at their own SESSION_START and must stay that way."""
+    for lv in sorted(LOGS.glob('*_liveleaderboard.log')):
+        data = lv.read_bytes()
+        assert data.count(b'SESSION_START') <= 1, (
+            f'{lv.name} holds {data.count(b"SESSION_START")} sessions; trim it to the last one')
+        assert len(data) < 4 * 1024 * 1024, f'{lv.name} is {len(data)/1048576:.1f} MB; it should be a single session'
 
 
 def test_stale_livelog_is_ignored():

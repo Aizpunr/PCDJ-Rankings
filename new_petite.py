@@ -75,6 +75,26 @@ def recycle(path):
     return r.returncode == 0
 
 
+def copy_last_session(src, dst):
+    """Copy a livelog, keeping only its last session.
+
+    The logger appends to one file forever, so a straight copy carries every
+    earlier session with it: the saved copies reached 19 MB each and 113 MB
+    across the repo, which stopped GitHub Pages deploying. parse_livelog()
+    resets on SESSION_START and reads only the last session, so this throws
+    away nothing it would have used.
+    """
+    with open(src, 'rb') as f:
+        data = f.read()
+    i = data.rfind(b'SESSION_START')
+    cut = 0 if i < 0 else data.rfind(b'\n', 0, i) + 1
+    with open(dst, 'wb') as f:
+        f.write(data[cut:])
+    if cut:
+        print(f'  livelog: kept the last session, {len(data)/1048576:.1f} MB -> '
+              f'{(len(data) - cut)/1048576:.1f} MB')
+
+
 def write_json_atomic(path, data, compact=False):
     tmp = path + '.tmp'
     with open(tmp, 'w', encoding='utf-8') as f:
@@ -302,7 +322,7 @@ def main():
     if os.path.abspath(src_log) != os.path.abspath(dst_log):
         shutil.copy2(src_log, dst_log)
     if src_live and os.path.abspath(src_live) != os.path.abspath(dst_live):
-        shutil.copy2(src_live, dst_live)
+        copy_last_session(src_live, dst_live)
     print(f'Logs: {os.path.basename(dst_log)}' + (f' + {os.path.basename(dst_live)}' if src_live else ' (no livelog)'))
 
     # ── 3. Parse ──
