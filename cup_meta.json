@@ -150,6 +150,9 @@
       }
     ],
     "maps_label": "Maps: PCDJ #58 - Rapidshade by [CTR]Mortishade + PCDJ #58 - Oh No! by [CSC]ShyGirlyRaccoon",
-    "excluded": []
+    "excluded": [
+      "aizpun",
+      "[CSC] variableferret"
+    ]
   }
 }

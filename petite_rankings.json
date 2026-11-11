@@ -17261,7 +17261,7 @@
         "name": "aizpun",
         "points": 0,
         "points_all": 0,
-        "rounds": 8,
+        "rounds": 7,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -17270,7 +17270,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 18.9,
+        "avg_pos": 17.0,
         "best_single": 0,
         "best_pos": 14,
         "dropped": 0,
@@ -17309,11 +17309,6 @@
             "r": "Round 8",
             "p": 0,
             "pos": 18
-          },
-          {
-            "r": "Round 9",
-            "p": 0,
-            "pos": 32
           }
         ],
         "rank": 36
@@ -18068,7 +18063,7 @@
         "name": "variableferret",
         "points": 0,
         "points_all": 0,
-        "rounds": 6,
+        "rounds": 5,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -18077,7 +18072,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 23.5,
+        "avg_pos": 21.8,
         "best_single": 0,
         "best_pos": 16,
         "dropped": 0,
@@ -18106,11 +18101,6 @@
             "r": "Round 7",
             "p": 0,
             "pos": 17
-          },
-          {
-            "r": "Round 9",
-            "p": 0,
-            "pos": 32
           }
         ],
         "rank": 58
@@ -20967,7 +20957,7 @@
         "name": "aizpun",
         "points": 0,
         "points_all": 0,
-        "rounds": 8,
+        "rounds": 7,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -20976,7 +20966,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 18.9,
+        "avg_pos": 17.0,
         "best_single": 0,
         "best_pos": 14,
         "dropped": 0,
@@ -21015,11 +21005,6 @@
             "r": "Round 8",
             "p": 0,
             "pos": 18
-          },
-          {
-            "r": "Round 9",
-            "p": 0,
-            "pos": 32
           }
         ],
         "rank": 36
@@ -21774,7 +21759,7 @@
         "name": "variableferret",
         "points": 0,
         "points_all": 0,
-        "rounds": 6,
+        "rounds": 5,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -21783,7 +21768,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 23.5,
+        "avg_pos": 21.8,
         "best_single": 0,
         "best_pos": 16,
         "dropped": 0,
@@ -21812,11 +21797,6 @@
             "r": "Round 7",
             "p": 0,
             "pos": 17
-          },
-          {
-            "r": "Round 9",
-            "p": 0,
-            "pos": 32
           }
         ],
         "rank": 58
@@ -26960,7 +26940,7 @@
         "name": "aizpun",
         "points": 40.0,
         "points_all": 40.0,
-        "rounds": 19,
+        "rounds": 18,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -26968,8 +26948,8 @@
           "bronze": 0
         },
         "top5": 0,
-        "avg_pts": 2.1,
-        "avg_pos": 19.8,
+        "avg_pts": 2.2,
+        "avg_pos": 19.2,
         "best_single": 40,
         "best_pos": 9,
         "dropped": 0,
@@ -27063,11 +27043,6 @@
             "r": "Season 4 Round 8",
             "p": 0,
             "pos": 18
-          },
-          {
-            "r": "Season 4 Round 9",
-            "p": 0,
-            "pos": 32
           }
         ],
         "rank": 56
@@ -31119,7 +31094,7 @@
         "name": "variableferret",
         "points": 0,
         "points_all": 0,
-        "rounds": 6,
+        "rounds": 5,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -31128,7 +31103,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 23.5,
+        "avg_pos": 21.8,
         "best_single": 0,
         "best_pos": 16,
         "dropped": 0,
@@ -31157,11 +31132,6 @@
             "r": "Season 4 Round 7",
             "p": 0,
             "pos": 17
-          },
-          {
-            "r": "Season 4 Round 9",
-            "p": 0,
-            "pos": 32
           }
         ],
         "rank": 185
@@ -35673,7 +35643,7 @@
         "name": "aizpun",
         "points": 2,
         "points_all": 2,
-        "rounds": 18,
+        "rounds": 17,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -35682,7 +35652,7 @@
         },
         "top5": 0,
         "avg_pts": 0.1,
-        "avg_pos": 20.1,
+        "avg_pos": 19.4,
         "best_single": 2,
         "best_pos": 9,
         "dropped": 0,
@@ -35771,11 +35741,6 @@
             "r": "Season 4 Round 8",
             "p": 0,
             "pos": 18
-          },
-          {
-            "r": "Season 4 Round 9",
-            "p": 0,
-            "pos": 32
           }
         ],
         "rank": 56
@@ -39393,7 +39358,7 @@
         "name": "variableferret",
         "points": 0,
         "points_all": 0,
-        "rounds": 6,
+        "rounds": 5,
         "wins": 0,
         "podiums": {
           "gold": 0,
@@ -39402,7 +39367,7 @@
         },
         "top5": 0,
         "avg_pts": 0.0,
-        "avg_pos": 23.5,
+        "avg_pos": 21.8,
         "best_single": 0,
         "best_pos": 16,
         "dropped": 0,
@@ -39431,11 +39396,6 @@
             "r": "Season 4 Round 7",
             "p": 0,
             "pos": 17
-          },
-          {
-            "r": "Season 4 Round 9",
-            "p": 0,
-            "pos": 32
           }
         ],
         "rank": 171
