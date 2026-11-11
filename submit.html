@@ -142,6 +142,8 @@
   .pill.failed { background: rgba(239,68,68,0.15); color: var(--red); }
   .pill.duplicate, .pill.superseded { background: var(--surface-hover); color: var(--text-muted); }
   .legend { display: grid; grid-template-columns: auto 1fr; gap: 6px 10px; margin-top: 12px; font-size: 12px; color: var(--text-dim); align-items: baseline; }
+  .latest { padding: 10px 14px; border-bottom: 1px solid var(--border); font-size: 13px; color: var(--text-dim); }
+  .latest strong { color: var(--text); font-family: var(--mono); }
   .empty { padding: 18px; text-align: center; font-family: var(--mono); font-size: 12px; color: var(--text-dark); }
   .footer { margin-top: 24px; text-align: center; }
 
@@ -263,6 +265,7 @@
       <span class="pill received">received</span><span>Waiting for aizpun's PC to pick it up (about every 15 minutes while it is on).</span>
       <span class="pill processed">processed</span><span>Rankings computed. Waiting for aizpun to check and publish.</span>
       <span class="pill published">published</span><span>Live on the rankings.</span>
+      <span class="pill published">published</span><span>Rows marked "processed from local logs" were not sent here: aizpun played that cup and processed his own recording. They are listed so you can tell a cup that is done from one that still needs a log.</span>
       <span class="pill duplicate">duplicate</span><span>That cup was already processed, or this exact file was already sent. The log is still kept and checked against the published result, so send it anyway if you think something is wrong.</span>
       <span class="pill superseded">superseded</span><span>Someone sent a more complete log for the same cup.</span>
       <span class="pill failed">failed</span><span>The pipeline stopped. The note says why; ping aizpun.</span>
@@ -619,16 +622,73 @@ $('submitBtn').addEventListener('click', function () {
 });
 
 // ── Status panel ──
+function getJson(url, opts) {
+  return fetch(url, opts).then(function (r) { return r.ok ? r.json() : null; })
+                         .catch(function () { return null; });
+}
+
+// A cup aizpun processed from his own logs has no submission record, so the
+// list used to stop at the last cup someone sent through this page. People
+// read it to decide whether their log is still needed, and a missing cup
+// cannot be told apart from an unprocessed one. These rows close that gap.
+function localRow(label, m, ranks) {
+  var maps = m.maps || [];
+  var row = {
+    id: 'local:' + label,
+    community: m.community,
+    map1: maps[0] ? maps[0].name : '', mapper1: maps[0] ? maps[0].mapper : '',
+    map2: maps[1] ? maps[1].name : '', mapper2: maps[1] ? maps[1].mapper : '',
+    maps_label: maps.length ? '' : (m.maps_label || '').replace(/^Maps:\s*/, ''),
+    submitter: 'aizpun', created: m.date, status: 'published', fromLogs: true,
+    summary: null, note: '', preview: null
+  };
+  var season = ranks && ranks[m.season];
+  if (season && season.rankings) {
+    var winner = null, players = 0;
+    season.rankings.forEach(function (p) {
+      p.history.forEach(function (h) {
+        if (h.r !== m.round) return;
+        players += 1;
+        if (h.pos === 1) winner = p.name;
+      });
+    });
+    if (winner) row.summary = { winner: winner, players: players };
+  }
+  return row;
+}
+
 function loadStatus() {
   if (!CONFIGURED) { $('statusBody').innerHTML = '<div class="empty">Submissions are not open yet.</div>'; return; }
-  fetch(WORKER_URL + '/status', { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (res) {
-    var rows = (res && res.submissions) || [];
+  Promise.all([
+    getJson(WORKER_URL + '/status', { cache: 'no-store' }),
+    getJson('cup_meta.json', { cache: 'no-store' }),
+    getJson('petite_rankings.json', { cache: 'no-store' })
+  ]).then(function (out) {
+    var res = out[0], meta = out[1] || {}, ranks = out[2];
+    if (!res) { $('statusBody').innerHTML = '<div class="empty">Could not load submissions.</div>'; return; }
+    var rows = (res.submissions || []).slice();
+    var seen = {};
+    rows.forEach(function (s) { seen[s.community] = true; });
+    Object.keys(meta).forEach(function (label) {
+      var m = meta[label];
+      if (m && m.community != null && !seen[m.community]) rows.push(localRow(label, m, ranks));
+    });
+    rows.sort(function (a, b) { return String(b.created || '').localeCompare(String(a.created || '')); });
     if (!rows.length) { $('statusBody').innerHTML = '<div class="empty">No submissions yet.</div>'; return; }
+    var latest = rows.reduce(function (best, r) {
+      return (best == null || Number(r.community) > Number(best)) ? r.community : best;
+    }, null);
     var mine = new Set(load(MY_KEY, []));
     function mapCell(name, by) {
       return esc(name) + (by ? ' <span style="color:var(--text-muted)">by ' + esc(by) + '</span>' : '');
     }
-    $('statusBody').innerHTML = '<table class="status-table"><thead><tr><th>Cup</th><th class="hide-sm">Maps</th><th class="hide-sm">By</th><th>Sent</th><th>Status</th><th>Result</th></tr></thead><tbody>' +
+    function mapsCell(s) {
+      if (s.maps_label) return esc(s.maps_label);
+      return mapCell(s.map1, s.mapper1) + '<br>' + mapCell(s.map2, s.mapper2);
+    }
+    var head = '<div class="latest">Latest cup on the site: <strong>PCDJ #' + esc(latest) +
+      '</strong>. If you played a later one, send its log.</div>';
+    $('statusBody').innerHTML = head + '<table class="status-table"><thead><tr><th>Cup</th><th class="hide-sm">Maps</th><th class="hide-sm">By</th><th>Sent</th><th>Status</th><th>Result</th></tr></thead><tbody>' +
       rows.map(function (s) {
         var result = '';
         if ((s.status === 'processed' || s.status === 'published') && s.summary && s.summary.winner) {
@@ -638,8 +698,9 @@ function loadStatus() {
         } else if (s.preview && s.preview.winner) {
           result = '<span style="color:var(--text-muted)">preview: ' + esc(s.preview.winner) + ' wins</span>';
         }
+        if (!result && s.fromLogs) result = '<span style="color:var(--text-muted)">processed from local logs</span>';
         return '<tr class="' + (mine.has(s.id) ? 'mine' : '') + '"><td>PCDJ #' + esc(s.community) + '</td>' +
-          '<td class="hide-sm">' + mapCell(s.map1, s.mapper1) + '<br>' + mapCell(s.map2, s.mapper2) + '</td>' +
+          '<td class="hide-sm">' + mapsCell(s) + '</td>' +
           '<td class="hide-sm">' + esc(s.submitter || '-') + '</td>' +
           '<td title="' + esc(s.created) + '">' + esc(ago(s.created)) + '</td>' +
           '<td><span class="pill ' + esc(s.status) + '">' + esc(s.status) + '</span></td>' +
