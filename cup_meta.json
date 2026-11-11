@@ -132,5 +132,24 @@
     "excluded": [
       "[CSC] variableferret"
     ]
+  },
+  "Petite Cup 59": {
+    "season": "Season 4",
+    "round": "Round 9",
+    "xlsx": "Petite Cups 56-60.xlsx",
+    "date": "2026-11-11",
+    "community": 58,
+    "maps": [
+      {
+        "name": "PCDJ #58 - Rapidshade",
+        "mapper": "[CTR]Mortishade"
+      },
+      {
+        "name": "PCDJ #58 - Oh No!",
+        "mapper": "[CSC]ShyGirlyRaccoon"
+      }
+    ],
+    "maps_label": "Maps: PCDJ #58 - Rapidshade by [CTR]Mortishade + PCDJ #58 - Oh No! by [CSC]ShyGirlyRaccoon",
+    "excluded": []
   }
 }
