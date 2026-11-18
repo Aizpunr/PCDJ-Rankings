@@ -154,5 +154,26 @@
       "aizpun",
       "[CSC] variableferret"
     ]
+  },
+  "Petite Cup 60": {
+    "season": "Season 4",
+    "round": "Round 10",
+    "xlsx": "Petite Cups 56-60.xlsx",
+    "date": "2026-11-18",
+    "community": 59,
+    "maps": [
+      {
+        "name": "PCDJ #59 - αηυϐις",
+        "mapper": "Diabler"
+      },
+      {
+        "name": "PCDJ #59 - Lavalala",
+        "mapper": "Shattersmith"
+      }
+    ],
+    "maps_label": "Maps: PCDJ #59 - αηυϐις by Diabler + PCDJ #59 - Lavalala by Shattersmith",
+    "excluded": [
+      "Diabler"
+    ]
   }
 }
