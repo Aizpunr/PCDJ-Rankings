@@ -142,9 +142,9 @@
   {
     "pos": 21,
     "name": "Warsnac",
-    "time": null,
+    "time": 21.445,
     "round": 6,
-    "note": "dnf"
+    "note": "LIVE_OVERRIDE_DNF"
   },
   {
     "pos": 22,

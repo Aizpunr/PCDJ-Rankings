@@ -32,12 +32,25 @@ def test_log_alone_reproduces_saved(n):
 
 # Excluded from the log-alone test because the livelog corrects them, so they
 # still have to reproduce WITH it: exclusion must not mean no coverage.
-@pytest.mark.parametrize('n', [43, 57, 58])
+# Cup -> number of overrides. 44, 49, 57 (its second), 59 and 60 are left-the-game
+# times of a round's slowest finisher, which the old upper bound threw away.
+LIVELOG_OVERRIDES = {43: 1, 44: 1, 49: 1, 57: 2, 58: 1, 59: 1, 60: 1}
+
+
+@pytest.mark.parametrize('n', [n for n in LIVELOG_OVERRIDES if n in CUPS])
 def test_livelog_override_reproduces_saved(n):
     results, overrides = quiet(ppl.parse, LOGS / f'petite_{n}.log',
                                LOGS / f'petite_{n}_liveleaderboard.log')
-    assert len(overrides) == 1
+    assert len(overrides) == LIVELOG_OVERRIDES[n]
     assert results == saved(n)
+
+
+def test_stale_livelog_keeps_the_upper_bound():
+    # Cup 50's livelog is another day's session: every round lands on its last
+    # plugin round. That is not a trusted correlation, so nothing is overridden.
+    results, overrides = quiet(ppl.parse, LOGS / 'petite_50.log', LOGS / 'petite_50_liveleaderboard.log')
+    assert overrides == []
+    assert results == saved(50)
 
 
 def test_saved_livelogs_hold_one_session_only():

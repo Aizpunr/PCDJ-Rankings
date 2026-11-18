@@ -153,6 +153,14 @@ def parse_livelog(path):
             map_names[int(m.group(2))] = m.group(4).strip()
             round_starts[int(m.group(2))] = m.group(1)
             continue
+    # A session that opens mid-round has that round's leaderboard but no
+    # ROUND_STARTED for it (Cup 60: the session began 16 s before the first time
+    # of elimination round 1). Without a start, correlate_by_time() gives up on
+    # every round. The round's first leaderboard line stands in for it. Only for
+    # logs that carry ROUND_STARTED at all: the old schema keeps its fallback.
+    if round_starts:
+        for ts, rn, _, _ in snaps:
+            round_starts.setdefault(rn, ts)
     return snaps, roster, map_names, round_starts
 
 
@@ -381,6 +389,9 @@ def reconstruct(cotd_rounds, snaps, sid_to_name, name_to_sid, cotd_lines=None, r
     plugin_mapping = None
     if cotd_lines is not None:
         plugin_mapping = correlate_by_time(cotd_rounds, cotd_lines, round_starts or {})
+    # Trusted only when every round lands on its own, later plugin round. A stale
+    # livelog (Cup 50) maps them all onto its last round and must not qualify.
+    by_time = bool(plugin_mapping) and all(a < b for a, b in zip(plugin_mapping, plugin_mapping[1:]))
     if plugin_mapping:
         print(f'  Round correlation: by timestamp (elim R1 -> plugin round {plugin_mapping[0]})')
     else:
@@ -405,6 +416,13 @@ def reconstruct(cotd_rounds, snaps, sid_to_name, name_to_sid, cotd_lines=None, r
             t_min, t_max = min(valid_times), max(valid_times)
             # Tolerance: 0.5s below min (for potential faster override), 0s above max (no one slower than slowest)
             t_lo, t_hi = t_min - 0.5, t_max + 0.01
+            # The upper bound guards the roster-similarity fallback, which can land on
+            # the wrong round. With rounds matched by timestamp the bucket IS the round,
+            # and the bound would throw out the one time it most often applies to: the
+            # slowest finisher, who left before the round ended and was eliminated on it
+            # (Cup 60: ZOMAN 18.975 behind four survivors at 18.79-18.86).
+            if by_time:
+                t_hi = float('inf')
         else:
             t_lo, t_hi = None, None  # cannot filter; accept any
 
